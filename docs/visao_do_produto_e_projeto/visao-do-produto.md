@@ -30,6 +30,8 @@ Tendo em vista essa inconveniência, a equipe propõe uma parceria com a empresa
 
 ## Tecnologias a serem utilizadas
 
-* Client-side: Typescript com Vue3 e Quasar Framework;
-* Server-side: Node.js;
+* Client-side: Typescript com Vue3 e Quasar Framework
+* Server-side: Node.js
 
+
+xxxxxxx
