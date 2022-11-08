@@ -4,29 +4,32 @@
 
 | Data       | Versão | Descrição            | Autor(es)                                                    |
 | ---------- | ------ | -------------------- | ------------------------------------------------------------ |
-| 31/10/2022 | 0.1    | Criação do documento | Arthur D'Assumpção, Arthur Trindade, Lucas Queiroz, Miguel Moreira |
+| 31/10/2022 | 0.1    | Criação do documento | Arthur D'Assumpção<br> Arthur Trindade<br> Lucas Queiroz<br> Miguel Moreira |
 
 ## Declaração de Posição do Produto
 
-Um dos problemas enfrentados por algumas empresas juniores e equipes de competição nas universidades é a falta de organização dos conhecimentos durante as trocas de gestão interna. Esse problema muitas vezes ocorre pela falta de um modelo padrão de documentação de itens relativos à gestão do negócio, que mudam anualmente, podendo tornar as trocas de gestão bastante confusas e gerando perda de tempo e dinheiro para a empresa. 
-Tendo em vista essa inconveniência, a equipe propõe uma parceria com a empresa júnior de Engenharia Aeroespacial da Universidade de Brasília, Zenit Aerospace, para criar uma aplicação web do tipo Wiki que ofereça não só informações para o usuário, mas um meio de centralização, padronização e organização das documentações e conhecimentos da empresa, e com o objetivo de facilitar a gestão interna da Zenit Aerospace.
+Um dos problemas enfrentados por algumas empresas juniores e equipes de competição nas universidades é a falta de organização dos conhecimentos durante as trocas de gestão interna. Esse problema muitas vezes ocorre pela falta de uma plataforma centralizadora de documentação de itens relativos à gestão do negócio, que muda anualmente, podendo tornar as trocas de gestão confusas e gerando perda de tempo e dinheiro para a empresa. <br>
+Tendo em vista essa inconveniência, a equipe propõe uma parceria com a empresa júnior de Engenharia Aeroespacial da Universidade de Brasília, Zenit Aerospace, para criar uma aplicação web do tipo Wiki que ofereça não só informações para o usuário, mas um meio de documentação dos conhecimentos e informações das áreas de gestão da empresa.
 
-| Para          | Zenit Aerospace                                       |
-| ------------- | ----------------------------------------------------- |
-| Quem          | Deseja ter controle na gestão do conhecimento         |
-| O AeroWiki    | É uma aplicação web                                   |
-| Que           | Centraliza a gestão do conhecimento da empresa junior |
-| Ao contrário  | [alternativa competitiva primária]                    |
-| Nosso produto | [declaração de diferenciação primária]                |
+| Para           | Zenit Aerospace                                       |
+| -------------- | ----------------------------------------------------- |
+| Quem           | Deseja centralizar as informações e conhecimentos da empresa.|
+| O AeroWiki     | É uma aplicação web.|
+| Que            | Centraliza a gestão dos conhecimentos e informações da empresa junior.|
+| Ao contrário do | Citrix Podio |
+| Nosso produto  | Proporciona o controle do conhecimento e, ainda, da informação.  |
 
 
 
 ## Objetivos do Produto
 
-Um dos problemas enfrentados por algumas empresas juniores e equipes de competição nas universidades é a falta de organização dos conhecimentos durante as trocas de gestão interna. Esse problema muitas vezes ocorre pela falta de um modelo padrão de documentação de itens relativos à gestão do negócio, que mudam anualmente, podendo tornar as trocas de gestão bastante confusas e gerando perda de tempo e dinheiro para a empresa. 
-Tendo em vista essa inconveniência, a equipe propõe uma parceria com a empresa júnior de Engenharia Aeroespacial da Universidade de Brasília, Zenit Aerospace, para criar uma aplicação web do tipo Wiki que ofereça não só informações para o usuário, mas um meio de centralização, padronização e organização das documentações e conhecimentos da empresa, e com o objetivo de facilitar a gestão interna da Zenit Aerospace.
-
-
+### Objetivos primários
+* CRUD de conhecimentos das áreas administrativas da Zenit Aerospace;
+* CRUD de informações da Zenit Aerospace;
+* CRUD de novos membros;
+### Objetivos secundários
+* Hierarquia de cargos da empresa refletidos nas permissões de uso da wiki;
+* Linkar informações externas à Zenit Aerospace;
 
 ## Tecnologias a serem utilizadas
 
