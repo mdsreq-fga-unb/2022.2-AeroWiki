@@ -1,102 +1,57 @@
+
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="lHr lpR lfr">
+
+    <q-header bordered class="bg-primary text-white" height-hint="98">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn dense flat round icon="menu" @click="alternarGaveta" />
 
         <q-toolbar-title>
-          Quasar App
+          <q-avatar>
+            <img src="https://scontent.fbsb9-1.fna.fbcdn.net/v/t39.30808-6/294373538_559763195852459_2568898542794734130_n.png?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=mCZaZrhQTjMAX_53IRr&_nc_ht=scontent.fbsb9-1.fna&oh=00_AfC50HcR7YYNnQ1N0G9kixUjuVJQBCgK5L-Qt_mSmGsPeQ&oe=6372D99A" />
+          </q-avatar>
+          Title
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
+
+      <q-tabs align="left">
+        <q-route-tab to="/page1" label="Page One" />
+        <q-route-tab to="/page2" label="Page Two" />
+        <q-route-tab to="/page3" label="Page Three" />
+      </q-tabs>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+    <q-drawer show-if-above v-model="ctrl.gavetaAberta" side="left" bordered>
     </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
   </q-layout>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue';
 
-const essentialLinks: EssentialLinkProps[] = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-];
+/**
+ * Interface para definição da estrutura do componente
+ */
+interface ComponentProps {
+  gavetaAberta: boolean;
+}
 
-const leftDrawerOpen = ref(false)
+/**
+ * Objeto para controle do componente
+ */
+const ctrl = ref<ComponentProps>({
+  gavetaAberta: false,
+})
 
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value
+/**
+ * Ao clicar nas 3 barras, o usuário abre a gaveta.
+ */
+function alternarGaveta(): void{
+  ctrl.value.gavetaAberta = !ctrl.value.gavetaAberta;
 }
 </script>

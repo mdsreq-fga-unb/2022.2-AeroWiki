@@ -1,42 +1,67 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+    <q-input
+      v-model="ctrl.texto1"
+      label="insira algo aqui."
+      stack-label
+      dense
+      filled
+      @update:model-value="mostrarTexto2"
+    />
+    <div v-if="ctrl.mostrarTexto2">
+      <q-input
+        v-model="ctrl.texto2"
+        label="insira algo aqui tbm!"
+        stack-label
+        dense
+        filled
+      />
+      {{ctrl.texto2 ? ctrl.texto2 : 'insira algo aqui em cima...'}}
+    </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
-import { ref } from 'vue';
+import { ref, onBeforeMount } from 'vue';
+import { QInput } from 'quasar';
 
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1'
-  },
-  {
-    id: 2,
-    content: 'ct2'
-  },
-  {
-    id: 3,
-    content: 'ct3'
-  },
-  {
-    id: 4,
-    content: 'ct4'
-  },
-  {
-    id: 5,
-    content: 'ct5'
-  }
-]);
-const meta = ref<Meta>({
-  totalCount: 1200
+/**
+ * Interface para definição de dados do componente.
+ */
+interface ComponentProps {
+  texto1?: string;
+  texto2?: string;
+  mostrarTexto2: boolean;
+}
+
+/**
+ * Objeto para controle do componente.
+ */
+const ctrl = ref<ComponentProps>({
+  texto1: undefined,
+  texto2: undefined,
+  mostrarTexto2: false,
+});
+
+/**
+ * Caso o usuário insira algo no primeiro input, mostrar o segundo.
+ */
+function mostrarTexto2(): void {
+  if(ctrl.value.texto1)
+    ctrl.value.mostrarTexto2 = true;
+  else
+    ctrl.value.mostrarTexto2 = false;
+}
+
+/** Printar Hello, World no console. */
+function olaMundo() {
+  console.log('Hello, World!');
+}
+
+/* onBeforeMount é uma função do vue.
+ * Ela sempre vai ser chamada antes da renderização do componente.
+ */
+onBeforeMount(()=>{
+  olaMundo();
 });
 </script>
