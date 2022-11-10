@@ -1,9 +1,9 @@
-# Instalando dependências pra utilizar o vur/quasar
+# Instalando dependências pra utilizar o vue/quasar
 
 ## Instalando o node 
 
 - Vamos utilizar o node 16.16.0. 
-- Para facilitar, utilizaremos o <a href="https://github.com/nvm-sh/nvm#installing-and-updating">Node Version Manager</a>. Este software nos permite ter mais de uma versão do node na máquina local.
+- Para facilitar, utilizaremos o <a target="_blank" yhref="https://github.com/nvm-sh/nvm#installing-and-updating">Node Version Manager</a>. Este software nos permite ter mais de uma versão do node na máquina local.
 
 ### Comandos NVM
 
