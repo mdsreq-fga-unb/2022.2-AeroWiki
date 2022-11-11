@@ -18,12 +18,20 @@
       />
       {{ctrl.texto2 ? ctrl.texto2 : 'insira algo aqui em cima...'}}
     </div>
+    <q-btn
+      label="me aperte"
+      dense
+      color="primary"
+      @click="funcaoteste"
+    />
+    <componente-exemplo-vue />
   </q-page>
 </template>
 
 <script setup lang="ts">
 import { ref, onBeforeMount } from 'vue';
-import { QInput } from 'quasar';
+import { QInput, QBtn} from 'quasar';
+import componenteExemploVue from 'src/components/componenteExemplo.vue';
 
 /**
  * Interface para definição de dados do componente.
@@ -32,6 +40,10 @@ interface ComponentProps {
   texto1?: string;
   texto2?: string;
   mostrarTexto2: boolean;
+}
+
+function funcaoteste() {
+  console.log('ola, arthur');
 }
 
 /**
