@@ -10,11 +10,11 @@
 
 ## Organização do projeto
 
-| Papel | Atribuições | Responsável | Participantes |
-| ----- | ----------- | ----------- | ------------- |
-|       |             |             |               |
-|       |             |             |               |
-|       |             |             |               |
+| Papel         | Atribuições                                                  | Responsável | Participantes |
+| ------------- | ------------------------------------------------------------ | ----------- | ------------- |
+| Desenvolvedor | Programar a aplicação;<br>Escrever a documentação do software;<br>Realizar testes. |             |               |
+| Scrum Master  | Garantir que os processos relativos ao Scrum ocorram de maneira funcional. |             |               |
+| Product Owner | Desenvolver e comunicar, explicitamente, os objetivos do produto;<br>Criar e comunicar os itens do backlog do produto;<br>Garantir a compreensão do backlog do produto. |             |               |
 
 ## Planejamento das Fases e/ou Iterações do Projeto
 
