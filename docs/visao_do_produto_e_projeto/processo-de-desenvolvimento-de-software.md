@@ -14,8 +14,8 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 
 | Atividade                  | Método      | Ferramenta | Entrega    |
 | -------------------------- | ----------- | ---------- | ---------- |
-| Planejamento de Releases   | XP          |  Zenhub    | Releases   |
-| Planejamento de Interações | XP          |  Zenhub    | Interaçoes |
+| Planejamento de Releases   | Reunições de alinhamento |  Zenhub    | Releases   |
+| Planejamento de Interações | Reuniões de alinhamento  |  Zenhub    | Interaçoes |
 
 ## Atividade 2 
 
