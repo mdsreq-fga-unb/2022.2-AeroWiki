@@ -23,4 +23,9 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 | --------------- | ---------------- | ----------------- | -------- |
 | Design  Simples | Pair programming |  Quasar Framework | Design   |
 
+## Atividade 3 
+
+| Atividade       | Método           | Ferramenta | Entrega       |
+| --------------- | ---------------- | ---------- | ------------- |
+| Desencolvimento | Pair programming |  VS code   | Implementação |
 
