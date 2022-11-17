@@ -36,7 +36,7 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 
 ## Atividade 5 
 
-| Atividade    | Método           | Ferramenta | Entrega                 |
-| ------------ | ---------------- | ---------- | ----------------------- |
-| Documentação | Pair programming | Gitpages   | Documentação do projeto |
+| Atividade    | Método                                                        | Ferramenta | Entrega                 |
+| ------------ | ------------------------------------------------------------- | ---------- | ----------------------- |
+| Documentação | reunião dos membros alocados na tarefa para criar o documento | Gitpages   | Documentação do projeto |
 
