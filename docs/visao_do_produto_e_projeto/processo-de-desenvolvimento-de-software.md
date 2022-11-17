@@ -27,5 +27,5 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 
 | Atividade       | Método           | Ferramenta | Entrega       |
 | --------------- | ---------------- | ---------- | ------------- |
-| Desencolvimento | Pair programming |  VS code   | Implementação |
+| Desenvolvimento | Pair programming |  VS code   | Implementação |
 
