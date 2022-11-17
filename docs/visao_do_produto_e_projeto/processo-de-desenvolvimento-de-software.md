@@ -31,7 +31,7 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 
 ## Atividade 4 
 
-| Atividade    | Método           | Ferramenta | Entrega      |
-| ------------ | ---------------- | ---------- | ------------ |
-| Documentação | Pair programming | Gitpages   | Documentação |
+| Atividade    | Método           | Ferramenta | Entrega                 |
+| ------------ | ---------------- | ---------- | ----------------------- |
+| Documentação | Pair programming | Gitpages   | Documentação do projeto |
 
