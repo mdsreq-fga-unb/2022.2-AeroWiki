@@ -12,7 +12,16 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 
 ## Atividade 1
 
-| Atividade                  | Método      | Ferramenta                                              | Entrega  |
-| -------------------------- | ----------- | ------------------------------------------------------- | -------- |
-| Desenvolvimento do produto | Srcum/XP    | Typescript com Vue3, Quasar Framework, Node.js e Zenhub | Aerowiki |
+| Atividade                  | Método      | Ferramenta | Entrega  |
+| -------------------------- | ----------- | ---------- | -------- |
+| Planejamento de Releases   | XP          |  Zenhub    | Realses  |
+| -------------------------- | ----------- | ---------- | -------- |
+| Planejamento de interações | XP          |  Zenhub    | Realses  |
+
+## Atividade 2 
+
+| Atividade       | Método           | Ferramenta        | Entrega  |
+| --------------- | ---------------- | ----------------- | -------- |
+| Design  Simples | Pair programming |  Quasar Framework | Design   |
+
 
