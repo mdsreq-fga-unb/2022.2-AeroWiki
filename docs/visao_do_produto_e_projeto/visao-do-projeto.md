@@ -33,9 +33,9 @@
 
 | Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados |
 | --------- | --------------- | ------------- | ---------------- |
-|           |                 |               |                  |
-|           |                 |               |                  |
-|           |                 |               |                  |
+| Dailies   | Equipe de desenvolvimento | Diária | Ata da reunião |
+| Sprints |   Equipe de desenvolvimento              | Semanal  | Ata da sprint |
+| Comunicar situação do projeto |Equipe de desenvolvimento <br>George Marsicano|Semanal|Ata da reunião;  <br> Relatório de situação do projeto                 |
 
 ## Gerenciamento de riscos
 Gerenciar riscos é particularmente importante para projetos de software por conta das incertezas inerentes que a maioria dos projetos enfrenta. Elas se originam de requisitos vagamente definidos, mudanças de requisitos devido a mudanças nas necessidades do cliente, dificuldades em estimar o tempo e os recursos necessários para o desenvolvimento do software e diferenças nas habilidades individuais. É preciso prever os riscos, compreender o impacto desses riscos sobre o projeto, o produto e o negócio e tomar medidas para evitar tais riscos. <br>
@@ -52,6 +52,10 @@ Dito isso, a equipe decidiu considerar os seguintes riscos iniciais:
 
 
 ## Critérios de replanejamento
+<ul>
+  <li>Trancamento da disciplina por membros da equipe;</li>
+  <li>Escopo maior que o esperado para o desenvolvimento dentro do tempo da disciplina;</li>
+</ul>
 
 ## Bibliografia
 - Sommerville, I., Engenharia de software. 9th ed., Pearson Addison Wesley, 2011.
