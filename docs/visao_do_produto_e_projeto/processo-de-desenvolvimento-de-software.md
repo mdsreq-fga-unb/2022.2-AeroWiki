@@ -15,21 +15,26 @@ Usaremos da metologia que alinha a o metodo de desenvolvimentode software, XP co
 | Atividade                  | Método      | Ferramenta | Entrega    |
 | -------------------------- | ----------- | ---------- | ---------- |
 | Planejamento de Releases   | Reunições de alinhamento |  Zenhub    | Releases   |
+
+## Atividade 2
+
+| Atividade                  | Método      | Ferramenta | Entrega    |
+| -------------------------- | ----------- | ---------- | ---------- |
 | Planejamento de Interações | Reuniões de alinhamento  |  Zenhub    | Interaçoes |
 
-## Atividade 2 
+## Atividade 3 
 
 | Atividade       | Método           | Ferramenta        | Entrega  |
 | --------------- | ---------------- | ----------------- | -------- |
 | Design  Simples | Pair programming |  Quasar Framework | Design   |
 
-## Atividade 3 
+## Atividade 4 
 
 | Atividade       | Método           | Ferramenta | Entrega       |
 | --------------- | ---------------- | ---------- | ------------- |
 | Desenvolvimento | Pair programming |  VS code   | Implementação |
 
-## Atividade 4 
+## Atividade 5 
 
 | Atividade    | Método           | Ferramenta | Entrega                 |
 | ------------ | ---------------- | ---------- | ----------------------- |
