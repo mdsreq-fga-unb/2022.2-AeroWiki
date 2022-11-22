@@ -32,7 +32,7 @@
 
 | Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados |
 | --------- | --------------- | ------------- | ---------------- |
-| Dailies | Equipe de desenvolvimento | Diária | Ata da reunião |
+| Daily Scrum| Equipe de desenvolvimento | Diária | Ata da reunião |
 | Sprints | Equipe de desenvolvimento | Semanal | Ata da sprint |
 | Comunicar situação do projeto |Equipe de desenvolvimento <br>George Marsicano| Semanal | Ata da reunião;  <br> Relatório de situação do projeto |
 

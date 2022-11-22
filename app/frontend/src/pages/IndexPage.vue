@@ -1,5 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
+    Componente da página
     <q-input
       v-model="ctrl.texto1"
       label="insira algo aqui."

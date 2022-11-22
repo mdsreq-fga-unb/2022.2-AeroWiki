@@ -1,6 +1,6 @@
-# Aero Wiki (frontend)
+# AeroWiki (frontend)
 
-frontend do aeroWiki
+Frontend do AeroWiki
 
 ## Install the dependencies
 ```bash

@@ -1,8 +1,8 @@
 {
   "name": "frontend",
   "version": "0.0.1",
-  "description": "frontend do aeroWiki",
-  "productName": "Aero Wiki",
+  "description": "Frontend do AeroWiki",
+  "productName": "AeroWiki",
   "author": "Lucas Queiroz <lucas.fn4@gmail.com>",
   "private": true,
   "scripts": {
