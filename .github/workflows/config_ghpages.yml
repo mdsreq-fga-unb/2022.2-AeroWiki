@@ -1,7 +1,8 @@
 name: config_ghpages 
 on:
   push:
-    branches: [main, development]
+    branches: 
+      - main
     
 jobs:
   deploy:
