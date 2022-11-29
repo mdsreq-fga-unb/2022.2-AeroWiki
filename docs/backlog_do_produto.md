@@ -3,40 +3,30 @@
 | Data       | Versão | Descrição                                                    | Autor(es)                                               |
 | ---------- | ------ | ------------------------------------------------------------ | ------------------------------------------------------- |
 | 25/11/2022 | 0.1    | Criação do documento a partir de reunião com cliente. Essa versão contém apenas uma abstração do conteúdo geral do software. | Arthur D'Assumpção<br>Lucas Queiroz<br>Gabriel de Souza |
+| 29/11/2022 | 0.2    | Adição de alguns RF's e RNF's | Lucas Queiroz |
 
-## acesso as áreas
+## Requisitos funcionais 
 
-- usuário vai poder acessar as áreas de gestão da empresa
-	as áreas são: 
-	Relações Externas 
-	Pesquisa & Desenvolvimento
-	Operações
-	Marketing
-	Comercial
-	Presidência
-- todos os membros podem ter acesso a todas as áreas;
-- nem todo o conteúdo das áreas pode ser acessado por todos os membros;
+1. O usuário, independente de sua classificação, deve conseguir acessar as áreas de gestão da empresa.
+2. O usuário deve conseguir, para cada área, criar, ler, alterar e deletar projetos da Zenit.
+3. O usuário "presidente" deve ter acesso total para cada uma das áreas, i.e., ele pode criar, alterar, ler e deletar todo o conteúdo de qualquer área.
 
-## hierarquia
-- quais cargos terão? quais os poderes de cada cargo? 
-  
-## conteúdo das áreas   
-- o que tem nessas áreas? 
-  - links para projetos da zenit
-  - links externos (refinar o significado de links externos)
-  - possibilidade de criar projetos, ler, alterar, deletar;
-  
-## conteúdo dos projetos
-- nos projetos:
-  documentação do projeto:
-  - toda a estrutura do projeto, dados a respeito
-  - quais são, exatamente, esses dados?
-  
-## visualização de conteúdo
-- ter uma tabela de membros (CRUD)
-  * depois o arthur manda as colunas da tabela
-  * 7 tabelas de membros
-  * uma geral
-  * 6 tabelas uma para cada setor
-- possibilidade de criar mais tabelas:
 
+## Requisitos não funcionais
+
+1. O sistema deve ter as áreas de gestão da Zenit, sendo elas:
+
+ - Relações externas
+ - Pesquisa & desenvolvimento
+ - Operações
+ - Marketing
+ - Comercial
+
+2. O sistema deve refletir a hierarquia dos cargos da Zenit, i.e.:
+
+ - Presidente
+ - Diretores
+ - Gerentes de projetos
+ - Demais membros
+
+3.  Para cada tipo de usuário acima devem existir restrições de uso do sistema.
