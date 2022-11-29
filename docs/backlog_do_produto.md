@@ -15,18 +15,20 @@
 ## Requisitos não funcionais
 
 1. O sistema deve ter as áreas de gestão da Zenit, sendo elas:
-
- - Relações externas
- - Pesquisa & desenvolvimento
- - Operações
- - Marketing
- - Comercial
+  <ul>
+    <li>Relações externas</li>
+    <li>Pesquisa & desenvolvimento</li>
+    <li>Operações</li>
+    <li>Marketing</li>
+    <li>Comercial</li>
+  </ul> 
 
 2. O sistema deve refletir a hierarquia dos cargos da Zenit, i.e.:
-
- - Presidente
- - Diretores
- - Gerentes de projetos
- - Demais membros
-
+  <ul>
+    <li>Presidente</li>
+    <li>Diretores</li>
+    <li>Gerentes de projetos</li>
+    <li>Demais membros</li>
+  </ul>
+  
 3.  Para cada tipo de usuário acima devem existir restrições de uso do sistema.
