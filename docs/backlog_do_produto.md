@@ -8,7 +8,14 @@
 | 29/11/2022 | 0.4    | Refatoração do arquivo.                                      | Lucas Queiroz                                           |
 | 01/12/2022 | 0.5    | Formatação dos requisitos em "Épicos" e "Features"  | Lucas Queiroz<br>Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br> Miguel Moreira |
 
-## ÉPICOS E FEATURES
+## Definição de CRUD
+Neste documento, a frase "CRUD de um item" significa que:
+- O usuário pode fazer o cadastro desse item (C - Create);
+- O usuário pode fazer a leitura e busca desse item (R - Read);
+- O usuário pode alterar os dados do item (U -Update);
+- O usuário pode deletar o item (D - Delete);
+
+## Épicos e features
 
 ### ÉPICO 1 - PROJETO
 - F1: CRUD de projetos;
