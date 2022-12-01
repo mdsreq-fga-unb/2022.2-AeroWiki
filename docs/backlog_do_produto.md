@@ -6,61 +6,38 @@
 | 29/11/2022 | 0.2    | Adição de RF's e RNF's.                               | Lucas Queiroz                                           |
 | 29/11/2022 | 0.3    | Adição de RF's e RNF's.                          | Arthur D'Assumpção<br>Arthur Trindade                   |
 | 29/11/2022 | 0.4    | Refatoração do arquivo.                                      | Lucas Queiroz                                           |
+| 01/12/2022 | 0.5    | Formatação dos requisitos em "Épicos" e "Features"  | Lucas Queiroz<br>Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br> Miguel Moreira |
 
-## Requisitos funcionais 
+## ÉPICOS E FEATURES
 
-1. O usuário "membro" deve conseguir ler todos os documentos de projetos que lhe são liberados; 
+### ÉPICO 1 - PROJETO
+- F1: CRUD de projetos;
+- F2: Classificação(em andamento ou finalizado) dos projetos;
 
-2. O usuário "gerente" de cada setor deve conseguir criar, alterar, ler e deletar documentos de projetos da empresa;
-3. O usuário "gerente" deve poder bloquear ou liberar áreas e funcionalidades específicas de perfis com menor nível de hierarquia;
-4. O usuário "presidente" deve poder criar, ler, alterar e deletar documentos de projetos da empresa;
-5. O usuário "presidente" deve poder alterar o perfil de qualquer usuário com menor nível de hierarquia para "gerente ou membro";
-6. O usuário "presidente" deve poder bloquear ou liberar áreas e funcionalidades específicas de perfis com menor nível de hierarquia;
-7. O usuário "presidente" deve poder criar e remover usuários "membro" e "gerente".
+### ÉPICO 2 - PESSOAS PARTICIPANTES
+- F1: CRUD de clientes;
+- F2: CRUD de membros;
 
-8. O usuário "gerente", ao criar o projeto, deve ter a opção de escolher uma imagem que represente o projeto e uma escrever uma descrição.
+### ÉPICO 3 - FINANCEIRO
+- F1: CRUD de entradas financeiras;
+- F2: CRUD de saídas financeiras;
+- F3: Tornar visíveis, para alunos inscritos no processo recrutador, os gastos financeiros da empresa;
+- F4: CRUD de contratos da empresa;
 
-9. O usuário "gerente" deve poder, para cada projeto, criar tabelas.
+### ÉPICO 4 - PESQUISA E DESENVOLVIMENTO
+- F1: CRUD de produtos;
+- F2: CRUD de serviços;
 
-10. O usuário "gerente" deve poder, para cada projeto, criar caixas de texto.
+### ÉPICO 5 - RELAÇÕES EXTERNAS
+- F1: CRUD de parceiros da empresa;
+- F2: CRUD de eventos.
 
-11. O usuário "gerente" deve poder, para cada projeto, alocar links e conteúdos externos.
+### ÉPICO 6 - AUTENTICAÇÃO E AUTORIZAÇÃO
+- F1: O perfil de usuário Presidente pode cadastrar, editar, ler e excluir membros;
+- F2: O perfil de usuário Presidente pode administrar o acesso de todos os usuários;
+- F3: O perfil de usuário Presidente pode cadastrar, editar, ler e excluir projetos;
+- F4: O perfil de usuário Diretor pode administrar o acesso de gerentes e membros;
+- F5: O perfil de usuário Diretor pode cadastrar, editar, ler e excluir projetos;
+- F6: O perfil de usuário Gerente pode cadastrar, editar, ler e excluir projetos;
+- F7: O perfil de usuário Membro pode ler projetos;
 
-12. O usuário "gerente" deve poder classificar todos os projetos de seu setor como "em andamento" ou "finalizado".
-
-13. Todos os usuários podem realizar CRUD de arquivos dentro de projetos em andamento;
-
-14. O usuário "gerente" de cada setor pode criar e deletar novos projetos;
-
-## Requisitos não-funcionais
-
-1. O sistema deve ter as áreas de gestão da Zenit, sendo elas:
-  <ul>
-    <li>Relações externas</li>
-    <li>Pesquisa & desenvolvimento</li>
-    <li>Operações</li>
-    <li>Marketing</li>
-    <li>Comercial</li>
-  </ul> 
-
-2. O sistema deve refletir a hierarquia dos cargos da Zenit através dos diferentes perfis de usuários. Os perfis são:
-  <ul>
-    <li> 1 - Presidente</li>
-    <li> 2 - Gerentes de projetos</li>
-    <li> 3 - Demais membros</li>
-  </ul>
-
-​	**Sendo que, quanto menor o número, maior o nível de hierarquia. Um nível de hierarquia tem todos os direitos do nível exatamente inferior.**
-
-
-3. Para cada perfil de usuário devem existir restrições de uso do sistema.
-4. Qualquer usuário, independente da classificação de seu perfil, deve ter acesso às 5 áreas de gestão do site.
-5. Cada área de gestão citada deve possuir uma subárea, chamada de *área de trabalho*, que por sua vez possuirá divisões para cada atividade do setor.
-6. Todas as divisões devem ser alocadas em caixas na área de trabalho de cada setor e identificadas através de uma imagem e descrição.
-7. Apenas o usuario admin de cada setor deve ter permissão para criar novas caixas ou excluir caixas antigas nas suas respectivas áreas de trabalho.
-8. Cada caixa deve levar o usuário para os detalhes do projeto a qual a caixa se refere.
-9. A área de trabalho do setor de marketing será dividida em *Campanhas*, *Gestão da marca*, *Endomarketing* e *Comunicações externas*.
-10. A área de trabalho do setor comercial será dividida em *Vendas* e *Banco de dados de clientes*.
-11. A área de trabalho do setor de P&D será dividida em *Projetos* e deve conter todos os projetos da empresa.
-12. A área de trabalho do setor de operações será dividida em *Administração financeira*, *Gestão de pessoas* e *Recursos humanos*.
-13. A área de trabalho do setor de relações externas será dividida em *Eventos* e *Networking*.
