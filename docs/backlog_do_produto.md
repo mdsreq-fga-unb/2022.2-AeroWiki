@@ -10,10 +10,12 @@
 
 ## Definição de CRUD
 Neste documento, a frase "CRUD de um item" significa que:
-- O usuário pode fazer o cadastro desse item (C - Create);
-- O usuário pode fazer a leitura e busca desse item (R - Read);
-- O usuário pode alterar os dados do item (U -Update);
-- O usuário pode deletar o item (D - Delete);
+<ul>
+  <li>O usuário pode fazer o cadastro desse item (C - Create);</li>
+  <li>O usuário pode fazer a leitura e busca desse item (R - Read);</li>
+  <li>O usuário pode alterar os dados do item (U -Update);</li>
+  <li>O usuário pode deletar o item (D - Delete);</li>
+</ul>
 
 ## Épicos e features
 
