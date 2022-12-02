@@ -1,66 +1,106 @@
-## Histórico de revisão
+# Histórico de revisão
 
-| Data       | Versão | Descrição                                                    | Autor(es)                                               |
-| ---------- | ------ | ------------------------------------------------------------ | ------------------------------------------------------- |
-| 25/11/2022 | 0.1    | Criação do documento a partir de reunião com cliente. Essa versão contém apenas uma abstração do conteúdo geral do software. | Arthur D'Assumpção<br>Lucas Queiroz<br>Gabriel de Souza |
-| 29/11/2022 | 0.2    | Adição de RF's e RNF's.                               | Lucas Queiroz                                           |
-| 29/11/2022 | 0.3    | Adição de RF's e RNF's.                          | Arthur D'Assumpção<br>Arthur Trindade                   |
-| 29/11/2022 | 0.4    | Refatoração do arquivo.                                      | Lucas Queiroz                                           |
+| Data       | Versão | Descrição | Autor(es) |
+| ---------- | ------ | --------- | --------  |
+| 25/11/2022 | 0.1 | Criação do documento a partir de reunião com cliente. Essa versão contém apenas uma abstração do conteúdo geral do software. | Arthur D'Assumpção<br>Lucas Queiroz<br>Gabriel de Souza |
+| 29/11/2022 | 0.2 | Adição de RF's e RNF's. | Lucas Queiroz |
+| 29/11/2022 | 0.3 | Adição de RF's e RNF's. | Arthur D'Assumpção<br>Arthur Trindade |
+| 29/11/2022 | 0.4 | Refatoração do arquivo. | Lucas Queiroz |
+| 01/12/2022 | 0.5 | Formatação dos requisitos em "Épicos" e "Features" | Lucas Queiroz |
+| 02/12/2022 | 0.6 | Atualização do backlog com base nos feedbacks do professor e do cliente | Arthur D'Assumpção<br>Arthur Trindade |
 
-## Requisitos funcionais 
+<br>
+<br>
 
-1. O usuário "membro" deve conseguir ler todos os documentos de projetos que lhe são liberados; 
+# Requisitos funcionais 
+## Presidente
+1. O usuário presidente deve poder cadastrar, editar, excluir e arquivar usuários do sistema.  
+2. O usuário presidente deve poder atribuir o papel de presidente, diretor, gerente ou membro para qualquer usuário do sistema.
+3. O usuário presidente deve poder administrar o acesso de todos os usuários do sistema.
+4. O usuário presidente deve poder criar, editar, excluir ou arquivar qualquer área de gestão.
+5. O usuário presidente deve poder criar, editar, excluir ou arquivar qualquer subárea de gestão.
+6. O usuário presidente deve poder criar, editar, ler, excluir e arquivar qualquer projeto.
+## Diretor
+7. O usuário diretor deve poder cadastrar e editar gerentes e membros do seu setor.
+8. O usuário diretor deve poder atribuir papéis de diretor, gerente ou membro para qualquer gerente ou membro do seu setor.
+9. O usuário diretor deve poder administrar o acesso de todos os gerentes e membros do seu setor.
+10. O usuário diretor deve poder criar, editar, excluir ou arquivar qualquer subárea de gestão no seu setor.
+11. O usuário diretor deve poder criar, editar, ler, excluir e arquivar qualquer projeto no seu setor.
+## Gerente de projetos
+12. O usuário gerente deve poder atribuir papéis de gerente ou membro para qualquer membro sob sua gerência.
+13. O usuário gerente deve poder administrar o acesso de todos os membros sob sua gerência.
+14. O usuário gerente deve poder criar, editar, ler, excluir e arquivar projetos sob sua gerência.
+## Membro
+15. O usuário membro deve conseguir ler todos os documentos de projetos e criar, editar ou excluir documentos de projetos do qual fazem parte;
 
-2. O usuário "gerente" de cada setor deve conseguir criar, alterar, ler e deletar documentos de projetos da empresa;
-3. O usuário "gerente" deve poder bloquear ou liberar áreas e funcionalidades específicas de perfis com menor nível de hierarquia;
-4. O usuário "presidente" deve poder criar, ler, alterar e deletar documentos de projetos da empresa;
-5. O usuário "presidente" deve poder alterar o perfil de qualquer usuário com menor nível de hierarquia para "gerente ou membro";
-6. O usuário "presidente" deve poder bloquear ou liberar áreas e funcionalidades específicas de perfis com menor nível de hierarquia;
-7. O usuário "presidente" deve poder criar e remover usuários "membro" e "gerente".
+<br>
+<br>
 
-8. O usuário "gerente", ao criar o projeto, deve ter a opção de escolher uma imagem que represente o projeto e uma escrever uma descrição.
+# Requisitos não-funcionais
 
-9. O usuário "gerente" deve poder, para cada projeto, criar tabelas.
+1. O sistema inicialmente deve ter áreas para os cada setor de gestão da Zenit, sendo eles:
+- Relações externas
+- Pesquisa & desenvolvimento
+- Operações
+- Marketing
+- Comercial
+- Segmentos
+- Presidência
 
-10. O usuário "gerente" deve poder, para cada projeto, criar caixas de texto.
-
-11. O usuário "gerente" deve poder, para cada projeto, alocar links e conteúdos externos.
-
-12. O usuário "gerente" deve poder classificar todos os projetos de seu setor como "em andamento" ou "finalizado".
-
-13. Todos os usuários podem realizar CRUD de arquivos dentro de projetos em andamento;
-
-14. O usuário "gerente" de cada setor pode criar e deletar novos projetos;
-
-## Requisitos não-funcionais
-
-1. O sistema deve ter as áreas de gestão da Zenit, sendo elas:
-  <ul>
-    <li>Relações externas</li>
-    <li>Pesquisa & desenvolvimento</li>
-    <li>Operações</li>
-    <li>Marketing</li>
-    <li>Comercial</li>
-  </ul> 
-
-2. O sistema deve refletir a hierarquia dos cargos da Zenit através dos diferentes perfis de usuários. Os perfis são:
-  <ul>
-    <li> 1 - Presidente</li>
-    <li> 2 - Gerentes de projetos</li>
-    <li> 3 - Demais membros</li>
-  </ul>
-
-​	**Sendo que, quanto menor o número, maior o nível de hierarquia. Um nível de hierarquia tem todos os direitos do nível exatamente inferior.**
-
+2. O sistema deve refletir a hierarquia dos cargos da Zenit através dos diferentes perfis de usuários, sendo eles:
+- Presidente
+- Diretor
+- Gerente de projetos
+- Membro
 
 3. Para cada perfil de usuário devem existir restrições de uso do sistema.
-4. Qualquer usuário, independente da classificação de seu perfil, deve ter acesso às 5 áreas de gestão do site.
-5. Cada área de gestão citada deve possuir uma subárea, chamada de *área de trabalho*, que por sua vez possuirá divisões para cada atividade do setor.
-6. Todas as divisões devem ser alocadas em caixas na área de trabalho de cada setor e identificadas através de uma imagem e descrição.
-7. Apenas o usuario admin de cada setor deve ter permissão para criar novas caixas ou excluir caixas antigas nas suas respectivas áreas de trabalho.
-8. Cada caixa deve levar o usuário para os detalhes do projeto a qual a caixa se refere.
-9. A área de trabalho do setor de marketing será dividida em *Campanhas*, *Gestão da marca*, *Endomarketing* e *Comunicações externas*.
-10. A área de trabalho do setor comercial será dividida em *Vendas* e *Banco de dados de clientes*.
-11. A área de trabalho do setor de P&D será dividida em *Projetos* e deve conter todos os projetos da empresa.
-12. A área de trabalho do setor de operações será dividida em *Administração financeira*, *Gestão de pessoas* e *Recursos humanos*.
-13. A área de trabalho do setor de relações externas será dividida em *Eventos* e *Networking*.
+4. Qualquer usuário, independente da classificação de seu perfil, deve ter acesso às áreas de gestão do site.
+5. Cada área de gestão citada deve possuir uma subárea, chamada *área de trabalho*, que por sua vez possuirá divisões para cada atividade do setor.
+6. Todas as divisões devem ser alocadas em caixas na área de trabalho de cada setor e identificadas através de uma image, descrição e classificação.
+7. Cada caixa deve levar o usuário para os detalhes do projeto a qual a caixa se refere.
+8. A área de trabalho do setor de Marketing será, por padrão, dividida em *Campanhas*, *Gestão da marca*, *Endomarketing* e *Comunicações externas*.
+9. A área de trabalho do setor Comercial será, por padrão, dividida em *Vendas* e *Banco de dados de clientes*.
+10. A área de trabalho do setor de P&D será, por padrão, dividida em *Projetos* e deve conter todos os projetos da empresa.
+11. A área de trabalho do setor de Operações será, por padrão, dividida em *Administração financeira*, *Gestão de pessoas* e *Recursos humanos*.
+12. A área de trabalho do setor de Relações externas será, por padrão, dividida em *Eventos* e *Networking*.
+13. A área de trabalho do setor de Segmentos será, por padrão, vazia e deve ser preenchida de acordo com as necessidades da empresa.
+14. A área de trabalho da Presidência será, por padrão, dividida em "Comissões".
+
+<br>
+<br>
+
+# Épicos e funcionalidades
+
+## E1 - Projetos da Zenit
+- F1 -> Administração de projetos.
+- F2 -> Classificação dos projetos.
+## E2 - Gestão de pessoas da Zenit
+- F1 -> Administração /  de clientes.
+- F2 -> Manutenção de dados pessoais. (Verificar com pessoal dps)
+
+## E3 - Admministração de membros da Zenit
+- F1 -> Cadastro de membros
+- F2 -> Atribuição de papel
+
+## E4 - Área financeira da Zenit
+- F1 -> Controle de entradas financeiras.
+- F2 -> Controle de saídas financeiras.
+- F3 -> Administração de contratos da empresa.
+
+## E5 - Pesquisa & Desenvolvimento
+- F1 -> Administração de produtos.
+- F2 -> Administração de serviços.
+
+## E6 - Relações externas da Zenit
+- F1 -> Organização de parceiros da empresa.
+- F2 -> Organização de eventos.
+
+<br>
+<br>
+
+# Produto viável mínimo
+
+| MVP | Funcionalidades | Objetivo | 
+| :---: | :--------------------------: | -------- |
+| 1 | x<br>x<br>x | Objetivo 1 | 
+| 2 | x<br>x<br>x | Objetivo 2 | 
