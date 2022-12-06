@@ -26,7 +26,7 @@ for x in y:
 - Depois:
 
 ```python
-for aluno in equipe:
+for aluno in turma:
     alocarEmEquipe(aluno)
 ```
 
