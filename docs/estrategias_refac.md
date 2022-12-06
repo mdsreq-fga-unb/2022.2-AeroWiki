@@ -105,6 +105,7 @@ def cadastrarUsuario(usuario):
     if not validarDados(usuario):
         return False
     limparFormulario(usuario)
+    ... # agora, ao invés de 50 linhas, aqui tem apenas 3 linhas, cada uma com uma chamada de função.
     Api.post(usuario)
     
     return True
