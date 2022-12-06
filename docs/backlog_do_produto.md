@@ -13,27 +13,34 @@
 <br>
 <br>
 
-## Requisitos funcionais 
+## Requisitos funcionais
 ### Presidente
-1. O usuário presidente deve poder cadastrar, editar, excluir e arquivar usuários do sistema.  
-2. O usuário presidente deve poder atribuir o papel de presidente, diretor, gerente ou membro para qualquer usuário do sistema.
-3. O usuário presidente deve poder administrar o acesso de todos os usuários do sistema.
-4. O usuário presidente deve poder criar, editar, excluir ou arquivar qualquer área de gestão.
-5. O usuário presidente deve poder criar, editar, excluir ou arquivar qualquer subárea de gestão.
-6. O usuário presidente deve poder criar, editar, ler, excluir e arquivar qualquer projeto.
-### Diretor
-7. O usuário diretor deve poder cadastrar, editar e arquivar gerentes e membros do seu setor.
-8. O usuário diretor deve poder atribuir papéis de diretor, gerente ou membro para qualquer gerente ou membro do seu setor.
-9. O usuário diretor deve poder administrar o acesso de todos os gerentes e membros do seu setor.
-10. O usuário diretor deve poder criar, editar, excluir ou arquivar qualquer subárea de gestão no seu setor.
-11. O usuário diretor deve poder criar, editar, ler, excluir e arquivar qualquer projeto no seu setor.
-### Gerente de projetos
-12. O usuário gerente deve poder atribuir papéis de gerente ou membro para qualquer membro sob sua gerência.
-13. O usuário gerente deve poder administrar o acesso de todos os membros sob sua gerência.
-14. O usuário gerente deve poder criar, editar, ler, excluir e arquivar projetos sob sua gerência.
-### Membro
-15. O usuário membro deve conseguir ler todos os documentos de projetos e criar, editar ou excluir documentos de projetos do qual fazem parte;
+<ol>
+    <li> O usuário presidente deve poder cadastrar, editar, excluir e arquivar usuários do sistema.  
+    <li> O usuário presidente deve poder atribuir o papel de presidente, diretor, gerente ou membro para qualquer usuário do sistema.
+    <li> O usuário presidente deve poder administrar o acesso de todos os usuários do sistema.
+    <li> O usuário presidente deve poder criar, editar, ler, excluir e arquivar qualquer projeto.
+</ol>
 
+### Diretor
+<ol start = 5>
+    <li> O usuário diretor deve poder cadastrar, editar e arquivar gerentes e membros do seu setor.
+    <li> O usuário diretor deve poder atribuir papéis de diretor, gerente ou membro para qualquer gerente ou membro do seu setor.
+    <li> O usuário diretor deve poder administrar o acesso de todos os gerentes e membros do seu setor.
+    <li> O usuário diretor deve poder criar, editar, ler, excluir e arquivar qualquer projeto no seu setor.
+</ol>
+
+### Gerente de projetos
+<ol start = 9>
+    <li> O usuário gerente deve poder atribuir papéis de gerente ou membro para qualquer membro sob sua gerência.
+    <li> O usuário gerente deve poder administrar o acesso de todos os membros sob sua gerência.
+    <li> O usuário gerente deve poder criar, editar, ler, excluir e arquivar projetos sob sua gerência.
+</ol>
+
+### Membro
+<ol start = 12>
+    <li> O usuário membro deve conseguir ler todos os documentos de projetos e criar, editar ou excluir documentos de projetos do qual fazem parte;
+</ol>
 <br>
 <br>
 
@@ -74,17 +81,17 @@
 
 ### E1 - Projetos da Zenit
 - F1: Administração de projetos.
-    - US1 -> Como *presidente da Zenit*, eu quero ser capaz de *administrar as áreas de gestão do sistema* para *limitar ou expandir as funcionalidades e áreas visíveis para diretores, gerentes e membros da empresa.* [Req.2]
-    - US2 -> Como *diretor do setor*, eu quero ser capaz de *administrar as subáreas de gestão de meu setor* para *limitar ou expandir as funcionalidades e subáreas visíveis para gerentes e membros do setor.* [Req.9]
-    - US3 -> Como *gerente de projetos*, eu quero ser capaz de *administrar os projetos da minha subárea* para *limitar ou expandir as funcionalidades e projetos visíveis para os membros do setor.* [Req.13]
+    - US1 -> Como *presidente da Zenit*, eu quero ser capaz de *administrar as áreas de gestão do sistema* para *limitar ou expandir as funcionalidades e áreas visíveis para diretores, gerentes e membros da empresa*. [Req.3]
+    - US2 -> Como *diretor do setor*, eu quero ser capaz de *administrar as subáreas de gestão de meu setor* para *limitar ou expandir as funcionalidades e subáreas visíveis para gerentes e membros do setor*. [Req.7]
+    - US3 -> Como *gerente de projetos*, eu quero ser capaz de *administrar os projetos da minha subárea* para *limitar ou expandir as funcionalidades e projetos visíveis para os membros do setor*. [Req.10]
 <br><br>
 - F2: Classificação dos projetos.
-    - US1 -> Como *presidente da Zenit*, eu quero conseguir *classificar qualquer projeto no sistema como “em andamento”* para *organizar projetos e abri-los para edição*. [Req.6]
-    - US2 -> Como *presidente da Zenit*, eu quero conseguir *classificar qualquer projeto no sistema como “finalizado”* para *organizar projetos e fechá-los para edição*. [Req.6]
-    - US3 -> Como *diretor do setor*, eu quero conseguir *classificar projetos das subáreas do meu setor de gestão como “em andamento”* para *organizar projetos e abri-los para edição*. [Req.11]
-    - US4 -> Como *diretor do setor*, eu quero conseguir *classificar projetos das subáreas do meu setor de gestão como “finalizado”* para *organizar projetos e fechá-los para edição*. [Req.11]
-    - US5 -> Como *gerente de projetos*, eu quero conseguir *classificar projetos da minha subárea como “em andamento”* para *organizar projetos e abri-los para edição*. [Req.14]
-    - US6 -> Como *gerente de projetos*, eu quero conseguir *classificar projetos da minha subárea como “finalizados”* para *organizar projetos e fechá-los para edição*. [Req.14]
+    - US1 -> Como *presidente da Zenit*, eu quero conseguir *classificar qualquer projeto no sistema como “em andamento”* para *organizar projetos e abri-los para edição*. [Req.4]
+    - US2 -> Como *presidente da Zenit*, eu quero conseguir *classificar qualquer projeto no sistema como “finalizado”* para *organizar projetos e fechá-los para edição*. [Req.4]
+    - US3 -> Como *diretor do setor*, eu quero conseguir *classificar projetos das subáreas do meu setor de gestão como “em andamento”* para *organizar projetos e abri-los para edição*. [Req.8]
+    - US4 -> Como *diretor do setor*, eu quero conseguir *classificar projetos das subáreas do meu setor de gestão como “finalizado”* para *organizar projetos e fechá-los para edição*. [Req.8]
+    - US5 -> Como *gerente de projetos*, eu quero conseguir *classificar projetos da minha subárea como “em andamento”* para *organizar projetos e abri-los para edição*. [Req.11]
+    - US6 -> Como *gerente de projetos*, eu quero conseguir *classificar projetos da minha subárea como “finalizados”* para *organizar projetos e fechá-los para edição*. [Req.11]
 <br><br>
 ### E2 - Gestão de pessoas da Zenit
 - F1: Administração /  de clientes.
@@ -99,20 +106,20 @@
     - US2 -> Como *presidente da Zentit*, eu devo poder editar *o cadastro de usuários da plataforma* para *atualizar a base de dados*. [Req.1]
     - US3 -> Como *presidente da Zentit*, eu devo poder *arquivar o usuário de ex-funcionários* para *manter a organização dos usuários*. [Req.1]
     - US4 -> Como *presidente da Zentit*, eu devo poder *remover cadastro de usuários da plataforma* para *removê-los da base de dados do sistema*. [Req.1]
-    - US5 -> Como *diretor do setor*, eu devo realizar *o cadastro de gerentes e membros do meu setor* para *que eles possam ter acesso ao sistema*. [Req.7]
-    - US6 -> Como *diretor do setor*, eu devo poder editar *o cadastro de usuários do meu setor* para *atualizar a base de dados*. [Req.7] 
-    - US7 -> Como *diretor do setor*, eu devo poder *arquivar o usuário de ex-funcionários do meu setor* para *manter a organização dos usuários*. [Req.7]
+    - US5 -> Como *diretor do setor*, eu devo realizar *o cadastro de gerentes e membros do meu setor* para *que eles possam ter acesso ao sistema*. [Req.5]
+    - US6 -> Como *diretor do setor*, eu devo poder editar *o cadastro de usuários do meu setor* para *atualizar a base de dados*. [Req.5] 
+    - US7 -> Como *diretor do setor*, eu devo poder *arquivar o usuário de ex-funcionários do meu setor* para *manter a organização dos usuários*. [Req.5]
 <br><br>
 - F2: Atribuição de papel
     - US1 -> Como *presidente da Zenit*, eu quero ser capaz de *atribuir o papel de “presidente” para qualquer usuário cadastrado no sistema* para *atribuir papéis para os usuários*. [Req.2]
     - US2 -> Como *presidente da Zenit*, eu quero ser capaz de *atribuir o papel de “diretor do setor” para qualquer usuário cadastrado no sistema* para *atribuir papéis para os usuários*. [Req.2]
     - US3 -> Como *presidente da Zenit*, eu quero ser capaz de *atribuir o papel de “gerente de projetos” para qualquer usuário cadastrado no sistema* para *atribuir papéis para os usuários*. [Req.2]
     - US4 -> Como *presidente da Zenit*, eu quero ser capaz de *atribuir o papel de “membro” para qualquer usuário cadastrado no sistema* para *atribuir papéis para os usuários*. [Req.2]
-    - US5 -> Como *diretor do setor*, eu quero ser capaz de *atribuir o papel de “diretor do setor” para qualquer usuário no meu setor* para *atribuir papéis para os usuários*. [Req.8]
-    - US6 -> Como *diretor do setor*, eu quero ser capaz de *atribuir o papel de “gerente de projetos” para qualquer usuário no meu setor* para *atribuir papéis para os usuários*. [Req.8]
-    - US7 -> Como *diretor do setor*, eu quero ser capaz de *atribuir o papel de “membro” para qualquer usuário no meu setor* para *atribuir papéis para os usuários*. [Req.8]
-    - US8 -> Como *gerente de projetos*, eu quero ser capaz de *atribuir o papel de “gerente de projetos” para qualquer membro sob minha gerência* para *atribuir papéis para os usuários*. [Req.12]
-    - US9 -> Como *gerente de projetos*, eu quero ser capaz de *atribuir o papel de “membro” para qualquer membro sob minha gerência* para *atribuir papéis para os usuários*. [Req.12]
+    - US5 -> Como *diretor do setor*, eu quero ser capaz de *atribuir o papel de “diretor do setor” para qualquer usuário no meu setor* para *atribuir papéis para os usuários*. [Req.6]
+    - US6 -> Como *diretor do setor*, eu quero ser capaz de *atribuir o papel de “gerente de projetos” para qualquer usuário no meu setor* para *atribuir papéis para os usuários*. [Req.6]
+    - US7 -> Como *diretor do setor*, eu quero ser capaz de *atribuir o papel de “membro” para qualquer usuário no meu setor* para *atribuir papéis para os usuários*. [Req.6]
+    - US8 -> Como *gerente de projetos*, eu quero ser capaz de *atribuir o papel de “gerente de projetos” para qualquer membro sob minha gerência* para *atribuir papéis para os usuários*. [Req.9]
+    - US9 -> Como *gerente de projetos*, eu quero ser capaz de *atribuir o papel de “membro” para qualquer membro sob minha gerência* para *atribuir papéis para os usuários*. [Req.9]
 <br><br>
 
 ### E4 - Área financeira da Zenit
