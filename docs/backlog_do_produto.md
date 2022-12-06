@@ -11,6 +11,71 @@
 | 05/12/2022 | 0.7 | Adição de alguns US's para revisão | Arthur Trindade |
 | 06/12/2022 | 0.8 | Definição dos MVP's 1 e 2 | Lucas Queiroz<br>Arthur Trindade<br>Miguel Moreira<br>Arthur D'Assumpção<br>Gabriel de Souza |
 
+## Requisitos funcionais
+### Presidente
+<ol>
+    <li> O usuário presidente deve poder cadastrar, editar, excluir e arquivar usuários do sistema.  
+    <li> O usuário presidente deve poder atribuir o papel de presidente, diretor, gerente ou membro para qualquer usuário do sistema.
+    <li> O usuário presidente deve poder administrar o acesso de todos os usuários do sistema.
+    <li> O usuário presidente deve poder criar, editar, ler, excluir e arquivar qualquer projeto.
+</ol>
+
+### Diretor
+<ol start = 5>
+    <li> O usuário diretor deve poder cadastrar, editar e arquivar gerentes e membros do seu setor.
+    <li> O usuário diretor deve poder atribuir papéis de diretor, gerente ou membro para qualquer gerente ou membro do seu setor.
+    <li> O usuário diretor deve poder administrar o acesso de todos os gerentes e membros do seu setor.
+    <li> O usuário diretor deve poder criar, editar, ler, excluir e arquivar qualquer projeto no seu setor.
+</ol>
+
+### Gerente de projetos
+<ol start = 9>
+    <li> O usuário gerente deve poder atribuir papéis de gerente ou membro para qualquer membro sob sua gerência.
+    <li> O usuário gerente deve poder administrar o acesso de todos os membros sob sua gerência.
+    <li> O usuário gerente deve poder criar, editar, ler, excluir e arquivar projetos sob sua gerência.
+</ol>
+
+### Membro
+<ol start = 12>
+    <li> O usuário membro deve conseguir ler todos os documentos de projetos e criar, editar ou excluir documentos de projetos do qual fazem parte;
+</ol>
+<br>
+<br>
+
+## Requisitos não-funcionais
+
+1. O sistema inicialmente deve ter áreas para os cada setor de gestão da Zenit, sendo eles:
+- Relações externas
+- Pesquisa & desenvolvimento
+- Operações
+- Marketing
+- Comercial
+- Segmentos
+- Presidência
+
+2. O sistema deve refletir a hierarquia dos cargos da Zenit através dos diferentes perfis de usuários, sendo eles:
+- Presidente
+- Diretor
+- Gerente de projetos
+- Membro
+
+3. Para cada perfil de usuário devem existir restrições de uso do sistema.
+4. Qualquer usuário, independente da classificação de seu perfil, deve ter acesso às áreas de gestão do site.
+5. Cada área de gestão citada deve possuir uma subárea, chamada *área de trabalho*, que por sua vez possuirá divisões para cada atividade do setor.
+6. Todas as divisões devem ser alocadas em caixas na área de trabalho de cada setor e identificadas através de uma image, descrição e classificação.
+7. Cada caixa deve levar o usuário para os detalhes do projeto a qual a caixa se refere.
+8. A área de trabalho do setor de Marketing será, por padrão, dividida em *Campanhas*, *Gestão da marca*, *Endomarketing* e *Comunicações externas*.
+9. A área de trabalho do setor Comercial será, por padrão, dividida em *Vendas* e *Banco de dados de clientes*.
+10. A área de trabalho do setor de P&D será, por padrão, dividida em *Projetos* e deve conter todos os projetos da empresa.
+11. A área de trabalho do setor de Operações será, por padrão, dividida em *Administração financeira*, *Gestão de pessoas* e *Recursos humanos*.
+12. A área de trabalho do setor de Relações externas será, por padrão, dividida em *Eventos* e *Networking*.
+13. A área de trabalho do setor de Segmentos será, por padrão, vazia e deve ser preenchida de acordo com as necessidades da empresa.
+14. A área de trabalho da Presidência será, por padrão, dividida em "Comissões".
+
+<br>
+<br>
+
+
 ## Épicos e funcionalidades
 
 ### E1 - Projetos da Zenit
