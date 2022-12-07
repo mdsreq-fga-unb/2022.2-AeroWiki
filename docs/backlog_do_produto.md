@@ -39,8 +39,6 @@
 <ol start = 12>
     <li> O usuário membro deve conseguir ler todos os documentos de projetos e criar, editar ou excluir documentos de projetos do qual fazem parte;
 </ol>
-<br>
-<br>
 
 ## Requisitos não-funcionais
 
@@ -51,8 +49,6 @@
 | RNF3   | Facilidade de uso | O usuário deve conseguir utilizar o software com facilidade após um tempo de treinamento de duas horas. |
 | RNF4   | Portabilidade     | A aplicação deve estar disponível para os navegadores Chrome e Firefox em suas versões mais recentes. |
 | RNF5   | Usabilidade       | Caso um usuário tente utilizar uma funcionalidade sem ter permissão para utilizá-la, o sistema deve avisá-lo de que ele não tem permissão de uso da funcionalidade. |
-
-
 
 ## Épicos e funcionalidades
 
@@ -104,6 +100,14 @@
 
 ### E6 - Relações externas da Zenit
 - F1: Organização de parceiros da empresa.
+
+<ol> <div style="text-align:center;"><b>Histórias de usuário</b></div>
+    <li >Eu, como gerente, desejo cadastrar dados de parceiros da empresa, para facilitar a organização e renovação dos contratos com os mesmos. </li>
+    <li>Eu, como gerente, desejo editar dados de parceiros da empresa, para que, caso algum dos dados mude, a organização e renovação de contratos não seja afetada.</li>
+    <li>Eu, como gerente, desejo ler dados de parceiros da empresa, para facilitar a organização e renovação dos contratos com os mesmos.</li>
+    <li>Eu, como gerente, desejo deletar dados de parceiros da empresa, para que, caso a parceria seja desfeita, a empresa não tome decisões contratuais com não-parceiros.</li>
+</ol>
+
 - F2: Organização de eventos.
 
 ## MVP's
