@@ -44,36 +44,14 @@
 
 ## Requisitos não-funcionais
 
-1. O sistema inicialmente deve ter áreas para os cada setor de gestão da Zenit, sendo eles:
-- Relações externas
-- Pesquisa & desenvolvimento
-- Operações
-- Marketing
-- Comercial
-- Segmentos
-- Presidência
+| Número | Categoria         | Descrição                                                    |
+| ------ | ----------------- | ------------------------------------------------------------ |
+| RNF1   | Implementação     | O front-end do produto deve ser desenvolvido utilizando Vue3 com Typescript e Quasar. |
+| RNF2   | Design            | O produto deve ter uma gaveta lateral à esquerda contendo links para as áreas do site. O usuário pode fechar ou abrir a gaveta. |
+| RNF3   | Facilidade de uso | O usuário deve conseguir utilizar o software com facilidade após um tempo de treinamento de duas horas. |
+| RNF4   | Portabilidade     | A aplicação deve estar disponível para os navegadores Chrome e Firefox em suas versões mais recentes. |
+| RNF5   | Usabilidade       | Caso um usuário tente utilizar uma funcionalidade sem ter permissão para utilizá-la, o sistema deve avisá-lo de que ele não tem permissão de uso da funcionalidade. |
 
-2. O sistema deve refletir a hierarquia dos cargos da Zenit através dos diferentes perfis de usuários, sendo eles:
-- Presidente
-- Diretor
-- Gerente de projetos
-- Membro
-
-3. Para cada perfil de usuário devem existir restrições de uso do sistema.
-4. Qualquer usuário, independente da classificação de seu perfil, deve ter acesso às áreas de gestão do site.
-5. Cada área de gestão citada deve possuir uma subárea, chamada *área de trabalho*, que por sua vez possuirá divisões para cada atividade do setor.
-6. Todas as divisões devem ser alocadas em caixas na área de trabalho de cada setor e identificadas através de uma image, descrição e classificação.
-7. Cada caixa deve levar o usuário para os detalhes do projeto a qual a caixa se refere.
-8. A área de trabalho do setor de Marketing será, por padrão, dividida em *Campanhas*, *Gestão da marca*, *Endomarketing* e *Comunicações externas*.
-9. A área de trabalho do setor Comercial será, por padrão, dividida em *Vendas* e *Banco de dados de clientes*.
-10. A área de trabalho do setor de P&D será, por padrão, dividida em *Projetos* e deve conter todos os projetos da empresa.
-11. A área de trabalho do setor de Operações será, por padrão, dividida em *Administração financeira*, *Gestão de pessoas* e *Recursos humanos*.
-12. A área de trabalho do setor de Relações externas será, por padrão, dividida em *Eventos* e *Networking*.
-13. A área de trabalho do setor de Segmentos será, por padrão, vazia e deve ser preenchida de acordo com as necessidades da empresa.
-14. A área de trabalho da Presidência será, por padrão, dividida em "Comissões".
-
-<br>
-<br>
 
 
 ## Épicos e funcionalidades
