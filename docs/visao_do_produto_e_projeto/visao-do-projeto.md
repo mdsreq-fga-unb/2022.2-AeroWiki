@@ -5,7 +5,7 @@
 | Data       | Versão | Descrição                           | Autor(es)     |
 | ---------- | ------ | ----------------------------------- | ------------- |
 | 14/11/2022 | 0.1 | Criação e estruturação do documento | Lucas Queiroz |
-| 16/11/2022 | 0.2 | Alterações no documento | Lucas Queiroz<br>Arthur Trindade<br> Gabriel de Souza<br>Miguel Moreira |
+| 16/11/2022 | 0.2 | Alterações no documento | Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
 | 07/11/2022 | 0.3 | Atualizações da unidade 2 | |  
 
 
@@ -46,12 +46,12 @@ Dito isso, a equipe decidiu considerar os seguintes riscos:
 | Descrição | Causa | Probabilidade | Mitigação |
 | --------- | --------------- | :-------------: | ---------------- |
 | Redução da equipe | Trancamento da disciplina ou qualquer questão pessoal dos membros que impossibilite a realização permanente ou temporária das atividades de desenvolvimento. | Baixa | Compensar por aumento na carga horária de trabalho dos membros restantes. |
-| Enfermidades | Incapacitação dos desenvolvedores por questões de saúde. | Altíssima | Compensar por aumento na carga horária de trabalho dos membros restantes. |
-| Falha na comunicação interna | Falta de comunicação entre os membros da equipe que possam levar a uma conclusão equivocada ou por questões como falta de internet ou energia. | Média | Repensar a metodologia de comunicação e redistribuir temporariamente as atividades. |
 | Falha na comunicação externa | Falta de comunicação com o cliente por indisponibilidade do mesmo ou perda de contato. | Baixa | Buscar contatos de membros de outros núcleos de gestão da Zenit. |
+| Falha na comunicação interna | Falta de comunicação entre os membros da equipe que possam levar a uma conclusão equivocada ou por questões como falta de internet ou energia. | Média | Repensar a metodologia de comunicação e redistribuir temporariamente as atividades. |
 | Atraso do cronograma | Falta de competência da equipe de desenvolvimento com as ferramentas propostas. | Média | Promover treinamentos para a equipe nas ferramentas em questão. |
-| Desvio de foco | Conflito de responsabilidades da equipe com faculdade, trabalho, família e etc ou falta de motivação dos membros. | Alta | Comunicação frequente entre os membros da equipe. |
 | Dimensão do projeto | Escopo de projeto muito grande para ser desenvolvido no tempo da disciplina com as competências dos membros | Média | Redefinir o escopo do produto. |
+| Desvio de foco | Conflito de responsabilidades da equipe com faculdade, trabalho, família e etc ou falta de motivação dos membros. | Alta | Comunicação frequente entre os membros da equipe. |
+| Enfermidades | Incapacitação dos desenvolvedores por questões de saúde. | Altíssima | Compensar por aumento na carga horária de trabalho dos membros restantes. |
 
 
 ## Critérios de replanejamento

@@ -3,8 +3,8 @@
 
 | Data       | Versão | Descrição            | Autor(es)                                                    |
 | ---------- | ------ | -------------------- | ------------------------------------------------------------ |
-| 16/11/2022 | 0.1    | Adicionando as lições aprendidas durante a unidade 1|Lucas Queiroz<br>Arthur Trindade<br>Gabriel de Souza<br>Miguel Moreira|
-| 07/12/2022 | 0.2    | Adicionando as lições aprendidas durante a unidade 2|Lucas Queiroz<br>Arthur Trindade<br>Gabriel de Souza<br>Miguel Moreira<br>Arthur D'Assumpção|
+| 16/11/2022 | 0.1 | Adicionando as lições aprendidas durante a unidade 1| Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
+| 07/12/2022 | 0.2 | Adicionando as lições aprendidas durante a unidade 2| Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
 
 ## Unidade 1
 Nas aulas teóricas, aprendemos principalmente sobre diferentes abordagens e processos de desenvolvimento de software, além dos diferentes ciclos de vida dos produtos. O foco maior foi na metodologia Scrum/XP, que usaremos para o desenvolvimento do nosso produto, mas entendemos que não existe um processo que é sempre melhor do que os outros, o que existe é o contexto, e esse contexto define qual ou quais métodos devem ser adotados para otimizar o desenvolvimento do produto.<br>

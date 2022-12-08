@@ -5,7 +5,7 @@
 | Data       | Versão | Descrição            | Autor(es)                                                    |
 | ---------- | ------ | -------------------- | ------------------------------------------------------------ |
 | 31/10/2022 | 0.1 | Criação do documento | Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
-| 07/11/2022 | 0.2 | Adição de objetivos e alteração na declaração do produto|Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira<br>Gabriel Ribeiro |
+| 07/11/2022 | 0.2 | Adição de objetivos e alteração na declaração do produto| Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Gabriel de Souza<br>Miguel Moreira<br> |
 
 ## Declaração de Posição do Produto
 
