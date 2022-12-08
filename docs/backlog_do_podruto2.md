@@ -2,24 +2,27 @@
 
 | Data       | Versão | Descrição | Autor(es) |
 | ---------- | ------ | --------- | --------  |
-| 25/11/2022 | 0.1 | Criação do documento a partir de reunião com cliente. Essa versão contém apenas uma abstração do conteúdo geral do software. | Arthur D'Assumpção<br>Lucas Queiroz<br>Gabriel de Souza |
+| 25/11/2022 | 0.1 | Criação do documento a partir de reunião com cliente. Essa versão contém apenas uma abstração do conteúdo geral do software. | Arthur D'Assumpção<br>Gabriel de Souza<br>Lucas Queiroz|
 | 29/11/2022 | 0.2 | Adição de RF's e RNF's. | Lucas Queiroz |
 | 29/11/2022 | 0.3 | Adição de RF's e RNF's. | Arthur D'Assumpção<br>Arthur Trindade |
 | 29/11/2022 | 0.4 | Refatoração do arquivo. | Lucas Queiroz |
-| 01/12/2022 | 0.5 | Formatação dos requisitos em "Épicos" e "Features" | Lucas Queiroz<br>Arthur D'Assumpção<br>Arthur Trindade<br>Miguel Moreira<br>Gabriel de Souza |
+| 01/12/2022 | 0.5 | Formatação dos requisitos em "Épicos" e "Features" | Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
 | 02/12/2022 | 0.6 | Atualização do backlog com base nos feedbacks do professor e do cliente | Arthur D'Assumpção<br>Arthur Trindade |
 | 05/12/2022 | 0.7 | Adição de alguns US's para revisão | Arthur Trindade |
-| 06/12/2022 | 0.8 | Definição dos MVP's 1 e 2 | Lucas Queiroz<br>Arthur Trindade<br>Miguel Moreira<br>Arthur D'Assumpção<br>Gabriel de Souza |
-| 06/12/2022 | 0.9 | Reformulação de todo o documento | Lucas Queiroz<br>Arthur Trindade<br>Miguel Moreira |
+| 06/12/2022 | 0.8 | Definição dos MVP's 1 e 2 | Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
+| 06/12/2022 | 0.9 | Reformulação de todo o documento | Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
+| 07/12/2022 | 0.91 | Reformulação de todo o documento | Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira|
 
 ## Mapeamento de personas
 
-| Persona      | Oq é |
+Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira
+
+| Persona      | Descrição |
 | ---------- | ------ |
-| Membro | Todos são membros |
-| Gerente | é um membro|
-| Diretor | é um membro e um gerente|
 | Presidente | é um membro, um diretor e um gerente|
+| Diretor | é um membro e um gerente|
+| Gerente | é um membro|
+| Membro | todos são membros |
 
 ## Requisitos não-funcionais
 
@@ -40,48 +43,37 @@
 - F2: Cadastro de membros
     - US1 -> Como diretor, eu devo realizar o cadastro de usuários na plataforma para que eles possam ter acesso ao sistema.
     - US2 -> Como diretor, eu devo poder editar o cadastro de usuários da plataforma para atualizar a base de dados.
-    - US4 -> Como diretor, eu devo poder remover cadastro de usuários da plataforma para removê-los da base de dados do sistema.
-    - US5 -> Como diretor, eu devo poder arquivar o cadastro de usuários da plataforma para manter a organização dos usuários.
+    - US3 -> Como diretor, eu devo poder remover cadastro de usuários da plataforma para removê-los da base de dados do sistema.
+    - US4 -> Como diretor, eu devo poder arquivar o cadastro de usuários da plataforma para manter a organização dos usuários.
 
-### E2 - Gestão de areas
+### E2 - Gestão de áreas 
 
 - F1: Atribuição de papel
-    - US1 -> Como gerente, eu quero ser capaz de atribuir papel a membros do sistema para ter um controle de hierarquia.
-    - US2 -> Como gerente, eu quero ser capaz de editar papel de membros do sistema para ter uma maior organização dos membros .
+    - US1 -> Como gerente, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
+    - US2 -> Como gerente, eu quero ser capaz de editar papel de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
 
 - F2: Navegação
-    - US1 -> Como membro, eu quero ser capaz de visualizar as areas do sistema para me integrar em todas as areas da empresa.
-    - US2 -> Como gerente, eu quero ser capaz de visualizar os projetos nas areas do sistema para ter o controle de projetos da empresa.
+    - US1 -> Como membro, eu quero ser capaz de visualizar as áreas  do sistema para me integrar em todas as áreas  da empresa.
+    - US2 -> Como gerente, eu quero ser capaz de visualizar os projetos nas áreas  do sistema para ter o controle de projetos da empresa.
+
+- F3: Criar áreas
+    - US1 -> Como presidente, eu quero ser capaz de criar novas áreas para expansão da empresa.
+    - US2 -> Como presidente, eu quero ser capaz de excluir áreas existentes para compactação da empresa.
 
 ### E3 - Projetos
 
 - F1: Administração de projetos.
-    - US1 -> Como gerente, eu quero classificar projetos para organização do sistema.
-    - US2 -> Como gerente, eu quero arquivar/excluir novos projetos para organização do sistema.
-    - US3 -> Como gerente, eu quero criar novos projetos para organização do sistema.
-    - US4 -> Como gerente, eu quero editar projetos para organização do sistema.
+    - US1 -> Como gerente, eu quero classificar projetos para saber quais projetos foram finalizados e quais estão em andamento.
+    - US2 -> Como gerente, eu quero arquivar projetos que estão inativos.
+    - US3 -> Como gerente, eu quero excluir projetos que perderam a relevancia.
+    - US4 -> Como gerente, eu quero criar novos projetos para atender novas demandas.
+    - US5 -> Como gerente, eu quero editar projetos para realizar alterações necessárias.
 
 - F2: Administração de documentos no projeto.
-    - US1 -> Como gerente, eu quero arquivar/excluir documentos para organização do projeto
-    - US2 -> Como gerente, eu quero adicionar novos documentos para organização do projeto
+    - US1 -> Como gerente, eu quero excluir documentos para manter o projeto limpo.
+    - US2 -> Como gerente, eu quero adicionar novos documentos para o desenvolvimento do projeto
 
-### E4 - Área financeira da Zenit
-
-- F1: Controle de Finanças.
-    - US1 -> 
-    
-- F2: Administração de contratos da empresa.
-    - US1 -> 
-
-### E5 - Pesquisa & Desenvolvimento
-
-- F1: Administração de produtos.
-    - US1 -> 
-    
-- F2: Administração de serviços.
-    - US1 -> 
-
-### E5 - Relações externas da Zenit
+### E4 - Relações externas da Zenit
 
 - F1: Organização de parceiros da empresa.
     - US1 -> Eu, como gerente, desejo cadastrar dados de parceiros da empresa, para facilitar a organização e renovação dos contratos com os mesmos.
@@ -89,12 +81,14 @@
     - US3 -> Eu, como gerente, desejo ler dados de parceiros da empresa, para facilitar a organização e renovação dos contratos com os mesmos.
     - US4 -> Eu, como gerente, desejo deletar dados de parceiros da empresa, para que, caso a parceria seja desfeita, a empresa não tome decisões contratuais com não-parceiros.
     
-- F2: Administração de serviços.
-    - US1 ->
+- F2: Organização de eventos.
+    - US1 -> Eu, como gerente, desejo calendarizar os eventos que a Zenit participa, para melhor organização da empresa na partcipação do evento.
+    - US2 -> Eu, como gerente, desejo editar os eventos que a Zenit participa, para não acontecer confusões com informações desatualizadas de eventos.
+    - US3 -> Eu, como gerente, desejo excluir os eventos da Zenit, para não acontecer confusões com informações erradas de eventos.
 
 ## MVP's
 
 | MVP | Funcionalidades | Objetivo |
 | :---: | :--------------------------: | -------- |
-| 1 | E4F1<br>E4F2<br>E4F3<br>E5F1<br>E5F2 | A aplicação deve auxiliar a Zenit na gestão financeira. |
-| 2 | E1F1<br> E1F2<br>E6F1<br>E6F2 | a aplicação deve auxiliar a Zenit no controle de seus projetos, eventos e relações com parceiros. |
+| 1 |  |  |
+| 2 |  |  |
