@@ -19,3 +19,4 @@ nav:
   - Backlog do Produto: backlog_do_produto.md
   - Backlog do Produto prov: backlog_do_podruto2.md
   - Estratégias de Refatoração: estrategias_refac.md
+  - Estratégias de TDD: estrategias_TDD.md

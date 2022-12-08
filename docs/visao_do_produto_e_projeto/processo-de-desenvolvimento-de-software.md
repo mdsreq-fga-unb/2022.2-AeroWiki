@@ -9,7 +9,7 @@
 | 17/11/2022 | 0.3    | Correções textuais                  | Lucas Queiroz |
 
 ## Metodologia
-Usaremos uma metodologia que alinha o método de desenvolvimento de software XP com o método de gerenciamento de projetos Scrum. O uso conjunto dessas metodologias une os valores do XP(simplicidade, feedback, comunicação, coragem, respeito) com os conjuntos de regras e práticas de gestão do Scrum.
+Usaremos uma metodologia que alinha o método de desenvolvimento de software XP com o método de gerenciamento de projetos Scrum. O uso conjunto dessas metodologias une os valores do XP (simplicidade, feedback, comunicação, coragem, respeito) com os conjuntos de regras e práticas de gestão do Scrum.
 
 
 ## Atividades
