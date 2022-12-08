@@ -15,8 +15,6 @@
 
 ## Mapeamento de personas
 
-Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira
-
 | Persona      | Descrição |
 | ---------- | ------ |
 | Presidente | é um membro, um diretor e um gerente|
