@@ -4,8 +4,8 @@
 
 | Data       | Versão | Descrição            | Autor(es)                                                    |
 | ---------- | ------ | -------------------- | ------------------------------------------------------------ |
-| 31/10/2022 | 0.1    | Criação do documento | Arthur D'Assumpção<br> Arthur Trindade<br> Lucas Queiroz<br> Miguel Moreira |
-| 07/11/2022 | 0.2    | Adição de objetivos e alteração na declaração do produto|Arthur D'Assumpção<br> Arthur Trindade<br> Lucas Queiroz<br> Miguel Moreira <br> Gabriel Ribeiro |
+| 31/10/2022 | 0.1 | Criação do documento | Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
+| 07/11/2022 | 0.2 | Adição de objetivos e alteração na declaração do produto|Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira<br>Gabriel Ribeiro |
 
 ## Declaração de Posição do Produto
 
@@ -27,15 +27,14 @@ Tendo em vista essa inconveniência, a equipe propõe uma parceria com a empresa
 ### Objetivos primários
 * CRUD de conhecimentos das áreas administrativas da Zenit Aerospace;
 * CRUD de informações da Zenit Aerospace;
-* CRUD de novos membros;
+* CRUD de membros da Zenit;
 ### Objetivos secundários
 * Hierarquia de cargos da empresa refletidos nas permissões de uso da wiki;
 * Linkar informações externas à Zenit Aerospace;
 
 ## Tecnologias a serem utilizadas
-
-* Client-side: Typescript com Vue3 e Quasar Framework
-* Server-side: Node.js
+* Client-side: Typescript com Vue3 e Quasar Framework.
+* Server-side: Node.js.
 
 
 
