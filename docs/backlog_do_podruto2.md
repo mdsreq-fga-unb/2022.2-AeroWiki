@@ -88,5 +88,5 @@
 
 | MVP | Funcionalidades | Objetivo |
 | :---: | :--------------------------: | -------- |
-| 1 | E1-F1<br>E1-F2<br>E2-F1<br>E2-F2 | Dar suporte de login, cadastramento e navegação a Zenit |
+| 1 | E1-F1<br>E1-F2<br>E2-F1<br>E2-F2 | Dar suporte de login, cadastramento e navegação no sisteama. |
 | 2 | E3-F1<br>E3-F2<br>E4-F1<br>E4-F2  | Fazer a platarforma está altamente personalizável e usável para Zenit |
