@@ -1,4 +1,5 @@
 site_name: AeroWiki
+docs_dir: gitpages\docs
 
 theme: 
   name: material
