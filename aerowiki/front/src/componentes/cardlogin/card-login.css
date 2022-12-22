@@ -1,4 +1,24 @@
-.Tittle {
+@media screen and (min-width: 2000px) {
+    .logo {
+        margin-right: 0px;
+        margin-left: 135px;
+    }
+}
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    .logo {
+        margin-left: 110px;
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .logo {
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+}
+.Title {
+    padding-top: 120px;
+    padding-left: 0.3em;
     font-weight: 700;
     font-size: 128px;
     line-height: 195px;
@@ -8,12 +28,47 @@
     letter-spacing: 0.3em;
     color: #FFFFFF;
 }
-.container{
-    flex-direction: column;
+
+.Sub-title {
+    margin-left: 20px;
+    padding-bottom: 50px;
+    font-family: Titillium Web;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 61px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
 }
 
-.Login {
-    
+.login-box {
+    height: 400px;
+    width: 414px;
+}
+
+.menu-login {
+    margin-left: 25px;
+}
 
 
+
+.username{
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.senha{
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.secondary{
+    margin-left: 10px;
+    margin-bottom: 150px;
+    border-radius: 30px;
+}
+
+.Logovertical img {
+    width: 290px;
+    height: 212px;
 }
