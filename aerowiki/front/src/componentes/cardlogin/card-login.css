@@ -1,21 +1,15 @@
 @media screen and (min-width: 2000px) {
-    .logo {
-        margin-right: 0px;
-        margin-left: 135px;
-    }
+    
 }
+
 @media screen and (min-width: 1500px) and (max-width: 2000px) {
-    .logo {
-        margin-left: 110px;
-        margin-right: 0px;
-    }
+    
 }
+
 @media screen and (max-width: 1500px) {
-    .logo {
-        margin-left: 0px;
-        margin-right: 40px;
-    }
+    
 }
+
 .Title {
     padding-top: 100px;
     padding-left: 0.3em;
@@ -30,43 +24,32 @@
 }
 
 .Sub-title {
-    margin-left: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     font-family: Titillium Web;
     font-size: 40px;
     font-weight: 700;
     line-height: 61px;
     letter-spacing: 0em;
-    text-align: center;
+    display: flex;
     color: #FFFFFF;
 }
 
-.login-box {
-    height: 400px;
-    width: 414px;
-}
-
-.menu-login {
-    margin-left: 25px;
-}
-
-.username{ 
+.username {
     border-radius: 30px;
     margin-bottom: 10px;
 }
 
-.senha{
+.senha {
     border-radius: 30px;
     margin-bottom: 20px;
 }
 
-.secondary{
-    margin-left: 10px;
+.secondary {
     margin-bottom: 110px;
     border-radius: 30px;
 }
 
-.Logovertical img {
+.Logovertical{
     width: 290px;
     height: 212px;
 }
