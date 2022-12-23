@@ -1,5 +1,5 @@
 import './estilo.css';
-import imglogo from '../../imagens/logohorizontal.png'
+import imglogo from '../../imagens/logohorizontal.svg'
 
 function Logohori() {
   return (
