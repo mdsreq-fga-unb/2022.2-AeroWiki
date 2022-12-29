@@ -1,0 +1,44 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+#username{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.7rem;
+    color: var(--zgrey);
+}
+
+.user-menu-icon{
+    font-size: 57px;
+    color: var(--zlight-blue);
+}
+.user-menu-icon:hover{
+    color: var(--zdark-blue);
+}
+
+#usermenu, #usermenu-active{
+    background-color: var(--zgrey);
+    position: absolute;
+    top: 83px;
+    right: 320px;
+    width: 320px;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0px 0px 8px;
+}
+#usermenu{
+    display: none;
+}
+
+#usermenu-items{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,90 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+#nav-menu-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    margin: 0;
+}
+
+
+#navbar-toggle{
+    height: 83px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#navbar-toggle a{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar-areas{
+    display: flex;
+    flex-direction: column;
+}
+
+#area{
+    display: flex;
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+}
+#area:hover{
+    background-color: var(--zdark-blue);
+}
+
+#subareas-toggle{
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;  
+    width: 15%;
+}
+
+#button{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+#button svg{
+    width: 30%;
+}
+#button span{
+    width: 70%;
+}
+
+
+
+#subareas{
+    display: none;
+}
+#subareas-active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--zgrey);
+}
+
+#subarea{
+    height: 70px;
+}
+#subarea #button{
+    font-size: 1.3rem;
+}

@@ -1,0 +1,12 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+#teste{
+    height: 674px;
+    width: 1920px;
+    background-color: var(--zlight-blue);
+}

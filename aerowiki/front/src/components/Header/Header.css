@@ -1,0 +1,49 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+header{
+    box-shadow: 0px 1px 8px;
+    position: fixed;
+    z-index: 1000;
+}
+
+main{
+    height: 100%;
+    width: 1280px;
+    margin: auto auto;
+}
+
+#mainheader{
+    height: 83px;
+    width: 1920px;
+    background-color: white;
+}
+
+#pad-box{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+#logo img{
+    height: 55px;
+}
+#user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+#subheader{
+    height: 67px;
+    background-color: var(--zlight-blue);
+}
