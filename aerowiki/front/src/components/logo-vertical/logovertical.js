@@ -1,5 +1,5 @@
 import './estilo.css';
-import imglogo from '../../imagens/logovertical.svg'
+import imglogo from '../../img/logovertical.svg'
 
 function Logovert() {
   return (
