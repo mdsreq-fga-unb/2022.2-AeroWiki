@@ -10,8 +10,14 @@ export const UserMenuData = [
         class: 'nav-text'
     },
     {
+        title: 'Membros',
+        path: '/membros',
+        icon: <FontAwesomeIcon icon={faIcons.faUsers} />,
+        class: 'nav-text'
+    },
+    {
         title: 'Sair',
-        path: '/logout',
+        path: '/',
         icon: <FontAwesomeIcon icon={faIcons.faRightFromBracket} />,
         class: 'nav-text'
     }

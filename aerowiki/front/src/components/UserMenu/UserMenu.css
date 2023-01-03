@@ -42,3 +42,7 @@
     height: 100%;
     width: 100%;
 }
+
+#usermenu-items #area{
+    height: 70px;
+}

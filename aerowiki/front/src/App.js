@@ -8,6 +8,7 @@ import PesqDes from './pages/PesqDes/PesqDes'
 import Operacoes from './pages/Operacoes/Operacoes'
 import Segmentos from './pages/Segmentos/Segmentos'
 import Presidencia from './pages/Presidencia/Presidencia'
+import Membros from './pages/Membros/Membros'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/operacoes" element = { <Operacoes /> }></Route>
       <Route path="/segmentos" element = { <Segmentos /> }></Route>
       <Route path="/presidencia" element = { <Presidencia /> }></Route>
+      <Route path="/membros" element = { <Membros /> }></Route>
     </Routes>
     </>
 

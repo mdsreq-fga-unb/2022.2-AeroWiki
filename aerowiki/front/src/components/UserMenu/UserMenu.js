@@ -13,7 +13,7 @@ function UserMenu() {
   return (
     <>
     <div id='username'>
-        <span>Nome_Sobrenome</span>
+        <span>Nome Sobrenome</span>
         <Link to='#' className='user-menu-icon'>
             <FontAwesomeIcon icon={faIcons.faCircleUser} onClick={showUsermenu} />
         </Link> 

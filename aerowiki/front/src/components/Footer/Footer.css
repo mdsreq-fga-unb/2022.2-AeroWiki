@@ -5,8 +5,8 @@
     --zgrey: #595959;
 }
 
-#teste{
-    height: 674px;
+#footer{
+    height: 500px;
     width: 1920px;
     background-color: var(--zlight-blue);
 }

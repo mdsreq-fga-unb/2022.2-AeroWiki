@@ -12,7 +12,6 @@
 
 #fixed-projects{
     width: 100%;
-    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
