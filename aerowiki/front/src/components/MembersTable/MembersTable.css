@@ -9,21 +9,28 @@
     width: 100%;
 }
 
-#columns-tags{
+#mtable-labels, #mtable-member, #member-info{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    height: 3rem;
-    width: 100%;
+    height: 2rem;
+    width: unset;
     padding: 1rem;
     border-bottom: solid 1px var(--zlight-blue);
 }
-#columns-tags > *{
+
+#labels{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+#labels > *{
     font-size: 1.7rem;
     display: flex;
-    width: 100%;
     justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 #members-list{
@@ -32,19 +39,17 @@
     flex-direction: column;
 }
 
-#member-info{
-    border-bottom: solid 1px var(--zlight-blue);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+#mtable-member{
     height: 100px;
-    width: 100%;
-    padding: 1rem;
 }
 
+#member-info{
+    border: none;
+    height: 100%;
+    width: 95%;
+    padding: 0;
+}
 #member-info > *{
-    width: 100%;
     height: 70%;
     display: flex;
     justify-content: center;
@@ -80,5 +85,34 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+
+#edit-member{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+#member-name, #name-label{
+    width: 20%;
+}
+#member-sector, #sector-label{
+    width: 20%;
+}
+#member-email, #email-label{
+    width: 30%;
+}
+#member-telephone, #telephone-label{
+    width: 15%;
+}
+#member-role, #role-label{
+    width: 15%;
 }
 

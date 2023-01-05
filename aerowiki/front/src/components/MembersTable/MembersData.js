@@ -12,7 +12,7 @@ export const MembersData = [
         subarea_path: '/operacoes/rh',
         icon: <FontAwesomeIcon icon={faIcons.faUserCircle} />,
         email: 'cansado@zenit.com',
-        role: 'membro',
+        role: 'Membro',
         telephone: '9999-9999'
     },
     {
