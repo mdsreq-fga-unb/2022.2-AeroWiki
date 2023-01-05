@@ -11,15 +11,15 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 20/12/2022 | 28/12/2022 | E2-F2-US1 | Gabriel de Souza |
+| 20/12/2022 | 28/12/2022 | E1-F1-US2 | Gabriel de Souza |
 
 | Planejamento |
 | --- |
-| |
+| O planejamento para a sprint 1 foi de realizar as tarefas que atendem o Épico 1 - Feature 1 - Story 2, do nosso backlog|
 
 | Review e retrospectiva |
-| --- |
-| |
+| ---|
+| A equipe fez a quebra técnica na qual ficou acordado em 5 tasks para a implementação do épico. No decorrer da sprint, utilizando das práticas de xp programming os integrantes conseguiram desenvolver mas obtiveram alguns débitos técnicos que impactaram no desenvolvimento, estes relacionados a conhecimento da tecnologia e perdas por doença de um integrante do grupo. Devido a esse débito técnico a implementação da story foi impactada e ficou acordado que seria resolvida durante o periodo de recesso que foi subsequente ao final da sprint.|
 
 
 ## Sprint 2
