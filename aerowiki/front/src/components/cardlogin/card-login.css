@@ -1,0 +1,55 @@
+@media screen and (min-width: 2000px) {
+    
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2000px) {
+    
+}
+
+@media screen and (max-width: 1500px) {
+    
+}
+
+.Title {
+    padding-top: 100px;
+    padding-left: 0.3em;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 195px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.3em;
+    color: #FFFFFF;
+}
+
+.Sub-title {
+    padding-bottom: 30px;
+    font-family: Titillium Web;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 61px;
+    letter-spacing: 0em;
+    display: flex;
+    color: #FFFFFF;
+}
+
+.username {
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.senha {
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.secondary {
+    margin-bottom: 110px;
+    border-radius: 30px;
+}
+
+.Logovertical{
+    width: 290px;
+    height: 212px;
+}
