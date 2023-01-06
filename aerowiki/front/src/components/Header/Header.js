@@ -1,5 +1,5 @@
 import './Header.css'
-import logohorizontal from '../../img/logo-horizontal.png'
+import LogoHorizontal from '../../img/logohorizontal.png'
 import {BrowserRouter as Router} from 'react-router-dom';
 import Navbar from '../Navbar/Navbar'
 import UserMenu from '../UserMenu/UserMenu'
@@ -11,7 +11,7 @@ function Header(){
           <main>
             <div id='pad-box'>
               <div id='logo'>
-                <img src={logohorizontal} alt='logo'></img>
+                <img src={LogoHorizontal} alt='logo'></img>
               </div>
 
               <div id='user'>

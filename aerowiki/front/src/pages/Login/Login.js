@@ -1,13 +1,14 @@
 import './Login.css';
-import Cardlogin from '../../components/cardlogin/card-login';
+import CardLogin from '../../components/CardLogin/CardLogin';
+
 function Login() {
     return (
         <>
-            <section>
-                <div className='Index'>
-                    <Cardlogin />
-                </div>
-            </section>
+        <div id='login-bg'>
+            <div className='Index'>
+                <CardLogin />
+            </div>
+        </div>
         </>
     );
 }

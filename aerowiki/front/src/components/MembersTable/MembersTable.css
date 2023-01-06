@@ -13,9 +13,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 2rem;
     width: unset;
-    padding: 1rem;
     border-bottom: solid 1px var(--zlight-blue);
 }
 
@@ -41,6 +39,7 @@
 
 #mtable-member{
     height: 100px;
+    padding: 1rem;
 }
 
 #member-info{
@@ -50,14 +49,14 @@
     padding: 0;
 }
 #member-info > *{
-    height: 70%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
     word-break: break-word;
     border-right: solid 1px rgb(185, 185, 185);
-    padding: 1rem;
+    padding: 0 1rem;
 }
 #member-info :last-child{
     border: none;
@@ -65,8 +64,8 @@
 
 #member-name{
     justify-content: start;
-    text-decoration: none;
     gap: 1rem;
+    padding-left: 0;
 }
 #member-name span{
     display: flex;
@@ -74,6 +73,7 @@
 }
 #member-name svg{
     font-size: 3rem;
+    color: var(--zlight-blue);
 }
 
 #member-sector{
@@ -85,6 +85,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    color: black;
 }
 
 #edit-member{
@@ -94,7 +95,9 @@
     align-items: center;
     font-size: 1.7rem;
 }
-
+#edit-member a{
+    color: var(--zlight-blue);
+}
 
 
 

@@ -24,10 +24,10 @@ function MembersTable() {
                     <>
                     <div id='mtable-member'>
                         <div id='member-info' key={index}> 
-                            <Link to={item.path} id='member-name'>
+                            <div id='member-name'>
                                 {item.icon}
                                 <span>{item.member_name}</span>
-                            </Link>
+                            </div>
                             <div id='member-sector'>
                                 <Link to={item.area_path}>{item.area}</Link>
                                 <Link to={item.subarea_path}>{item.subarea}</Link>

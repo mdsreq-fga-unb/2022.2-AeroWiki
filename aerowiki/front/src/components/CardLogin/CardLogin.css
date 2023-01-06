@@ -49,7 +49,10 @@
     border-radius: 30px;
 }
 
-.Logovertical{
+#login-logo{
+    width: unset;
+}
+#login-logo img{
     width: 290px;
     height: 212px;
 }
