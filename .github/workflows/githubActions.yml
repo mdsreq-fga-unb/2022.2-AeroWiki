@@ -4,8 +4,8 @@ on:
     branches:
       - main
     paths: 
-      -'back/**'
-      -'front/**'        
+     -'/back/**'
+     -'/front/**'        
 jobs:
   build:
 
