@@ -6,7 +6,7 @@
 | ---------- | ------ | ----------------------------------- | ------------- |
 | 14/11/2022 | 0.1 | Criação e estruturação do documento | Lucas Queiroz |
 | 16/11/2022 | 0.2 | Alterações no documento | Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
-| 07/11/2022 | 0.3 | Atualizações da unidade 2 | |  
+| 07/11/2022 | 0.3 | Atualizações da unidade 2 | Arthur Trindade |  
 
 
 

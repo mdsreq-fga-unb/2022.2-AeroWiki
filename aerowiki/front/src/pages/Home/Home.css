@@ -1,0 +1,19 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+*{
+    font-family: 'Titillium Web';
+}
+#app{
+    height: 100vh;
+    width: 1920px;
+    display: flex;
+    flex-direction: column;
+}
+
+#web-body{
+    margin-top: 150px;
+}
