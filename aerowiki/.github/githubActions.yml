@@ -1,11 +1,10 @@
 name: github_Actions
 on:
   pull_request:
+    types: 
+    - opened
     branches:
-      - main
-    paths: 
-     -'/back/**'
-     -'/front/**'        
+      - main      
 jobs:
   build:
 
