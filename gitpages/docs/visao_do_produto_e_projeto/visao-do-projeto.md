@@ -7,6 +7,7 @@
 | 14/11/2022 | 0.1 | Criação e estruturação do documento | Lucas Queiroz |
 | 16/11/2022 | 0.2 | Alterações no documento | Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
 | 07/11/2022 | 0.3 | Atualizações da unidade 2 | Arthur Trindade |  
+| 05/01/2023 | 0.4 | Atualizações da unidade 3 | Miguel Moreira |  
 
 
 
@@ -22,22 +23,22 @@
 
 ## Planejamento das Fases e/ou Iterações do Projeto
 
-| Sprint | Produto (Entrega) | Data Início | Data fim |
-| :------: | ---------------- | ----------- | -------- |
-| 1 | Definição do produto;<br>Desenvolvimento da visão de produto. | 27/10/2022 | 01/11/2022 |
-| 2 | Construção do GitPages;<br>Revisão da visão de produto. | 02/11/2022 | 10/11/2022 |
-| 3 | Desenvolvimento da visão de projeto. | 11/11/2022 | 17/11/2022 |
-| 4 | Abstração 1 com o cliente;<br>Levantamento inicial de requisitos do produto. | 18/11/2022 | 24/11/2022 |
-| 5 | Abstração 2 com o cliente;<br>Refinamento da lista de requisitos;<br>Construção da estrutura inical do projeto.  | 25/11/2022 | 01/12/2022 |
-| 6 | Reconstrução da estrutura do projeto;<br>Desenvolvimento das estratégias de refatoração e TDD;<br>Revisão da visão de projeto. | 02/12/2022 | 08/12/2022 |
-| 7 | Implementação E1 F1. | 09/12/2022 | 15/12/2022 |
-| 8 | Implementação E1 F2.  | 16/12/2022 | 22/12/2022 |
-| 9 | Implementação E2 F1. | 23/12/2022 | 05/01/2023 |
-| 10 | Implementação E2 F2;<br>Entrega do MVP1. | 05/01/2023 | 12/01/2023 |
-| 11 | Implementação E3 F1. | 13/01/2023 | 19/01/2023 |
-| 12 | Implementação E3 F2. | 20/01/2023 | 26/01/2023 |
-| 13 | Implementação E4 F1 | 27/02/2023 | 02/02/2023 |
-| 14 | Implementação E4 F2;<br>Entrega do MVP2. | 03/02/2023 | 09/02/2023 |
+| Sprint| Atividades | Produto (Entrega) | Data Início | Data fim |
+| :------:| | ---------------- | ----------- | -------- |
+| 1 |Reunião sobre o produto e realização da documentação |Definição do produto;<br>Visão de produto. | 27/10/2022 | 01/11/2022 |
+| 2 |Reunião para atualizar a documentação e dojo de gitpages |Construção do GitPages;<br>Revisão da visão de produto. | 02/11/2022 | 10/11/2022 |
+| 3 |Atualizar a documentção |Desenvolvimento da visão de projeto. | 11/11/2022 | 17/11/2022 |
+| 4 |Reunião 1 com o cliente |Levantamento inicial de requisitos do produto. | 18/11/2022 | 24/11/2022 |
+| 5 |Reunião 2 com o cliente |Refinamento da lista de requisitos;<br>Construção da estrutura inical do projeto.  | 25/11/2022 | 01/12/2022 |
+| 6 |Atualizar a documentação |Reconstrução da estrutura do projeto;<br>Desenvolvimento das estratégias de refatoração e TDD;<br>Revisão da visão de projeto. | 02/12/2022 | 08/12/2022 |
+| 7 | Desenvolvimento |Implementação E1 F1. | 09/12/2022 | 15/12/2022 |
+| 8 | Desenvolvimento |Implementação E1 F2.  | 16/12/2022 | 22/12/2022 |
+| 9 | Desenvolvimento |Implementação E2 F1. | 23/12/2022 | 05/01/2023 |
+| 10 | Desenvolvimento, reunião de validação com o cliente e atualização da documentação|Implementação E2 F2;<br>Entrega do MVP1. | 05/01/2023 | 12/01/2023 |
+| 11 | Desenvolvimento |Implementação E3 F1. | 13/01/2023 | 19/01/2023 |
+| 12 | Desenvolvimento |Implementação E3 F2. | 20/01/2023 | 26/01/2023 |
+| 13 | Desenvolvimento |Implementação E4 F1 | 27/02/2023 | 02/02/2023 |
+| 14 | Desenvolvimento, reunião de validação com o cliente e atualização da documentação|Implementação E4 F2;<br>Entrega do MVP2. | 03/02/2023 | 09/02/2023 |
 
 ## Matriz de Comunicação
 

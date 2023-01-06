@@ -5,6 +5,7 @@
 | ---------- | ------ | -------------------- | ------------------------------------------------------------ |
 | 16/11/2022 | 0.1 | Adicionando as lições aprendidas durante a unidade 1| Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
 | 07/12/2022 | 0.2 | Adicionando as lições aprendidas durante a unidade 2| Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
+| 05/01/2023 | 0.3 | Adicionando as lições aprendidas durante a unidade 3| Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Miguel Moreira |
 
 ## Unidade 1
 Nas aulas teóricas, aprendemos principalmente sobre diferentes abordagens e processos de desenvolvimento de software, além dos diferentes ciclos de vida dos produtos. O foco maior foi na metodologia Scrum/XP, que usaremos para o desenvolvimento do nosso produto, mas entendemos que não existe um processo que é sempre melhor do que os outros, o que existe é o contexto, e esse contexto define qual ou quais métodos devem ser adotados para otimizar o desenvolvimento do produto.<br>
@@ -17,3 +18,6 @@ Fora de aula, tivemos algumas reuniões com os clientes para avalição do escop
 Nessa unidade, a maior parte da equipe ficou incapacitada por questões de saúde, o que gerou uma distribuição maior da carga nos integrantes restantes, como previsto no mapa de riscos da unidade 1, no entanto, a equipe conseguiu se comunicar bem por mensagens e de modo assíncrono e administrou a situação com certa competência.
 Como mencionado na unidade 1, tentamos otimizar a gestão do tempo da equipe através de uma planilha de horários e definimos um dia para realizar reuinões semanais.<br>
 Para a próxima unidade, o maior desafio será a implementação do código e a diferença de conhecimento entres os membros, que pretendemos reduzir com o uso prático das tecnologias escolhidas para a realização do projeto.
+
+## Unidade 3
+Nessa unidade tivemos mais liberdade para desenvolver em aula e também aulas práticas. Em aulas de desenvolvimento nosso grupo, em sua maioria não esteve presente, por ser mais fácil desenvolver de casa, mas julgamos essas aulas essenciais, até pelas quantidades de entregas que devemos realizar na matéria. Nas aulas práticas aprendemos sobre teste unitários, conhecimento essencial para matéria e para todos do grupo. Nessa unidade novamente tivemos problemas com enfermidades, ocasionando atrasos nas entregas que tivemos que correr atrás. 
