@@ -1,4 +1,4 @@
-name: github_actions
+name: github_Actions
 on:
   pull_request:
     branches:
