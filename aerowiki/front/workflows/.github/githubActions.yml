@@ -4,10 +4,7 @@ on:
     types: 
     - opened
     branches:
-      - main
-    paths: 
-     -'/back/**'
-     -'/front/**'        
+      - main      
 jobs:
   build:
 
