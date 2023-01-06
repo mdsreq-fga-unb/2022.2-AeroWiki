@@ -3,6 +3,9 @@ on:
   pull_request:
     branches:
       - main
+    paths: 
+      -'back/**'
+      -'front/**'        
 jobs:
   build:
 
