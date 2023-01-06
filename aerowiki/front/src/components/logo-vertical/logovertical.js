@@ -1,9 +1,11 @@
 import './estilo.css';
-import imglogo from '../../img/logovertical.svg'
+import imglogo from '../../imagens/logovertical.png'
 
 function Logovert() {
   return (
-   <img className='Logovertical' src={imglogo} alt="logo"></img> 
+    <div className="Logovertical">
+      <img src={imglogo} alt="logo"></img>
+    </div>
   )
 }
 
