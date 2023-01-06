@@ -47,8 +47,8 @@
 ### E2 - Gestão de áreas 
 
 - F1: Atribuição de papel
-    - US1 -> Como gerente, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
-    - US2 -> Como gerente, eu quero ser capaz de editar papel de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
+    - US1 -> Como diretor, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
+    - US2 -> Como diretor, eu quero ser capaz de editar papel de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
 
 - F2: Navegação
     - US1 -> Como membro, eu quero ser capaz de visualizar as áreas  do sistema para me integrar em todas as áreas  da empresa.
