@@ -9,21 +9,23 @@ import Operacoes from './pages/Operacoes/Operacoes'
 import Segmentos from './pages/Segmentos/Segmentos'
 import Presidencia from './pages/Presidencia/Presidencia'
 import Membros from './pages/Membros/Membros'
+import Login from './pages/Login/Login'
 
 function App() {
   return (
-    <> 
-    <Routes>
-      <Route path="/home" element = { <Home /> }></Route>
-      <Route path="/comercial" element = { <Comercial /> }></Route>
-      <Route path="/marketing" element = { <Marketing /> }></Route>
-      <Route path="/relacoes" element = { <Relacoes /> }></Route>
-      <Route path="/ped" element = { <PesqDes /> }></Route>
-      <Route path="/operacoes" element = { <Operacoes /> }></Route>
-      <Route path="/segmentos" element = { <Segmentos /> }></Route>
-      <Route path="/presidencia" element = { <Presidencia /> }></Route>
-      <Route path="/membros" element = { <Membros /> }></Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/comercial" element={<Comercial />}></Route>
+        <Route path="/marketing" element={<Marketing />}></Route>
+        <Route path="/relacoes" element={<Relacoes />}></Route>
+        <Route path="/ped" element={<PesqDes />}></Route>
+        <Route path="/operacoes" element={<Operacoes />}></Route>
+        <Route path="/segmentos" element={<Segmentos />}></Route>
+        <Route path="/presidencia" element={<Presidencia />}></Route>
+        <Route path="/membros" element={<Membros />}></Route>
+      </Routes>
     </>
 
   )
