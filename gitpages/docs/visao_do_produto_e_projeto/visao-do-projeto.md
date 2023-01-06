@@ -24,7 +24,7 @@
 ## Planejamento das Fases e/ou Iterações do Projeto
 
 | Sprint| Atividades | Produto (Entrega) | Data Início | Data fim |
-| :------:| | ---------------- | ----------- | -------- |
+| :------:| -------- | ---------------- | ----------- | -------- |
 | 1 |Reunião sobre o produto e realização da documentação |Definição do produto;<br>Visão de produto. | 27/10/2022 | 01/11/2022 |
 | 2 |Reunião para atualizar a documentação e dojo de gitpages |Construção do GitPages;<br>Revisão da visão de produto. | 02/11/2022 | 10/11/2022 |
 | 3 |Atualizar a documentção |Desenvolvimento da visão de projeto. | 11/11/2022 | 17/11/2022 |
