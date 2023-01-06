@@ -15,10 +15,10 @@
 
 | Papel         | Atribuições                                                  | Responsável        | Participantes                                                |
 | ------------- | ------------------------------------------------------------ | ------------------ | ------------------------------------------------------------ |
-| Desenvolvedor | Programar a aplicação;<br>Escrever a documentação do software;<br>Realizar testes. | Lucas Queiroz      | Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br> Lucas Queiroz<br> Miguel Moreira |
-| Scrum Master  | Garantir que os processos relativos ao Scrum ocorram de maneira funcional. | Papel rotativo | Arthur D'Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br> Lucas Queiroz<br> Miguel Moreira |
+| Desenvolvedor | Programar a aplicação;<br>Escrever a documentação do software;<br>Realizar testes. | Gabriel de Souza    | Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br>Miguel Moreira |
+| Scrum Master  | Garantir que os processos relativos ao Scrum ocorram de maneira funcional. | Papel rotativo | Arthur D'Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br> Miguel Moreira |
 | Product Owner | Desenvolver e comunicar, explicitamente, os objetivos do produto;<br>Criar e comunicar os itens do backlog do produto;<br>Garantir a compreensão do backlog do produto. | Arthur D'Assumpção | Arthur D'Assumpção                                           |
-| Designer      | Planejar o layout das interfaces do site.                    | Miguel Moreira     | Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br> Lucas Queiroz<br> Miguel Moreira |
+| Designer      | Planejar o layout das interfaces do site.                    | Miguel Moreira     | Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br>  Miguel Moreira |
 | Cliente | Dar feedback do projeto à equipe de desenvolvimento; <br>Validar os protótipos e entregas; | Arthur D'Assumpção | Zenit Aerospace |
 
 ## Planejamento das Fases e/ou Iterações do Projeto
