@@ -4,7 +4,9 @@ on:
     types: 
     - opened
     branches:
-      - main      
+      - main  
+    paths: 
+      - 'aerowiki/front/**'
 jobs:
   build:
 
