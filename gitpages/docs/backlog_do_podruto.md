@@ -36,8 +36,8 @@
 
 ### E1 - Gestão de cadastros
 - F1: Manutenção de dados pessoais.
-    - US1 -> Como Membro, devo poder alterar os dados pessoais do meu cadastro para maior organização da minha conta .
-    - US2 -> Como Membro, quero realizar login no sistema para ter acesso ao sistema
+    - US1 -> Como membro, devo poder alterar os dados pessoais do meu cadastro para atualizar a minha conta.
+    - US2 -> Como membro, quero realizar login no site para ter acesso ao sistema.
 - F2: Cadastro de membros
     - US1 -> Como diretor, eu devo realizar o cadastro de usuários na plataforma para que eles possam ter acesso ao sistema.
     - US2 -> Como diretor, eu devo poder editar o cadastro de usuários da plataforma para atualizar a base de dados.
