@@ -82,6 +82,14 @@ label{
     padding: 0.3rem
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 #form-box{
     display: flex;
     flex-direction: column;

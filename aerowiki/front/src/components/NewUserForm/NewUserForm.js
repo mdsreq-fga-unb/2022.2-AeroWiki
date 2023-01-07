@@ -43,8 +43,8 @@ function NewUserForm() {
             </div>
 
             <div id='form-box'>
-              <label>Senha</label>
-              <input type="password" name='password' placeholder='Senha' className='input'></input>
+              <label>Matrícula UnB</label>
+              <input type="number" name='matricula' placeholder='Matrícula' className='input'></input>
             </div>
 
             <div id='form-roles'>
