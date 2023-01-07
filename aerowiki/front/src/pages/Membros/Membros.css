@@ -18,18 +18,18 @@
     font-size: 5rem;
 }
 
-#main-title #area{
+#main-title .area{
     position: absolute;
     right: calc(320px + 1rem);
     height: unset;
     width: unset;
 }
-#main-title #button{
+#main-title .button{
     gap: 1rem;
     padding: 1rem;
 }
-#main-title #button span,
-#main-title #button svg{
+#main-title .button span,
+#main-title .button svg{
     width: unset;
     font-size: 1.7rem;
 }

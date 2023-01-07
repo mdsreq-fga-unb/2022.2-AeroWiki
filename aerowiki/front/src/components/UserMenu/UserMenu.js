@@ -23,8 +23,8 @@ function UserMenu() {
         <div id='usermenu-items' onClick={showUsermenu}>
             {UserMenuData.map((item, index) => {
                 return(
-                    <div id='area' key={index}>
-                        <Link to={item.path} id='button'>
+                    <div className='area' key={index}>
+                        <Link to={item.path} className='button'>
                             {item.icon}
                             <span>{item.title}</span>
                         </Link>

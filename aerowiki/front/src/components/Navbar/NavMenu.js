@@ -10,8 +10,8 @@ function NavMenu({item}) {
   return (
     <>
     <div id='item'>
-      <div id='area' >
-        <Link to={item.path} id='button'>
+      <div className='area' >
+        <Link to={item.path} className='button'>
           {item.icon}
           <span>{item.title}</span>
         </Link>
@@ -24,8 +24,8 @@ function NavMenu({item}) {
       <div id={subnav? 'subareas-active' : 'subareas'}>
         {item.subnav && item.subnav.map((item, index) => {
           return(
-            <div id='subarea' key={index}>
-              <Link to={item.path} id='button'>
+            <div className='subarea' key={index}>
+              <Link to={item.path} className='button'>
                 {item.icon}
                 <span>{item.title}</span>
               </Link>

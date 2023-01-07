@@ -33,13 +33,13 @@
     flex-direction: column;
 }
 
-#area{
+.area{
     display: flex;
     border-radius: 8px;
     height: 100px;
     width: 100%;
 }
-#area:hover{
+.area:hover{
     background-color: var(--zdark-blue);
 }
 
@@ -52,7 +52,7 @@
     width: 15%;
 }
 
-#button{
+.button{
     text-decoration: none;
     height: 100%;
     width: 100%;
@@ -62,13 +62,15 @@
     align-items: center;
     color: white;
 }
-#button svg{
+.button svg{
     width: 30%;
 }
-#button span{
+.button span{
     width: 70%;
 }
-
+.button:hover{
+    color: white;
+}
 
 
 #subareas{
@@ -82,9 +84,9 @@
     background-color: var(--zgrey);
 }
 
-#subarea{
+.subarea{
     height: 70px;
 }
-#subarea #button{
+.subarea .button{
     font-size: 1.3rem;
 }
