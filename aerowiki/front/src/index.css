@@ -1,9 +1,9 @@
-.Index{
+.Body{
     margin-left: 620px;
     margin-right: 620px;
 }
 @media screen and (max-width: 1920px) {
-    .Index {
+    .Body {
         margin-left: 320px;
         margin-right: 320px;
     }

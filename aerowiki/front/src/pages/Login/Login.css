@@ -1,14 +1,4 @@
 #login-bg {
+    height: 100vh;
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 41%, rgba(0, 212, 255, 1) 100%);
-}
-.Index{
-    margin-left: 620px;
-    margin-right: 620px;
-}
-@media screen and (max-width: 1920px) {
-    .Index {
-        margin-left: 320px;
-        margin-right: 320px;
-    }
-
 }

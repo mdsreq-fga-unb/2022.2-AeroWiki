@@ -5,7 +5,7 @@ function Login() {
     return (
         <>
         <div id='login-bg'>
-            <div className='Index'>
+            <div className='Body'>
                 <CardLogin />
             </div>
         </div>

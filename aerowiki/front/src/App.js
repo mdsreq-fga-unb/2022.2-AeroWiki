@@ -10,6 +10,8 @@ import Segmentos from './pages/Segmentos/Segmentos'
 import Presidencia from './pages/Presidencia/Presidencia'
 import Membros from './pages/Membros/Membros'
 import Login from './pages/Login/Login'
+import Account from './pages/Account/Account'
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/segmentos" element={<Segmentos />}></Route>
         <Route path="/presidencia" element={<Presidencia />}></Route>
         <Route path="/membros" element={<Membros />}></Route>
+        <Route path="/myAccount" element={<Account />}></Route>
       </Routes>
     </>
 
