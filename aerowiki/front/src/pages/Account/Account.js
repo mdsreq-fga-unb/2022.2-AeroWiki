@@ -5,9 +5,18 @@ import Footer from '../../components/Footer/Footer'
 function Account() {
     return (
       <>
-      <Header></Header>
-      <CardAccount></CardAccount>
-      <Footer></Footer>
+      <header>
+        <Header></Header>
+      </header>
+      
+      <div id='web-body'>
+        <CardAccount></CardAccount>
+      </div>
+      
+      <footer>
+        <Footer></Footer>
+      </footer>
+      
       </>
     )
   }

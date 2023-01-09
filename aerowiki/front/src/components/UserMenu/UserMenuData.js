@@ -5,7 +5,7 @@ import * as faIcons from '@fortawesome/free-solid-svg-icons'
 export const UserMenuData = [
     {
         title: 'Meus Dados',
-        path: '/user',
+        path: '/myAccount',
         icon: <FontAwesomeIcon icon={faIcons.faUserPen} />,
         class: 'nav-text'
     },
@@ -17,7 +17,7 @@ export const UserMenuData = [
     },
     {
         title: 'Sair',
-        path: '/',
+        path: '/login',
         icon: <FontAwesomeIcon icon={faIcons.faRightFromBracket} />,
         class: 'nav-text'
     }

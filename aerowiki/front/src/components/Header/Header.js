@@ -10,7 +10,7 @@ function Header(){
         <div id='mainheader'>
           <main>
             <div id='pad-box'>
-              <div id='logo'>
+              <div className='logo'>
                 <img src={LogoHorizontal} alt='logo'></img>
               </div>
 
