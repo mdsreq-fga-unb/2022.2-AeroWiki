@@ -9,5 +9,5 @@
   },
   "include": [
     "src/main/**/*.ts"
-  ]
+, "src/main/config/database.ts"  ]
 }
