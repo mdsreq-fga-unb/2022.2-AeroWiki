@@ -38,7 +38,7 @@ function CardAccount() {
     return (
         <>
             <Row className='TitleAccountCard justify-content-center align-items-center'>
-                <Col xxl={3}>
+                <Col xxl={4} xl={6}>
                     <h1 className='TitleAccount'>Minha conta</h1>
                 </Col>
             </Row>
