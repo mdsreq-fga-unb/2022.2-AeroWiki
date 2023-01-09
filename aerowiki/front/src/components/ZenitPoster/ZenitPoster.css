@@ -1,6 +1,6 @@
 #poster-container{
     height: 620px;
-    width: 1920px;
+    width: 100%;
     background-image: url('../../img/background.webp');
     background-size: cover;
     background-position: center;

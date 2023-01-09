@@ -25,7 +25,7 @@
     position: absolute;
     top: 0;
     height: 100vw;
-    width: 320px;
+    width: 16.665%;
     background-color: var(--zlight-blue);
     display: flex;
     justify-content: center;
@@ -36,6 +36,6 @@
     transition: 500ms;
 }
 #nav-menu{
-    left: -320px;
+    left: -16.665%;
     transition: 500ms;
 }
