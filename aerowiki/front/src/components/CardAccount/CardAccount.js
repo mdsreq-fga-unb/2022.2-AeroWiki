@@ -4,8 +4,36 @@ import Row from 'react-bootstrap/esm/Row';
 import './CardAccount.css'
 import Col from 'react-bootstrap/esm/Col';
 import Form from 'react-bootstrap/Form';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { useState } from 'react';
+import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
+import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
+import DropdownItem from 'react-bootstrap/esm/DropdownItem';
+import Button from 'react-bootstrap/esm/Button';
 
 function CardAccount() {
+    const [liberar, setLiberar] = useState(true);
+    const [mostrar, setMostrar] = useState('block');
+    const [mostrarInverse, setmostrarInverse] = useState('none');
+    const [mostrarInverseSenha, setmostrarInverseSenha] = useState('none');
+
+    const editConta = () => {
+        setLiberar(false);
+        setMostrar('none');
+        setmostrarInverse('block');
+    }
+    const editSenha = () => {
+        setMostrar('none');
+        setmostrarInverse('block');
+        setmostrarInverseSenha('block');
+        
+        document.getElementById("btsAccount").classList.remove("btsAccount");
+        document.getElementById("btsAccount").style.marginBottom='10px';
+
+    }
+    function refreshPage() {
+        window.location.reload(false);
+    }
 
     return (
         <>
@@ -24,9 +52,22 @@ function CardAccount() {
                     </Row> */}
                     <Row className='justify-content-end'>
                         <Col xxl={1}>
-                            <FontAwesomeIcon icon={faIcons.faPen} />
-                        </Col>
+                            <Row className='justify-content-end'>
+                                <Col xxl={10}>
+                                    <Dropdown style={{
+                                        display: mostrar,
+                                    }}>
+                                        <DropdownToggle variant="outline-secondary"><FontAwesomeIcon className='iconAccount' icon={faIcons.faPen} /></DropdownToggle>
+                                        <DropdownMenu>
+                                            <DropdownItem onClick={editConta}>Editar conta</DropdownItem>
+                                            <DropdownItem onClick={editSenha}>Editar senha</DropdownItem>
+                                        </DropdownMenu>
 
+                                    </Dropdown>
+                                    {/* <Button variant="outline-secondary" className='accountBt' onClick={editConta}><FontAwesomeIcon icon={faIcons.faPen} /></Button> */}
+                                </Col>
+                            </Row>
+                        </Col>
                     </Row>
 
                     <Form>
@@ -34,11 +75,11 @@ function CardAccount() {
                             <Col xxl={5}>
                                 <Form.Group className="FullName form" controlId="fullName">
                                     <Form.Label className='imputAccount'>Nome</Form.Label>
-                                    <Form.Control disabled={true} size='lg' className='imputNameAccount' type="text" placeholder="Cansado da Silva Pererira Rocha" />
+                                    <Form.Control disabled={liberar} size='lg' className='imputNameAccount activeAccount' type="text" placeholder="Cansado da Silva Pererira Rocha" />
                                 </Form.Group>
                                 <Form.Group className="Email form" controlId="email">
                                     <Form.Label className='imputAccount'>Email</Form.Label>
-                                    <Form.Control disabled={true} size='lg' className='imputEmailAccount' type="email" placeholder="cansadodasilvapereirarocha2023@zenit.com" />
+                                    <Form.Control disabled={liberar} size='lg' className='imputEmailAccount activeAccount' type="email" placeholder="cansadodasilvapereirarocha2023@zenit.com" />
                                 </Form.Group>
                                 <Form.Group className="Matricula form" controlId="matricula">
                                     <Form.Label className='imputAccount'>Matrícula</Form.Label>
@@ -74,21 +115,44 @@ function CardAccount() {
                                 </Form.Group>
                                 <Row>
                                     <Col>
-                                        <Form.Group className="changePs NewPs form" controlId="newPs">
+                                        <Form.Group className="changePs NewPs form" style={{
+                                                    display: mostrarInverseSenha,
+                                                }} controlId="newPs">
                                             <Form.Label className='imputAccount'>Digite a nova senha</Form.Label>
                                             <Form.Control disabled={false} size='lg' className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
-                                        <Form.Group className="changePs NewPs form" controlId="confirmNewPs">
+                                        <Form.Group className="changePs NewPs form" style={{
+                                                    display: mostrarInverseSenha,
+                                                }} controlId="confirmNewPs">
                                             <Form.Label className='imputAccount'>Confirme a nova senha</Form.Label>
                                             <Form.Control disabled={false} size='lg' className='imputCNewPsccount' type="password" placeholder="Confirme aqui" />
                                         </Form.Group>
+
+                                    </Col>
+                                </Row>
+                                <Row className='justify-content-end'>
+                                    <Col xxl={5}>
+                                        <Row className='justify-content-end'>
+                                            <Col xxl={12}>
+                                                <div id='btsAccount' className='btsAccount' style={{
+                                                    display: mostrarInverse,
+                                                }}>
+                                                    <Button className='btSalvarAccount'>Salvar</Button>
+                                                    <Button onClick={refreshPage} className='btCancelarAccount'>Cancelar</Button>
+                                                </div>
+                                            </Col>
+
+                                        </Row>
+
                                     </Col>
                                 </Row>
                             </Col>
                         </Row>
                     </Form>
+
+
 
 
                 </div>

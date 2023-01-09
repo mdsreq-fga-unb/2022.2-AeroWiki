@@ -33,8 +33,37 @@
     margin-bottom: 20px;
 }
 
-.changePs{
-    display:none;
+.editarBt{
+    height: 20px;
+    width: 20px;
+    margin-left: 60px;
+}
+
+.accountBt{
+    background-color: white;
+    border: 0px;
+}
+
+.iconAccount{
+    margin-right: 7px;
+}
+
+.btCancelarAccount{
+    height: 48px;
+    width: 84px;
+    border-color: var(--zgrey) !important;
+    background: var(--zgrey) !important;
+    margin-left: 28px;
+}
+.btSalvarAccount{
+    height: 48px;
+    width: 84px;
+    border-color: #00549b !important;
+    background: #00549b !important;
+
+}
+.btsAccount{
+    margin-top: 42px;
 }
 
 /* .imputAccount {

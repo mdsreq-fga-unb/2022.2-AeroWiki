@@ -1,5 +1,5 @@
 :root{
-    --zlight-blue: #00549B;
+    --zlight-blue: #00549b;
     --zdark-blue: #082B61;
     --zred: #DD284F;
     --zgrey: #595959;
@@ -8,5 +8,5 @@
 #footer{
     height: 500px;
     width: 1920px;
-    background-color: var(--zlight-blue);
+    background-color: #00549b;
 }
