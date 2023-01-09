@@ -1,0 +1,47 @@
+.TitleAccountCard {
+    background-color: var(--zgrey);
+    height: 150px;
+
+}
+
+.TitleAccount {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.tamanhoRow {
+    height: 150px;
+}
+
+.PerfilImg {
+    height: 191px;
+    width: 200px;
+}
+
+.ajusteAccount {
+    padding-left: 16px;
+    padding-top: 22px;
+}
+
+.imputAccount {
+    height: 32px;
+    font-size: 24px;
+}
+
+.form{
+    margin-bottom: 20px;
+}
+
+.changePs{
+    display:none;
+}
+
+/* .imputAccount {
+    height: 60px;
+    font-size: 200px;
+}
+
+.imputAccount::placeholder {
+    font-size: 20px;
+} */

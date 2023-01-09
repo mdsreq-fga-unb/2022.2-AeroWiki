@@ -10,7 +10,7 @@ function Cardlogin() {
 
     return (
         <>
-            <h1 className="Title justify-content-center" ><bold>AERO WIKI</bold></h1>
+            <h1 className="TitleLogin justify-content-center" ><bold>AERO WIKI</bold></h1>
             <h3 className="Sub-title justify-content-center">login</h3>
             <Row className='justify-content-center'>
                 <Col xxl={4} className='menu-login'>
