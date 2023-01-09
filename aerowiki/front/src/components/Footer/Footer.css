@@ -1,12 +1,29 @@
-:root{
+:root {
     --zlight-blue: #00549b;
     --zdark-blue: #082B61;
     --zred: #DD284F;
     --zgrey: #595959;
 }
 
-#footer{
-    height: 500px;
-    width: 1920px;
+#footer {
+    position: absolute;
+    width: 100%;
     background-color: #00549b;
+}
+
+.logoFooter {
+    margin-top: 20px;
+    height: 145px;
+    width: 197px;
+}
+
+.textofooter {
+    font-size: 32px;
+    /* font-weight: 700; */
+    line-height: 49px;
+    color: white;
+}
+
+.marginfooter {
+    margin-top: 25px;
 }
