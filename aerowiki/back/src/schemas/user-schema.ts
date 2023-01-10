@@ -5,19 +5,33 @@ const UserSchema = new mongoose.Schema<User>({
   name: {
     type: String,
     required: true,
-    unique: true,
-  },
-
-  password: {
-    type: String,
-    required: true,
-    unique: true,
   },
 
   email: {
     type: String,
     required: true,
     unique: true,
+  },
+
+  password: {
+    type: String,
+    required: true,
+  },
+
+  unb_id: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+
+  area: {
+    type: String,
+    required: true,
+  },
+
+  role: {
+    type: String,
+    required: true,
   }
 
 })

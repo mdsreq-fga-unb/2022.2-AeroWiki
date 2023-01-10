@@ -4,7 +4,7 @@ import {createUserController} from '../UseCases'
 
 const router =  Router()
 
-router.post('/users', (request, response) => {
+router.post('/membros', (request, response) => {
   return createUserController.handle(request, response);
 });
 

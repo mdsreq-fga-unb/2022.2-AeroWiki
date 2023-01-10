@@ -27,8 +27,7 @@ function NewUserForm() {
       <div id={newuserForm ? 'form' : 'form-active'}>
         <div id='form-container'>
           <span>Cadastrar membro</span>
-          <form id='new-user-form'>
-
+          <form id='new-user-form' method='post' action='/membros'>
             <div id='form-box'>
               <label>Nome</label>
               <div id='inputs'>
@@ -44,7 +43,7 @@ function NewUserForm() {
 
             <div id='form-box'>
               <label>Matrícula UnB</label>
-              <input type="number" name='matricula' placeholder='Matrícula' className='input'></input>
+              <input type="number" name='unb_id' placeholder='Matrícula' className='input'></input>
             </div>
 
             <div id='form-roles'>
@@ -73,7 +72,6 @@ function NewUserForm() {
                 </div>
               </div>
             </div>
-              
           </form>
           <div id='form-buttons'>
             <div className='back area'>
@@ -84,10 +82,10 @@ function NewUserForm() {
             </div>
 
             <div className='add area'>
-              <Link to='#' className='button' onClick={showForm}>
+              <div className='button' onClick={showForm}>
                 <FontAwesomeIcon icon={faIcons.faUserPlus} />
                 <input type='submit' value='Adicionar' form='new-user-form'></input>
-              </Link>
+              </div>
             </div>            
           </div>
         </div>
