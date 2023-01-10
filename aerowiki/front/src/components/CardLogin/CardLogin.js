@@ -5,8 +5,18 @@ import Col from 'react-bootstrap/Col';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import LogoVerical from '../../img/logovertical.svg';
 import './CardLogin.css'
+import { useState } from 'react';
 
 function Cardlogin() {
+
+    const [matriculaLogin, setMatriculaLogin] = useState();
+    const [senhaLogin, setSenhaLogin] = useState();
+
+    function loginBanco() {
+        alert('Matrícula: ' + matriculaLogin + "\n" +
+            "Senha: " + senhaLogin + "\n"
+        )
+    }
 
     return (
         <>
@@ -18,13 +28,13 @@ function Cardlogin() {
                         <Col xxl={8}>
                             <Form className='3'>
                                 <FloatingLabel label='Matrícula'>
-                                    <Form.Control className='username' type="email" placeholder="Matrícula" />
+                                    <Form.Control className='username' type="number" value={matriculaLogin} onChange={(e) => setMatriculaLogin(e.target.value)} placeholder="Matrícula" />
                                 </FloatingLabel>
                                 <FloatingLabel label='Senha'>
-                                    <Form.Control className='senha' type="password" placeholder="Senha" />
+                                    <Form.Control className='senha' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
                                 </FloatingLabel>
                                 <Row className='justify-content-center'>
-                                    <Button className='secondary' variant="outline-light col-5">Entrar</Button>{' '}
+                                    <Button onClick={loginBanco} className='secondary' variant="outline-light col-5">Entrar</Button>{''}
                                 </Row>
                             </Form>
                         </Col>

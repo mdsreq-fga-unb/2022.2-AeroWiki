@@ -11,6 +11,8 @@ import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
 
+var validacao = require('../../testes/validacoes')
+
 
 
 
@@ -62,13 +64,12 @@ function CardAccount() {
     }
 
 
-
     function testess() {
-        alert('Nome: '+nome+"\n"+
-        "Email: "+email+"\n"+
-        "Telefone: "+telefone+"\n"
-         )
-        
+        alert('Nome: ' + nome + "\n" +
+            "Email: " + email + "\n" +
+            "Telefone: " + telefone + "\n"
+        )
+        // alert(validacao(1 , 2))
     }
 
 
@@ -108,23 +109,23 @@ function CardAccount() {
                             <Col xxl={5}>
                                 <Form.Group className="FullName form" controlId="fullName">
                                     <Form.Label className='imputAccount'>Nome</Form.Label>
-                                    <Form.Control disabled={liberar} size='lg' value={nome} onChange={(e)=> setNome(e.target.value)} className='imputNameAccount activeAccount' type="text" placeholder="Digite seu nome" />
+                                    <Form.Control disabled={liberar} size='lg' value={nome} onChange={(e) => setNome(e.target.value)} className='imputNameAccount activeAccount' type="text" placeholder="Digite seu nome" />
                                 </Form.Group>
                                 <Form.Group className="Email form" controlId="email">
                                     <Form.Label className='imputAccount'>Email</Form.Label>
-                                    <Form.Control disabled={liberar} size='lg' value={email} onChange={(e)=> setEmail(e.target.value)} className='imputEmailAccount activeAccount' type="email" placeholder="Digite seu email" />
+                                    <Form.Control disabled={liberar} size='lg' value={email} onChange={(e) => setEmail(e.target.value)} className='imputEmailAccount activeAccount' type="email" placeholder="Digite seu email" />
                                 </Form.Group>
                                 <Row>
                                     <Col>
                                         <Form.Group className="Matricula form" controlId="matricula">
                                             <Form.Label className='imputAccount'>Matrícula</Form.Label>
-                                            <Form.Control disabled={true} size='lg' value={matricula} onChange={(e)=> setMatricula(e.target.value)} className='imputMatriculaAccount' type="number" placeholder="Digite sua matrícula" />
+                                            <Form.Control disabled={true} size='lg' value={matricula} onChange={(e) => setMatricula(e.target.value)} className='imputMatriculaAccount' type="number" placeholder="Digite sua matrícula" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
                                         <Form.Group className="Telefone form" controlId="telefone">
                                             <Form.Label className='imputAccount'>Telefone</Form.Label>
-                                            <Form.Control disabled={liberar} size='lg' value={telefone} onChange={(e)=> setTelefone(e.target.value)} className='imputTelefoneAccount' type="tel" placeholder="(YY)XXXXX-XXXX" />
+                                            <Form.Control disabled={liberar} size='lg' value={telefone} onChange={(e) => setTelefone(e.target.value)} className='imputTelefoneAccount' type="tel" placeholder="(YY)XXXXX-XXXX" />
                                         </Form.Group>
                                     </Col>
                                 </Row>
@@ -132,13 +133,13 @@ function CardAccount() {
                                     <Col>
                                         <Form.Group className="Setor form" controlId="setor">
                                             <Form.Label className='imputAccount'>Setor</Form.Label>
-                                            <Form.Control disabled={true} size='lg' value={setor} onChange={(e)=> setSetor(e.target.value)} className='imputSetorAccount' type="text" placeholder="Sem setor" />
+                                            <Form.Control disabled={true} size='lg' value={setor} onChange={(e) => setSetor(e.target.value)} className='imputSetorAccount' type="text" placeholder="Sem setor" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
                                         <Form.Group className="Cargo form" controlId="cargo">
                                             <Form.Label className='imputAccount'>Cargo</Form.Label>
-                                            <Form.Control disabled={true} size='lg' value={cargo} onChange={(e)=> setCargo(e.target.value)} className='imputCargoAccount' type="text" placeholder="Sem cargo" />
+                                            <Form.Control disabled={true} size='lg' value={cargo} onChange={(e) => setCargo(e.target.value)} className='imputCargoAccount' type="text" placeholder="Sem cargo" />
                                         </Form.Group>
                                     </Col>
                                 </Row>
@@ -146,15 +147,15 @@ function CardAccount() {
                             <Col xxl={{ span: 5, offset: 2 }}>
                                 <Form.Group className="NascDate form" controlId="nascDate">
                                     <Form.Label className='imputAccount'>Data de nascimento</Form.Label>
-                                    <Form.Control disabled={true} size='lg' value={dataNasc} onChange={(e)=> setDataNasc(e.target.value)} className='imputNascDateAccount' type="date"/>
+                                    <Form.Control disabled={true} size='lg' value={dataNasc} onChange={(e) => setDataNasc(e.target.value)} className='imputNascDateAccount' type="date" />
                                 </Form.Group>
                                 <Form.Group className="Cpf form" controlId="cpf">
                                     <Form.Label className='imputAccount'>CPF</Form.Label>
-                                    <Form.Control disabled={true} size='lg' value={cpf} onChange={(e)=> setCpf(e.target.value)} className='imputCPFAccount' type="number" placeholder="AAABBBCCCDD" />
+                                    <Form.Control disabled={true} size='lg' value={cpf} onChange={(e) => setCpf(e.target.value)} className='imputCPFAccount' type="number" placeholder="AAABBBCCCDD" />
                                 </Form.Group>
                                 <Form.Group className="Rg form" controlId="rg">
                                     <Form.Label className='imputAccount'>RG</Form.Label>
-                                    <Form.Control disabled={true} size='lg' value={rg} onChange={(e)=> setRg(e.target.value)} className='imputRGAccount' type="number" placeholder="AABBBCCCD" />
+                                    <Form.Control disabled={true} size='lg' value={rg} onChange={(e) => setRg(e.target.value)} className='imputRGAccount' type="number" placeholder="AABBBCCCD" />
                                 </Form.Group>
                                 <Row>
                                     <Col>
