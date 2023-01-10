@@ -1,12 +1,12 @@
 export interface ICreateUserRequestDTO {
-  name: string;
-  email: string;
-  password: string;
-  unb_id: number;
-  area: string;
-  role: string;
-  telephone: number;
-  birthdate: Date;
-  rg: number;
-  cpf: number;
+  name: String;
+  email: String;
+  password: String;
+  unb_id: String;
+  area: String;
+  role: String;
+  telephone: String;
+  birthdate: String;
+  rg: String;
+  cpf: String;
 }

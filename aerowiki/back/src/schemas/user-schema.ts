@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema<User>({
   },
 
   unb_id: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },
@@ -34,12 +34,24 @@ const UserSchema = new mongoose.Schema<User>({
     required: true,
   },
 
+  telephone: {
+    type: String,
+    required: true,
+  },
+
+  birthdate: {
+    type: String,
+    required: true,
+  },
+
   rg: {
-    type: Number,
+    type: String,
+    required: true,
   },
 
   cpf: {
-    type: Number,
+    type: String,
+    required: true,
   }
 
 })
