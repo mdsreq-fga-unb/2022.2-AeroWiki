@@ -4,13 +4,31 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
+import {setUser} from '../../services/cadastro'
 
 function NewUserForm() {
-    const [newuserForm, setForm] = useState(true)
-    const showForm = () => setForm(!newuserForm)
+  const [newuserForm, setForm] = useState(true)
+  const showForm = () => setForm(!newuserForm)
 
-    return (
-      <>
+  const [name, setNameForm] = useState();
+  const [surname, setSurnameForm] = useState();
+  const [email, setEmailForm] = useState();
+  const [unb_id, setUnb_idForm] = useState();
+  const [area, setAreaForm] = useState();
+  const [role, setRoleForm] = useState();
+  const [telephone, setTelephoneForm] = useState();
+  const [birthdate, setBirthdateForm] = useState();
+  const [cpf, setCpfForm] = useState();
+  const [rg, setRgForm] = useState();
+
+  const sendform = (e) => {
+    e.preventDefault();
+    setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+  };
+
+
+  return (
+    <>
       <div className='area'>
         <Link to='#' className='button' onClick={showForm}>
           <FontAwesomeIcon icon={faIcons.faPlus} />
@@ -23,30 +41,50 @@ function NewUserForm() {
       <div id={newuserForm ? 'form' : 'form-active'}>
         <div id='form-container'>
           <span>Cadastrar membro</span>
-          <form id='new-user-form' method='post' >
+          <form id='new-user-form' method='post' onSubmit={sendform} >
             <div id='form-box'>
               <label>Nome</label>
               <div id='inputs'>
-                <input type="text" name='name' placeholder='Nome' className='input'></input>
-                <input type="text" name='surname' placeholder='Sobrenome' className='input'></input>
+                <input type="text" name='name' value={name} onChange={(e) => setNameForm(e.target.value)} placeholder='Nome' className='input'></input>
+                <input type="text" name='surname' value={surname} onChange={(e) => setSurnameForm(e.target.value)} placeholder='Sobrenome' className='input'></input>
               </div>
             </div>
-                
+
             <div id='form-box'>
               <label>Email</label>
-              <input type="email" name='email' placeholder='E-mail Zenit' className='input'></input>
+              <input type="email" name='email' value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
             </div>
 
             <div id='form-box'>
               <label>Matrícula UnB</label>
-              <input type="number" name='unb_id' placeholder='Matrícula' className='input'></input>
+              <input type="number" name='unb_id' value={unb_id} onChange={(e) => setUnb_idForm(e.target.value)} placeholder='Matrícula' className='input'></input>
+            </div>
+
+            <div id='form-box'>
+              <label>Telefone</label>
+              <input type="tel" name='tel' value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
+            </div>
+
+            <div id='form-box'>
+              <label>Data de nascimento</label>
+              <input type="date" name='birthdate' value={birthdate} onChange={(e) => setBirthdateForm(e.target.value)} className='input'></input>
+            </div>
+
+            <div id='form-box'>
+              <label>RG</label>
+              <input type="number" name='rg' value={rg} onChange={(e) => setRgForm(e.target.value)} className='input'></input>
+            </div>
+
+            <div id='form-box'>
+              <label>cpf</label>
+              <input type="number" name='cpf' value={cpf} onChange={(e) => setCpfForm(e.target.value)} className='input'></input>
             </div>
 
             <div id='form-roles'>
               <div id='inputs'>
                 <div id='form-box'>
                   <label>Setor</label>
-                  <select name="area" className='input'>
+                  <select name="area" value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
                     <option value="" disabled selected>Selecione o setor</option>
                     <option value="comercial">Comercial</option>
                     <option value="marketing">Marketing</option>
@@ -58,7 +96,7 @@ function NewUserForm() {
 
                 <div id='form-box'>
                   <label>Cargo</label>
-                  <select name="role" className='input'>
+                  <select name="role" value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
                     <option value="" disabled selected>Selecione o cargo</option>
                     <option value="membro">Membro</option>
                     <option value="gerente">Gerente</option>
@@ -80,13 +118,13 @@ function NewUserForm() {
             <div className='add area'>
               <div className='button' onClick={showForm}>
                 <FontAwesomeIcon icon={faIcons.faUserPlus} />
-                <input type='submit' value='Adicionar' form='new-user-form'></input>
+                <button type='submit' form='new-user-form'>Adicionar</button>
               </div>
-            </div>            
+            </div>
           </div>
         </div>
       </div>
-      </>
+    </>
 
   )
 }

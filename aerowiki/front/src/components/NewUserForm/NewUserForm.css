@@ -25,11 +25,11 @@
     z-index: 12;
 }
 #form{
-    top: -882.35px;
+    top: -1396.48px;
     transition: 300ms;
 }
 #form-active{
-    top: calc(50% - (882.35px)/2);
+    top: calc(50% - (1396.48px)/2);
     transition: 500ms;
 }
 
@@ -49,7 +49,7 @@
 
 #new-user-form{
     display: flex;
-    gap: 2rem;
+    gap: 0;
     flex-direction: column;
     font-size: 1.7rem;
     border: solid 3px var(--zlight-blue);
@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
     padding: 0 !important;
     padding-left: 1rem !important;
 }
-.add input{
+.add button{
     padding: 0;
     width: 100%;
     height: 100%;

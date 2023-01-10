@@ -10,6 +10,8 @@ export class User {
   public unb_id: number;
   public area: string;
   public role: string;
+  public telephone: number;
+  public birthdate: Date;
   public rg: number;
   public cpf: number;
 

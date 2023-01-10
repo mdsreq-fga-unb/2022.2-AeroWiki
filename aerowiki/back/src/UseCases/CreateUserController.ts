@@ -7,7 +7,7 @@ export class CreateUserController {
   ) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { name, surname, email, unb_id, area, role } = request.body;
+    const { name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg } = request.body;
 
     try {
       await this.createUserUseCase.execute({
@@ -17,8 +17,10 @@ export class CreateUserController {
         unb_id,
         area,
         role,
-        rg: null,
-        cpf: null,
+        telephone,
+        birthdate,
+        rg,
+        cpf,
       })
   
       return response.status(201).send();  
