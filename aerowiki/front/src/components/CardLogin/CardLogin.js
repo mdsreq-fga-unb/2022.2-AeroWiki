@@ -17,9 +17,9 @@ function Cardlogin() {
     const [senhaLogin, setSenhaLogin] = useState();
 
     function loginBanco() {
-        alert('Matrícula: ' + matriculaLogin + "\n" +
-            "Senha: " + senhaLogin + "\n"
-        )
+        // alert('Matrícula: ' + matriculaLogin + "\n" +
+        //     "Senha: " + senhaLogin + "\n"
+        // )
         if (matriculaLogin != undefined && matriculaLogin != "") {
             if (senhaLogin != undefined && senhaLogin != "") {
                 MySwal.fire({
