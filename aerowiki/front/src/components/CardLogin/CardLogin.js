@@ -5,8 +5,41 @@ import Col from 'react-bootstrap/Col';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import LogoVerical from '../../img/logovertical.svg';
 import './CardLogin.css'
+import { useState } from 'react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 function Cardlogin() {
+
+    const [matriculaLogin, setMatriculaLogin] = useState();
+    const [senhaLogin, setSenhaLogin] = useState();
+
+    function loginBanco() {
+        // alert('Matrícula: ' + matriculaLogin + "\n" +
+        //     "Senha: " + senhaLogin + "\n"
+        // )
+        if (matriculaLogin != undefined && matriculaLogin != "") {
+            if (senhaLogin != undefined && senhaLogin != "") {
+                MySwal.fire({
+                    title: <strong>Cadastro realizado com sucesso</strong>,
+                    icon: 'success'
+                })
+            } else {
+                MySwal.fire({
+                    title: <strong>Digite uma senha válida</strong>,
+                    icon: 'error'
+                })
+            }
+        } else {
+            MySwal.fire({
+                title: <strong>Digite uma matrícula válida</strong>,
+                icon: 'error'
+            })
+        }
+
+    }
 
     return (
         <>
@@ -18,13 +51,13 @@ function Cardlogin() {
                         <Col xxl={8}>
                             <Form className='3'>
                                 <FloatingLabel label='Matrícula'>
-                                    <Form.Control className='username' type="email" placeholder="Matrícula" />
+                                    <Form.Control className='username' type="number" value={matriculaLogin} onChange={(e) => setMatriculaLogin(e.target.value)} placeholder="Matrícula" />
                                 </FloatingLabel>
                                 <FloatingLabel label='Senha'>
-                                    <Form.Control className='senha' type="password" placeholder="Senha" />
+                                    <Form.Control className='senha' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
                                 </FloatingLabel>
                                 <Row className='justify-content-center'>
-                                    <Button className='secondary' variant="outline-light col-5">Entrar</Button>{' '}
+                                    <Button onClick={loginBanco} className='secondary' variant="outline-light col-5">Entrar</Button>{''}
                                 </Row>
                             </Form>
                         </Col>
