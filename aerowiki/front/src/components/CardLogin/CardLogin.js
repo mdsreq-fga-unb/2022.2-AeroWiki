@@ -6,6 +6,10 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import LogoVerical from '../../img/logovertical.svg';
 import './CardLogin.css'
 import { useState } from 'react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 function Cardlogin() {
 
@@ -16,6 +20,25 @@ function Cardlogin() {
         alert('Matrícula: ' + matriculaLogin + "\n" +
             "Senha: " + senhaLogin + "\n"
         )
+        if (matriculaLogin != undefined && matriculaLogin != "") {
+            if (senhaLogin != undefined && senhaLogin != "") {
+                MySwal.fire({
+                    title: <strong>Cadastro realizado com sucesso</strong>,
+                    icon: 'success'
+                })
+            } else {
+                MySwal.fire({
+                    title: <strong>Digite uma senha válida</strong>,
+                    icon: 'error'
+                })
+            }
+        } else {
+            MySwal.fire({
+                title: <strong>Digite uma matrícula válida</strong>,
+                icon: 'error'
+            })
+        }
+
     }
 
     return (
