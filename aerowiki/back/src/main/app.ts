@@ -4,9 +4,10 @@ import MongoConnection from './config/database'
 import cors from 'cors'
 
 const app = express()
+app.use(cors())
 MongoConnection.connect()
 app.use(express.json())
 app.use(router)
-app.use(cors())
+
 
 export {app}
