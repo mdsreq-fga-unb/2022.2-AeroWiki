@@ -11,7 +11,7 @@ import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
 
-var validacao = require('../../testes/validacoes')
+var validacao = require('../../testes/validacoes/validacoes')
 
 
 

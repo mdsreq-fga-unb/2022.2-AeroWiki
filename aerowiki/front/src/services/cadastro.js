@@ -7,8 +7,11 @@ export async function setUser(name, surname, email, unb_id, area, role, telephon
     },
     )
     console.log(response)
+    // resposta = response
 
   } catch (error){
     console.error(error)
+    // resposta = error
   }
+  // return (resposta)
 }
