@@ -32,6 +32,14 @@ const UserSchema = new mongoose.Schema<User>({
   role: {
     type: String,
     required: true,
+  },
+
+  rg: {
+    type: Number,
+  },
+
+  cpf: {
+    type: Number,
   }
 
 })

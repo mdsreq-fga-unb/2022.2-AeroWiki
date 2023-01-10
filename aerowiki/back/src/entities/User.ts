@@ -10,6 +10,8 @@ export class User {
   public unb_id: number;
   public area: string;
   public role: string;
+  public rg: number;
+  public cpf: number;
 
 
   constructor(props: Omit<User, 'id'>, id?: string) {

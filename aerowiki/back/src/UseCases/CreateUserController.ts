@@ -16,7 +16,9 @@ export class CreateUserController {
         password: "Aerowiki@Zenit2023",
         unb_id,
         area,
-        role
+        role,
+        rg: null,
+        cpf: null,
       })
   
       return response.status(201).send();  

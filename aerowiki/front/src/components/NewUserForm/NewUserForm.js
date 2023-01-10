@@ -1,13 +1,9 @@
 import './NewUserForm.css'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
-import Form from 'react-bootstrap/Form'
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 
 function NewUserForm() {
     const [newuserForm, setForm] = useState(true)
@@ -27,7 +23,7 @@ function NewUserForm() {
       <div id={newuserForm ? 'form' : 'form-active'}>
         <div id='form-container'>
           <span>Cadastrar membro</span>
-          <form id='new-user-form' method='post' action='/membros'>
+          <form id='new-user-form' method='post' >
             <div id='form-box'>
               <label>Nome</label>
               <div id='inputs'>

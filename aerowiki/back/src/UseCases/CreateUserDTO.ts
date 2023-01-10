@@ -5,4 +5,6 @@ export interface ICreateUserRequestDTO {
   unb_id: number;
   area: string;
   role: string;
+  rg: number;
+  cpf: number;
 }
