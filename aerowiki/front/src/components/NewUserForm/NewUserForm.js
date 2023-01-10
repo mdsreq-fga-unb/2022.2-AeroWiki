@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
-import {setUser} from '../../services/cadastro'
+import { setUser } from '../../services/cadastro'
 
 function NewUserForm() {
   const [newuserForm, setForm] = useState(true)
@@ -22,9 +22,38 @@ function NewUserForm() {
   const [rg, setRgForm] = useState();
 
   const sendform = (e) => {
+    // if(testes() == "fail"){
+    //   responseFetch('erro')
+    //   return
+    // }
     e.preventDefault();
     setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+    // resultado = setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
   };
+
+  function testes(){
+
+  }
+
+
+
+
+
+
+  // function responseFetch(response) {
+  //   if (response == ) {
+  //     MySwal.fire({
+  //       title: <strong>Cadastro realizado com sucesso</strong>,
+  //       icon: 'success'
+  //     })
+  //   } else {
+  //     MySwal.fire({
+  //       title: <strong>O cadastro falhou</strong>,
+  //       icon: 'error'
+  //     })
+  //   }
+
+  // }
 
 
   return (
