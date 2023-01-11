@@ -11,11 +11,13 @@ export class LoginController {
 
     try {
         const user = await this.LoginUseCase.execute({
+            name,
             email,
             password,
         })
         
       return response.status(201).json({
+        name: user.name,
         email: user.email,
         password: user.password
     });  

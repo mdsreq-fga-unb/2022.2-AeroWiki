@@ -26,7 +26,7 @@ function MembersTable() {
                         <div id='member-info' key={index}> 
                             <div id='member-name'>
                                 {item.icon}
-                                <span>{item.member_name}</span>
+                                <span>{item.name}</span>
                             </div>
                             <div id='member-sector'>
                                 <Link to={item.area_path}>{item.area}</Link>

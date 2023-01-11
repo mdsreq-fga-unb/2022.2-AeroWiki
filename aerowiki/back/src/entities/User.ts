@@ -1,7 +1,6 @@
 import { v4 as uuid_v4 } from "uuid";
 
 export class User {
-   
   public readonly id: String;
 
   public name: string;

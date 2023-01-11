@@ -1,6 +1,6 @@
 import { MongodbImplementation } from "../repositories/implementations/UserRepository-mongodb";
-import { CreateUserUseCase } from "./CreateUserUseCase";
-import { CreateUserController } from "./CreateUserController";
+import { CreateUserUseCase } from "./CreateUserUseCase/CreateUserUseCase";
+import { CreateUserController } from "./CreateUserUseCase/CreateUserController";
 import { LoginController } from "./LoginUseCase/LoginController";
 import { LoginUseCase } from "./LoginUseCase/LoginUseCase";
 
