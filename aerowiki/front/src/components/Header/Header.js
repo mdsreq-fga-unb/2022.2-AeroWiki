@@ -1,10 +1,13 @@
 import './Header.css'
 import LogoHorizontal from '../../img/logohorizontal.png'
-import {BrowserRouter as Router} from 'react-router-dom';
 import Navbar from '../Navbar/Navbar'
 import UserMenu from '../UserMenu/UserMenu'
 
 function Header(){
+
+    function replace(){
+      window.location.replace("http://localhost:3000/home")
+    }
     return(
       <>
         <div id='mainheader'>

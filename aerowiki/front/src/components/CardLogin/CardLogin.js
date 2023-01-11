@@ -42,9 +42,14 @@ function Cardlogin() {
 
 
                 if (resultado['status'] != 400) {
-                    resultado = resultado['data']['password']
-                    if (resultado == senhaLogin) {
+                    const jazon = resultado
+                    const senhareal = jazon['data']['password']
+                    if (senhareal == senhaLogin) {
+                        sessionStorage.setItem('senhaReal', resultado['data']['password'])
+                        sessionStorage.setItem('emailReal', resultado['data']['email'])
+                        sessionStorage.setItem('nomeReal', resultado['data']['name'])
                         window.location.replace("http://localhost:3000/home");
+
                     } else {
                         MySwal.fire({
                             title: "Senha incorreta.",
@@ -68,6 +73,7 @@ function Cardlogin() {
                     }
                 }
             }catch(error){
+                console.log(error)
                 MySwal.fire({
                     title: "Erro no sistema. :(",
                     text: "Por favor, tente novamente mais tarde.",
