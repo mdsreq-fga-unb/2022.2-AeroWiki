@@ -8,7 +8,7 @@ router.post('/membros', (request, response) => {
   return createUserController.handle(request, response);
 });
 
-router.get('/login', (request, response) => {
+router.post('/login', (request, response) => {
   return loginController.handle(request, response);
 });
 
