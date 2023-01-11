@@ -14,73 +14,103 @@ function NewUserForm() {
   const [newuserForm, setForm] = useState(true)
   const showForm = () => setForm(!newuserForm)
 
-  const [name, setNameForm] = useState();
-  const [surname, setSurnameForm] = useState();
-  const [email, setEmailForm] = useState();
-  const [unb_id, setUnb_idForm] = useState();
-  const [area, setAreaForm] = useState();
-  const [role, setRoleForm] = useState();
-  const [telephone, setTelephoneForm] = useState();
-  const [birthdate, setBirthdateForm] = useState();
-  const [cpf, setCpfForm] = useState();
-  const [rg, setRgForm] = useState();
+  const [name, setNameForm] = useState('');
+  const [surname, setSurnameForm] = useState('');
+  const [email, setEmailForm] = useState('');
+  const [unb_id, setUnb_idForm] = useState('');
+  const [area, setAreaForm] = useState('');
+  const [role, setRoleForm] = useState('');
+  const [telephone, setTelephoneForm] = useState('');
+  const [birthdate, setBirthdateForm] = useState('');
+  const [cpf, setCpfForm] = useState('');
+  const [rg, setRgForm] = useState('');
+
+
+  // function validarImputs() {
+  // //   if (name != undefined && name != "") {
+  // //     if (surname != undefined && surname != "") {
+  // //       if (email != undefined && email != "") {
+  // //         if (unb_id != undefined && unb_id != "") {
+  // //           if (area != undefined && area != "") {
+  // //             if (role != undefined && role != "") {
+  // //               if (birthdate != undefined && birthdate != "") {
+  // //                 if (cpf != undefined && cpf != "") {
+  // //                   if (rg != undefined && rg != "") {
+  // //                     return false
+  // //                   } else {
+  // //                     return true
+  // //                   }
+  // //                 } else {
+  // //                   return true
+  // //                 }
+  // //               } else {
+  // //                 return true
+  // //               }
+  // //             } else {
+  // //               return true
+  // //             }
+  // //           } else {
+  // //             return true
+  // //           }
+  // //         } else {
+  // //           return true
+  // //         }
+  // //       } else {
+  // //         return true
+  // //       }
+  // //     } else {
+  // //       return true
+  // //     }
+  // //   } else {
+  // //     return true
+  // //   }
+  // // }
 
   const sendform = async (e) => {
-    // if(testes() == "fail"){
-    //   responseFetch('erro')
-    //   return
-    // }
+    // if (validarImputs() == false) {
     e.preventDefault();
-    // setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
     try {
       const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
       console.log("certo")
       console.log(r)
-      resultadoC(r)
+      resultadoCadastro(r)
     } catch (error) {
       console.log("errado")
       console.log(error)
-      resultadoC(error)
-
+      resultadoCadastro(error['response'])
     }
-  };
+  }
 
-  function resultadoC(resultado) {
-    const fraseResultado = resultado['response']['data']['message']
+  function resultadoCadastro(resultado) {
+    if (resultado == "repetiu") {
 
-    if (fraseResultado == 'User already exist') {
       MySwal.fire({
-        title: <strong>Usuario ja cadastrado</strong>,
+        title: <strong>Um ou mais campos estão incompletos</strong>,
         icon: 'error'
       })
+
+    } else {
+      const fraseResultado = resultado['data']['message']
+      const erroNumber = resultado['status']
+      if (erroNumber == 201) {
+        MySwal.fire({
+          title: <strong>Cadastro realizado com sucesso</strong>,
+          icon: 'success'
+        })
+
+      } else if (fraseResultado == 'User already exist') {
+        MySwal.fire({
+          title: <strong>Usuario ja cadastrado</strong>,
+          icon: 'error'
+        })
+      } else {
+        MySwal.fire({
+          title: <strong>Erro tente novamente mais tarde</strong>,
+          icon: 'error'
+        })
+      }
     }
   }
-
-
-  function testes() {
-
-  }
-
-
-
-
-
-
-  // function responseFetch(response) {
-  //   if (response == ) {
-  //     MySwal.fire({
-  //       title: <strong>Cadastro realizado com sucesso</strong>,
-  //       icon: 'success'
-  //     })
-  //   } else {
-  //     MySwal.fire({
-  //       title: <strong>O cadastro falhou</strong>,
-  //       icon: 'error'
-  //     })
-  //   }
-
-  // }
-
 
   return (
     <>
@@ -96,7 +126,7 @@ function NewUserForm() {
       <div id={newuserForm ? 'form' : 'form-active'}>
         <div id='form-container'>
           <span>Cadastrar membro</span>
-          <form id='new-user-form' method='post' onSubmit={sendform} >
+          <form id='new-user-form' onSubmit={sendform} >
             <div className='form-col'>
 
               <div id='form-box'>
@@ -110,7 +140,7 @@ function NewUserForm() {
               <div id='form-box'>
                 <label>Email</label>
                 <input type="email" name='email' value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
-              </div>              
+              </div>
 
               <div id='form-box'>
                 <label>Matrícula UnB</label>
@@ -145,7 +175,7 @@ function NewUserForm() {
               </div>
 
             </div>
-            
+
 
 
             <div className='form-col'>
