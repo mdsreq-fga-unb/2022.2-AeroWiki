@@ -23,30 +23,48 @@ function Cardlogin() {
             const r = await loginUser(emailLogin, senhaLogin)
             console.log("certo")
             console.log(r)
+            resultadoLogin(r)
         } catch (error) {
             console.log("errado")
-            console.log(error)
+            resultadoLogin(error['response'])
+            
         }
     }
 
-    // function loginBanco() {
-    //     if (emailLogin != undefined && emailLogin != "") {
-    //         if (senhaLogin != undefined && senhaLogin != "") {
-    //             loginForm()
-    //         } else {
-    //             MySwal.fire({
-    //                 title: <strong>Digite uma senha válida.</strong>,
-    //                 icon: 'error'
-    //             })
-    //         }
-    //     } else {
-    //         MySwal.fire({
-    //             title: <strong>Digite um e-mail válido.</strong>,
-    //             icon: 'error'
-    //         })
-    //     }
-    // }
+    function resultadoLogin(resultado) {
+        if (resultado == "vazio") {
+            MySwal.fire({
+                title: <strong>Preencha todos os campos</strong>,
+                icon: 'warning'
+            })
+        } else {
+            if (resultado['status'] != 400) {
+                resultado = resultado['data']['password']
+                if (resultado == senhaLogin) {
+                    window.location.replace("http://localhost:3000/home");
+                } else {
+                    MySwal.fire({
+                        title: <strong>Senha incorreta</strong>,
+                        icon: 'error'
+                    })
+                }
+            } else {
+                resultado = resultado['data']['message']
+                if (resultado == "Esse usuário não existe!") {
+                    MySwal.fire({
+                        title: <strong>Esse usuário não existe!</strong>,
+                        icon: 'error'
+                    })
+                } else {
+                    MySwal.fire({
+                        title: <strong>Ocorreu um erro tente novamente mais tarde</strong>,
+                        icon: 'error'
+                    })
+                }
+            }
 
+        }
+    }
     return (
         <>
             <h1 className="TitleLogin justify-content-center" ><bold>AERO WIKI</bold></h1>

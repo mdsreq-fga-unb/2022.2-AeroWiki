@@ -9,5 +9,4 @@ function imputvazioLogin(emailLogin, senhaLogin) {
         return "vazio"
     }
 }
-
 module.exports = imputvazioLogin;
