@@ -13,45 +13,41 @@ const MySwal = withReactContent(Swal)
 
 function Cardlogin() {
 
-    const [matriculaLogin, setMatriculaLogin] = useState();
+    const [emailLogin, setemailLogin] = useState();
     const [senhaLogin, setSenhaLogin] = useState();
 
     function loginBanco() {
-        // alert('Matrícula: ' + matriculaLogin + "\n" +
-        //     "Senha: " + senhaLogin + "\n"
-        // )
-        if (matriculaLogin != undefined && matriculaLogin != "") {
+        if (emailLogin != undefined && emailLogin != "") {
             if (senhaLogin != undefined && senhaLogin != "") {
                 MySwal.fire({
-                    title: <strong>Cadastro realizado com sucesso</strong>,
+                    title: <strong>Usuário Autenticado!</strong>,
                     icon: 'success'
                 })
             } else {
                 MySwal.fire({
-                    title: <strong>Digite uma senha válida</strong>,
+                    title: <strong>Digite uma senha válida.</strong>,
                     icon: 'error'
                 })
             }
         } else {
             MySwal.fire({
-                title: <strong>Digite uma matrícula válida</strong>,
+                title: <strong>Digite um e-mail válido.</strong>,
                 icon: 'error'
             })
         }
-
     }
 
     return (
         <>
             <h1 className="TitleLogin justify-content-center" ><bold>AERO WIKI</bold></h1>
-            <h3 className="Sub-title justify-content-center">login</h3>
+            <h3 className="Sub-title justify-content-center">Entrar</h3>
             <Row className='justify-content-center'>
                 <Col xxl={4} className='menu-login'>
                     <Row className='justify-content-center'>
                         <Col xxl={8}>
                             <Form className='3'>
-                                <FloatingLabel label='Matrícula'>
-                                    <Form.Control className='username' type="number" value={matriculaLogin} onChange={(e) => setMatriculaLogin(e.target.value)} placeholder="Matrícula" />
+                                <FloatingLabel label='E-mail Zenit'>
+                                    <Form.Control className='username' type="email" value={emailLogin} onChange={(e) => setemailLogin(e.target.value)} placeholder="E-mail" />
                                 </FloatingLabel>
                                 <FloatingLabel label='Senha'>
                                     <Form.Control className='senha' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
