@@ -9,4 +9,5 @@ export interface ICreateUserRequestDTO {
   birthdate: string;
   rg: string;
   cpf: string;
+  active: boolean;
 }

@@ -42,10 +42,9 @@ function NewUserForm() {
 
   function resultadoCadastro(resultado) {
     if (resultado == "repetiu") {
-
       MySwal.fire({
-        title: <strong>Um ou mais campos estão incompletos</strong>,
-        icon: 'error'
+        title: "Um ou mais campos obrigatórios estão incompletos.",
+        icon: 'warning'
       })
 
     } else {
@@ -53,18 +52,19 @@ function NewUserForm() {
       const erroNumber = resultado['status']
       if (erroNumber == 201) {
         MySwal.fire({
-          title: <strong>Cadastro realizado com sucesso</strong>,
+          title: "Cadastro realizado com sucesso!",
           icon: 'success'
         })
 
       } else if (fraseResultado == 'User already exist') {
         MySwal.fire({
-          title: <strong>Usuario ja cadastrado</strong>,
-          icon: 'error'
+          title: "Este membro já está cadastrado.",
+          icon: 'warning'
         })
       } else {
         MySwal.fire({
-          title: <strong>Erro tente novamente mais tarde</strong>,
+          title: "Erro no sistema. :(",
+          text: "Por favor, tente novamente mais tarde.",
           icon: 'error'
         })
       }
@@ -91,26 +91,26 @@ function NewUserForm() {
               <div id='form-box'>
                 <label>Nome</label>
                 <div id='inputs'>
-                  <input type="text" name='name' value={name} onChange={(e) => setNameForm(e.target.value)} placeholder='Nome' className='input'></input>
-                  <input type="text" name='surname' value={surname} onChange={(e) => setSurnameForm(e.target.value)} placeholder='Sobrenome' className='input'></input>
+                  <input type="text" value={name} onChange={(e) => setNameForm(e.target.value)} placeholder='Nome' className='input'></input>
+                  <input type="text" value={surname} onChange={(e) => setSurnameForm(e.target.value)} placeholder='Sobrenome' className='input'></input>
                 </div>
               </div>
 
               <div id='form-box'>
                 <label>Email</label>
-                <input type="email" name='email' value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
+                <input type="email" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
               </div>
 
               <div id='form-box'>
                 <label>Matrícula UnB</label>
-                <input type="number" name='unb_id' value={unb_id} onChange={(e) => setUnb_idForm(e.target.value)} placeholder='Matrícula' className='input'></input>
+                <input type="number" value={unb_id} onChange={(e) => setUnb_idForm(e.target.value)} placeholder='Matrícula' className='input'></input>
               </div>
 
               <div id='form-roles'>
                 <div id='inputs'>
                   <div id='form-box'>
                     <label>Setor</label>
-                    <select name="area" value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
+                    <select value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o setor</option>
                       <option value="comercial">Comercial</option>
                       <option value="marketing">Marketing</option>
@@ -122,7 +122,7 @@ function NewUserForm() {
 
                   <div id='form-box'>
                     <label>Cargo</label>
-                    <select name="role" value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
+                    <select value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o cargo</option>
                       <option value="membro">Membro</option>
                       <option value="gerente">Gerente</option>
@@ -141,22 +141,22 @@ function NewUserForm() {
 
               <div id='form-box'>
                 <label>Telefone</label>
-                <input type="tel" name='tel' value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
+                <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
               <div id='form-box'>
                 <label>Data de nascimento</label>
-                <input type="date" name='birthdate' value={birthdate} onChange={(e) => setBirthdateForm(e.target.value)} className='input'></input>
+                <input type="date" value={birthdate} onChange={(e) => setBirthdateForm(e.target.value)} className='input'></input>
               </div>
 
               <div id='form-box'>
                 <label>RG</label>
-                <input type="number" name='rg' value={rg} onChange={(e) => setRgForm(e.target.value)} className='input'></input>
+                <input type="number" value={rg} onChange={(e) => setRgForm(e.target.value)} className='input'></input>
               </div>
 
               <div id='form-box'>
                 <label>CPF</label>
-                <input type="number" name='cpf' value={cpf} onChange={(e) => setCpfForm(e.target.value)} className='input'></input>
+                <input type="number" value={cpf} onChange={(e) => setCpfForm(e.target.value)} className='input'></input>
               </div>
 
             </div>
@@ -170,7 +170,7 @@ function NewUserForm() {
             </div>
 
             <div className='add area'>
-              <div className='button' onClick={showForm}>
+              <div className='button'>
                 <FontAwesomeIcon icon={faIcons.faUserPlus} />
                 <button type='submit' form='new-user-form'>Adicionar</button>
               </div>

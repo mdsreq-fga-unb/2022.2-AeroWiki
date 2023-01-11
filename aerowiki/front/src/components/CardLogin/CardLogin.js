@@ -14,7 +14,7 @@ const MySwal = withReactContent(Swal)
 
 function Cardlogin() {
 
-    const [emailLogin, setemailLogin] = useState();
+    const [emailLogin, setEmailLogin] = useState();
     const [senhaLogin, setSenhaLogin] = useState();
 
     const loginForm = async (e) => {
@@ -34,7 +34,7 @@ function Cardlogin() {
     function resultadoLogin(resultado) {
         if (resultado == "vazio") {
             MySwal.fire({
-                title: <strong>Preencha todos os campos</strong>,
+                title: "Por favor, preencha todos os campos.",
                 icon: 'warning'
             })
         } else {
@@ -47,7 +47,7 @@ function Cardlogin() {
                         window.location.replace("http://localhost:3000/home");
                     } else {
                         MySwal.fire({
-                            title: <strong>Senha incorreta</strong>,
+                            title: "Senha incorreta.",
                             icon: 'error'
                         })
                     }
@@ -55,19 +55,22 @@ function Cardlogin() {
                     resultado = resultado['data']['message']
                     if (resultado == "Esse usuário não existe!") {
                         MySwal.fire({
-                            title: <strong>Esse usuário não existe!</strong>,
+                            title: "Usuário não cadastrado!",
+                            text: "Por favor, contate o gerente ou diretor do seu setor.",
                             icon: 'error'
                         })
                     } else {
                         MySwal.fire({
-                            title: <strong>Ocorreu um erro tente novamente mais tarde</strong>,
+                            title: "Erro no sistema. :(",
+                            text: "Por favor, tente novamente mais tarde.",
                             icon: 'error'
                         })
                     }
                 }
             }catch(error){
                 MySwal.fire({
-                    title: <strong>Ocorreu um erro tente novamente mais tarde</strong>,
+                    title: "Erro no sistema. :(",
+                    text: "Por favor, tente novamente mais tarde.",
                     icon: 'error'
                 })
             }
@@ -84,10 +87,10 @@ function Cardlogin() {
                         <Col xxl={8}>
                             <Form className='3' onSubmit={loginForm}>
                                 <FloatingLabel label='E-mail Zenit'>
-                                    <Form.Control className='username' name='email' type="email" value={emailLogin} onChange={(e) => setemailLogin(e.target.value)} placeholder="E-mail" />
+                                    <Form.Control className='username' type="email" value={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} placeholder="E-mail" />
                                 </FloatingLabel>
                                 <FloatingLabel label='Senha'>
-                                    <Form.Control className='senha' name='password' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
+                                    <Form.Control className='senha' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
                                 </FloatingLabel>
                                 <Row className='justify-content-center'>
                                     <Button onClick={loginForm} type='submit' className='secondary' variant="outline-light col-5">Entrar</Button>

@@ -20,7 +20,7 @@
 
 #main-title .area{
     position: absolute;
-    right: calc(320px + 1rem);
+    right: calc(16.665% + 1rem);
     height: unset;
     width: unset;
 }

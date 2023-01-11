@@ -36,12 +36,10 @@ const UserSchema = new mongoose.Schema<User>({
 
   telephone: {
     type: String,
-    required: true,
   },
 
   birthdate: {
     type: String,
-    required: true,
   },
 
   rg: {
@@ -52,6 +50,10 @@ const UserSchema = new mongoose.Schema<User>({
   cpf: {
     type: String,
     required: true,
+  },
+
+  active: {
+    type: Boolean,
   }
 
 })

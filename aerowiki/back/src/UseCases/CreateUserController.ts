@@ -21,6 +21,7 @@ export class CreateUserController {
         birthdate,
         rg,
         cpf,
+        active: true,
       })
   
       return response.status(201).send();  
