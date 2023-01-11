@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 import { setUser } from '../../services/cadastro'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 function NewUserForm() {
   const [newuserForm, setForm] = useState(true)
@@ -21,17 +25,39 @@ function NewUserForm() {
   const [cpf, setCpfForm] = useState();
   const [rg, setRgForm] = useState();
 
-  const sendform = (e) => {
+  const sendform = async (e) => {
     // if(testes() == "fail"){
     //   responseFetch('erro')
     //   return
     // }
     e.preventDefault();
-    setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-    // resultado = setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+    // setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+    try {
+      const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+      console.log("certo")
+      console.log(r)
+      resultadoC(r)
+    } catch (error) {
+      console.log("errado")
+      console.log(error)
+      resultadoC(error)
+
+    }
   };
 
-  function testes(){
+  function resultadoC(resultado) {
+    const fraseResultado = resultado['response']['data']['message']
+
+    if (fraseResultado == 'User already exist') {
+      MySwal.fire({
+        title: <strong>Usuario ja cadastrado</strong>,
+        icon: 'error'
+      })
+    }
+  }
+
+
+  function testes() {
 
   }
 
