@@ -11,10 +11,6 @@ import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
 
-var validacao = require('../../testes/validacoes/validacoes')
-
-
-
 
 function CardAccount() {
     const nomebanco = 'cansado da silva'
@@ -62,17 +58,6 @@ function CardAccount() {
     function refreshPage() {
         window.location.reload(false);
     }
-
-
-    function testess() {
-        alert('Nome: ' + nome + "\n" +
-            "Email: " + email + "\n" +
-            "Telefone: " + telefone + "\n"
-        )
-        // alert(validacao(1 , 2))
-    }
-
-
 
     return (
         <>
@@ -183,7 +168,7 @@ function CardAccount() {
                                                 <div id='btsAccount' className='btsAccount' style={{
                                                     display: mostrarInverse,
                                                 }}>
-                                                    <Button onClick={testess} className='btSalvarAccount'>Salvar</Button>
+                                                    <Button onClick={refreshPage} className='btSalvarAccount'>Salvar</Button>
                                                     <Button onClick={refreshPage} className='btCancelarAccount'>Cancelar</Button>
                                                 </div>
                                             </Col>

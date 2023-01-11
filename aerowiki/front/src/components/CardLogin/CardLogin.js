@@ -27,7 +27,7 @@ function Cardlogin() {
         } catch (error) {
             console.log("errado")
             resultadoLogin(error['response'])
-            
+
         }
     }
 
@@ -38,29 +38,38 @@ function Cardlogin() {
                 icon: 'warning'
             })
         } else {
-            if (resultado['status'] != 400) {
-                resultado = resultado['data']['password']
-                if (resultado == senhaLogin) {
-                    window.location.replace("http://localhost:3000/home");
+            try{
+
+
+                if (resultado['status'] != 400) {
+                    resultado = resultado['data']['password']
+                    if (resultado == senhaLogin) {
+                        window.location.replace("http://localhost:3000/home");
+                    } else {
+                        MySwal.fire({
+                            title: <strong>Senha incorreta</strong>,
+                            icon: 'error'
+                        })
+                    }
                 } else {
-                    MySwal.fire({
-                        title: <strong>Senha incorreta</strong>,
-                        icon: 'error'
-                    })
+                    resultado = resultado['data']['message']
+                    if (resultado == "Esse usuário não existe!") {
+                        MySwal.fire({
+                            title: <strong>Esse usuário não existe!</strong>,
+                            icon: 'error'
+                        })
+                    } else {
+                        MySwal.fire({
+                            title: <strong>Ocorreu um erro tente novamente mais tarde</strong>,
+                            icon: 'error'
+                        })
+                    }
                 }
-            } else {
-                resultado = resultado['data']['message']
-                if (resultado == "Esse usuário não existe!") {
-                    MySwal.fire({
-                        title: <strong>Esse usuário não existe!</strong>,
-                        icon: 'error'
-                    })
-                } else {
-                    MySwal.fire({
-                        title: <strong>Ocorreu um erro tente novamente mais tarde</strong>,
-                        icon: 'error'
-                    })
-                }
+            }catch(error){
+                MySwal.fire({
+                    title: <strong>Ocorreu um erro tente novamente mais tarde</strong>,
+                    icon: 'error'
+                })
             }
 
         }
