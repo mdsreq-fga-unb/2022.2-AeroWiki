@@ -26,48 +26,7 @@ function NewUserForm() {
   const [rg, setRgForm] = useState('');
 
 
-  // function validarImputs() {
-  // //   if (name != undefined && name != "") {
-  // //     if (surname != undefined && surname != "") {
-  // //       if (email != undefined && email != "") {
-  // //         if (unb_id != undefined && unb_id != "") {
-  // //           if (area != undefined && area != "") {
-  // //             if (role != undefined && role != "") {
-  // //               if (birthdate != undefined && birthdate != "") {
-  // //                 if (cpf != undefined && cpf != "") {
-  // //                   if (rg != undefined && rg != "") {
-  // //                     return false
-  // //                   } else {
-  // //                     return true
-  // //                   }
-  // //                 } else {
-  // //                   return true
-  // //                 }
-  // //               } else {
-  // //                 return true
-  // //               }
-  // //             } else {
-  // //               return true
-  // //             }
-  // //           } else {
-  // //             return true
-  // //           }
-  // //         } else {
-  // //           return true
-  // //         }
-  // //       } else {
-  // //         return true
-  // //       }
-  // //     } else {
-  // //       return true
-  // //     }
-  // //   } else {
-  // //     return true
-  // //   }
-  // // }
-
   const sendform = async (e) => {
-    // if (validarImputs() == false) {
     e.preventDefault();
     try {
       const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
