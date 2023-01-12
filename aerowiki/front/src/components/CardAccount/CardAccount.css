@@ -1,0 +1,76 @@
+.TitleAccountCard {
+    background-color: var(--zgrey);
+    height: 150px;
+
+}
+
+.TitleAccount {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.tamanhoRow {
+    height: 150px;
+}
+
+.PerfilImg {
+    height: 191px;
+    width: 200px;
+}
+
+.ajusteAccount {
+    padding-left: 16px;
+    padding-top: 22px;
+}
+
+.imputAccount {
+    height: 32px;
+    font-size: 24px;
+}
+
+.form{
+    margin-bottom: 20px;
+}
+
+.editarBt{
+    height: 20px;
+    width: 20px;
+    margin-left: 60px;
+}
+
+.accountBt{
+    background-color: white;
+    border: 0px;
+}
+
+.iconAccount{
+    margin-right: 7px;
+}
+
+.btCancelarAccount{
+    height: 48px;
+    width: 84px;
+    border-color: var(--zgrey) !important;
+    background: var(--zgrey) !important;
+    margin-left: 28px;
+}
+.btSalvarAccount{
+    height: 48px;
+    width: 84px;
+    border-color: #00549b !important;
+    background: #00549b !important;
+
+}
+.btsAccount{
+    margin-top: 42px;
+}
+
+/* .imputAccount {
+    height: 60px;
+    font-size: 200px;
+}
+
+.imputAccount::placeholder {
+    font-size: 20px;
+} */

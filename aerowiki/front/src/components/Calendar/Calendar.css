@@ -1,0 +1,47 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+#calendar-container #pad-box{
+    display: block;
+    padding: 1rem;
+}
+
+#title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#title span{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    color: var(--zlight-blue);
+    white-space: nowrap;
+}
+
+#hr{
+    width: 100%;
+    margin-left: 0.7rem;
+}
+#hr hr{
+    height: 5px;
+    width: 100%;
+    background-color: var(--zlight-blue);
+    border-radius: 16px;
+}
+
+
+#calendar{
+    height: 500px;
+    width: 100%;
+    background-color: var(--zgrey);
+    border-radius: 16px;
+}
+
+iframe{
+    width: 100%;
+}
