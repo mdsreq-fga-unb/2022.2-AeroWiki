@@ -12,13 +12,13 @@ export const NavbarData = [
         class: 'nav-text',
         subnav: [
             {
-                title: 'BLABLABLA',
-                path: '/BLABLABLA',
+                title: 'Subárea 1',
+                path: '/SubAreas',
                 class: 'nav-text'
             },
             {
-                title: 'BLABLABLA',
-                path: '/BLABLABLA',
+                title: 'Subárea 2',
+                path: '/SubAreas',
                 class: 'nav-text'
             }
         ]
@@ -29,7 +29,19 @@ export const NavbarData = [
         icon: <FontAwesomeIcon icon={faIcons.faCommentsDollar} />,
         iconOpened: <FontAwesomeIcon icon={faIcons.faCaretUp} />,
         iconClosed: <FontAwesomeIcon icon={faIcons.faCaretDown} />,
-        class: 'nav-text'
+        class: 'nav-text',
+        subnav: [
+            {
+                title: 'Subárea 1',
+                path: '/SubAreas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Subárea 2',
+                path: '/SubAreas',
+                class: 'nav-text'
+            }
+        ]
     },
     {
         title: 'Relações Externas',
@@ -37,7 +49,19 @@ export const NavbarData = [
         icon: <FontAwesomeIcon icon={faIcons.faHandshake} />,
         iconOpened: <FontAwesomeIcon icon={faIcons.faCaretUp} />,
         iconClosed: <FontAwesomeIcon icon={faIcons.faCaretDown} />,
-        class: 'nav-text'
+        class: 'nav-text',
+        subnav: [
+            {
+                title: 'Subárea 1',
+                path: '/SubAreas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Subárea 2',
+                path: '/SubAreas',
+                class: 'nav-text'
+            }
+        ]
     },
     {
         title: 'Pesquisa & Desenvolvimento',
@@ -45,7 +69,19 @@ export const NavbarData = [
         icon: <FontAwesomeIcon icon={faIcons.faLightbulb} />,
         iconOpened: <FontAwesomeIcon icon={faIcons.faCaretUp} />,
         iconClosed: <FontAwesomeIcon icon={faIcons.faCaretDown} />,
-        class: 'nav-text'
+        class: 'nav-text',
+        subnav: [
+            {
+                title: 'Subárea 1',
+                path: '/SubAreas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Subárea 2',
+                path: '/SubAreas',
+                class: 'nav-text'
+            }
+        ]
     },
     {
         title: 'Operações',
@@ -53,7 +89,19 @@ export const NavbarData = [
         icon: <FontAwesomeIcon icon={faIcons.faGlobe} />,
         iconOpened: <FontAwesomeIcon icon={faIcons.faCaretUp} />,
         iconClosed: <FontAwesomeIcon icon={faIcons.faCaretDown} />,
-        class: 'nav-text'
+                class: 'nav-text',
+        subnav: [
+            {
+                title: 'Subárea 1',
+                path: '/SubAreas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Subárea 2',
+                path: '/SubAreas',
+                class: 'nav-text'
+            }
+        ]
     },
     {
         title: 'Segmentos',
@@ -61,7 +109,19 @@ export const NavbarData = [
         icon: <FontAwesomeIcon icon={faIcons.faPeopleGroup} />,
         iconOpened: <FontAwesomeIcon icon={faIcons.faCaretUp} />,
         iconClosed: <FontAwesomeIcon icon={faIcons.faCaretDown} />,
-        class: 'nav-text'
+                class: 'nav-text',
+        subnav: [
+            {
+                title: 'Subárea 1',
+                path: '/SubAreas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Subárea 2',
+                path: '/SubAreas',
+                class: 'nav-text'
+            }
+        ]
     },
     {
         title: 'Presidência',
@@ -69,18 +129,16 @@ export const NavbarData = [
         icon: <FontAwesomeIcon icon={faIcons.faUserTie} />,
         iconOpened: <FontAwesomeIcon icon={faIcons.faCaretUp} />,
         iconClosed: <FontAwesomeIcon icon={faIcons.faCaretDown} />,
-        class: 'nav-text',
+                class: 'nav-text',
         subnav: [
             {
-                title: 'Comercial',
-                path: '/comercial',
-                icon: <FontAwesomeIcon icon={faIcons.faPhone} />,
+                title: 'Subárea 1',
+                path: '/SubAreas',
                 class: 'nav-text'
             },
             {
-                title: 'aaaaaaa',
-                path: '/comercial',
-                icon: <FontAwesomeIcon icon={faIcons.faPhone} />,
+                title: 'Subárea 2',
+                path: '/SubAreas',
                 class: 'nav-text'
             }
         ]
