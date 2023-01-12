@@ -1,0 +1,24 @@
+name: github_Actions
+on:
+  pull_request:
+    types: 
+    - opened
+    branches:
+      - main  
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm --prefix ./aerowiki/front install
+      - run: npm --prefix ./aerowiki/front run build
+      - run: npm --prefix ./aerowiki/back install
+      - run: npm --prefix ./aerowiki/back run build
+      - run: mpm --prefix ./aerowiki/front run test
+
