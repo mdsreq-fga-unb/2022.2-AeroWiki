@@ -16,7 +16,7 @@ function SubAreas() {
                   <div id='project-text'>
                     
                     <div id='bot' >
-                      <Link to={item.path} id='project-title'>{item.subarea}</Link>
+                      <Link to={'/SubAreas'} id='project-title'>{item.subarea}</Link>
                     </div>
                   </div>
                 </div>
