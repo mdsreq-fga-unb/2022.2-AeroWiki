@@ -31,6 +31,7 @@ function CardAccount() {
             for (i = 0; i < jazon.length; i++) {
                 if (emailReal == jazon[i]["email"]) {
                     sessionStorage.setItem('nomebanco', jazon[i]['name'])
+                    sessionStorage.setItem('nomeReal', jazon[i]['name'])
                     sessionStorage.setItem('emailbanco', jazon[i]['email'])
                     sessionStorage.setItem('matriculabanco', jazon[i]['unb_id'])
                     sessionStorage.setItem('telefonebanco', jazon[i]['telephone'])
