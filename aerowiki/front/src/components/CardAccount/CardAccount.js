@@ -10,18 +10,49 @@ import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
-
+import { Add_membro } from '../../services/add_membro'
+import email from '../../testes/validacoes/email';
+const sendform = async () => {
+    try {
+        const response = await Add_membro()
+        console.log("certo")
+        console.log(response.data)
+        const jazon = response.data
+        // const membersData = JSON.stringify(response.data)
+        const emailReal = sessionStorage.getItem('emailReal')
+        console.log(jazon)
+        // alert(jazon[0]["email"])
+        var i
+        for (i = 0; i < jazon.length; i++) {
+            if (emailReal == jazon[i]["email"]) {
+                // sessionStorage.setItem('nomebanco', jazon[i]['name'])
+                // sessionStorage.setItem('emailbanco', jazon[i]['email'])
+                sessionStorage.setItem('matriculabanco', jazon[i]['unb_id'])
+                sessionStorage.setItem('telefonebanco', jazon[i]['telephone'])
+                sessionStorage.setItem('setorbanco', jazon[i]['area'])
+                sessionStorage.setItem('cargobanco', jazon[i]['role'])
+                sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
+                sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
+                sessionStorage.setItem('rgbanco', jazon[i]['rg'])
+            }
+        }
+    } catch (error) {
+        console.log("errado")
+        console.log(error)
+    }
+}
+sendform()
 
 function CardAccount() {
-    const nomebanco = 'cansado da silva'
-    const emailbanco = 'cansadodasilvapereirarocha2023@zenit.com'
-    const matriculabanco = '123456789'
-    const telefonebanco = '(61)98292-4900'
-    const setorbanco = 'Presidência'
-    const cargobanco = 'Presidente'
-    const dataNascbanco = '2000-02-28'
-    const cpfbanco = '12345678910'
-    const rgbanco = '123456789'
+    const nomebanco = sessionStorage.getItem('nomeReal')
+    const emailbanco = sessionStorage.getItem('emailReal')
+    const matriculabanco = sessionStorage.getItem('matriculabanco')
+    const telefonebanco = sessionStorage.getItem('telefonebanco')
+    const setorbanco = sessionStorage.getItem('setorbanco')
+    const cargobanco = sessionStorage.getItem('cargobanco')
+    const dataNascbanco = sessionStorage.getItem('dataNascbanco')
+    const cpfbanco = sessionStorage.getItem('cpfbanco')
+    const rgbanco = sessionStorage.getItem('rgbanco')
 
 
 
@@ -41,6 +72,13 @@ function CardAccount() {
     const [cpf, setCpf] = useState(cpfbanco);
     const [rg, setRg] = useState(rgbanco);
 
+
+
+    const sendPassword = async (e) => {
+        e.preventDefault();
+        console.log('deubom')
+
+    }
     const editConta = () => {
         setLiberar(false);
         setMostrar('none');
@@ -89,7 +127,7 @@ function CardAccount() {
                         </Col>
                     </Row>
 
-                    <Form>
+                    <Form onSubmit={sendPassword}>
                         <Row>
                             <Col xxl={5}>
                                 <Form.Group className="FullName form" controlId="fullName">
@@ -168,7 +206,7 @@ function CardAccount() {
                                                 <div id='btsAccount' className='btsAccount' style={{
                                                     display: mostrarInverse,
                                                 }}>
-                                                    <Button onClick={refreshPage} className='btSalvarAccount'>Salvar</Button>
+                                                    <Button type='submit' onClick={refreshPage} className='btSalvarAccount'>Salvar</Button>
                                                     <Button onClick={refreshPage} className='btCancelarAccount'>Cancelar</Button>
                                                 </div>
                                             </Col>
