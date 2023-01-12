@@ -11,6 +11,7 @@ import Presidencia from './pages/Presidencia/Presidencia'
 import Membros from './pages/Membros/Membros'
 import Login from './pages/Login/Login'
 import Account from './pages/Account/Account'
+import SubAreas from './pages/SubAreas/Sub'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/operacoes" element={<Operacoes />} />
         <Route path="/segmentos" element={<Segmentos />} />
         <Route path="/presidencia" element={<Presidencia />} />
+        <Route path="/subareas" element={<SubAreas />}></Route>
         <Route path="/membros" element={<Membros />} />
         <Route path="/myAccount" element={<Account />} />
         <Route path="*" element={<Navigate to="/login" />} />
