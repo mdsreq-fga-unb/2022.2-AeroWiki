@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "63bf0d50166f9f49500dce4b",
+        "name": "Miguel Moreira da Silva de Oliveira",
+        "email": "miguelmsoliveira@gmail.com",
+        "password": "Aerowiki@Zenit2023",
+        "unb_id": "202023968",
+        "area": "comercial",
+        "role": "presidente",
+        "telephone": "82689588",
+        "birthdate": "2002-03-16",
+        "rg": "010101010",
+        "cpf": "02020202020",
+        "active": true,
+        "__v": 0
+    },
+    {
+        "_id": "63bf2233df98ca683607fcbd",
+        "name": "Arthur Trindade",
+        "email": "arthurtrindadeunb@hotmail.com",
+        "password": "Aerowiki@Zenit2023",
+        "unb_id": "180098080",
+        "area": "operacoes",
+        "role": "presidente",
+        "telephone": "61981343643",
+        "birthdate": "2000-03-31",
+        "rg": "11111111",
+        "cpf": "11111111111",
+        "active": true,
+        "__v": 0
+    },
+    {
+        "_id": "63bf25a001a53c3a65a755dd",
+        "name": "Arthur D'assumpção",
+        "email": "dassumpcaoarthur@gmail.com",
+        "password": "Aerowiki@Zenit2023",
+        "unb_id": "190084570",
+        "area": "operacoes",
+        "role": "presidente",
+        "telephone": "123456789",
+        "birthdate": "1111-11-11",
+        "rg": "123456789",
+        "cpf": "12345678910",
+        "active": true,
+        "__v": 0
+    }
+]
