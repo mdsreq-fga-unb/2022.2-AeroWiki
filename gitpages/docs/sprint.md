@@ -53,7 +53,7 @@ Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima s
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 05/01/2023 | 12/01/2023 | E1-F1-US1<br>E1-F1-US2<br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3<br>E1-F2-US4<br>E2-F1-US1<br>E2-F1-US2<br>E2-F2-US1<br>E2-F2-US2<br>E2-F2-US3<br> | Arthur Trindade |
+| 05/01/2023 | 12/01/2023 | E1-F1-US1<br>E1-F1-US2<br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3 <br>E2-F1-US1<br>E2-F1-US2<br>E2-F2-US1<br>E2-F2-US2<br>E2-F2-US3<br> | Arthur Trindade |
 
 
 | Planejamento |
@@ -62,7 +62,7 @@ Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima s
 
 | Review e retrospectiva |
 | --- |
-|  |
+| Para a sprint 3 foi realizado a reunião de validação com o cliente e o feedback foi postado na página inicial do pages. Houve um notável progresso entre os integrantes do grupo na comunicação entre a equipe e as habilidades de programação. O pair programming foi a técnica que mais fez diferença notada na reunião de restrospectiva e review. Pois houve uma melhora mútua nas skills dos integrantes e boa rotatividade na implementação das storys do projeto. Ficou como débito técnico para a entrega da sprint 3 as seguintes stories: E1-F2-US2, E1-F2-US3, E2-F1-US2, na hora de realizar a comunicação do front-end com o back-end, porém ambas foram implementadas separadamente em suas respectivas stacks. Houve uma baixa no começo da sprint por questões de saúde o que impactou o desenvolvimento da sprint. No mais foi uma sprint que obteve uma melhora de desenvolvimento e de muito aprendizado relatado pelos integrantes. |
 
 | Programação em Pares | Ferramentas Utilizadas | Duplas da sprint|
 |---| ---| ---|

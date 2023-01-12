@@ -40,15 +40,14 @@
     - US2 -> Como membro, quero realizar login no site para ter acesso ao sistema.
 - F2: Cadastro de membros
     - US1 -> Como diretor, eu devo realizar o cadastro de usuários na plataforma para que eles possam ter acesso ao sistema.
-    - US2 -> Como diretor, eu devo poder editar o cadastro de usuários da plataforma para atualizar a base de dados.
-    - US3 -> Como diretor, eu devo poder remover cadastro de usuários da plataforma para removê-los da base de dados do sistema.
-    - US4 -> Como diretor, eu devo poder arquivar o cadastro de usuários da plataforma para manter a organização dos usuários.
+    - US2 -> Como diretor, eu devo poder remover cadastro de usuários da plataforma para removê-los da base de dados do sistema.
+    - US3 -> Como diretor, eu devo poder arquivar o cadastro de usuários da plataforma para manter a organização dos usuários.
 
 ### E2 - Gestão de áreas 
 
 - F1: Atribuição de papel
     - US1 -> Como diretor, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
-    - US2 -> Como diretor, eu quero ser capaz de editar papel de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
+    - US2 -> Como diretor, eu quero ser capaz de editar papéis de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
 
 - F2: Navegação
     - US1 -> Como membro, eu quero ser capaz de visualizar as áreas do sistema para me integrar em todas as áreas  da empresa.
