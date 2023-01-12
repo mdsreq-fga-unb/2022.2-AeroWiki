@@ -3,12 +3,12 @@ function Nome(nome) {
     const regexC = /[@!#$%^&*()/\\~]/;
     if (regexN.test(nome) == false) {
         if (regexC.test(nome) == false) {
-            return "valido"
+            return true
         } else {
-            return "invalido"
+            return false
         }
     } else {
-        return "invalido"
+        return false
     }
 }
 

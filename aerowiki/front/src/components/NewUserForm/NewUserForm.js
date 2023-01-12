@@ -24,19 +24,37 @@ function NewUserForm() {
   const [birthdate, setBirthdateForm] = useState('');
   const [cpf, setCpfForm] = useState('');
   const [rg, setRgForm] = useState('');
+  var validarEmail = require('../../testes/validacoes/email')
+  var validarNome = require('../../testes/validacoes/nome')
+  var validarMatricula = require('../../testes/validacoes/matricula')
 
 
   const sendform = async (e) => {
     e.preventDefault();
-    try {
-      const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-      console.log("certo")
-      console.log(r)
-      resultadoCadastro(r)
-    } catch (error) {
-      console.log("errado")
-      console.log(error)
-      resultadoCadastro(error['response'])
+
+    if (validarMatricula(unb_id) == false) {
+      MySwal.fire({
+        title: "Matrícula inválida",
+        icon: 'error'
+      })
+    } else {
+      if (validarNome(name) == false || validarNome(surname) == false) {
+        MySwal.fire({
+          title: "Nome inválido",
+          icon: 'error'
+        })
+      } else {
+        try {
+          const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+          console.log("certo")
+          console.log(r)
+          resultadoCadastro(r)
+        } catch (error) {
+          console.log("errado")
+          console.log(error)
+          resultadoCadastro(error['response'])
+        }
+      }
     }
   }
 

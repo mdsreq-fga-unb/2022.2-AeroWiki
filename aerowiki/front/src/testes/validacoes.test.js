@@ -21,13 +21,13 @@ describe('Validar email', ()=> {
 
 describe('Validar nome', ()=> {
     it('Verifica nomes válidos', () =>{
-        expect(validarNome('miguel moreira da silva')).toEqual('valido')
-        expect(validarNome('miguel moreirã da silva')).toEqual('valido')    
+        expect(validarNome('miguel moreira da silva')).toEqual(true)
+        expect(validarNome('miguel moreirã da silva')).toEqual(true)    
     })
     it('Verifica nomes inválidos', () =>{
-        expect(validarNome('miguel moreira da silva1')).toEqual('invalido') 
-        expect(validarNome('miguel moreira da silva@')).toEqual('invalido')
-        expect(validarNome('miguel more~ira da silva')).toEqual('invalido')
+        expect(validarNome('miguel moreira da silva1')).toEqual(false) 
+        expect(validarNome('miguel moreira da silva@')).toEqual(false)
+        expect(validarNome('miguel more~ira da silva')).toEqual(false)
     })
 })
 
