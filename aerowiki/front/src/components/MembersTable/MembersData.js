@@ -1,47 +1,11 @@
-// import React from 'react'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import * as faIcons from '@fortawesome/free-regular-svg-icons'
-// import { api } from '../../api/config';
-
-// async function getUserAccount() {
-//         try{
-//             const userData =  await api.get('/membros');     
-//             console.log("UserData", userData);
-//             return userData
-//         } catch(error) {
-//             console.log(error);
-//         };
-// }
-
-// const memberData = await getUserAccount();
-
-// console.log("memberData", memberData)
-
-// function UsersData() {
-//     const membroData = getUserAccount()
-//     console.log(membroData)
-//     return membroData.data
-// }
-
-// export { UsersData }
-
-import React from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import * as faIcons from '@fortawesome/free-regular-svg-icons'
-import { MembersDataname } from '../../services/cadastrocopy'
+import { Add_membro } from '../../services/add_membro'
 
 const sendform = async () => {
-    // e.preventDefault();
     try {
-        const response = await MembersDataname()
+        const response = await Add_membro()
         console.log("certo")
-        console.log(JSON.stringify(response.data))
-        const alow = JSON.stringify(response.data)
-        const teste = JSON.parse("[" + alow + "]");
-        console.log("credo", teste)
-        sessionStorage.setItem('formdataa', alow)
-        
-        
+        const membersData = JSON.stringify(response.data)
+        sessionStorage.setItem('formdata', membersData)
         
     } catch (error) {
         console.log("errado")
@@ -50,6 +14,7 @@ const sendform = async () => {
 }
 sendform()
 
-const MembersData = JSON.parse("[" + sessionStorage.getItem('formdataa') + "]");
+const MembersData = JSON.parse("[" + sessionStorage.getItem('formdata') + "]");
 console.log("MembersData", MembersData)
+
 export {MembersData}

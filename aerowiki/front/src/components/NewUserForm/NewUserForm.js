@@ -112,11 +112,11 @@ function NewUserForm() {
                     <label>Setor</label>
                     <select value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o setor</option>
-                      <option value="comercial">Comercial</option>
-                      <option value="marketing">Marketing</option>
-                      <option value="relacoes">Relações Externas</option>
-                      <option value="p&d">Pesquisa & Desenvolvimento</option>
-                      <option value="operacoes">Operações</option>
+                      <option value="Comercial">Comercial</option>
+                      <option value="Marketing">Marketing</option>
+                      <option value="Relacoes">Relações Externas</option>
+                      <option value="Pesquisa & Desenvolvimento">Pesquisa & Desenvolvimento</option>
+                      <option value="Operacoes">Operações</option>
                     </select>
                   </div>
 
@@ -124,10 +124,10 @@ function NewUserForm() {
                     <label>Cargo</label>
                     <select value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o cargo</option>
-                      <option value="membro">Membro</option>
-                      <option value="gerente">Gerente</option>
-                      <option value="diretor">Diretor</option>
-                      <option value="presidente">Presidente</option>
+                      <option value="Membro">Membro</option>
+                      <option value="Gerente">Gerente</option>
+                      <option value="Diretor">Diretor</option>
+                      <option value="Presidente">Presidente</option>
                     </select>
                   </div>
                 </div>
