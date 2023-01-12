@@ -11,7 +11,7 @@ export class LoginController {
 
     try {
         const user = await this.LoginUseCase.execute({
-            name,
+            // name,
             email,
             password,
         })

@@ -4,8 +4,10 @@ import ZenitPoster from '../../components/ZenitPoster/ZenitPoster'
 import Calendar from '../../components/Calendar/Calendar'
 import FixedProjects from '../../components/FixedProjects/FixedProjects'
 import Footer from '../../components/Footer/Footer'
+import testedetoken from '../../testes/testedetoken'
 
 function Home() {
+  testedetoken()
   return (
     <div id='app'>
       <header>
