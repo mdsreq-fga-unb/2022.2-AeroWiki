@@ -20,18 +20,17 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/comercial" element={<Comercial />} />
-        <Route path="/marketing" element={<Marketing />} />
-        <Route path="/relacoes" element={<Relacoes />} />
-        <Route path="/ped" element={<PesqDes />} />
-        <Route path="/operacoes" element={<Operacoes />} />
-        <Route path="/segmentos" element={<Segmentos />} />
-        <Route path="/presidencia" element={<Presidencia />} />
-        <Route path="/subareas" element={<SubAreas />}></Route>
+        <Route path="/comercial/*" element={<Comercial />} />
+        <Route path="/marketing/*" element={<Marketing />} />
+        <Route path="/relacoes/*" element={<Relacoes />} />
+        <Route path="/ped/*" element={<PesqDes />} />
+        <Route path="/operacoes/*" element={<Operacoes />} />
+        <Route path="/segmentos/*" element={<Segmentos />} />
+        <Route path="/presidencia/*" element={<Presidencia />} />
+        <Route path="/subareas/*" element={<SubAreas />}></Route>
         <Route path="/membros" element={<Membros />} />
         <Route path="/myAccount" element={<Account />} />
         <Route path="*" element={<Navigate to="/login" />} />
-
       </Routes>
     </>
 
