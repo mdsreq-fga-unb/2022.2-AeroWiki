@@ -19,7 +19,8 @@ export class LoginController {
       return response.status(201).json({
         name: user.name,
         email: user.email,
-        password: user.password
+        password: user.password,
+        role: user.role
     });  
     } catch (err) {
       return response.status(400).json({
