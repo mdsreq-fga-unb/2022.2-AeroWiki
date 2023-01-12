@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {createUserController} from '../UseCases'
+import {createUserController, updateMemberController, updateUserController} from '../UseCases'
 import {loginController} from '../UseCases'
 import mongoose from "mongoose";
 import {UserSchema} from '../schemas/user-schema'
@@ -25,5 +25,13 @@ router.post('/membros', (request, response) => {
 router.post('/login', (request, response) => {
   return loginController.handle(request, response);
 });
+
+router.put('/updateUser', (request, response) => {
+  return updateUserController.handle(request, response)
+})
+
+router.put('/updateMember', (request, response) => {
+  return updateMemberController.handle(request, response)
+})
 
 export {router}
