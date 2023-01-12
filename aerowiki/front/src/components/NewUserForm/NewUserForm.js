@@ -1,6 +1,6 @@
 import './NewUserForm.css'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
@@ -132,9 +132,9 @@ function NewUserForm() {
                       <option value="" disabled selected>Selecione o setor</option>
                       <option value="Comercial">Comercial</option>
                       <option value="Marketing">Marketing</option>
-                      <option value="Relacoes">Relações Externas</option>
+                      <option value="Relações">Relações Externas</option>
                       <option value="Pesquisa & Desenvolvimento">Pesquisa & Desenvolvimento</option>
-                      <option value="Operacoes">Operações</option>
+                      <option value="Operações">Operações</option>
                     </select>
                   </div>
 

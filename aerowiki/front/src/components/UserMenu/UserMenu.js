@@ -7,7 +7,6 @@ import { UserMenuData } from './UserMenuData'
 
 function UserMenu() {
     const [usermenu, setUsermenu] = useState(true)
-
     const showUsermenu = () => setUsermenu(!usermenu)
     
     useEffect(() => {
