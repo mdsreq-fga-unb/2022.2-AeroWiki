@@ -14,7 +14,7 @@ function Header(){
           <main>
             <div id='pad-box'>
               <div className='logo'>
-                <img src={LogoHorizontal} alt='logo'></img>
+                <a className='logo' href={"/home"}><img src={LogoHorizontal} alt='logo'></img></a>
               </div>
 
               <div id='user'>

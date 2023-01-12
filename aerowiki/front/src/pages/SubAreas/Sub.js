@@ -12,7 +12,7 @@ function Sub() {
             <Header/>
         </header>
       
-        <div id='title'>
+        <div id='title' className='Body'>
           <div id='hr'><hr></hr></div>
             <span >PROJETOS</span>
           <div id='hr'><hr></hr></div>

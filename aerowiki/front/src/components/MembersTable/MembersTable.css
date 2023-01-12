@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+#mtable-members{
+    background-color: white;
+}
+
 #mtable-labels, #mtable-member, #member-info{
     display: flex;
     flex-direction: row;
@@ -88,14 +92,14 @@
     color: black;
 }
 
-#edit-member{
+#member-buttons{
     width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.7rem;
 }
-#edit-member a{
+#member-buttons a{
     color: var(--zlight-blue);
 }
 
@@ -118,4 +122,56 @@
 #member-role, #role-label{
     width: 15%;
 }
+
+#member-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+}
+
+#member-buttons svg{
+    font-size: 2rem;
+    color: var(--zlight-blue);
+}
+#member-buttons svg:hover{
+    color: var(--zdark-blue);
+}
+
+#delete-file-edit, 
+#delete-file-edit-active{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+#delete-file-edit{
+    left: -5vw;
+    transition: 500ms;
+    z-index: -1;
+}
+#delete-file-edit-active{
+    left: 5vw;
+    transition: 500ms;
+    z-index: 0;
+}
+
+#file, #edit, #delete{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+#file svg{
+    color: var(--zgrey);
+}
+#edit svg{
+    color: black;
+}
+#delete svg{
+    color: var(--zred);
+}
+
 

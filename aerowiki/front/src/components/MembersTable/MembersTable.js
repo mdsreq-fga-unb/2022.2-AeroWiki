@@ -4,6 +4,7 @@ import { MembersData } from './MembersData'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
+import MembersButton from './MembersButton'
 
 function MembersTable() {
     return (
@@ -36,10 +37,7 @@ function MembersTable() {
                                         <span id='member-telephone'>{item.telephone}</span>
                                         <span id='member-role'>{item.role}</span>
                                     </div>
-
-                                    <div id='edit-member'>
-                                        <Link to='#'><FontAwesomeIcon icon={faIcons.faPen} /></Link>
-                                    </div>
+                                    <MembersButton></MembersButton>
                                 </div>
 
                             </>
