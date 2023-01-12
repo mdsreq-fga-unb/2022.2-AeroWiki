@@ -25,7 +25,7 @@ Toda a documentação do projeto será feita de acordo com os artefatos dos even
 
 Devido ao tempo disponível para o desenvolvimento do projeto, a equipe decidiu que a sprint planning e sprint review acontecerão na mesma reunião.
 
-# Estratégia XP Programming
+# Estratégias XP Programming
 | Estratégia              | Descrição      | Ferramenta utilizada | 
 | ----------------------- | -------------- | -------- |
 | Design simples | É uma metodologia utilizada para simplificar o desenvolvimento de software para que o código seja compreensível para qualquer desenvolvedor. O clean code é uma prática de design simples. | VisualStudio Code |
