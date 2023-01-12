@@ -48,6 +48,7 @@ function Cardlogin() {
                         sessionStorage.setItem('senhaReal', resultado['data']['password'])
                         sessionStorage.setItem('emailReal', resultado['data']['email'])
                         sessionStorage.setItem('nomeReal', resultado['data']['name'])
+                        sessionStorage.setItem('cargoReal', resultado['data']['role'])
                         window.location.replace("http://localhost:3000/home");
 
                     } else {

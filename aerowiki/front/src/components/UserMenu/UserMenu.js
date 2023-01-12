@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 import { UserMenuData } from './UserMenuData'
+import { UserMenuDataM } from './UserMenuDataM'
 
 function UserMenu() {
+    let UserMenuDataFinal = UserMenuDataM
     const [usermenu, setUsermenu] = useState(true)
     const showUsermenu = () => setUsermenu(!usermenu)
     
@@ -16,7 +18,12 @@ function UserMenu() {
         }
 
     }, []);
-
+    // alert(sessionStorage.getItem('cargobanco'))
+    if(sessionStorage.getItem('cargobanco') == 'Presidente'){
+        UserMenuDataFinal = UserMenuData     
+    }
+    
+    
     return (
         <>
             <div id='username'>
@@ -28,7 +35,7 @@ function UserMenu() {
 
             <nav id={usermenu ? 'usermenu' : 'usermenu-active'}>
                 <div id='usermenu-items' onClick={showUsermenu}>
-                    {UserMenuData.map((item, index) => {
+                    {UserMenuDataFinal.map((item, index) => {
                         return (
                             <div className='area' key={index}>
                                 <Link to={item.path} className='button'>
