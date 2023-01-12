@@ -5,6 +5,9 @@ GitPages do projeto "AeroWiki", da disciplina "Métodos de desenvolvimento de so
 <a href="https://www.youtube.com/watch?v=Z9P06O2Z-KA"> Link para a apresentação da unidade 1.</a>
 <br>
 <a href="https://youtu.be/SqbOQjjPxpY"> Link para a apresentação da unidade 2.</a>
+<br>
+<a href="https://www.youtube.com/watch?v=xeLSqw1WdJU"> Link para a apresentação do produto para o cliente.</a>
+
 
 ## Membros da equipe
 
