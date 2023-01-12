@@ -8,6 +8,7 @@ import { UserMenuDataM } from './UserMenuDataM'
 
 function UserMenu() {
     let UserMenuDataFinal = UserMenuDataM
+    UserMenuDataFinal = UserMenuDataM
     const [usermenu, setUsermenu] = useState(true)
     const showUsermenu = () => setUsermenu(!usermenu)
     
@@ -19,7 +20,7 @@ function UserMenu() {
 
     }, []);
     // alert(sessionStorage.getItem('cargobanco'))
-    if(sessionStorage.getItem('cargobanco') == 'Presidente'){
+    if(sessionStorage.getItem('cargoReal') == 'Presidente'){
         UserMenuDataFinal = UserMenuData     
     }
     

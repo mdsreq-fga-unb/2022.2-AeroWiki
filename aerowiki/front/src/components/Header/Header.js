@@ -8,6 +8,7 @@ function Header(){
     function replace(){
       window.location.replace("http://localhost:3000/home")
     }
+    
     return(
       <>
         <div id='mainheader'>
