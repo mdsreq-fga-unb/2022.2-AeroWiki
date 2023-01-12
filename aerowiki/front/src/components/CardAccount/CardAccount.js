@@ -17,50 +17,51 @@ import { updateUser } from '../../services/updateUser';
 
 
 function CardAccount() {
-    // const attform = async () => {
-    //     try {
-    //         const response = await Add_membro()
-    //         console.log("atualizado")
-    //         console.log(response.data)
-    //         const jazon = response.data
-    //         // const membersData = JSON.stringify(response.data)
-    //         const emailReal = sessionStorage.getItem('emailReal')
-    //         console.log(jazon)
-    //         // alert(jazon[0]["email"])
-    //         var i
-    //         for (i = 0; i < jazon.length; i++) {
-    //             if (emailReal == jazon[i]["email"]) {
-    //                 // sessionStorage.setItem('nomebanco', jazon[i]['name'])
-    //                 // sessionStorage.setItem('emailbanco', jazon[i]['email'])
-    //                 sessionStorage.setItem('matriculabanco', jazon[i]['unb_id'])
-    //                 sessionStorage.setItem('telefonebanco', jazon[i]['telephone'])
-    //                 sessionStorage.setItem('setorbanco', jazon[i]['area'])
-    //                 sessionStorage.setItem('cargobanco', jazon[i]['role'])
-    //                 sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
-    //                 sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
-    //                 sessionStorage.setItem('rgbanco', jazon[i]['rg'])
-    //             }
-    //         }
-    //     } catch (error) {
-    //         console.log("error")
-    //         console.log(error)
-    //     }
-    // }
-    // attform()
-    sessionStorage.setItem('matriculabanco', '11111')
-    sessionStorage.setItem('telefonebanco', '111111')
-    sessionStorage.setItem('setorbanco', 'aaaaaa')
-    sessionStorage.setItem('cargobanco', 'aaaaaa')
-    sessionStorage.setItem('dataNascbanco','1111-11-11' )
-    sessionStorage.setItem('cpfbanco', '1111111')
-    sessionStorage.setItem('rgbanco','11111111')
+    const attform = async () => {
+        try {
+            const response = await Add_membro()
+            console.log("atualizado")
+            console.log(response.data)
+            const jazon = response.data
+            // const membersData = JSON.stringify(response.data)
+            const emailReal = sessionStorage.getItem('emailReal')
+            console.log(jazon)
+            // alert(jazon[0]["email"])
+            var i
+            for (i = 0; i < jazon.length; i++) {
+                if (emailReal == jazon[i]["email"]) {
+                    sessionStorage.setItem('nomebanco', jazon[i]['name'])
+                    sessionStorage.setItem('emailbanco', jazon[i]['email'])
+                    sessionStorage.setItem('matriculabanco', jazon[i]['unb_id'])
+                    sessionStorage.setItem('telefonebanco', jazon[i]['telephone'])
+                    sessionStorage.setItem('setorbanco', jazon[i]['area'])
+                    sessionStorage.setItem('cargobanco', jazon[i]['role'])
+                    sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
+                    sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
+                    sessionStorage.setItem('rgbanco', jazon[i]['rg'])
+                }
+            }
+        } catch (error) {
+            console.log("error")
+            console.log(error)
+        }
+    }
+    attform()
+    // sessionStorage.setItem('matriculabanco', '190087439')
+    // sessionStorage.setItem('telefonebanco', '111111')
+    // sessionStorage.setItem('setorbanco', 'aaaaaa')
+    // sessionStorage.setItem('cargobanco', 'aaaaaa')
+    // sessionStorage.setItem('dataNascbanco','1111-11-11' )
+    // sessionStorage.setItem('cpfbanco', '1111111')
+    // sessionStorage.setItem('rgbanco','11111111')
 
     const update = async (e) => {
         e.preventDefault();
         try {
-            const response = await updateUser(nome, email, telefone, telefone)
+            const response = await updateUser(nome, email, matricula, telefone)
             console.log("updateuser")
             console.log(response)
+            refreshPage()
             // resultadoCadastro(r)
         } catch (error) {
             console.log("errado")
@@ -69,8 +70,8 @@ function CardAccount() {
         }
     }
 
-    const nomebanco = sessionStorage.getItem('nomeReal')
-    const emailbanco = sessionStorage.getItem('emailReal')
+    const nomebanco = sessionStorage.getItem('nomebanco')
+    const emailbanco = sessionStorage.getItem('emailbanco')
     const matriculabanco = sessionStorage.getItem('matriculabanco')
     const telefonebanco = sessionStorage.getItem('telefonebanco')
     const setorbanco = sessionStorage.getItem('setorbanco')
