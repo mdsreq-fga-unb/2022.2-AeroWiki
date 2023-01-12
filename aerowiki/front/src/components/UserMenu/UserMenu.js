@@ -15,7 +15,7 @@ function UserMenu() {
     useEffect(() => {
         // alert(document.getElementById('nameHeader').textContent)
         if (document.getElementById('nameHeader').textContent == '') {
-            document.getElementById('nameHeader').append(sessionStorage.getItem('nomeReal'))
+            document.getElementById('nameHeader').append(sessionStorage.getItem('nomebanco'))
         }
 
     }, []);
