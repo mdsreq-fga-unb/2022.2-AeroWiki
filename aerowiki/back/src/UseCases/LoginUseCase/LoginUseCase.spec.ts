@@ -18,8 +18,7 @@ const mockRequest: User = {
   active: true,
 };
 
-
-describe("CreateUserCase", () => {
+describe("LoginUseCase", () => {
   let sut:CreateUserUseCase;
   let mockUserRepository: MockProxy<IUsersRepository>
   let mockUserResponse: MockProxy<User>
@@ -30,7 +29,7 @@ describe("CreateUserCase", () => {
 
     sut = new CreateUserUseCase(mockUserRepository)
   })
-  test("should create user", async () => {
+  test("should login a user", async () => {
     const user = new User(mockRequest)
     mockUserRepository.findByEmail.mockResolvedValue(mockUserResponse)
     
