@@ -14,7 +14,7 @@
 A equipe utilizará uma metodologia que alinha o método de desenvolvimento de software XP com o método de gerenciamento de projetos Scrum. O uso conjunto dessas metodologias une os valores do XP (simplicidade, feedback, comunicação, coragem, respeito) com os conjuntos de regras e práticas de gestão do Scrum.
 Toda a documentação do projeto será feita de acordo com os artefatos dos eventos Scrum e XP, sendo eles:
 
-#Scrum
+# Scrum
 | Evento                  | Descrição      | Artefato | 
 | ----------------------- | -------------- | -------- |
 | Sprint | A sprint é um contêiner de todas os eventos abaixo, nela, a equipe de desenvolvimento transforma uma ideia em im incremento de valor do produto | Incremento de valor ao produto |
@@ -26,7 +26,7 @@ como esses problemas foram (ou não) resolvidos. | Documentação |
 
 Devido ao tempo disponível para o desenvolvimento do projeto, a equipe decidiu que a sprint planning e sprint review acontecerão na mesma reunião.
 
-#Estratégia XP Programming
+# Estratégia XP Programming
 | Estratégia              | Descrição      | Ferramenta utilizada | 
 | ----------------------- | -------------- | -------- |
 | Design simples | É uma metodologia utilizada para simplificar o desenvolvimento de software para que o código seja compreensível para qualquer desenvolvedor. O clean code é uma prática de design simples. | VisualStudio Code |
