@@ -12,6 +12,7 @@ import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
 import { Add_membro } from '../../services/add_membro'
 import email from '../../testes/validacoes/email';
+import { updateUser } from '../../services/updateUser';
 const sendform = async () => {
     try {
         const response = await Add_membro()
@@ -76,8 +77,16 @@ function CardAccount() {
 
     const sendPassword = async (e) => {
         e.preventDefault();
-        console.log('deubom')
-
+        try {
+            const response = await updateUser(nome, email, telefone, matricula)
+            console.log("certo")
+            console.log(response)
+            // resultadoCadastro(r)
+        } catch (error) {
+            console.log("errado")
+            console.log(error)
+            // resultadoCadastro(error['response'])
+        }
     }
     const editConta = () => {
         setLiberar(false);
