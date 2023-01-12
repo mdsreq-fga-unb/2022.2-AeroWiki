@@ -13,7 +13,7 @@ import Button from 'react-bootstrap/esm/Button';
 import { Add_membro } from '../../services/add_membro'
 import email from '../../testes/validacoes/email';
 import { updateUser } from '../../services/updateUser';
-const sendform = async () => {
+const attform = async () => {
     try {
         const response = await Add_membro()
         console.log("certo")
@@ -42,7 +42,7 @@ const sendform = async () => {
         console.log(error)
     }
 }
-sendform()
+attform()
 
 function CardAccount() {
     const nomebanco = sessionStorage.getItem('nomeReal')
@@ -75,7 +75,7 @@ function CardAccount() {
 
 
 
-    const sendPassword = async (e) => {
+    const updateUser = async (e) => {
         e.preventDefault();
         try {
             const response = await updateUser(nome, email, telefone, matricula)
@@ -136,7 +136,7 @@ function CardAccount() {
                         </Col>
                     </Row>
 
-                    <Form onSubmit={sendPassword}>
+                    <Form onSubmit={updateUser}>
                         <Row>
                             <Col xxl={5}>
                                 <Form.Group className="FullName form" controlId="fullName">
