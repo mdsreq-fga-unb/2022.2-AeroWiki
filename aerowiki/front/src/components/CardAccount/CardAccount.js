@@ -43,7 +43,7 @@ function CardAccount() {
                 }
             }
         } catch (error) {
-            console.log("error")
+            console.log("erro")
             console.log(error)
         }
     }

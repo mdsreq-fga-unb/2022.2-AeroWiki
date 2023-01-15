@@ -10,14 +10,15 @@ export class UpdateUserController {
     const {name, email, unb_id, telephone } = request.body;
 
     try {
+      console.log("aqui")
       await this.updateUserUseCase.execute({
        name,
        email,
        unb_id,
        telephone
       })
-      
-      return response.status(201).send().json({message: "USUARIO ATUALIZADO"});  
+      console.log("por ultimo")
+      return response.status(201).json({message: "USUARIO ATUALIZADO"});  
     } catch (err) {
       return response.status(400).json({
         message: err.message || 'Unexpected error ao createUser.'

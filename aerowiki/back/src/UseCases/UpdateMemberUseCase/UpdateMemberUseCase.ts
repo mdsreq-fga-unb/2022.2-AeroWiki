@@ -1,4 +1,3 @@
-
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { IUpdateMemberRequest } from "./UpdateMemberDTO";
 
