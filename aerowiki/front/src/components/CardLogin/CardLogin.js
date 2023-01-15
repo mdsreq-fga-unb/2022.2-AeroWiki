@@ -86,7 +86,7 @@ function Cardlogin() {
     }
     return (
         <>
-            <h1 className="TitleLogin justify-content-center" ><bold>AERO WIKI</bold></h1>
+            <h1 className="TitleLogin justify-content-center" >AEROWIKI</h1>
             <h3 className="Sub-title justify-content-center">Entrar</h3>
             <Row className='justify-content-center'>
                 <Col xxl={4} className='menu-login'>
@@ -94,10 +94,10 @@ function Cardlogin() {
                         <Col xxl={8}>
                             <Form className='3' onSubmit={loginForm}>
                                 <FloatingLabel label='E-mail Zenit'>
-                                    <Form.Control className='username' type="email" value={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} placeholder="E-mail" />
+                                    <Form.Control className=' input username' type="email" value={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} placeholder="E-mail" />
                                 </FloatingLabel>
                                 <FloatingLabel label='Senha'>
-                                    <Form.Control className='senha' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
+                                    <Form.Control className='input senha' type="password" value={senhaLogin} onChange={(e) => setSenhaLogin(e.target.value)} placeholder="Senha" />
                                 </FloatingLabel>
                                 <Row className='justify-content-center'>
                                     <Button onClick={loginForm} type='submit' className='secondary' variant="outline-light col-5">Entrar</Button>

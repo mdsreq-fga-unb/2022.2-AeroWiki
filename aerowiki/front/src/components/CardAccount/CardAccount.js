@@ -128,7 +128,7 @@ function CardAccount() {
                 </Col>
             </Row>
 
-            <div className='Body'>
+            <main>
                 <div className='ajusteAccount'>
                     <Row className='justify-content-end'>
                         <Col xxl={1}>
@@ -242,7 +242,7 @@ function CardAccount() {
                         </Row>
                     </Form>
                 </div>
-            </div>
+            </main>
 
         </>
     );

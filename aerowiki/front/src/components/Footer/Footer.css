@@ -7,24 +7,26 @@
 
 #footer {
     position: absolute;
+    height: 350px;
     width: 100%;
-    /* bottom: 0vh; */
     background-color: #00549b;
 }
 
-.logoFooter {
-    margin-top: 20px;
+#footer main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
     height: 145px;
-    width: 197px;
 }
 
-.textofooter {
-    font-size: 32px;
-    /* font-weight: 700; */
-    line-height: 49px;
+#footer-text{
     color: white;
-}
-
-.marginfooter {
-    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    gap: 2rem;
+    font-size: 1.7rem;
 }
