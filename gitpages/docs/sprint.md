@@ -20,13 +20,12 @@
 
 | Review e retrospectiva |
 | ---|
-| No decorrer da sprint, utilizando das práticas de XP programming, os integrantes conseguiram desenvolver mas obtiveram alguns débitos técnicos que impactaram no desenvolvimento, estes relacionados a conhecimento da tecnologia e, mais uma vez, perdas de integrantes da equipe por comorbidades, no entanto, apresentamos ideias e começamos a desenvolver o código do backend do login da aplicação.<br>Durante a sprint realizamos pair programming 2 vezes, a primeira fez, focada no front, foi realizada com a dupla Miguel e Arthur Assunção já a segunda, focada no back, foi realizada entre Gabriel e Arthur Trindade. Devido ao débito técnico a implementação das stories foram impactadas e ficou acordado que seriam resolvidas durante o periodo de recesso. |
+| No decorrer da sprint, utilizando das práticas de XP programming, os integrantes conseguiram desenvolver mas obtiveram alguns débitos técnicos que impactaram no desenvolvimento, estes relacionados a conhecimento da tecnologia e, mais uma vez, perdas de integrantes da equipe por comorbidades, no entanto, apresentamos ideias e começamos a desenvolver o código do backend do login da aplicação.<br>Durante a sprint realizamos pair programming 2 vezes, a primeira, focada no front, foi realizada com a dupla Miguel e Arthur Assunção já a segunda, focada no back, foi realizada entre Gabriel e Arthur Trindade. Devido ao débito técnico a implementação das stories foram impactadas e ficou acordado que seriam resolvidas durante o periodo de recesso. |
 
-| Programação em Pares | Ferramentas Utilizadas | Duplas da sprint|
-|---| ---| ---|
-|Foi dividida a programação pares por duplas| Como mencionado na review e retrospectiva as duplas da primeira sprint utilizaram da extensão do Vscode chamada live share e o discord| Miguel e Arthur Assunção, Gabriel e Arthur Trindade|
-
-
+# Programação em pares
+| Duplas da sprint|
+| --- |
+| Miguel e Arthur D'Assumpção;<br>Gabriel e Arthur Trindade |
 
 ## Sprint 8
 
@@ -44,9 +43,10 @@
 | A sprint 2 foi pouco movimentada, como foi previsto de gerenciamento de riscos, era quase certo que a produtividade da equipe seria impactada pelo feriado de Natal e a chegada do Ano novo. No decorrer da spint, a equipe finalizou uma das telas pendentes da sprint 1, porém, descobrimos que precisaríamos de duas telas a mais do que planejávamos anteriormente, desse modo, a E2-F2-US1 entou mais vez para o backlog da próxima. No back-end, a equipe conseguiu desenvolver um código para o login que foi testado no Postman com sucesso e a equipe a definiu a E1-F1-US2 como finalizada, porém, não foi feita a integração front-end / back-end.<br>
 Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima sprint e, sendo a última sprint, a equipe deve retomar a produtividade e concluir as US's pendentes das sprints 1 e 2 e as US's restantes. |
 
-| Programação em Pares | Ferramentas Utilizadas | Duplas da sprint|
-|---| ---| ---|
-|Foi dividida a programação pares por duplas| As duplas da segunda sprint utilizaram da extensão do Vscode chamada live share e o discord| Miguel e Arthur Trindade, Gabriel e Arthur Assunção|
+# Programação em pares
+| Duplas da sprint|
+| --- |
+| Sem programação em pares na sprint. |
 
 
 ## Sprint 9
@@ -64,6 +64,7 @@ Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima s
 | --- |
 | Para a sprint 3 foi realizado a reunião de validação com o cliente e o feedback foi postado na página inicial do pages. Houve um notável progresso entre os integrantes do grupo na comunicação entre a equipe e as habilidades de programação. O pair programming foi a técnica que mais fez diferença notada na reunião de restrospectiva e review. Pois houve uma melhora mútua nas skills dos integrantes e boa rotatividade na implementação das storys do projeto. Ficou como débito técnico para a entrega da sprint 3 as seguintes stories: E1-F2-US2, E1-F2-US3, E2-F1-US2, na hora de realizar a comunicação do front-end com o back-end, porém ambas foram implementadas separadamente em suas respectivas stacks. Houve uma baixa no começo da sprint por questões de saúde o que impactou o desenvolvimento da sprint. No mais foi uma sprint que obteve uma melhora de desenvolvimento e de muito aprendizado relatado pelos integrantes. |
 
-| Programação em Pares | Ferramentas Utilizadas | Duplas da sprint|
-|---| ---| ---|
-|Foi dividida a programação pares por duplas| As duplas da terceira sprint utilizaram da extensão do Vscode chamada live share e o discord| Miguel e Gabriel , Arthur trindade e Arthur Assunção|
+# Programação em pares
+| Duplas da sprint|
+| --- |
+| Miguel e Gabriel;<br>Miguel e Arthur Trindade;<br>Gabriel e Arthur Trindade;<br>Miguel e Arthur D'Assumpção;<br>Arthur Trindade e Arthur D'Assumpção|
