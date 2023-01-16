@@ -25,20 +25,18 @@
 
 | Sprint| Atividades | Produto (Entrega) | Data Início | Data fim |
 | :------:| -------- | ---------------- | ----------- | -------- |
-| 1 |Reunião sobre o produto e realização da documentação |Definição do produto;<br>Visão de produto. | 27/10/2022 | 01/11/2022 |
-| 2 |Reunião para atualizar a documentação e dojo de gitpages |Construção do GitPages;<br>Revisão da visão de produto. | 02/11/2022 | 10/11/2022 |
-| 3 |Atualizar a documentção |Desenvolvimento da visão de projeto. | 11/11/2022 | 17/11/2022 |
-| 4 |Reunião 1 com o cliente |Levantamento inicial de requisitos do produto. | 18/11/2022 | 24/11/2022 |
-| 5 |Reunião 2 com o cliente |Refinamento da lista de requisitos;<br>Construção da estrutura inical do projeto.  | 25/11/2022 | 01/12/2022 |
-| 6 |Atualizar a documentação |Reconstrução da estrutura do projeto;<br>Desenvolvimento das estratégias de refatoração e TDD;<br>Revisão da visão de projeto. | 02/12/2022 | 08/12/2022 |
-| 7 | Desenvolvimento |Implementação E1 F1. | 09/12/2022 | 15/12/2022 |
-| 8 | Desenvolvimento |Implementação E1 F2.  | 16/12/2022 | 22/12/2022 |
-| 9 | Desenvolvimento |Implementação E2 F1. | 23/12/2022 | 05/01/2023 |
-| 10 | Desenvolvimento, reunião de validação com o cliente e atualização da documentação|Implementação E2 F2;<br>Entrega do MVP1. | 05/01/2023 | 12/01/2023 |
-| 11 | Desenvolvimento |Implementação E3 F1. | 13/01/2023 | 19/01/2023 |
-| 12 | Desenvolvimento |Implementação E3 F2. | 20/01/2023 | 26/01/2023 |
-| 13 | Desenvolvimento |Implementação E4 F1 | 27/02/2023 | 02/02/2023 |
-| 14 | Desenvolvimento, reunião de validação com o cliente e atualização da documentação|Implementação E4 F2;<br>Entrega do MVP2. | 03/02/2023 | 09/02/2023 |
+| 1 | Definição do produto;<br>Inicio da documentação. | Ideia inicial do produto;<br>Documento de visão de produto. | 27/10/2022 | 01/11/2022 |
+| 2 | Revisão do documento de visão de produto;<br>Construção do GitPages. | GitPages;<br>Documento de visão de produto atualizado. | 02/11/2022 | 10/11/2022 |
+| 3 | Desenvolvimento do documento de visão de projeto. | Documento de visão de projeto. | 11/11/2022 | 17/11/2022 |
+| 4 | Reunião 1 com o cliente | Lista de de requisitos iniciais do produto. | 18/11/2022 | 24/11/2022 |
+| 5 | Reunião 2 com o cliente;<br>Refinamento da lista de requisitos;<br>Construção da estrutura inical do projeto. | Lista de requisitos do projeto;<br>Estrutura inicial do projeto (Épicos, Features e US's) | 25/11/2022 | 01/12/2022 |
+| 6 | Reconstrução da estrutura do projeto;<br>Desenvolvimento das estratégias de refatoração e TDD;<br>Revisão da visão de projeto. | Documentação atualizada;<br>Estrutura do projeto (Épicos, features e US's) | 02/12/2022 | 08/12/2022 |
+| 7 | Desenvolvimento | E2-F2-US1 | 20/12/2022 | 27/12/2022 |
+| 8 | Desenvolvimento | E1-F1-US2<br>E2-F2-US1  | 28/12/2022 | 04/12/2022 |
+| 9 | Desenvolvimento;<BR>Reunião de validação com o cliente;<br>Atualização da documentação.| E1-F1-US1<br>E1-F1-US2<br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3 <br>E2-F1-US1<br>E2-F1-US2<br>E2-F2-US1<br>E2-F2-US2<br>E2-F2-US3<br><br>Entrega do MVP1. | 05/01/2023 | 12/01/2023 |
+| 10 | Desenvolvimento | - | 17/01/2023 | 24/01/2023 |
+| 11 | Desenvolvimento | - | 25/01/2023 | 01/02/2023 |
+| 12 | Desenvolvimento, reunião de validação com o cliente e atualização da documentação | -<br>Entrega do MVP2. | 02/02/2023 | 09/02/2023 |
 
 ## Matriz de Comunicação
 
