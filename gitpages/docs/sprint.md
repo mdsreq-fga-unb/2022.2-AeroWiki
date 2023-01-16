@@ -8,11 +8,11 @@
 | 03/01/2023 | 0.2 | Estruturação e atualização da Sprint 2 | Arthur Trindade |
 | 12/01/2023 | 0.2 | Atualização da Sprint 3 | Arthur Trindade |
 
-## Sprint 1
+## Sprint 7
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 20/12/2022 | 28/01/2023 | E2-F2-US1 | Gabriel de Souza |
+| 20/12/2022 | 27/01/2023 | E2-F2-US1 | Gabriel de Souza |
 
 | Planejamento |
 | --- |
@@ -28,11 +28,11 @@
 
 
 
-## Sprint 2
+## Sprint 8
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 20/12/2022 | 04/01/2023 | E1-F1-US2<br>E2-F2-US1 | Arthur Trindade |
+| 28/12/2022 | 04/01/2023 | E1-F1-US2<br>E2-F2-US1 | Arthur Trindade |
 
 
 | Planejamento |
@@ -49,7 +49,7 @@ Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima s
 |Foi dividida a programação pares por duplas| As duplas da segunda sprint utilizaram da extensão do Vscode chamada live share e o discord| Miguel e Arthur Trindade, Gabriel e Arthur Assunção|
 
 
-## Sprint 3
+## Sprint 9
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
