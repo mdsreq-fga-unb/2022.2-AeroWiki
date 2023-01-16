@@ -39,8 +39,7 @@
 
 | Review e retrospectiva |
 | --- |
-| A sprint 2 foi pouco movimentada, como foi previsto de gerenciamento de riscos, era quase certo que a produtividade da equipe seria impactada pelo feriado de Natal e a chegada do Ano novo. No decorrer da spint, a equipe finalizou uma das telas pendentes da sprint 1, porém, descobrimos que precisaríamos de duas telas a mais do que planejávamos anteriormente, desse modo, a E2-F2-US1 entou mais vez para o backlog da próxima. No back-end, a equipe conseguiu desenvolver um código para o login que foi testado no Postman com sucesso e a equipe a definiu a E1-F1-US2 como finalizada, porém, não foi feita a integração front-end / back-end.<br>
-Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima sprint e, sendo a última sprint, a equipe deve retomar a produtividade e concluir as US's pendentes das sprints 1 e 2 e as US's restantes. |
+| A sprint 2 foi pouco movimentada, como foi previsto de gerenciamento de riscos, era quase certo que a produtividade da equipe seria impactada pelo feriado de Natal e a chegada do Ano novo. No decorrer da spint, a equipe finalizou uma das telas pendentes da sprint 1, porém, descobrimos que precisaríamos de duas telas a mais do que planejávamos anteriormente, desse modo, a E2-F2-US1 entou mais vez para o backlog da próxima. No back-end, a equipe conseguiu desenvolver um código para o login que foi testado no Postman com sucesso e a equipe a definiu a E1-F1-US2 como finalizada, porém, não foi feita a integração front-end / back-end.<br>Após o feedback do professor, a E1-F1-US2 retornou para o backlog da próxima sprint e, sendo a última sprint, a equipe deve retomar a produtividade e concluir as US's pendentes das sprints 1 e 2 e as US's restantes. |
 
 | Programação em pares |
 | --- |
