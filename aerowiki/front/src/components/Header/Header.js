@@ -13,7 +13,7 @@ function Header(){
       <>
         <div id='mainheader'>
           <main>
-            <div id='pad-box'>
+            <div className='pad-box'>
               <div className='logo'>
                 <a className='logo' href={"/home"}><img src={LogoHorizontal} alt='logo'></img></a>
               </div>

@@ -5,17 +5,17 @@
     --zgrey: #595959;
 }
 
-#calendar-container #pad-box{
+#calendar-container .pad-box{
     display: block;
     padding: 1rem;
 }
 
-#title{
+.title{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-#title span{
+.title span{
     font-size: 4rem;
     font-weight: 600;
     letter-spacing: 0.3rem;
@@ -23,15 +23,13 @@
     white-space: nowrap;
 }
 
-#hr{
+.hr{
     width: 100%;
-    margin-left: 0.7rem;
-}
-#hr hr{
     height: 5px;
     width: 100%;
     background-color: var(--zlight-blue);
     border-radius: 16px;
+    margin-left: 0.7rem;
 }
 
 

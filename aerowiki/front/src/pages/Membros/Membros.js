@@ -21,7 +21,7 @@ function Membros() {
         </div>
         <div id='member-table-container'>
             <main>
-                <div id='pad-box'>
+                <div className='pad-box'>
                     <MembersTable></MembersTable>
                 </div>
             </main>

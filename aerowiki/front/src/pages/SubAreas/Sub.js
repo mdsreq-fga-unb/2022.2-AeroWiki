@@ -7,25 +7,28 @@ import testedetoken from '../../testes/testedetoken'
 function Sub() {
   testedetoken()
   return (
+    <>
+    <header>
+        <Header/>
+    </header>
+    
     <div id='web-body'>
-        <header>
-            <Header/>
-        </header>
-      
-        <div id='title' className='Body'>
-          <div id='hr'><hr></hr></div>
-            <span >PROJETOS</span>
-          <div id='hr'><hr></hr></div>
+      <main>
+        <div className='area-page pad-box'>
+          <div className='title'>
+            <div className='hr no-marg'></div>
+            <span>PROJETOS</span>
+            <div className='hr no-marg'></div>
+          </div>
         </div>
+      </main>
 
-      <body>
-        
-      </body>
-
-        <footer>
-            <Footer/>
-        </footer>
     </div>
+
+    <footer>
+        <Footer/>
+    </footer>
+    </>
   
   )
 }

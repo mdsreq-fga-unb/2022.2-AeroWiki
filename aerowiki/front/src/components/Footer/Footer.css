@@ -29,4 +29,6 @@
     margin: 0 10%;
     gap: 2rem;
     font-size: 1.7rem;
+    width: 100%;
+    text-align: center;
 }

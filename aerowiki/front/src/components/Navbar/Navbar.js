@@ -12,7 +12,7 @@ function Navbar() {
 
     return (
         <>
-        <div id='pad-box'>
+        <div className='pad-box'>
             <div id='navbar'>
                 <Link to='#' id='navbar-icons'> 
                     <FontAwesomeIcon icon={faIcons.faBars} onClick={showSidebar} />

@@ -5,7 +5,7 @@
     --zgrey: #595959;
 }
 
-#fixed-projects-container #pad-box{
+#fixed-projects-container .pad-box{
     display: block;
     padding: 1rem;
 }
