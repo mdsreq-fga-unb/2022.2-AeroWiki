@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 export function ModalButton({ open, onSave, onCancel, member }) {
-  console.log("membro", member);
-  const [setor, setSetor] = useState("");
-  const [cargo, setCargo] = useState("");
+  const [newsetor, setSetor] = useState("");
+  const [newcargo, setCargo] = useState("");
 
   // handleChange(event) {
   //   this.setState({value: event.target.value});
@@ -18,17 +17,13 @@ export function ModalButton({ open, onSave, onCancel, member }) {
         <form id="edit-member">
           <div id="form-box">
             <label>Setor</label>
-            <select
-              value={setor}
-              onChange={(e) => setSetor(e.target.value)}
-              className="input"
-            >
+            <select value={newsetor} onChange={(e) => setSetor(e.target.value)} className="input">
               <option value="" disabled selected>
                 Selecione o setor
               </option>
               <option value="Comercial">Comercial</option>
               <option value="Marketing">Marketing</option>
-              <option value="Relações">Relações Externas</option>
+              <option value="Relações Externas">Relações Externas</option>
               <option value="Pesquisa & Desenvolvimento">
                 Pesquisa & Desenvolvimento
               </option>
@@ -38,11 +33,7 @@ export function ModalButton({ open, onSave, onCancel, member }) {
 
           <div id="form-box">
             <label>Cargo</label>
-            <select
-              value={cargo}
-              onChange={(e) => setCargo(e.target.value)}
-              className="input"
-            >
+            <select value={newcargo} onChange={(e) => setCargo(e.target.value)} className="input">
               <option value="" disabled selected>
                 Selecione o cargo
               </option>
@@ -71,8 +62,8 @@ export function ModalButton({ open, onSave, onCancel, member }) {
                 onClick={() =>
                   onSave({
                     email: member.email,
-                    area: setCargo(cargo),
-                    role: setSetor(setor),
+                    role: newcargo,
+                    area: newsetor
                   })
                 }
               >

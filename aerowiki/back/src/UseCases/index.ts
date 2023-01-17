@@ -7,6 +7,8 @@ import { UpdateUserUseCase } from "../UseCases/UpdateUserUseCase/UpdateUserUseCa
 import { UpdateUserController } from "../UseCases/UpdateUserUseCase/UpdateUserController";
 import { UpdateMemberUseCase } from "../UseCases/UpdateMemberUseCase/UpdateMemberUseCase";
 import { UpdateMemberController } from "../UseCases/UpdateMemberUseCase/UpdateMemberController";
+import { DeleteMemberUseCase } from "../UseCases/DeleteMemberUseCase/DeleteMemberUseCase";
+import { DeleteMemberController } from "../UseCases/DeleteMemberUseCase/DeleteMemberController";
 
 const userRepository = new MongodbImplementation();
 
@@ -26,6 +28,10 @@ const updateMemberUseCase = new UpdateMemberUseCase(userRepository);
 
 const updateMemberController = new UpdateMemberController(updateMemberUseCase);
 
+const deleteMemberUseCase = new DeleteMemberUseCase(userRepository);
+
+const deleteMemberController = new DeleteMemberController(deleteMemberUseCase);
+
 export {
   createUserUseCase,
   createUserController,
@@ -35,4 +41,6 @@ export {
   updateUserController,
   updateMemberUseCase,
   updateMemberController,
+  deleteMemberUseCase,
+  deleteMemberController
 };

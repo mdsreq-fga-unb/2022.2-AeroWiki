@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {createUserController, updateMemberController, updateUserController} from '../UseCases'
+import {createUserController, updateMemberController, updateUserController, deleteMemberController} from '../UseCases'
 import {loginController} from '../UseCases'
 import mongoose from "mongoose";
 import {UserSchema} from '../schemas/user-schema'
@@ -32,6 +32,10 @@ router.put('/updateUser', (request, response) => {
 
 router.put('/updateMember', (request, response) => {
   return updateMemberController.handle(request, response)
+})
+
+router.delete('/deleteMember', (request, response) => {
+  return deleteMemberController.handle(request, response)
 })
 
 export {router}

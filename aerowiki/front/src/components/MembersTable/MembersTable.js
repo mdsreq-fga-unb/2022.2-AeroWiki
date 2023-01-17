@@ -15,13 +15,16 @@ function MembersTable() {
     open: false,
     member: undefined,
   });
-  const showButtons = () => setButtons(!memberButtons);
-  const [newuserForm, setForm] = useState(true);
-  const showForm = () => setForm(!newuserForm);
+  
+  // const showButtons = () => setButtons(!memberButtons);
+  // const [newuserForm, setForm] = useState(true);
+  // const showForm = () => setForm(!newuserForm);
+
   const onEdit = (member) => {
-    console.log(member);
+    console.log("editMember", member);
     setModalState({ open: true, member: member });
   };
+
   const onCloseModal = () => setModalState({ open: false, member: undefined });
 
   const onUpdate = async ({ area, role, email }) => {

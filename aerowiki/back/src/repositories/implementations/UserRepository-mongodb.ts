@@ -50,4 +50,11 @@ export class MongodbImplementation implements IUsersRepository {
       }
     );
   }
+  async deleteMember(email: string): Promise<void> {
+    const memberDeleted = await this.repository.findOneAndDelete(
+    {
+      email: email
+    }
+    )
+  }
 }
