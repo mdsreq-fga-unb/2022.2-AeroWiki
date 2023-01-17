@@ -16,7 +16,6 @@ export class UpdateMemberController {
 
       return response
         .status(201)
-        .send()
         .json({ message: "Membro ATUALIZADO" });
     } catch (err) {
       return response.status(400).json({
