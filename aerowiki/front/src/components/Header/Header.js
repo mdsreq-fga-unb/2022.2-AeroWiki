@@ -6,7 +6,7 @@ import UserMenu from '../UserMenu/UserMenu'
 function Header(){
 
     function replace(){
-      window.location.replace("http://localhost:3000/home")
+      window.location.href = ('/home')
     }
     
     return(

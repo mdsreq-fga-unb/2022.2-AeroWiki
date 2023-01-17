@@ -49,7 +49,7 @@ function Cardlogin() {
                         sessionStorage.setItem('emailReal', resultado['data']['email'])
                         sessionStorage.setItem('nomeReal', resultado['data']['name'])
                         sessionStorage.setItem('cargoReal', resultado['data']['role'])
-                        window.location.replace("http://localhost:3000/home");
+                        window.location.href = ('/home')
 
                     } else {
                         MySwal.fire({

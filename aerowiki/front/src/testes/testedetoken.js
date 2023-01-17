@@ -5,11 +5,11 @@ function testedetoken() {
         if(senha != null){
             return true
         }else{
-            window.location.replace("http://localhost:3000/login")
+            window.location.href = ('/login')
             return false
         }
     }else{
-        window.location.replace("http://localhost:3000/login")
+        window.location.href = ('/login')
         return false
     }
 }
