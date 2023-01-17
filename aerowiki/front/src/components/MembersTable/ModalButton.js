@@ -59,8 +59,7 @@ export function ModalButton({ open, onSave, onCancel, member }) {
               <FontAwesomeIcon icon={faIcons.faEraser} />
               <button
                 type="button"
-                onClick={() =>
-                  onSave({
+                onClick={() => onSave({
                     email: member.email,
                     role: newcargo,
                     area: newsetor

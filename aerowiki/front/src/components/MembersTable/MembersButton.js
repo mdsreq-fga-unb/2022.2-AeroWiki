@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import { deleteMember } from "../../services/deleteMember";
 
-function MembersButton({onDelete, onEdit, member }) {
+function MembersButton({ onDelete, onEdit, member }) {
+  console.log("item", member)
   const [memberButtons, setButtons] = useState(false);
   const showButtons = () => setButtons((prev) => !prev);
 
@@ -27,9 +28,9 @@ function MembersButton({onDelete, onEdit, member }) {
           />
         </Link>
 
-        <Link to="#" id="delete">
+        <button type="button" id="delete" onClick={() => onDelete({email: member.email})}>
           <FontAwesomeIcon icon={faIcons.faUserXmark} />
-        </Link>
+        </button>
       </div>
     </Link>
   );

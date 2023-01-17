@@ -8,6 +8,7 @@ import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import MembersButton from "./MembersButton";
 import { ModalButton } from "./ModalButton";
 import { updateMember } from "../../services/updateMember";
+import { deleteMember } from "../../services/deleteMember";
 
 function MembersTable() {
   const [memberButtons, setButtons] = useState(false);
@@ -29,9 +30,18 @@ function MembersTable() {
 
   const onUpdate = async ({ area, role, email }) => {
     try {
-      console.log("email:", email);
+      console.log("onUpdate email:", email);
       await updateMember({ area, role, email });
       setModalState({ open: false, member: undefined });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const onDelete = async ({ email }) => {
+    try {
+      console.log("onDelete email:", email);
+      await deleteMember({ email });
     } catch (err) {
       console.log(err);
     }
@@ -67,19 +77,14 @@ function MembersTable() {
                     <span id="member-telephone">{item.telephone}</span>
                     <span id="member-role">{item.role}</span>
                   </div>
-                  <MembersButton onEdit={onEdit} member={item}></MembersButton>
+                  <MembersButton onDelete={onDelete} onEdit={onEdit} member={item}/>
                 </div>
               </>
             );
           })}
         </div>
       </div>
-      <ModalButton
-        open={modalState.open}
-        member={modalState.member}
-        onCancel={onCloseModal}
-        onSave={onUpdate}
-      />
+      <ModalButton open={modalState.open} member={modalState.member} onCancel={onCloseModal} onSave={onUpdate}/>
     </>
   );
 }
