@@ -36,7 +36,7 @@ export class MongodbImplementation implements IUsersRepository {
       }
     );
   }
-  async updateMember(area: string, role: string, email: string): Promise<void> {
+  async updateMember(area: string, role: string, email: string, active: boolean): Promise<void> {
     const memberUpdate = await this.repository.findOneAndUpdate(
       {
         email: email,
@@ -44,6 +44,7 @@ export class MongodbImplementation implements IUsersRepository {
       {
         area: area,
         role: role,
+        active: active
       },
       {
         new: true,

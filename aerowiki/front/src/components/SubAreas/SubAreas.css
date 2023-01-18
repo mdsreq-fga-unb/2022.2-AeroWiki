@@ -5,11 +5,6 @@
     --zgrey: #595959;
 }
 
-#fixed-projects-container .pad-box{
-    display: block;
-    padding: 1rem;
-}
-
 #fixed-projects{
     width: 100%;
     display: flex;

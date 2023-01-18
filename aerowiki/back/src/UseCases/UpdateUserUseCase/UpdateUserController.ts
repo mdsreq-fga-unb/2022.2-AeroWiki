@@ -21,7 +21,7 @@ export class UpdateUserController {
       return response.status(201).json({message: "USUARIO ATUALIZADO"});  
     } catch (err) {
       return response.status(400).json({
-        message: err.message || 'Unexpected error ao createUser.'
+        message: err.message || 'ERRO NO SISTEMA D:'
       })
     }
   }

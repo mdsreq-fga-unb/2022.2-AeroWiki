@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import { deleteMember } from "../../services/deleteMember";
 
-function MembersButton({ onDelete, onEdit, member }) {
+function MembersButton({ onUpdate, onDelete, onEdit, member }) {
   console.log("item", member)
   const [memberButtons, setButtons] = useState(false);
   const showButtons = () => setButtons((prev) => !prev);
@@ -15,22 +15,28 @@ function MembersButton({ onDelete, onEdit, member }) {
 
   return (
     <Link to="#" id="member-buttons" onClick={showButtons}>
-      <FontAwesomeIcon icon={faIcons.faPen} />
+      <FontAwesomeIcon icon={faIcons.faEllipsis} />
       <div id={memberButtons ? "delete-file-edit-active" : "delete-file-edit"}>
 
-        <Link to="#" id="file">
+        <Link to="#" id="file" onClick={() => onUpdate({
+            email: member.email,
+            role: member.role,
+            area: member.area,
+            active: !member.active
+          })}
+        >
           <FontAwesomeIcon icon={faIcons.faUserMinus} />
         </Link>
 
-        <Link to="#" id="edit" onClick={() => onEdit(member)}>
+        <Link id="edit" onClick={() => onEdit(member)}>
           <FontAwesomeIcon
             icon={faIcons.faEraser}
           />
         </Link>
 
-        <button type="button" id="delete" onClick={() => onDelete({email: member.email})}>
+        <Link id="delete" onClick={() => onDelete({email: member.email})}>
           <FontAwesomeIcon icon={faIcons.faUserXmark} />
-        </button>
+        </Link>
       </div>
     </Link>
   );

@@ -34,7 +34,7 @@ router.put('/updateMember', (request, response) => {
   return updateMemberController.handle(request, response)
 })
 
-router.put('/deleteMember', (request, response) => {
+router.delete('/deleteMember', (request, response) => {
   return deleteMemberController.handle(request, response)
 })
 

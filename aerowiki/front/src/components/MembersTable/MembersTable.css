@@ -81,15 +81,12 @@
 }
 
 #member-sector{
-    flex-direction: column;
-    gap: 1rem;
-}
-#member-sector > *{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
-    color: black;
+}
+
+#member-sector > *{
+    color: var(--zlight-blue);
+    text-align: center;
 }
 
 #member-buttons{
@@ -173,5 +170,3 @@
 #delete svg{
     color: var(--zred);
 }
-
-

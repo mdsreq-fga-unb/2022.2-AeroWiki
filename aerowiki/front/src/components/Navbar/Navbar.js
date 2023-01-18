@@ -31,7 +31,7 @@ function Navbar() {
 
                 <div id='navbar-areas'>
                     {NavbarData.map((item, index) => {
-                        return <NavMenu item={item} key={index} />;
+                        return <NavMenu item={item} key={index} chave={index} />;
                     })}  
                 </div>
                 

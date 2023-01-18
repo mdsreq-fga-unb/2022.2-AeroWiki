@@ -62,7 +62,8 @@ export function ModalButton({ open, onSave, onCancel, member }) {
                 onClick={() => onSave({
                     email: member.email,
                     role: newcargo,
-                    area: newsetor
+                    area: newsetor,
+                    active: member.active
                   })
                 }
               >

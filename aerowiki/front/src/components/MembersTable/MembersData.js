@@ -1,8 +1,8 @@
-import { Add_membro } from '../../services/add_membro'
+import { getMembers } from '../../services/getMembers'
 
 const sendform = async () => {
     try {
-        const response = await Add_membro()
+        const response = await getMembers()
         console.log("certo")
         const membersData = JSON.stringify(response.data)
         sessionStorage.setItem('formdata', membersData)

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
-import { setUser } from '../../services/cadastro'
+import { addMember } from '../../services/addMember'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -45,7 +45,7 @@ function NewUserForm() {
         })
       } else {
         try {
-          const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+          const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
           console.log("certo")
           console.log(r)
           resultadoCadastro(r)

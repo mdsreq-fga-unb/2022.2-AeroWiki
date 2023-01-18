@@ -10,7 +10,7 @@ import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
-import { Add_membro } from '../../services/add_membro'
+import { getMembers } from '../../services/getMembers'
 import email from '../../testes/validacoes/email';
 import { updateUser } from '../../services/updateUser';
 
@@ -19,7 +19,7 @@ import { updateUser } from '../../services/updateUser';
 function CardAccount() {
     const attform = async () => {
         try {
-            const response = await Add_membro()
+            const response = await getMembers()
             console.log("atualizado")
             console.log(response.data)
             const jazon = response.data

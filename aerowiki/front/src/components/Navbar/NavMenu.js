@@ -3,20 +3,30 @@ import './NavMenu.css'
 import { Link } from 'react-router-dom'
 
 
-function NavMenu({item}) {
+function NavMenu({item, chave}) {
   const [subnav, setSubnav] = useState(false)
-  const showSubnav = () => setSubnav(!subnav)
+  const showSubnav = (divid) => {
+    setSubnav(!subnav)
+    console.log(divid)
+    if(!subnav){
+      document.getElementById(divid).style.backgroundColor = "#082B61"
+    }
+    else{
+      document.getElementById(divid).style.backgroundColor = "transparent"
+    }
+    
+  }
 
   return (
     <>
     <div id='item'>
-      <div className='area' >
+      <div tabindex="-1" id={chave} className="area">
         <Link to={item.path} className='button'>
           {item.icon}
           <span>{item.title}</span>
         </Link>
 
-        <div id='subareas-toggle' onClick={showSubnav} >
+        <div id='subareas-toggle' onClick={() => showSubnav(chave)} >
           {item.subnav && !subnav ? item.iconClosed :  item.subnav ? item.iconOpened : null}
         </div>
       </div>

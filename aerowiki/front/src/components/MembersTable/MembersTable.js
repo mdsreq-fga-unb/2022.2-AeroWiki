@@ -28,10 +28,10 @@ function MembersTable() {
 
   const onCloseModal = () => setModalState({ open: false, member: undefined });
 
-  const onUpdate = async ({ area, role, email }) => {
+  const onUpdate = async ({ area, role, email, active }) => {
     try {
       console.log("onUpdate email:", email);
-      await updateMember({ area, role, email });
+      await updateMember({ area, role, email, active });
       setModalState({ open: false, member: undefined });
     } catch (err) {
       console.log(err);
@@ -69,15 +69,14 @@ function MembersTable() {
                       <FontAwesomeIcon icon={faIcons.faCircleUser} />
                       <span>{item.name}</span>
                     </div>
-                    <div id="member-sector">
-                      <Link to={item.path}>{item.area}</Link>
-                      <Link to={item.subarea_path}>{item.subarea}</Link>
-                    </div>
+                    <Link to={item.path} id="member-sector">
+                      <span>{item.area}</span>
+                    </Link>
                     <span id="member-email">{item.email}</span>
                     <span id="member-telephone">{item.telephone}</span>
                     <span id="member-role">{item.role}</span>
                   </div>
-                  <MembersButton onDelete={onDelete} onEdit={onEdit} member={item}/>
+                  <MembersButton onUpdate={onUpdate} onDelete={onDelete} onEdit={onEdit} member={item}/>
                 </div>
               </>
             );

@@ -24,7 +24,7 @@ export class LoginController {
     });  
     } catch (err) {
       return response.status(400).json({
-        message: err.message || 'Unexpected error ao createUser.'
+        message: err.message || 'ERRO NO SISTEMA D:'
       })
     }
   }

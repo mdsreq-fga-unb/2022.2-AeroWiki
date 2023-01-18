@@ -7,7 +7,8 @@ export class UpdateMemberUseCase {
     await this.usersRepository.updateMember(
       data.area,
       data.role,
-      data.email
+      data.email,
+      data.active
     );
   }
 }

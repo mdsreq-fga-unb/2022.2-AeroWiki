@@ -91,3 +91,7 @@
 .subarea .button{
     font-size: 1.3rem;
 }
+
+div:focus {
+    background-color: Aqua;
+}

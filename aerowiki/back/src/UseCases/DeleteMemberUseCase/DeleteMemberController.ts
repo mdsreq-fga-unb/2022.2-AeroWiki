@@ -17,7 +17,7 @@ export class DeleteMemberController {
       return response.status(201).json({message: "MEMBRO EXCLUIDO"});  
     } catch (err) {
       return response.status(400).json({
-        message: err.message || 'Unexpected error ao deleteMember.'
+        message: err.message || 'ERRO NO SISTEMA D:'
       })
     }
   }
