@@ -49,11 +49,6 @@
     - US1 -> Como diretor, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
     - US2 -> Como diretor, eu quero ser capaz de editar papéis de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
 
-- F2: Navegação
-    - US1 -> Como membro, eu quero ser capaz de visualizar as áreas do sistema para me integrar em todas as áreas  da empresa.
-    - US2 -> Como gerente, eu quero ser capaz de visualizar as subáreas  nas áreas do sistema para ter o controle das areas da empresa.
-    - US3 -> Como gerente, eu quero ser capaz de visualizar os projetos nas áreas do sistema para ter o controle de projetos da empresa.
-
 - F3: Criar áreas
     - US1 -> Como presidente, eu quero ser capaz de criar novas áreas para expansão da empresa.
     - US2 -> Como presidente, eu quero ser capaz de excluir áreas existentes para compactação da empresa.
@@ -88,5 +83,5 @@
 
 | MVP | Funcionalidades | Objetivo |
 | :---: | :--------------------------: | -------- |
-| 1 | E1-F1<br>E1-F2<br>E2-F1<br>E2-F2 | Dar suporte de login, cadastramento e navegação no sisteama. |
+| 1 | E1-F1<br>E1-F2<br>E2-F1 | Dar suporte de login e cadastramento|
 | 2 | E3-F1<br>E3-F2<br>E4-F1<br>E4-F2  | Fazer a platarforma está altamente personalizável e usável para Zenit |
