@@ -6,7 +6,7 @@ import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import { deleteMember } from "../../services/deleteMember";
 
 function MembersButton({ onUpdate, onDelete, onEdit, member }) {
-  console.log("item", member)
+  // console.log("item", member)
   const [memberButtons, setButtons] = useState(false);
   const showButtons = () => setButtons((prev) => !prev);
 

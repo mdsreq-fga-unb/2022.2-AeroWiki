@@ -170,3 +170,19 @@
 #delete svg{
     color: var(--zred);
 }
+.logoLoadoff{
+    position: fixed;
+    top: 50% ;
+    left: 50%;
+    z-index: 1;
+    display: none;
+}
+.logoLoad{
+    position: fixed;
+    top: 50% ;
+    left: 50%;
+    z-index: 1;
+}
+.fundoLoad{
+    background-color: rgba(0, 0, 0, 0.5);
+}
