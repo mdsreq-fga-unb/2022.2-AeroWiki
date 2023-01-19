@@ -8,11 +8,16 @@ function NavMenu({item, chave}) {
   const showSubnav = (divid) => {
     setSubnav(!subnav)
     console.log(divid)
+    var area = document.getElementById(divid)
     if(!subnav){
-      document.getElementById(divid).style.backgroundColor = "#082B61"
+      area.style.backgroundColor = "#082B61"
+      area.style.borderBottomLeftRadius = 0
+      area.style.borderBottomRightRadius = 0
     }
     else{
-      document.getElementById(divid).style.backgroundColor = "transparent"
+      area.style.backgroundColor = "transparent"
+      area.style.borderBottomLeftRadius = "8px"
+      area.style.borderBottomRightRadius = "8px"
     }
     
   }

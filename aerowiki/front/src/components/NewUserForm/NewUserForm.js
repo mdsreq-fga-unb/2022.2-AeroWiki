@@ -98,15 +98,15 @@ function NewUserForm() {
         </Link>
       </div>
 
-      <div id={newuserForm ? 'form-bg' : 'form-bg-active'}></div>
+      <div className={newuserForm ? 'form-bg' : 'form-bg-active'}></div>
 
-      <div id={newuserForm ? 'form' : 'form-active'}>
-        <div id='form-container'>
-          <span>Cadastrar membro</span>
+      <div id={newuserForm ? 'addM-form' : 'addM-form-active'}>
+        <div className='form-container'>
+          <span className='form-title'>Cadastrar membro</span>
           <form id='new-user-form' onSubmit={sendform} >
             <div className='form-col'>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>Nome</label>
                 <div id='inputs'>
                   <input type="text" value={name} onChange={(e) => setNameForm(e.target.value)} placeholder='Nome' className='input'></input>
@@ -114,19 +114,19 @@ function NewUserForm() {
                 </div>
               </div>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>Email</label>
                 <input type="email" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
               </div>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>Matrícula UnB</label>
                 <input type="number" value={unb_id} onChange={(e) => setUnb_idForm(e.target.value)} placeholder='Matrícula' className='input'></input>
               </div>
 
               <div id='form-roles'>
                 <div id='inputs'>
-                  <div id='form-box'>
+                  <div className='form-box'>
                     <label>Setor</label>
                     <select value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o setor</option>
@@ -138,7 +138,7 @@ function NewUserForm() {
                     </select>
                   </div>
 
-                  <div id='form-box'>
+                  <div className='form-box'>
                     <label>Cargo</label>
                     <select value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o cargo</option>
@@ -157,29 +157,29 @@ function NewUserForm() {
 
             <div className='form-col'>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>Telefone</label>
                 <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>Data de nascimento</label>
                 <input type="date" value={birthdate} onChange={(e) => setBirthdateForm(e.target.value)} className='input'></input>
               </div>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>RG</label>
                 <input type="number" value={rg} onChange={(e) => setRgForm(e.target.value)} className='input'></input>
               </div>
 
-              <div id='form-box'>
+              <div className='form-box'>
                 <label>CPF</label>
                 <input type="number" value={cpf} onChange={(e) => setCpfForm(e.target.value)} className='input'></input>
               </div>
 
             </div>
           </form>
-          <div id='form-buttons'>
+          <div className='form-buttons'>
             <div className='back area'>
               <Link to='#' className='button' onClick={showForm}>
                 <FontAwesomeIcon icon={faIcons.faChevronLeft} />
