@@ -1,5 +1,7 @@
+import './ModalButton.css'
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom'
 import { useState } from "react";
 
 export function ModalButton({ open, onSave, onCancel, member }) {
@@ -11,47 +13,52 @@ export function ModalButton({ open, onSave, onCancel, member }) {
   // }
 
   return (
-    <div id={open ? "form-active" : "form"}>
-      <div id="form-container">
-        <span>Editar Membro</span>
-        <form id="edit-member">
-          <div id="form-box">
-            <label>Setor</label>
-            <select value={newsetor} onChange={(e) => setSetor(e.target.value)} className="input">
-              <option value="" disabled selected>
-                Selecione o setor
-              </option>
-              <option value="Comercial">Comercial</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Relações Externas">Relações Externas</option>
-              <option value="Pesquisa & Desenvolvimento">
-                Pesquisa & Desenvolvimento
-              </option>
-              <option value="Operações">Operações</option>
-            </select>
-          </div>
+    <>
+    <div className={open ? 'form-bg-active' : 'form-bg'}></div>
 
-          <div id="form-box">
-            <label>Cargo</label>
-            <select value={newcargo} onChange={(e) => setCargo(e.target.value)} className="input">
-              <option value="" disabled selected>
-                Selecione o cargo
-              </option>
-              <option value="Membro">Membro</option>
-              <option value="Gerente">Gerente</option>
-              <option value="Diretor">Diretor</option>
-              <option value="Presidente">Presidente</option>
-            </select>
-          </div>
-        </form>
-        <div id="form-buttons">
-          <div className="add area">
-            <div className="button">
-              <FontAwesomeIcon icon={faIcons.faArrowLeft} />
-              <button type="button" onClick={onCancel}>
-                Voltar
-              </button>
+    <div id={open ? "editM-form-active" : "editM-form"}>
+      <div className="form-container">
+        <span className="form-title">Editar Membro</span>
+        <form id="edit-member">
+
+          <div className='form-col'>
+            <div className="form-box">
+              <label>Setor</label>
+              <select value={newsetor} onChange={(e) => setSetor(e.target.value)} className="input">
+                <option value="" disabled selected>
+                  Selecione o setor
+                </option>
+                <option value="Comercial">Comercial</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Relações Externas">Relações Externas</option>
+                <option value="Pesquisa & Desenvolvimento">
+                  Pesquisa & Desenvolvimento
+                </option>
+                <option value="Operações">Operações</option>
+              </select>
             </div>
+
+            <div className="form-box">
+              <label>Cargo</label>
+              <select value={newcargo} onChange={(e) => setCargo(e.target.value)} className="input">
+                <option value="" disabled selected>
+                  Selecione o cargo
+                </option>
+                <option value="Membro">Membro</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Diretor">Diretor</option>
+                <option value="Presidente">Presidente</option>
+              </select>
+            </div>
+          </div>
+          
+        </form>
+        <div className="form-buttons">
+          <div className='back area'>
+            <Link to='#' className='button' onClick={onCancel}>
+              <FontAwesomeIcon icon={faIcons.faChevronLeft} />
+              <span>Voltar</span>
+            </Link>
           </div>
 
           <div className="add area">
@@ -74,5 +81,6 @@ export function ModalButton({ open, onSave, onCancel, member }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
