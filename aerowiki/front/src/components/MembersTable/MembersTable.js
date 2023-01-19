@@ -15,6 +15,8 @@ import load from "../../img/loding.png"
 const MySwal = withReactContent(Swal)
 
 function MembersTable() {
+
+  
   function refreshPage() {
     window.location.reload(true);
   }
@@ -82,10 +84,6 @@ function MembersTable() {
         refreshPage()
       }
     })
-
-
-
-
   }
 
   return (

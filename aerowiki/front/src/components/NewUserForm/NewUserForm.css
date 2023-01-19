@@ -74,7 +74,7 @@
 
 label{
     padding: 0.3rem;
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
 }
 
 input[type='number'] {

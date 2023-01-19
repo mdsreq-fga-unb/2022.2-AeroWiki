@@ -59,6 +59,28 @@ function NewUserForm() {
   }
 
   function resultadoCadastro(resultado) {
+
+    function refreshPage() {
+      window.location.reload(true);
+    }
+  
+
+    function resultado() {
+      document.getElementById("load").classList.remove('logoLoad')
+      document.getElementById("load").classList.add('logoLoadoff')
+      MySwal.fire({
+        title: "Cadastro realizado com sucesso!",
+        icon: 'success',
+        confirmButtonText: 'Ok',
+        allowOutsideClick: false
+      }).then((result) => {
+        if (result.isConfirmed) {
+          refreshPage()
+        }
+      })
+    }
+
+
     if (resultado == "repetiu") {
       MySwal.fire({
         title: "Um ou mais campos obrigatórios estão incompletos.",
@@ -69,11 +91,10 @@ function NewUserForm() {
       const fraseResultado = resultado['data']['message']
       const erroNumber = resultado['status']
       if (erroNumber == 201) {
-        MySwal.fire({
-          title: "Cadastro realizado com sucesso!",
-          icon: 'success'
-        })
-
+        document.getElementById("load").classList.remove('logoLoadoff')
+        document.getElementById("load").classList.add('logoLoad')
+        setTimeout(function () { resultado(); }, 5000)
+        
       } else if (fraseResultado == 'User already exist') {
         MySwal.fire({
           title: "Este membro já está cadastrado.",
