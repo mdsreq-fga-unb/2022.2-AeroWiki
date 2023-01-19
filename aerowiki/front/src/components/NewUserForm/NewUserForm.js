@@ -63,9 +63,8 @@ function NewUserForm() {
     function refreshPage() {
       window.location.reload(true);
     }
-  
 
-    function resultado() {
+    function resultadoC() {
       document.getElementById("load").classList.remove('logoLoad')
       document.getElementById("load").classList.add('logoLoadoff')
       MySwal.fire({
@@ -80,7 +79,6 @@ function NewUserForm() {
       })
     }
 
-
     if (resultado == "repetiu") {
       MySwal.fire({
         title: "Um ou mais campos obrigatórios estão incompletos.",
@@ -93,7 +91,7 @@ function NewUserForm() {
       if (erroNumber == 201) {
         document.getElementById("load").classList.remove('logoLoadoff')
         document.getElementById("load").classList.add('logoLoad')
-        setTimeout(function () { resultado(); }, 5000)
+        setTimeout(function () { resultadoC(); }, 5000)
         
       } else if (fraseResultado == 'User already exist') {
         MySwal.fire({
@@ -128,7 +126,7 @@ function NewUserForm() {
             <div className='form-col'>
 
               <div className='form-box'>
-                <label>Nome</label>
+                <label className='form-label'>Nome</label>
                 <div id='inputs'>
                   <input type="text" value={name} onChange={(e) => setNameForm(e.target.value)} placeholder='Nome' className='input'></input>
                   <input type="text" value={surname} onChange={(e) => setSurnameForm(e.target.value)} placeholder='Sobrenome' className='input'></input>
@@ -136,19 +134,19 @@ function NewUserForm() {
               </div>
 
               <div className='form-box'>
-                <label>Email</label>
+                <label className='form-label'>Email</label>
                 <input type="email" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
               </div>
 
               <div className='form-box'>
-                <label>Matrícula UnB</label>
+                <label className='form-label'>Matrícula UnB</label>
                 <input type="number" value={unb_id} onChange={(e) => setUnb_idForm(e.target.value)} placeholder='Matrícula' className='input'></input>
               </div>
 
               <div id='form-roles'>
                 <div id='inputs'>
                   <div className='form-box'>
-                    <label>Setor</label>
+                    <label className='form-label'>Setor</label>
                     <select value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o setor</option>
                       <option value="Comercial">Comercial</option>
@@ -160,7 +158,7 @@ function NewUserForm() {
                   </div>
 
                   <div className='form-box'>
-                    <label>Cargo</label>
+                    <label className='form-label'>Cargo</label>
                     <select value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o cargo</option>
                       <option value="Membro">Membro</option>
@@ -179,22 +177,22 @@ function NewUserForm() {
             <div className='form-col'>
 
               <div className='form-box'>
-                <label>Telefone</label>
+                <label className='form-label'>Telefone</label>
                 <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
               <div className='form-box'>
-                <label>Data de nascimento</label>
+                <label className='form-label'>Data de nascimento</label>
                 <input type="date" value={birthdate} onChange={(e) => setBirthdateForm(e.target.value)} className='input'></input>
               </div>
 
               <div className='form-box'>
-                <label>RG</label>
+                <label className='form-label'>RG</label>
                 <input type="number" value={rg} onChange={(e) => setRgForm(e.target.value)} className='input'></input>
               </div>
 
               <div className='form-box'>
-                <label>CPF</label>
+                <label className='form-label'>CPF</label>
                 <input type="number" value={cpf} onChange={(e) => setCpfForm(e.target.value)} className='input'></input>
               </div>
 

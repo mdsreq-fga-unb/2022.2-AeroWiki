@@ -19,11 +19,11 @@ export function ModalButton({ open, onSave, onCancel, member }) {
     <div id={open ? "editM-form-active" : "editM-form"}>
       <div className="form-container">
         <span className="form-title">Editar Membro</span>
-        <form id="edit-member">
+        <form>
 
           <div className='form-col'>
             <div className="form-box">
-              <label>Setor</label>
+              <label className='form-label'>Setor</label>
               <select value={newsetor} onChange={(e) => setSetor(e.target.value)} className="input">
                 <option value="" disabled selected>
                   Selecione o setor
@@ -39,7 +39,7 @@ export function ModalButton({ open, onSave, onCancel, member }) {
             </div>
 
             <div className="form-box">
-              <label>Cargo</label>
+              <label className='form-label'>Cargo</label>
               <select value={newcargo} onChange={(e) => setCargo(e.target.value)} className="input">
                 <option value="" disabled selected>
                   Selecione o cargo

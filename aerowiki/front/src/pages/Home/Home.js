@@ -16,10 +16,13 @@ function Home() {
      
       <div id='web-body'>
         <ZenitPoster></ZenitPoster>
-        <main>
-          <Calendar></Calendar>
-          <FixedProjects></FixedProjects>
-        </main>
+        <div>
+          <main>
+            <Calendar></Calendar>
+            <FixedProjects></FixedProjects>
+          </main>          
+        </div>
+
       </div>
 
       <footer>

@@ -72,9 +72,9 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-label{
+.form-label{
     padding: 0.3rem;
-    /* font-size: 1.7rem; */
+    font-size: 1.7rem;
 }
 
 input[type='number'] {
