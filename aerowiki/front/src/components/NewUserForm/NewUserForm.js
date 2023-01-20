@@ -100,7 +100,7 @@ function NewUserForm() {
         })
       } else {
         MySwal.fire({
-          title: "Erro no sistema. :(",
+          title: "Ocorreu um erro no sistema D:",
           text: "Por favor, tente novamente mais tarde.",
           icon: 'error'
         })

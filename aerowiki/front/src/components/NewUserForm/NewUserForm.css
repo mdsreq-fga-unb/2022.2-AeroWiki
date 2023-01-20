@@ -10,7 +10,7 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
     transition: 500ms;
 }
@@ -22,11 +22,11 @@
     z-index: 1;
 }
 #addM-form{
-    top: -838.84px;
+    top: -866.3px;
     transition: 300ms;
 }
 #addM-form-active{
-    top: calc(50% - (838.84px)/2);
+    top: calc(50% - (866.3px)/2);
     transition: 500ms;
 }
 

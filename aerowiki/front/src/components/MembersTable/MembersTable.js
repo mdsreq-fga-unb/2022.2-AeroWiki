@@ -1,7 +1,7 @@
 import "./MembersTable.css";
 import React, { useEffect } from 'react';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+// import Swal from 'sweetalert2'
+// import withReactContent from 'sweetalert2-react-content'
 import { MembersData } from "./MembersData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -12,16 +12,12 @@ import { ModalButton } from "./ModalButton";
 import { updateMember } from "../../services/updateMember";
 import { deleteMember } from "../../services/deleteMember";
 import load from "../../img/loding.png"
-const MySwal = withReactContent(Swal)
+import LoadingIcon from "../LoadingIcon/LoadingIcon";
+// const MySwal = withReactContent(Swal)
+
 
 function MembersTable() {
-
-  
-  function refreshPage() {
-    window.location.reload(true);
-  }
-
-  const [memberButtons, setButtons] = useState(false);
+  // const [memberButtons, setButtons] = useState(false);
   const [modalState, setModalState] = useState({
     open: false,
     member: undefined,
@@ -38,59 +34,74 @@ function MembersTable() {
 
   const onCloseModal = () => setModalState({ open: false, member: undefined });
 
-  const onUpdate = async ({ area, role, email, active }) => {
-
+  const onUpdate = async ({ area, role, email, active }, action) => {
     try {
       console.log("onUpdate email:", email);
       let response = await updateMember({ area, role, email, active });
       console.log(response)
       // alert(response['data']['message'])
       setModalState({ open: false, member: undefined });
-      document.getElementById("load").classList.remove('logoLoadoff')
-      document.getElementById("load").classList.add('logoLoad')
-      setTimeout(function () { resultado(response.data); }, 5000)
+
+      // document.getElementById("load").classList.remove('logoLoadoff')
+      // document.getElementById("load").classList.add('logoLoad')
+      // setTimeout(function () { resultado(response.data); }, 5000)
+      
+      if(action === "editar"){
+        LoadingIcon("success", "Membro atualizado com sucesso!", "") 
+      }
+      else if(action === "arquivar"){
+        console.log(active)
+        if(!active){
+          LoadingIcon("success", "Membro arquivado com sucesso!", "")          
+        }
+        else{
+          LoadingIcon("success", "Membro desarquivado com sucesso!", "")     
+        }
+      }
 
     } catch (err) {
       console.log(err);
-      MySwal.fire({
-        title: "Não foi possivel realizar essa tarefa",
-        icon: 'error'
-      })
+      LoadingIcon("error", "Ocorreu um erro no sistema D:", "Por favor, tente mais tarde.")
     }
   };
 
   const onDelete = async ({ email }) => {
     try {
       // console.log("onDelete email:", email);
-      let response = await deleteMember({ email });
-      document.getElementById("load").classList.remove('logoLoadoff')
-      document.getElementById("load").classList.add('logoLoad')
-      setTimeout(function () { resultado(response.data); }, 5000)
+
+      await deleteMember({ email });
+      // document.getElementById("load").classList.remove('logoLoadoff')
+      // document.getElementById("load").classList.add('logoLoad')
+      // setTimeout(function () { resultado(response.data); }, 5000)
+
+      LoadingIcon("Membro excluído com sucesso", "success")
+
     } catch (err) {
       console.log(err);
+      LoadingIcon("error", "Ocorreu um erro no sistema D:", "Por favor, tente mais tarde.")
     }
   };
 
-  function resultado(jazon) {
-    document.getElementById("load").classList.remove('logoLoad')
-    document.getElementById("load").classList.add('logoLoadoff')
-    MySwal.fire({
-      title: "função realizada com sucesso",
-      icon: 'success',
-      confirmButtonText: 'Ok',
-      allowOutsideClick: false
-    }).then((result) => {
-      if (result.isConfirmed) {
-        refreshPage()
-      }
-    })
-  }
+  // function resultado(jazon) {
+  //   document.getElementById("load").classList.remove('logoLoad')
+  //   document.getElementById("load").classList.add('logoLoadoff')
+  //   MySwal.fire({
+  //     title: "função realizada com sucesso",
+  //     icon: 'success',
+  //     confirmButtonText: 'Ok',
+  //     allowOutsideClick: false
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       refreshPage()
+  //     }
+  //   })
+  // }
 
   return (
     <>
-      <div className="fundoload">
-        <img id="load" className="logoLoadoff" src={load} alt="loading..." />
-      </div>
+      <div id='load-bg' className='form-bg'></div>
+      <img id="load" className="logoLoadoff" src={load} alt="loading..." />
+
       <div id="members-table">
         <div id="mtable-labels">
           <div id="labels">
@@ -103,20 +114,25 @@ function MembersTable() {
         </div>
         <div id="mtable-members">
           {MembersData[0].map((item, index) => {
+            setTimeout(function () { 
+            if(!item.active){
+              document.getElementById("membro-"+ index).classList.add("arquivado")            
+            }         
+            }, 3)
             return (
               <>
-                <div id="mtable-member">
-                  <div id="member-info" key={index}>
-                    <div id="member-name">
-                      <FontAwesomeIcon icon={faIcons.faCircleUser} />
+                <div id={"membro-" + index} className="mtable-member" key={index}>
+                  <div className="member-info" >
+                    <div className="member-name">
+                      <FontAwesomeIcon icon={faIcons.faCircleUser}/>
                       <span>{item.name}</span>
                     </div>
-                    <Link to={item.path} id="member-sector">
+                    <Link to={item.path} className="member-sector">
                       <span>{item.area}</span>
                     </Link>
-                    <span id="member-email">{item.email}</span>
-                    <span id="member-telephone">{item.telephone}</span>
-                    <span id="member-role">{item.role}</span>
+                    <span className="member-email">{item.email}</span>
+                    <span className="member-telephone">{item.telephone}</span>
+                    <span className="member-role">{item.role}</span>
                   </div>
                   <MembersButton onUpdate={onUpdate} onDelete={onDelete} onEdit={onEdit} member={item} />
                 </div>
@@ -125,7 +141,7 @@ function MembersTable() {
           })}
         </div>
       </div>
-      <ModalButton open={modalState.open} member={modalState.member} onCancel={onCloseModal} onSave={onUpdate} />
+      <ModalButton open={modalState.open} member={modalState.member} onCancel={onCloseModal} onUpdate={onUpdate} />
     </>
   );
 }

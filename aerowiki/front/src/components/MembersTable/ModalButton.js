@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom'
 import { useState } from "react";
 
-export function ModalButton({ open, onSave, onCancel, member }) {
+export function ModalButton({ open, onUpdate, onCancel, member }) {
   const [newsetor, setSetor] = useState("");
   const [newcargo, setCargo] = useState("");
 
@@ -66,12 +66,12 @@ export function ModalButton({ open, onSave, onCancel, member }) {
               <FontAwesomeIcon icon={faIcons.faEraser} />
               <button
                 type="button"
-                onClick={() => onSave({
+                onClick={() => onUpdate({
                     email: member.email,
                     role: newcargo,
                     area: newsetor,
                     active: member.active
-                  })
+                  }, "editar")
                 }
               >
                 Atualizar

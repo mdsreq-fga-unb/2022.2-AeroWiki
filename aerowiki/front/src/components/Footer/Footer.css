@@ -8,7 +8,7 @@
 #footer {
     position: absolute;
     height: 350px;
-    width: 100%;
+    width: 100vw;
     background-color: #00549b;
 }
 

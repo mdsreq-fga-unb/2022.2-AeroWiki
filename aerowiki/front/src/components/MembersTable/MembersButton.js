@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
-import { deleteMember } from "../../services/deleteMember";
 
 function MembersButton({ onUpdate, onDelete, onEdit, member }) {
   // console.log("item", member)
@@ -23,7 +22,7 @@ function MembersButton({ onUpdate, onDelete, onEdit, member }) {
             role: member.role,
             area: member.area,
             active: !member.active
-          })}
+          }, "arquivar")}
         >
           <FontAwesomeIcon icon={faIcons.faUserMinus} />
         </Link>

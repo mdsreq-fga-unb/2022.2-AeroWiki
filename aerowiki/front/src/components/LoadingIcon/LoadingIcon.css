@@ -1,0 +1,11 @@
+.logoLoadoff{
+    display: none;
+}
+.logoLoad{
+    position: fixed;
+    top: calc(50% - 150px/2);
+    left: calc(50% - 150px/2);
+    z-index: 1;
+    height: 150px;
+    width: 150px;
+}

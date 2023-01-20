@@ -13,7 +13,7 @@
     background-color: white;
 }
 
-#mtable-labels, #mtable-member, #member-info{
+#mtable-labels, .mtable-member, .member-info{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -41,18 +41,18 @@
     flex-direction: column;
 }
 
-#mtable-member{
+.mtable-member{
     height: 100px;
     padding: 1rem;
 }
 
-#member-info{
+.member-info{
     border: none;
     height: 100%;
     width: 95%;
     padding: 0;
 }
-#member-info > *{
+.member-info > *{
     height: 100%;
     display: flex;
     justify-content: center;
@@ -62,29 +62,29 @@
     border-right: solid 1px rgb(185, 185, 185);
     padding: 0 1rem;
 }
-#member-info :last-child{
+.member-info :last-child{
     border: none;
 }
 
-#member-name{
+.member-name{
     justify-content: start;
     gap: 1rem;
     padding-left: 0;
 }
-#member-name span{
+.member-name span{
     display: flex;
     justify-content: center;
 }
-#member-name svg{
+.member-name svg{
     font-size: 3rem;
     color: var(--zlight-blue);
 }
 
-#member-sector{
+.member-sector{
     text-decoration: none;
 }
 
-#member-sector > *{
+.member-sector > *{
     color: var(--zlight-blue);
     text-align: center;
 }
@@ -104,19 +104,19 @@
 
 
 
-#member-name, #name-label{
+.member-name, #name-label{
     width: 20%;
 }
-#member-sector, #sector-label{
+.member-sector, #sector-label{
     width: 20%;
 }
-#member-email, #email-label{
+.member-email, #email-label{
     width: 30%;
 }
-#member-telephone, #telephone-label{
+.member-telephone, #telephone-label{
     width: 15%;
 }
-#member-role, #role-label{
+.member-role, #role-label{
     width: 15%;
 }
 
@@ -170,19 +170,10 @@
 #delete svg{
     color: var(--zred);
 }
-.logoLoadoff{
-    position: fixed;
-    top: 50% ;
-    left: 50%;
-    z-index: 1;
-    display: none;
+
+.arquivado{
+    background-color: rgb(0, 0, 0, .1);
 }
-.logoLoad{
-    position: fixed;
-    top: 50% ;
-    left: 50%;
-    z-index: 1;
-}
-.fundoLoad{
-    background-color: rgba(0, 0, 0, 0.5);
+.arquivado svg{
+    color: var(--zgrey);
 }
