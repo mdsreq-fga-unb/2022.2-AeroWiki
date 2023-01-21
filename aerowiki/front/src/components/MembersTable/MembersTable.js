@@ -116,7 +116,13 @@ function MembersTable() {
           {MembersData[0].map((item, index) => {
             setTimeout(function () { 
             if(!item.active){
-              document.getElementById("membro-"+ index).classList.add("arquivado")            
+              document.getElementById("membro-"+ index).classList.add("arquivado") 
+              
+              var cargo = sessionStorage.getItem('cargoReal')
+              if(cargo === 'Membro' || cargo === 'Gerente'){
+                document.getElementById("member-buttons").remove()
+                document.getElementById("newMember-button").remove()
+              }  
             }         
             }, 3)
             return (

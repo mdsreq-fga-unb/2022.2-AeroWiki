@@ -17,8 +17,8 @@ function Membros() {
         <div id='main-title'>
           <span>Membros</span>
           <NewUserForm></NewUserForm>
-          
         </div>
+        
         <div id='member-table-container'>
             <main>
                 <div className='pad-box'>

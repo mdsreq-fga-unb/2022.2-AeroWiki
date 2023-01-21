@@ -16,7 +16,7 @@ export function ModalButton({ open, onUpdate, onCancel, member }) {
     <>
     <div className={open ? 'form-bg-active' : 'form-bg'}></div>
 
-    <div id={open ? "editM-form-active" : "editM-form"}>
+    <div id={open ? "editMember-form-active" : "editMember-form"}>
       <div className="form-container">
         <span className="form-title">Editar Membro</span>
         <form>

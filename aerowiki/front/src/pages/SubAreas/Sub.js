@@ -3,6 +3,8 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import testedetoken from '../../testes/testedetoken'
+import NewUserForm from '../../components/NewProjectForm/NewProjectForm'
+import NewProjectForm from '../../components/NewProjectForm/NewProjectForm'
 
 function Sub() {
   testedetoken()
@@ -13,15 +15,10 @@ function Sub() {
     </header>
     
     <div id='web-body'>
-      <main>
-        <div className='area-page pad-box'>
-          <div className='title'>
-            <div className='hr no-marg'></div>
-            <span>PROJETOS</span>
-            <div className='hr no-marg'></div>
-          </div>
-        </div>
-      </main>
+      <div id='main-title'>
+        <span>Projetos</span>
+        <NewProjectForm></NewProjectForm>
+      </div>
 
     </div>
 

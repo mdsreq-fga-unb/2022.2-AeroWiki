@@ -110,8 +110,8 @@ function NewUserForm() {
 
   return (
     <>
-      <div className='area'>
-        <Link to='#' className='button' onClick={showForm}>
+      <div id='newMember-button=' className='area' onClick={showForm}>
+        <Link to='#' className='button'>
           <FontAwesomeIcon icon={faIcons.faPlus} />
           <span>Novo membro</span>
         </Link>
@@ -119,10 +119,10 @@ function NewUserForm() {
 
       <div className={newuserForm ? 'form-bg' : 'form-bg-active'}></div>
 
-      <div id={newuserForm ? 'addM-form' : 'addM-form-active'}>
+      <div id={newuserForm ? 'newMember-form' : 'newMember-form-active'}>
         <div className='form-container'>
           <span className='form-title'>Cadastrar membro</span>
-          <form id='new-user-form' onSubmit={sendform} >
+          <form id='new-member-form' onSubmit={sendform} >
             <div className='form-col'>
 
               <div className='form-box'>
@@ -209,7 +209,7 @@ function NewUserForm() {
             <div className='add area'>
               <div className='button'>
                 <FontAwesomeIcon icon={faIcons.faUserPlus} />
-                <button type='submit' form='new-user-form'>Adicionar</button>
+                <button type='submit' form='new-member-form'>Adicionar</button>
               </div>
             </div>
           </div>
