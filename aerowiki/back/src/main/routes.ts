@@ -6,7 +6,7 @@ import {UserSchema} from '../schemas/user-schema'
 
 const router =  Router()
 
-router.get('/membros', (request, response) => {
+router.get('/getMembers', (request, response) => {
   const UsersData = mongoose.model('User', UserSchema)
   UsersData.find((error, data) => {
     if (error){

@@ -113,7 +113,7 @@ function MembersTable() {
           </div>
         </div>
         <div id="mtable-members">
-          {MembersData[0].map((item, index) => {
+          {MembersData.map((item, index) => {
             setTimeout(function () { 
             if(!item.active){
               document.getElementById("membro-"+ index).classList.add("arquivado") 

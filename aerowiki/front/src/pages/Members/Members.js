@@ -1,11 +1,11 @@
-import './Membros.css'
+import './Members.css'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import MembersTable from '../../components/MembersTable/MembersTable'
 import NewUserForm from '../../components/NewUserForm/NewUserForm'
 import testedetoken from '../../testes/testedetoken'
 
-function Membros() {
+function Members() {
   // testedetoken()
   return (
     <div id='app'>
@@ -36,4 +36,4 @@ function Membros() {
   )
 }
 
-export default Membros
+export default Members

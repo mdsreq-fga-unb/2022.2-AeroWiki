@@ -1,4 +1,3 @@
-import { json } from 'react-router-dom';
 import { api } from '../api/config';
 import imputvazioLogin from '../testes/imputvazioLogin';
 

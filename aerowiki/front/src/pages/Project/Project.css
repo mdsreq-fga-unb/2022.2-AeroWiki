@@ -1,0 +1,20 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+.editor-container{
+    height: 700px;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 7rem;
+}
+
+#editorjs{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
