@@ -13,7 +13,7 @@ export default function LoadingIcon(alertIcon, alertTitle, alertText) {
 
     LoadingIcon.classList.remove('logoLoadoff')
     LoadingIcon.classList.add('logoLoad')
-    setTimeout(function () { resultado(alertIcon, alertTitle, alertText); }, 1)
+    setTimeout(function () { resultado(alertIcon, alertTitle, alertText); }, 3000)
 
     function resultado(alertIcon, alertTitle, alertText) {
         LoadBackground.classList.remove('form-bg-active')
