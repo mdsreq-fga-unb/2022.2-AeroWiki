@@ -30,17 +30,17 @@ function Cardlogin() {
   };
 
   function resultadoLogin(resultado) {
-    if (resultado == "vazio") {
+    if (resultado === "vazio") {
       MySwal.fire({
         title: "Por favor, preencha todos os campos.",
         icon: "warning",
       });
     } else {
       try {
-        if (resultado["status"] != 400) {
+        if (resultado["status"] !== 400) {
           const jazon = resultado;
           const senhareal = jazon["data"]["password"];
-          if (senhareal == senhaLogin) {
+          if (senhareal === senhaLogin) {
             sessionStorage.setItem("senhaReal", resultado["data"]["password"]);
             sessionStorage.setItem("emailReal", resultado["data"]["email"]);
             sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
@@ -54,7 +54,7 @@ function Cardlogin() {
           }
         } else {
           resultado = resultado["data"]["message"];
-          if (resultado == "Esse usuário não existe!") {
+          if (resultado === "Esse usuário não existe!") {
             MySwal.fire({
               title: "Usuário não cadastrado!",
               text: "Por favor, contate o gerente ou diretor do seu setor.",

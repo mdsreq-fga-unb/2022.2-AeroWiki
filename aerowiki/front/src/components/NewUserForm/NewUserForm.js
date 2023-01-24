@@ -32,13 +32,13 @@ function NewUserForm() {
   const sendform = async (e) => {
     e.preventDefault();
 
-    if (validarMatricula(unb_id) == false) {
+    if (validarMatricula(unb_id) === false) {
       MySwal.fire({
         title: "Matrícula inválida",
         icon: 'error'
       })
     } else {
-      if (validarNome(name) == false || validarNome(surname) == false) {
+      if (validarNome(name) === false || validarNome(surname) === false) {
         MySwal.fire({
           title: "Nome inválido",
           icon: 'error'
@@ -79,7 +79,7 @@ function NewUserForm() {
       })
     }
 
-    if (resultado == "repetiu") {
+    if (resultado === "repetiu") {
       MySwal.fire({
         title: "Um ou mais campos obrigatórios estão incompletos.",
         icon: 'warning'
@@ -88,12 +88,12 @@ function NewUserForm() {
     } else {
       const fraseResultado = resultado['data']['message']
       const erroNumber = resultado['status']
-      if (erroNumber == 201) {
+      if (erroNumber === 201) {
         document.getElementById("load").classList.remove('logoLoadoff')
         document.getElementById("load").classList.add('logoLoad')
         setTimeout(function () { resultadoC(); }, 5000)
         
-      } else if (fraseResultado == 'User already exist') {
+      } else if (fraseResultado === 'User already exist') {
         MySwal.fire({
           title: "Este membro já está cadastrado.",
           icon: 'warning'

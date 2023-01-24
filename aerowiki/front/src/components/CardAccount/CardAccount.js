@@ -21,15 +21,16 @@ function CardAccount() {
         try {
             const response = await getMembers()
             console.log("atualizado")
-            console.log(response.data)
-            const jazon = response.data
+            // console.log(response.data)
+            let jazon = response.data
             // const membersData = JSON.stringify(response.data)
-            const emailReal = sessionStorage.getItem('emailReal')
-            console.log(jazon)
+            let emailReal = sessionStorage.getItem('emailReal')
+            // console.log(jazon)
             // alert(jazon[0]["email"])
             var i
             for (i = 0; i < jazon.length; i++) {
-                if (emailReal == jazon[i]["email"]) {
+                if (emailReal === jazon[i]["email"]) {
+                    
                     sessionStorage.setItem('nomebanco', jazon[i]['name'])
                     sessionStorage.setItem('nomeReal', jazon[i]['name'])
                     sessionStorage.setItem('emailbanco', jazon[i]['email'])
@@ -42,6 +43,7 @@ function CardAccount() {
                     sessionStorage.setItem('rgbanco', jazon[i]['rg'])
                 }
             }
+
         } catch (error) {
             console.log("erro")
             console.log(error)
@@ -57,7 +59,8 @@ function CardAccount() {
     // sessionStorage.setItem('rgbanco','11111111')
 
     const update = async (e) => {
-        e.preventDefault();
+        
+        // e.preventDefault();
         try {
             const response = await updateUser(nome, email, matricula, telefone)
             console.log("updateuser")
@@ -71,15 +74,15 @@ function CardAccount() {
         }
     }
 
-    const nomebanco = sessionStorage.getItem('nomebanco')
-    const emailbanco = sessionStorage.getItem('emailbanco')
-    const matriculabanco = sessionStorage.getItem('matriculabanco')
-    const telefonebanco = sessionStorage.getItem('telefonebanco')
-    const setorbanco = sessionStorage.getItem('setorbanco')
-    const cargobanco = sessionStorage.getItem('cargobanco')
-    const dataNascbanco = sessionStorage.getItem('dataNascbanco')
-    const cpfbanco = sessionStorage.getItem('cpfbanco')
-    const rgbanco = sessionStorage.getItem('rgbanco')
+    let nomebanco = sessionStorage.getItem('nomebanco')
+    let emailbanco = sessionStorage.getItem('emailbanco')
+    let matriculabanco = sessionStorage.getItem('matriculabanco')
+    let telefonebanco = sessionStorage.getItem('telefonebanco')
+    let setorbanco = sessionStorage.getItem('setorbanco')
+    let cargobanco = sessionStorage.getItem('cargobanco')
+    let dataNascbanco = sessionStorage.getItem('dataNascbanco')
+    let cpfbanco = sessionStorage.getItem('cpfbanco')
+    let rgbanco = sessionStorage.getItem('rgbanco')
 
 
 
@@ -117,7 +120,7 @@ function CardAccount() {
 
     }
     function refreshPage() {
-        window.location.reload(true);
+        window.location.href = "/myAccount";
     }
 
     return (

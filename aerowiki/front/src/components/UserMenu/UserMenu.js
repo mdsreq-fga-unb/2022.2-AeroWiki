@@ -14,13 +14,13 @@ function UserMenu() {
     
     useEffect(() => {
         // alert(document.getElementById('nameHeader').textContent)
-        if (document.getElementById('nameHeader').textContent == '') {
+        if (document.getElementById('nameHeader').textContent === '') {
             document.getElementById('nameHeader').append(sessionStorage.getItem('nomeReal'))
         }
 
     }, []);
     // alert(sessionStorage.getItem('cargobanco'))
-    if(sessionStorage.getItem('cargoReal') == 'Presidente'){
+    if(sessionStorage.getItem('cargoReal') === 'Presidente'){
         UserMenuDataFinal = UserMenuData     
     }
     
