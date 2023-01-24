@@ -64,3 +64,18 @@
 | Programação em pares |
 | --- |
 | Miguel Moreira e Gabriel de Souza;<br>Miguel Moreira e Arthur Trindade;<br>Gabriel de Souza e Arthur Trindade;<br>Miguel Moreira e Arthur D'Assumpção;<br>Arthur Trindade e Arthur D'Assumpção.|
+
+## Sprint 10
+
+| Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
+| --- | --- | --- | --- |
+| 17/01/2023 | 24/01/2023 | Correções, complementos e refatoração do MVP1 <br> E3-F1-US4  | Miguel |
+
+| Planejamento |
+| --- |
+| Nessa sprint o foco era lapidar o MVP1, rafatorar o código, que foi feito na correria e finalizar todo o frontend atraves da iniciação de uma US. Para concluir essa sprint será necessario, adicionar funcionalidades que não eram exigidas mas que agregam ao produto final, refatorar o código com o objetivo de diminuir e torna-lo mais legível e para começar o MVP2 iniciamos uma US para fazer a ultima tela do frontend. |
+
+O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO?
+O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR?
+O QUE APRENDEMOS DURANTE ESSA SPRINT?
+O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?
