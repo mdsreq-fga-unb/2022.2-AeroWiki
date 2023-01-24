@@ -23,8 +23,6 @@ Paleta de Cores
 
 ## Componentes
 --------------------------------------------------------------------------
-  ### Calendario
-  
   ### Header
   * Contera a logo da Zenit no canto superior esquerdo;
   * Terá a representação do login no canto superiro esquerdo;
@@ -35,6 +33,10 @@ Paleta de Cores
   * O botão de deirecionamento das áreas tera três linhas brancas empilhadas e a frase "Áreas" ao lado;
   
   ### Footer
+  * O footer se enconta na ultima posição na parte inferior da pagina;
+  * O footer tera a logo da Zenit;
+  * O footer contara com informações da empresa;
+ 
   
   ### Barra de navagação 
   * Coluna lateral esquerda;
@@ -43,10 +45,20 @@ Paleta de Cores
   * A Coluna lateral tera o fundo Azul Claro e as letras em branco;
   * Na ponta tera uma seta que será um botão de vizualização das subareas;
   
-  ### Sub-Areas
+  ### Sub-Areas e Areas
+  * Cada area tera o fundo branco;
+  * Cada area terá o seu nome fixado no incio da pagina, logo a baixo do header;
+  * Cada area terá seus projetos no corpo da pagina.
   
   ### Menu de usuario
+  * Contara com campos de preenchimento; 
+  * Cada campo terá o nome do dado a ser usado;
+  * O local de preenchimento será uma barra cinza;
  
-  ### Projetos fixados
+  ### Projetos 
+  * Os quadros terão o formato de retangulo;
+  * O quadro terá uma imagem representativa do projeto;
+  * O quadro terá o caminho do projeto escrito;
+  * O quasro terá o nome do proejto;
   
 
