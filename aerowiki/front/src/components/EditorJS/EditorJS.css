@@ -1,0 +1,62 @@
+:root {
+    --zlight-blue: #00559b;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+.project-container{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.project-bg{
+    padding: 3rem;
+    background-color: rgba(0, 84, 155, 0.1);
+    border-radius: 16px;
+}
+
+.editor-container{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background-color: white;
+}
+
+.editor-textbox{
+    padding: 3rem 10rem;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.project-area-subarea{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.7rem;
+    align-items: center;
+}
+
+.project-name{
+    font-size: 3rem;
+}
+
+
+.ce-block__content,
+.ce-toolbar__content {
+    max-width: 100% !important;
+}
+
+.cdx-block {
+    max-width: 100% !important;
+}
+
+.codex-editor{
+    z-index: 0;
+}

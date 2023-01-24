@@ -25,7 +25,7 @@ function NavMenu({item, chave}) {
   return (
     <>
     <div id='item'>
-      <div tabindex="-1" id={chave} className="area">
+      <div tabIndex="-1" id={chave} className="area">
         <Link to={item.path} className='button'>
           {item.icon}
           <span>{item.title}</span>

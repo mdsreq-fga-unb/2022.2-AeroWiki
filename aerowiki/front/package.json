@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
+    "@calumk/editorjs-codeflask": "^1.0.9",
     "@editorjs/editorjs": "^2.26.4",
     "@editorjs/header": "^2.7.0",
     "@editorjs/list": "^1.8.0",
+    "@editorjs/nested-list": "^1.3.0",
     "@editorjs/paragraph": "^2.9.0",
+    "@editorjs/table": "^2.2.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -22,9 +25,11 @@
     "editorjs-header-with-alignment": "^1.0.1",
     "editorjs-header-with-anchor": "^2.6.0",
     "editorjs-paragraph-with-alignment": "^3.0.0",
+    "editorjs-text-alignment-blocktune": "^1.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
+    "react-editor-js": "^2.1.0",
     "react-fontawesome": "^1.7.1",
     "react-router-dom": "^6.6.0",
     "react-scripts": "5.0.1",
@@ -57,10 +62,14 @@
     ]
   },
   "devDependencies": {
+    "@editorjs/checklist": "^1.4.0",
     "@editorjs/delimiter": "^1.3.0",
     "@editorjs/quote": "^2.5.0",
     "@editorjs/warning": "^1.3.0",
+    "editorjs-drag-drop": "^1.1.13",
+    "editorjs-table": "^1.4.10",
     "editorjs-toggle-block": "^0.3.8",
+    "editorjs-undo": "^1.0.1",
     "jest": "^27.5.1"
   }
 }
