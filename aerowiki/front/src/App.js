@@ -26,7 +26,7 @@ function App() {
         <Route path="/membros" element={<Members />} />
         <Route path="/myAccount" element={<Account />} />
         <Route path='/projetoteste' element={<Project />} />
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </>
 
