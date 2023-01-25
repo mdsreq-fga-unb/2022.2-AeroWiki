@@ -45,6 +45,7 @@ function Cardlogin() {
             sessionStorage.setItem("emailReal", resultado["data"]["email"]);
             sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
             sessionStorage.setItem("cargoReal", resultado["data"]["role"]);
+            sessionStorage.setItem("matriculaReal", resultado["data"]["unb_id"]);
             window.location.href = "/home";
           } else {
             MySwal.fire({

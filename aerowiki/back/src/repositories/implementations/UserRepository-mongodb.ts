@@ -20,7 +20,8 @@ export class MongodbImplementation implements IUsersRepository {
     name: string,
     email: string,
     telephone: string,
-    unb_id: string
+    unb_id: string,
+    password: string
   ): Promise<void> {
     const userUpdated = await this.repository.findOneAndUpdate(
       {
@@ -30,6 +31,7 @@ export class MongodbImplementation implements IUsersRepository {
         name: name,
         email: email,
         telephone: telephone,
+        password: password
       },
       {
         new: true,

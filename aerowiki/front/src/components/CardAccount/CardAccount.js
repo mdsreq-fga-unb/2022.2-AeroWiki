@@ -13,6 +13,8 @@ import Button from 'react-bootstrap/esm/Button';
 import { getMembers } from '../../services/getMembers'
 import email from '../../testes/validacoes/email';
 import { updateUser } from '../../services/updateUser';
+// import load from "../../img/loding.png"
+// import LoadingIcon from '../LoadingIcon/LoadingIcon';
 
 
 
@@ -24,13 +26,13 @@ function CardAccount() {
             // console.log(response.data)
             let jazon = response.data
             // const membersData = JSON.stringify(response.data)
-            let emailReal = sessionStorage.getItem('emailReal')
+            let matriculaReal = sessionStorage.getItem('matriculaReal')
             // console.log(jazon)
-            // alert(jazon[0]["email"])
+
             var i
             for (i = 0; i < jazon.length; i++) {
-                if (emailReal === jazon[i]["email"]) {
-                    
+                if (matriculaReal === jazon[i]["unb_id"]) {
+
                     sessionStorage.setItem('nomebanco', jazon[i]['name'])
                     sessionStorage.setItem('nomeReal', jazon[i]['name'])
                     sessionStorage.setItem('emailbanco', jazon[i]['email'])
@@ -41,6 +43,7 @@ function CardAccount() {
                     sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
                     sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
                     sessionStorage.setItem('rgbanco', jazon[i]['rg'])
+                    sessionStorage.setItem('senhabanco', jazon[i]['password'])
                 }
             }
 
@@ -59,13 +62,14 @@ function CardAccount() {
     // sessionStorage.setItem('rgbanco','11111111')
 
     const update = async (e) => {
-        
+
         // e.preventDefault();
         try {
-            const response = await updateUser(nome, email, matricula, telefone)
+            const response = await updateUser(nome, email, matricula, telefone, senha)
             console.log("updateuser")
-            console.log(response)
-            refreshPage()
+            console.log("aloalo", response)
+            sessionStorage.clear()
+            refreshPage() 
             // resultadoCadastro(r)
         } catch (error) {
             console.log("errado")
@@ -83,6 +87,7 @@ function CardAccount() {
     let dataNascbanco = sessionStorage.getItem('dataNascbanco')
     let cpfbanco = sessionStorage.getItem('cpfbanco')
     let rgbanco = sessionStorage.getItem('rgbanco')
+    let senhabanco = sessionStorage.getItem('senhabanco')
 
 
 
@@ -101,9 +106,7 @@ function CardAccount() {
     const [dataNasc, setDataNasc] = useState(dataNascbanco);
     const [cpf, setCpf] = useState(cpfbanco);
     const [rg, setRg] = useState(rgbanco);
-
-
-
+    const [senha, setSenha] = useState(senhabanco);
 
     const editConta = () => {
         setLiberar(false);
@@ -125,6 +128,9 @@ function CardAccount() {
 
     return (
         <>
+            {/* <div id='load-bg' className='form-bg'></div>
+            <img id="load" className="logoLoadoff" src={load} alt="loading..." /> */}
+
             <Row className='TitleAccountCard justify-content-center align-items-center'>
                 <Col xxl={4} xl={6}>
                     <h1 className='TitleAccount'>Minha conta</h1>
@@ -153,7 +159,7 @@ function CardAccount() {
                         </Col>
                     </Row>
 
-                    <Form onSubmit={update}>
+                    <Form /* onSubmit={update}*/ >
                         <Row>
                             <Col xxl={5}>
                                 <Form.Group className="FullName form" controlId="fullName">
@@ -212,7 +218,7 @@ function CardAccount() {
                                             display: mostrarInverseSenha,
                                         }} controlId="newPs">
                                             <Form.Label className='imputAccount'>Digite a nova senha</Form.Label>
-                                            <Form.Control disabled={false} size='lg' className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
+                                            <Form.Control disabled={false} size='lg' value={senha} onChange={(e) => setSenha(e.target.value)} className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
@@ -232,7 +238,7 @@ function CardAccount() {
                                                 <div id='btsAccount' className='btsAccount' style={{
                                                     display: mostrarInverse,
                                                 }}>
-                                                    <Button type='submit' className='btSalvarAccount'>Salvar</Button>
+                                                    <Button onClick={update} type='button' className='btSalvarAccount'>Salvar</Button>
                                                     <Button onClick={refreshPage} className='btCancelarAccount'>Cancelar</Button>
                                                 </div>
                                             </Col>

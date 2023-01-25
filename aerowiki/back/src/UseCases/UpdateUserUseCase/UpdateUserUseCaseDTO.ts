@@ -3,4 +3,5 @@ export interface IUpdateUserRequest {
   email: string;
   telephone: string;
   unb_id: string;
+  password: string;
 }

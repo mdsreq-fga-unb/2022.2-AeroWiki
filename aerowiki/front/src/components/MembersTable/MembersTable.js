@@ -13,6 +13,7 @@ import { updateMember } from "../../services/updateMember";
 import { deleteMember } from "../../services/deleteMember";
 import load from "../../img/loding.png"
 import LoadingIcon from "../LoadingIcon/LoadingIcon";
+import { getMembers } from "../../services/getMembers";
 // const MySwal = withReactContent(Swal)
 
 
@@ -47,15 +48,15 @@ function MembersTable() {
       // setTimeout(function () { resultado(response.data); }, 5000)
       
       if(action === "editar"){
-        LoadingIcon("success", "Membro atualizado com sucesso!", "") 
+        LoadingIcon("success", "Membro atualizado com sucesso!") 
       }
       else if(action === "arquivar"){
         console.log(active)
         if(!active){
-          LoadingIcon("success", "Membro arquivado com sucesso!", "")          
+          LoadingIcon("success", "Membro arquivado com sucesso!")          
         }
         else{
-          LoadingIcon("success", "Membro desarquivado com sucesso!", "")     
+          LoadingIcon("success", "Membro desarquivado com sucesso!")     
         }
       }
 
@@ -74,7 +75,7 @@ function MembersTable() {
       // document.getElementById("load").classList.add('logoLoad')
       // setTimeout(function () { resultado(response.data); }, 5000)
 
-      LoadingIcon("Membro excluído com sucesso", "success")
+      LoadingIcon("success", "Membro excluído com sucesso")
 
     } catch (err) {
       console.log(err);
@@ -146,6 +147,7 @@ function MembersTable() {
             );
           })}
         </div>
+
       </div>
       <ModalButton open={modalState.open} member={modalState.member} onCancel={onCloseModal} onUpdate={onUpdate} />
     </>

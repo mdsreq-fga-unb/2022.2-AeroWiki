@@ -9,7 +9,8 @@ export class UpdateUserUseCase {
       data.name,
       data.email,
       data.telephone,
-      data.unb_id
+      data.unb_id,
+      data.password
     );
   }
 }

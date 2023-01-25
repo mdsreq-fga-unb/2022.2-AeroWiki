@@ -7,7 +7,7 @@ export class UpdateUserController {
   ) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const {name, email, unb_id, telephone } = request.body;
+    const {name, email, unb_id, telephone, password } = request.body;
 
     try {
       console.log("aqui")
@@ -15,7 +15,8 @@ export class UpdateUserController {
        name,
        email,
        unb_id,
-       telephone
+       telephone,
+       password
       })
       console.log("por ultimo")
       return response.status(201).json({message: "USUARIO ATUALIZADO"});  

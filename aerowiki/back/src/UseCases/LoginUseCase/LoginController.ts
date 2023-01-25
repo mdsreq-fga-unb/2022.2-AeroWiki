@@ -20,7 +20,8 @@ export class LoginController {
         name: user.name,
         email: user.email,
         password: user.password,
-        role: user.role
+        role: user.role,
+        unb_id: user.unb_id
     });  
     } catch (err) {
       return response.status(400).json({
