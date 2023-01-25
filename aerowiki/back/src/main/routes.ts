@@ -2,7 +2,7 @@ import { Router } from "express";
 import {createUserController, updateMemberController, updateUserController, deleteMemberController} from '../UseCases'
 import {loginController} from '../UseCases'
 import mongoose from "mongoose";
-import {UserSchema} from '../schemas/user-schema'
+import {UserSchema} from '../schemas/UserSchema'
 
 const router =  Router()
 

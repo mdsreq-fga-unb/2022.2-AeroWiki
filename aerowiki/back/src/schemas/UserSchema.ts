@@ -58,6 +58,4 @@ const UserSchema = new mongoose.Schema<User>({
 
 })
 
-
-
 export {UserSchema}
