@@ -86,7 +86,7 @@ Primeira sprint pós entrega do MVP1, grande parte da equipe está relaxada e n�
 O QUE APRENDEMOS DURANTE ESSA SPRINT?<br>
 A importancia do clean code e da refatoração.
 
-O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?<br>
+O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?<br>|
 
 
 | Programação em pares |
