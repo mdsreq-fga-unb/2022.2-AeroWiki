@@ -46,30 +46,45 @@ function CardAccount() {
                     sessionStorage.setItem('senhabanco', jazon[i]['password'])
                 }
             }
-
         } catch (error) {
             console.log("erro")
             console.log(error)
         }
     }
     attform()
-    // sessionStorage.setItem('matriculabanco', '190087439')
-    // sessionStorage.setItem('telefonebanco', '111111')
-    // sessionStorage.setItem('setorbanco', 'aaaaaa')
-    // sessionStorage.setItem('cargobanco', 'aaaaaa')
-    // sessionStorage.setItem('dataNascbanco','1111-11-11' )
-    // sessionStorage.setItem('cpfbanco', '1111111')
-    // sessionStorage.setItem('rgbanco','11111111')
 
     const update = async (e) => {
-
+        let senhaDefinit = sessionStorage.getItem('senhaReal')
+        if (senhaConfirm !== '') {
+            if (senha === senhaConfirm) {
+                if (senha === sessionStorage.getItem('senhaReal')) {
+                    alert("Use uma senha diferente da atual")
+                    return;
+                } else {
+                    senhaDefinit = senha
+                }
+            } else {
+                alert('As duas senhas devem ser iguais')
+                return;
+            }
+        }
         // e.preventDefault();
         try {
-            const response = await updateUser(nome, email, matricula, telefone, senha)
+            const response = await updateUser(nome, email, matricula, telefone, senhaDefinit)
+            sessionStorage.setItem('nomebanco', nome)
+            sessionStorage.setItem('emailbanco', email)
+            sessionStorage.setItem('matriculabanco', matricula)
+            sessionStorage.setItem('telefonebanco', telefone)
+
             console.log("updateuser")
             console.log("aloalo", response)
-            sessionStorage.clear()
-            refreshPage() 
+            if (email === sessionStorage.getItem('emailReal') && senhaDefinit === sessionStorage.getItem('senhaReal')) {
+
+            } else {
+                sessionStorage.clear()
+            }
+
+            refreshPage()
             // resultadoCadastro(r)
         } catch (error) {
             console.log("errado")
@@ -87,7 +102,7 @@ function CardAccount() {
     let dataNascbanco = sessionStorage.getItem('dataNascbanco')
     let cpfbanco = sessionStorage.getItem('cpfbanco')
     let rgbanco = sessionStorage.getItem('rgbanco')
-    let senhabanco = sessionStorage.getItem('senhabanco')
+    // let senhabanco = sessionStorage.getItem('senhabanco')
 
 
 
@@ -106,7 +121,8 @@ function CardAccount() {
     const [dataNasc, setDataNasc] = useState(dataNascbanco);
     const [cpf, setCpf] = useState(cpfbanco);
     const [rg, setRg] = useState(rgbanco);
-    const [senha, setSenha] = useState(senhabanco);
+    const [senha, setSenha] = useState();
+    const [senhaConfirm, setSenhaConfirm] = useState('');
 
     const editConta = () => {
         setLiberar(false);
@@ -218,7 +234,7 @@ function CardAccount() {
                                             display: mostrarInverseSenha,
                                         }} controlId="newPs">
                                             <Form.Label className='imputAccount'>Digite a nova senha</Form.Label>
-                                            <Form.Control disabled={false} size='lg' value={senha} onChange={(e) => setSenha(e.target.value)} className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
+                                            <Form.Control autocomplete="off" disabled={false} size='lg' value={senha} onChange={(e) => setSenha(e.target.value)} className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
@@ -226,7 +242,7 @@ function CardAccount() {
                                             display: mostrarInverseSenha,
                                         }} controlId="confirmNewPs">
                                             <Form.Label className='imputAccount'>Confirme a nova senha</Form.Label>
-                                            <Form.Control disabled={false} size='lg' className='imputCNewPsccount' type="password" placeholder="Confirme aqui" />
+                                            <Form.Control autocomplete="off" disabled={false} size='lg' value={senhaConfirm} onChange={(e) => setSenhaConfirm(e.target.value)} className='imputCNewPsccount' type="password" placeholder="Confirme aqui" />
                                         </Form.Group>
 
                                     </Col>
