@@ -36,16 +36,36 @@
     padding-bottom: 1rem;
 }
 
-.project-area-subarea{
+.sector-container{
     display: flex;
     gap: 1rem;
     font-size: 1.7rem;
     align-items: center;
 }
 
-.project-name{
+.title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title{
     font-size: 3rem;
 }
+
+.edit{
+    background-color: var(--zgrey);
+    cursor: pointer;
+    width: 270px;
+    height: unset;
+    padding: 1rem;
+}
+
+.active{
+    background-color: green;
+}
+
 
 
 .ce-block__content,
