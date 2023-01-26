@@ -79,14 +79,14 @@
 | --- |
 <br>O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO?<br>
 Nessa sprint funcionou bem a rafatoração do codigo, fizemos em grande parte do mesmo, e devemos continuar fazendo para melhor organização e clean code.
-
+| --- |
 O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR?<br>
 Primeira sprint pós entrega do MVP1, grande parte da equipe está relaxada e não devemos levar isso adiante, manter o foco que o MVP2 e logo ali.
-
+| --- |
 O QUE APRENDEMOS DURANTE ESSA SPRINT?<br>
 A importancia do clean code e da refatoração.
-
-O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?<br>|
+| --- |
+O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?<br>
 
 
 | Programação em pares |
