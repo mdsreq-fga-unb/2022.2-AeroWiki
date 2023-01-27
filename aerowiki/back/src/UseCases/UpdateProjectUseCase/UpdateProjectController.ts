@@ -12,8 +12,7 @@ export class UpdateProjectController {
       isfixed,
       editable,
       ongoing,
-      active,
-      project } = request.body;
+      active} = request.body;
 
     try {
       await this.updateProjectUseCase.execute({
@@ -22,8 +21,7 @@ export class UpdateProjectController {
         isfixed,
         editable,
         ongoing,
-        active,
-        project
+        active
       });
 
       return response

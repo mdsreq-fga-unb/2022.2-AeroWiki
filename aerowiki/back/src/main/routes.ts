@@ -1,25 +1,29 @@
 import { Router } from "express";
 import mongoose from "mongoose";
 import { UserSchema } from '../schemas/UserSchema'
-import { createUserController, 
-  updateMemberController, 
-  updateUserController, 
-  deleteMemberController, 
-  loginController, 
+import {
+  createUserController,
+  updateMemberController,
+  updateUserController,
+  deleteMemberController,
+  loginController,
   newProjectController,
-  updateProjectController} from '../UseCases'
+  updateProjectController,
+  updateProjectDataController,
+  deleteProjectController
+} from '../UseCases'
 
-const router =  Router()
+const router = Router()
 
 //Pega lista de membros do banco
 
 router.get('/getMembers', (request, response) => {
   const UsersData = mongoose.model('User', UserSchema)
   UsersData.find((error, data) => {
-    if (error){
+    if (error) {
       console.log(error)
     }
-    else{
+    else {
       response.json(data)
     }
   })
@@ -51,6 +55,7 @@ router.delete('/deleteMember', (request, response) => {
 })
 
 
+
 // Cria projeto no banco de dados
 router.post('/newProject', (request, response) => {
   return newProjectController.handle(request, response)
@@ -61,4 +66,14 @@ router.put('/updateProject', (request, response) => {
   return updateProjectController.handle(request, response)
 })
 
-export {router}
+// Edita texto do projeto no banco de dados
+router.put('/updateProjectData', (request, response) => {
+  return updateProjectDataController.handle(request, response)
+})
+
+// Remove permanentemente um projeto do banco de dados
+router.delete('/deleteProject', (request, response) => {
+  return deleteProjectController.handle(request, response)
+})
+
+export { router }

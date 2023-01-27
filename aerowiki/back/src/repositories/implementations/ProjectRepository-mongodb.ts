@@ -38,7 +38,8 @@ export class MongodbProjectImplementation implements IProjectsRepository {
   //     }
   //   );
   // }
-  async updateProject(id: string, name:string, isfixed:boolean, editable:boolean, ongoing:boolean, active:boolean, project: object): Promise<void> {
+
+  async updateProject(id: string, name: string, isfixed: boolean, editable: boolean, ongoing: boolean, active: boolean): Promise<void> {
     const projectUpdate = await this.repository.findOneAndUpdate(
       {
         id: id,
@@ -48,7 +49,20 @@ export class MongodbProjectImplementation implements IProjectsRepository {
         isfixed: isfixed,
         editable: editable,
         ongoing: ongoing,
-        active: active,
+        active: active
+      },
+      {
+        new: true,
+      }
+    );
+  }
+
+  async updateProjectData(id: string, project: object): Promise<void> {
+    const projectDataUpdate = await this.repository.findOneAndUpdate(
+      {
+        id: id,
+      },
+      {
         project: project
       },
       {
@@ -56,11 +70,12 @@ export class MongodbProjectImplementation implements IProjectsRepository {
       }
     );
   }
-  // async deleteMember(email: string): Promise<void> {
-  //   const memberDeleted = await this.repository.findOneAndDelete(
-  //   {
-  //     email: email
-  //   }
-  //   )
-  // }
+
+  async deleteProject(id: string): Promise<void> {
+    const projectDeleted = await this.repository.findOneAndDelete(
+      {
+        id: id
+      }
+    )
+  }
 }

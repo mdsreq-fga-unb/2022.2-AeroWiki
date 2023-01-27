@@ -15,6 +15,10 @@ import { NewProjectController } from "../UseCases/NewProjectUseCase/NewProjectCo
 import { NewProjectUseCase } from "../UseCases/NewProjectUseCase/NewProjectUseCase";
 import { UpdateProjectController } from "../UseCases/UpdateProjectUseCase/UpdateProjectController";
 import { UpdateProjectUseCase } from "../UseCases/UpdateProjectUseCase/UpdateProjectUseCase";
+import { UpdateProjectDataController } from "../UseCases/UpdateProjectDataUseCase/UpdateProjectDataController";
+import { UpdateProjectDataUseCase } from "../UseCases/UpdateProjectDataUseCase/UpdateProjectDataUseCase";
+import { DeleteProjectController } from "../UseCases/DeleteProjectUseCase/DeleteProjectController";
+import { DeleteProjectUseCase } from "../UseCases/DeleteProjectUseCase/DeleteProjectUseCase";
 
 const userRepository = new MongodbUserImplementation();
 
@@ -50,6 +54,14 @@ const updateProjectUseCase = new UpdateProjectUseCase(projectRepository);
 
 const updateProjectController = new UpdateProjectController(updateProjectUseCase);
 
+const updateProjectDataUseCase = new UpdateProjectDataUseCase(projectRepository);
+
+const updateProjectDataController = new UpdateProjectDataController(updateProjectDataUseCase);
+
+const deleteProjectUseCase = new DeleteProjectUseCase(projectRepository);
+
+const deleteProjectController = new DeleteProjectController(deleteProjectUseCase);
+
 export {
   createUserUseCase,
   createUserController,
@@ -64,5 +76,9 @@ export {
   newProjectUseCase,
   newProjectController,
   updateProjectUseCase,
-  updateProjectController
+  updateProjectController,
+  updateProjectDataUseCase,
+  updateProjectDataController,
+  deleteProjectUseCase,
+  deleteProjectController,
 };

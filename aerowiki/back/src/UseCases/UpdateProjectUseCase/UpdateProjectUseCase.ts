@@ -10,7 +10,6 @@ export class UpdateProjectUseCase {
       data.isfixed,
       data.editable,
       data.ongoing,
-      data.active,
-      data.project);
+      data.active);
   }
 }

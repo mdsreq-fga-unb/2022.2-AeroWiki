@@ -5,5 +5,4 @@ export interface IUpdateProjectRequest{
   editable: boolean
   ongoing: boolean
   active: boolean
-  project: object
 }
