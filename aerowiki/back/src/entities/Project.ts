@@ -6,8 +6,11 @@ export class Project {
     public name: string;
     public area: string;
     public subarea: string;
+    public isfixed: boolean;
+    public editable: boolean;
     public ongoing: boolean;
     public active: boolean;
+    public project: object;
 
     constructor(props: Omit<Project, 'id'>, id?: string) {
         Object.assign(this, props);

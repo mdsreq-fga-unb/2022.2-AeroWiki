@@ -13,7 +13,11 @@ import List from "@editorjs/list"
 import NestedList from "@editorjs/nested-list"
 import CheckList from "@editorjs/checklist"
 
+import Image from "@editorjs/simple-image"
+
 import Table from "@editorjs/table"
+
+import FontSize from "editorjs-inline-font-size-tool"
 
 import AlignmentTuneTool from "editorjs-text-alignment-blocktune"
 
@@ -39,7 +43,7 @@ export const Tools = {
         class: Quote,
         inlineToolbar: true,
         config: {
-            quotePlaceholder: 'Digite uma citação',
+            quotePlaceholder: 'Digite a citação',
             captionPlaceholder: 'Autor da citação',
         },
     },
@@ -60,7 +64,7 @@ export const Tools = {
         inlineToolbar: true,
         config: {
             defaultType: 'primary',
-            messagePlaceholder: 'Digite um alerta',
+            messagePlaceholder: 'Digite o alerta',
         },
     },
 
@@ -89,6 +93,10 @@ export const Tools = {
             withHeadings: true
         },
     },
+
+    image: Image,
+
+    fontSize: FontSize,
 
     AlignmentTune: {
         class:AlignmentTuneTool,

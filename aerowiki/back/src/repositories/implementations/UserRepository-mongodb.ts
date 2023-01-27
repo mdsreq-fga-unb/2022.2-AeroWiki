@@ -1,7 +1,7 @@
 import { IUsersRepository } from "../IUsersRepository";
 import { User } from "../../entities/User";
 import * as mongoose from "mongoose";
-import { UserSchema } from "../../schemas/user-schema";
+import { UserSchema } from "../../schemas/UserSchema";
 
 export class MongodbImplementation implements IUsersRepository {
   private repository = mongoose.model("User", UserSchema);
