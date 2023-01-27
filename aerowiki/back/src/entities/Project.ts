@@ -1,7 +1,7 @@
 import { v4 as uuid_v4 } from "uuid";
 
 export class Project {
-    public readonly id: String;
+    public /*readonly*/ id: String;
 
     public name: string;
     public area: string;

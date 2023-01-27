@@ -1,7 +1,12 @@
+import { ObjectId } from "mongodb"
 import mongoose from "mongoose"
-import { Project} from "../entities/Project"
+import { Project } from "../entities/Project"
 
 const ProjectSchema = new mongoose.Schema<Project>({
+  id:{
+    type: ObjectId
+  },
+  
   name:{
     type: String,
     required: true
