@@ -4,13 +4,47 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
+import { newProject } from '../../services/newProject'
+import LoadingIcon from "../LoadingIcon/LoadingIcon"
+import SweetAlert from "../SweetAlert/SweetAlert"
+import load from "../../img/loding.png"
+
 
 function NewProjectForm() {
+
   const [newprojectForm, setForm] = useState(true)
   const showForm = () => setForm(!newprojectForm)
 
+  const [name, setProjectNameForm] = useState('')
+  const area = "Area Teste"
+  const subarea = "Subarea Teste"
+
+  const sendform = async (e) => {
+    e.preventDefault();
+    const editable = document.querySelector('input[name="iseditable"]:checked').value
+    console.log(name, area, subarea, editable)
+    if (name === '') {
+      SweetAlert("error", "Por favor, escolha um nome para o projeto")
+    }
+    else {
+      try {
+        const response = await newProject(name, area, subarea, editable)
+        console.log("certo")
+        console.log(response)
+        LoadingIcon("success", "Projeto criado com sucesso!")
+      } catch (error) {
+        console.log("errado")
+        console.log(error)
+        SweetAlert("error", "Ocorreu um erro no sistema D:", "Por favor, tente mais tarde.")
+      }
+    }
+  }
+
   return (
     <>
+      <div id='load-bg' className='form-bg'></div>
+      <img id="load" className="logoLoadoff" src={load} alt="loading..." />
+
       <div id='newProject-button=' className='area' onClick={showForm}>
         <Link to='#' className='button'>
           <FontAwesomeIcon icon={faIcons.faPlus} />
@@ -23,12 +57,12 @@ function NewProjectForm() {
       <div id={newprojectForm ? 'newProject-form' : 'newProject-form-active'}>
         <div className='form-container'>
           <span className='form-title'>Iniciar novo projeto</span>
-          <form>
+          <form onSubmit={sendform}>
 
             <div className='form-col'>
               <div className='form-box'>
                 <label className='form-label'>Nome do projeto</label>
-                <input type="text" /* value={name} onChange={(e) => setNameForm(e.target.value)} */ placeholder='Nome' className='input'></input>
+                <input type="text" value={name} onChange={(e) => setProjectNameForm(e.target.value)} placeholder='Nome' className='input'></input>
               </div>
 
               {/* <div className='hr no-marg'></div> */}
@@ -39,12 +73,12 @@ function NewProjectForm() {
                 <div className='radio-form'>
 
                   <div className='radio-option'>
-                    <input id="form-yes" type="radio" name="iseditable" /* value={name} onChange={(e) => setNameForm(e.target.value)} */ className='radio-input'></input>
+                    <input id="form-yes" type="radio" name="iseditable" value={true} className='radio-input'></input>
                     <label htmlFor='form-yes'>Sim</label>
                   </div>
 
                   <div className='radio-option'>
-                    <input id="form-no" type="radio" name="iseditable" /* value={name} onChange={(e) => setNameForm(e.target.value)} */ className='radio-input' defaultChecked></input>
+                    <input id="form-no" type="radio" name="iseditable" value={false} className='radio-input' defaultChecked></input>
                     <label htmlFor="form-no">Não</label>
                   </div>
 
@@ -57,12 +91,12 @@ function NewProjectForm() {
 
                   <div className='form-box'>
                     <label className='form-label'>Area</label>
-                    <input type="text" /* value={name} onChange={(e) => setNameForm(e.target.value)} */ placeholder='Area' className='input' disabled></input>
+                    <input type="text" value={area} placeholder='Area' className='input' disabled></input>
                   </div>
 
                   <div className='form-box'>
                     <label className='form-label'>Subarea</label>
-                    <input type="text" /* value={name} onChange={(e) => setNameForm(e.target.value)} */ placeholder='Subarea' className='input' disabled></input>
+                    <input type="text" value={subarea} placeholder='Subarea' className='input' disabled></input>
                   </div>
 
                 </div>
@@ -86,7 +120,7 @@ function NewProjectForm() {
                 <div className='add area'>
                   <div className='button'>
                     <FontAwesomeIcon icon={faIcons.faFileCirclePlus} />
-                    <button type='submit' form='new-member-form'>Salvar</button>
+                    <button type='submit'>Salvar</button>
                   </div>
                 </div>
               </div>
