@@ -1,0 +1,12 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+.projects-table{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 1rem;
+}

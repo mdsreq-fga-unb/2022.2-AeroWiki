@@ -13,7 +13,7 @@ function FixedProjects() {
           <span>PROJETOS FIXADOS</span>
           <div className='hr'></div>
         </div>
-        <div id='fixed-projects'>
+        <div className='fixed-projects'>
           {ProjectsData.map((item, index) => {
             return(
               <div id='fixed-project' key={index} >

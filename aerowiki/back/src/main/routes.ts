@@ -1,6 +1,7 @@
 import { Router } from "express";
 import mongoose from "mongoose";
 import { UserSchema } from '../schemas/UserSchema'
+import { ProjectSchema } from '../schemas/ProjectSchema'
 import {
   createUserController,
   updateMemberController,
@@ -19,7 +20,7 @@ const router = Router()
 
 router.get('/getMembers', (request, response) => {
   const UsersData = mongoose.model('User', UserSchema)
-  UsersData.find((error, data) => {
+  UsersData.find({active: true}, (error, data) => {
     if (error) {
       console.log(error)
     }
@@ -55,6 +56,19 @@ router.delete('/deleteMember', (request, response) => {
 })
 
 
+
+//
+router.get('/getProjects', (request, response) => {
+  const ProjectsData = mongoose.model('Project', ProjectSchema)
+  ProjectsData.find((error, data) => {
+    if (error) {
+      console.log(error)
+    }
+    else {
+      response.json(data)
+    }
+  })
+});
 
 // Cria projeto no banco de dados
 router.post('/newProject', (request, response) => {
