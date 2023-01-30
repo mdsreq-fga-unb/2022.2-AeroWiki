@@ -8,9 +8,8 @@ export class UpdateUserController {
 
   async handle(request: Request, response: Response): Promise<Response> {
     const {name, email, unb_id, telephone, password } = request.body;
-
+    // console.log(request)
     try {
-      console.log("aqui")
       await this.updateUserUseCase.execute({
        name,
        email,
@@ -18,7 +17,6 @@ export class UpdateUserController {
        telephone,
        password
       })
-      console.log("por ultimo")
       return response.status(201).json({message: "USUARIO ATUALIZADO"});  
     } catch (err) {
       return response.status(400).json({

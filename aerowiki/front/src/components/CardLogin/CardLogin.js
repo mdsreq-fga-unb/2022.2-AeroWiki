@@ -9,6 +9,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { loginUser } from "../../services/login";
+import SweetAlert from "../SweetAlert/SweetAlert";
 
 const MySwal = withReactContent(Swal);
 
@@ -31,51 +32,39 @@ function Cardlogin() {
 
   function resultadoLogin(resultado) {
     if (resultado === "vazio") {
-      MySwal.fire({
-        title: "Por favor, preencha todos os campos.",
-        icon: "warning",
-      });
+      SweetAlert('warning', 'Por favor, preencha todos os campos.')
     } else {
       try {
         if (resultado["status"] !== 400) {
           const jazon = resultado;
           const senhareal = jazon["data"]["password"];
+          // const status = jazon["data"]["status"];
+          const status = "ativo"
           if (senhareal === senhaLogin) {
-            sessionStorage.setItem("senhaReal", resultado["data"]["password"]);
-            sessionStorage.setItem("emailReal", resultado["data"]["email"]);
-            sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
-            sessionStorage.setItem("cargoReal", resultado["data"]["role"]);
-            sessionStorage.setItem("matriculaReal", resultado["data"]["unb_id"]);
-            window.location.href = "/home";
+            if (status == 'ativo') {
+              sessionStorage.setItem("senhaReal", resultado["data"]["password"]);
+              sessionStorage.setItem("emailReal", resultado["data"]["email"]);
+              sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
+              sessionStorage.setItem("cargoReal", resultado["data"]["role"]);
+              sessionStorage.setItem("matriculaReal", resultado["data"]["unb_id"]);
+              window.location.href = "/home";
+            } else {
+              SweetAlert('warning', 'Não foi possível fazer login', 'Sua conta não está ativa')
+            }
           } else {
-            MySwal.fire({
-              title: "Senha incorreta.",
-              icon: "error",
-            });
+            SweetAlert('error', 'Senha incorreta.')
           }
         } else {
           resultado = resultado["data"]["message"];
           if (resultado === "Esse usuário não existe!") {
-            MySwal.fire({
-              title: "Usuário não cadastrado!",
-              text: "Por favor, contate o gerente ou diretor do seu setor.",
-              icon: "error",
-            });
+            SweetAlert('error', 'Usuário não cadastrado!', 'Por favor, contate o gerente ou diretor do seu setor.')
           } else {
-            MySwal.fire({
-              title: "Erro no sistema. :(",
-              text: "Por favor, tente novamente mais tarde.",
-              icon: "error",
-            });
+            SweetAlert('error', 'Erro no sistema. :(', 'Por favor, tente novamente mais tarde.')
           }
         }
       } catch (error) {
         console.log(error);
-        MySwal.fire({
-          title: "Erro no sistema. :(",
-          text: "Por favor, tente novamente mais tarde.",
-          icon: "error",
-        });
+        SweetAlert('error', 'Erro no sistema. :(', 'Por favor, tente novamente mais tarde.')
       }
     }
   }
