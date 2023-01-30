@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 import { addMember } from '../../services/addMember'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
-const MySwal = withReactContent(Swal)
+import LoadingIcon from "../LoadingIcon/LoadingIcon"
+import SweetAlert from "../SweetAlert/SweetAlert"
+import load from "../../img/loding.png"
 
 function NewUserForm() {
   const [newuserForm, setForm] = useState(true)
@@ -32,84 +31,52 @@ function NewUserForm() {
   const sendform = async (e) => {
     e.preventDefault();
 
-    if (validarMatricula(unb_id) === false) {
-      MySwal.fire({
-        title: "Matrícula inválida",
-        icon: 'error'
-      })
-    } else {
-      if (validarNome(name) === false || validarNome(surname) === false) {
-        MySwal.fire({
-          title: "Nome inválido",
-          icon: 'error'
-        })
-      } else {
-        try {
-          const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-          console.log("certo")
-          console.log(r)
-          resultadoCadastro(r)
-        } catch (error) {
-          console.log("errado")
-          console.log(error)
-          resultadoCadastro(error['response'])
-        }
+    if (validarNome(name) === false || validarNome(surname) === false) {
+      SweetAlert("error", "Nome inválido")
+    }
+    else if (validarMatricula(unb_id) === false) {
+      SweetAlert("error", "Matrícula inválida")
+    }
+    else {
+      try {
+        const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+        console.log("certo")
+        console.log(r)
+        resultadoCadastro(r)
+      }
+      catch (error) {
+        console.log("errado")
+        console.log(error)
+        resultadoCadastro(error['response'])
       }
     }
   }
 
   function resultadoCadastro(resultado) {
 
-    function refreshPage() {
-      window.location.reload(true);
-    }
-
-    function resultadoC() {
-      document.getElementById("load").classList.remove('logoLoad')
-      document.getElementById("load").classList.add('logoLoadoff')
-      MySwal.fire({
-        title: "Cadastro realizado com sucesso!",
-        icon: 'success',
-        confirmButtonText: 'Ok',
-        allowOutsideClick: false
-      }).then((result) => {
-        if (result.isConfirmed) {
-          refreshPage()
-        }
-      })
-    }
-
     if (resultado === "repetiu") {
-      MySwal.fire({
-        title: "Um ou mais campos obrigatórios estão incompletos.",
-        icon: 'warning'
-      })
-
-    } else {
+      SweetAlert("warning", "Um ou mais campos obrigatórios estão incompletos.")
+    }
+    else {
       const fraseResultado = resultado['data']['message']
       const erroNumber = resultado['status']
       if (erroNumber === 201) {
-        document.getElementById("load").classList.remove('logoLoadoff')
-        document.getElementById("load").classList.add('logoLoad')
-        setTimeout(function () { resultadoC(); }, 5000)
-        
-      } else if (fraseResultado === 'User already exist') {
-        MySwal.fire({
-          title: "Este membro já está cadastrado.",
-          icon: 'warning'
-        })
-      } else {
-        MySwal.fire({
-          title: "Ocorreu um erro no sistema D:",
-          text: "Por favor, tente novamente mais tarde.",
-          icon: 'error'
-        })
+        LoadingIcon("success", "Cadastro realizado com sucesso!")
+      }
+      else if (fraseResultado === 'User already exist') {
+        SweetAlert("warning", "Esse membro já está cadastrado.")
+      }
+      else {
+        SweetAlert("error", "Ocorreu um erro no sistema D:", "Por favor, tente novamente mais tarde.")
       }
     }
   }
 
   return (
     <>
+      <div id='load-bg' className='form-bg'></div>
+      <img id="load" className="logoLoadoff" src={load} alt="loading..." />
+
       <div id='newMember-button=' className='area' onClick={showForm}>
         <Link to='#' className='button'>
           <FontAwesomeIcon icon={faIcons.faPlus} />
