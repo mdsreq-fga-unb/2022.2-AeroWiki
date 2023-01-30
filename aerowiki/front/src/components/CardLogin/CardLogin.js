@@ -21,7 +21,7 @@ function Cardlogin() {
     try {
       const r = await loginUser(emailLogin, senhaLogin);
       console.log("certo");
-      console.log(r.data);
+      console.log(r);
       resultadoLogin(r);
     } catch (error) {
       console.log("errado");
