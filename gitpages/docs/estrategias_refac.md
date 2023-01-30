@@ -11,6 +11,7 @@
 | Nomes insignificantes         | Nomes de funções, classes e variáveis, entre outros, que não revelam o propósito do objeto. | Mudar o nome do objeto, de forma que ele revele o propósito. |
 | Código duplicado              | Blocos de código que se repetem.                             | Criar funções para executar o bloco de código.               |
 | Funções demasiadamente longas | Funções que, por realizar várias tarefas, são muito longas.  | Extrair funções de dentro da função em questão.              |
+| Componentização(React) | Qualquer bloco de código que seja recorrente em dois ou mais arquivos   | Transformar o bloco em componente |
 
 ## Exemplos
 

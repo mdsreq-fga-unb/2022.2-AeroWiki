@@ -26,7 +26,7 @@
 
 | Número | Categoria         | Descrição                                                    |
 | ------ | ----------------- | ------------------------------------------------------------ |
-| RNF1   | Implementação     | O front-end do produto deve ser desenvolvido utilizando Vue3 com Typescript e Quasar. |
+| RNF1   | Implementação     | O front-end do produto deve ser desenvolvido utilizando react. |
 | RNF2   | Design            | O produto deve ter uma gaveta lateral à esquerda contendo links para as áreas do site. O usuário pode fechar ou abrir a gaveta. |
 | RNF3   | Facilidade de uso | O usuário deve conseguir utilizar o software com facilidade após um tempo de treinamento de duas horas. |
 | RNF4   | Portabilidade     | A aplicação deve estar disponível para os navegadores Chrome e Firefox em suas versões mais recentes. |
@@ -49,7 +49,7 @@
     - US1 -> Como diretor, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
     - US2 -> Como diretor, eu quero ser capaz de editar papéis de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
 
-- F3: Criar áreas
+- F2: Criar áreas
     - US1 -> Como presidente, eu quero ser capaz de criar novas áreas para expansão da empresa.
     - US2 -> Como presidente, eu quero ser capaz de excluir áreas existentes para compactação da empresa.
 
@@ -64,20 +64,17 @@
 
 - F2: Administração de documentos no projeto.
     - US1 -> Como gerente, eu quero excluir documentos para manter o projeto limpo.
-    - US2 -> Como gerente, eu quero adicionar novos documentos para o desenvolvimento do projeto
+    - US2 -> Como gerente, eu quero adicionar novos documentos para o desenvolvimento do projeto.
 
-### E4 - Relações externas da Zenit
+### E4 - Tela inicial
 
-- F1: Organização de parceiros da empresa.
-    - US1 -> Eu, como gerente, desejo cadastrar dados de parceiros da empresa, para facilitar a organização e renovação dos contratos com os mesmos.
-    - US2 -> Eu, como gerente, desejo editar dados de parceiros da empresa, para que, caso algum dos dados mude, a organização e renovação de contratos não seja afetada.
-    - US3 -> Eu, como gerente, desejo ler dados de parceiros da empresa, para facilitar a organização e renovação dos contratos com os mesmos.
-    - US4 -> Eu, como gerente, desejo deletar dados de parceiros da empresa, para que, caso a parceria seja desfeita, a empresa não tome decisões contratuais com não-parceiros.
+- F1: Projetos
+    - US1 -> Eu, como presidente, desejo fixar projetos na tela inicial, para mostrar os projetos mais importantes da empresa.
+    - US2 -> Eu, como presidente, desejo desafixar projetos na tela inicial, para que a plataforma tenha maior organização. 
     
-- F2: Organização de eventos.
-    - US1 -> Eu, como gerente, desejo calendarizar os eventos que a Zenit participa, para melhor organização da empresa na partcipação do evento.
-    - US2 -> Eu, como gerente, desejo editar os eventos que a Zenit participa, para não acontecer confusões com informações desatualizadas de eventos.
-    - US3 -> Eu, como gerente, desejo excluir os eventos da Zenit, para não acontecer confusões com informações erradas de eventos.
+- F2: Funcionalidades
+    - US1 -> Eu, como membro, desejo visualizar o calendário da empresa na tela inicial, para sempre estar atualizado dos enventos da empresa.
+    - US2 -> Eu, como presidente, desejo editar a imagem do banner da tela incial, para maior dinamicidade da plataforma.
 
 ## MVP's
 

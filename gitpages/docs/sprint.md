@@ -83,9 +83,20 @@ Nessa sprint funcionou bem a rafatoração do codigo, fizemos em grande parte do
 Primeira sprint pós entrega do MVP1, grande parte da equipe está relaxada e não devemos levar isso adiante, manter o foco que o MVP2 e logo ali.|
 |O QUE APRENDEMOS DURANTE ESSA SPRINT?<br>
 A importancia do clean code e da refatoração.|
-|O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?<br>|
+|O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS?<br>| 
+Programação em pares|
 
 
 | Programação em pares |
 | --- |
 | Miguel Moreira e Arthur Trindade;<br>Gabriel de Souza e Arthur Trindade;<br>Miguel Moreira e Arthur D'Assumpção;|
+
+## Sprint 11
+
+| Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
+| --- | --- | --- | --- |
+| 25/01/2023 | 01/02/2023 | Desenvolvimento; <br>Atualização da documentação; <br> Refatoração;<br> E3-F1-US4;<br> E3-F1-US3;<br>E3-F1-US5;  | Miguel |
+
+| Planejamento |
+| --- |
+| Notamos que com programação em pares rendemos mais, em questão de organização e desenvolvimento, nessa sprint planejamos fazer mais sessões de programação em pares e com isso validar 3 US para o MVP2, alem disso ainda estamos trabalhando na refatoração e na documentação, para termos feedback no ponto de controle |

@@ -34,8 +34,8 @@
 | 7 | Desenvolvimento | E2-F2-US1 | 20/12/2022 | 27/12/2022 |
 | 8 | Desenvolvimento | E1-F1-US2<br>E2-F2-US1  | 28/12/2022 | 04/12/2022 |
 | 9 | Desenvolvimento;<BR>Reunião de validação com o cliente;<br>Atualização da documentação.| E1-F1-US1<br>E1-F1-US2<br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3 <br>E2-F1-US1<br>E2-F1-US2<br>E2-F2-US1<br>E2-F2-US2<br>E2-F2-US3<br><br>Entrega do MVP1. | 05/01/2023 | 12/01/2023 |
-| 10 | Desenvolvimento | - | 17/01/2023 | 24/01/2023 |
-| 11 | Desenvolvimento | - | 25/01/2023 | 01/02/2023 |
+| 10 | Desenvolvimento; <br> Refatoração; | Correções, complementos e refatoração do MVP1 | 17/01/2023 | 24/01/2023 |
+| 11 | Desenvolvimento; <br>Atualização da documentação; <br> Refatoração;| E3-F1-US4; <br> E3-F1-US3; <br> E3-F1-US5; <br> gitpages atualizado | 25/01/2023 | 01/02/2023 |
 | 12 | Desenvolvimento, reunião de validação com o cliente e atualização da documentação | -<br>Entrega do MVP2. | 02/02/2023 | 09/02/2023 |
 
 ## Matriz de Comunicação
