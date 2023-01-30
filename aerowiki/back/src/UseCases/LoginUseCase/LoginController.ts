@@ -16,13 +16,7 @@ export class LoginController {
             password,
         })
         
-      return response.status(201).json({
-        name: user.name,
-        email: user.email,
-        password: user.password,
-        role: user.role,
-        unb_id: user.unb_id
-    });  
+      return response.status(201).json(user);  
     } catch (err) {
       return response.status(400).json({
         message: err.message || 'ERRO NO SISTEMA D:'

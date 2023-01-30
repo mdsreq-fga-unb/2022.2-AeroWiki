@@ -28,9 +28,8 @@ function CardAccount() {
             // const membersData = JSON.stringify(response.data)
             let matriculaReal = sessionStorage.getItem('matriculaReal')
             // console.log(jazon)
-
-            var i
-            for (i = 0; i < jazon.length; i++) {
+            
+            for (var i = 0; i < jazon.length; i++) {
                 if (matriculaReal === jazon[i]["unb_id"]) {
 
                     sessionStorage.setItem('nomebanco', jazon[i]['name'])
