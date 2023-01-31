@@ -34,7 +34,7 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 28/12/2022 | 04/01/2023 | <span style="color:yellow"><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s></span><br><br><span style="color:blue">E1-F1-US1</span> | Arthur Trindade |
+| 28/12/2022 | 04/01/2023 | <s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s><br><br><span style="color:blue">E1-F1-US1</span> | Arthur Trindade |
 
 <i>*E2-F2 retirada do backlog do produto de acordo com o feedback do professor.</i>
 
@@ -55,7 +55,7 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 05/01/2023 | 12/01/2023 | <span style="color:yellow">E1-F1-US1<br></span><span style="color:blue">E1-F1-US2<br><br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US3</span><br><br><span style="color:yellow"><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s></span><br> | Arthur Trindade |
+| 05/01/2023 | 12/01/2023 | E1-F1-US1<br><span style="color:blue">E1-F1-US2<br><br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US3</span><br><br><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s> | Arthur Trindade |
 
 <i>*E2-F2 retirada do backlog do produto de acordo com o feedback do professor.</i>
 
@@ -75,7 +75,7 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 17/01/2023 | 24/01/2023 | <span style="color:yellow">E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US3</span><br><br><span style="color:blue">E3-F1-US4<br><br>E4-F2-US1</span> | Miguel Moreira |
+| 17/01/2023 | 24/01/2023 | E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US3<br><br><span style="color:blue">E3-F1-US4<br><br>E4-F2-US1</span> | Miguel Moreira |
 
 <i>*A partir desse ponto, o backlog do produto foi atualizado de acordo com o feedback da entrega do MVP1 e a antiga E2-F2 foi removida. A então E2-F3 subiu e é a agora é atual E2-F2.</i>
 
@@ -99,7 +99,7 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 25/01/2023 | 01/02/2023 | <span style="color:blue">E3-F1-US2<br>E3-F1-US3</span><br><span style="color:yellow">E3-F1-US4</span><br><span style="color:blue">E3-F1-US5<br><br>E3-F2-US1</span> | Miguel Moreira |
+| 25/01/2023 | 01/02/2023 | <span style="color:blue">E3-F1-US2<br>E3-F1-US3</span><br>E3-F1-US4<br><span style="color:blue">E3-F1-US5<br><br>E3-F2-US1</span> | Miguel Moreira |
 
 | Planejamento |
 | --- |
