@@ -14,7 +14,7 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 20/12/2022 | 27/01/2023 | <span style="color:blue"><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s></span> | Gabriel de Souza |
+| 20/12/2022 | 27/12/2022 | <span style="color:blue"><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s></span> | Gabriel de Souza |
 
 <i>*E2-F2 retirada do backlog do produto de acordo com o feedback do professor.</i>
 
