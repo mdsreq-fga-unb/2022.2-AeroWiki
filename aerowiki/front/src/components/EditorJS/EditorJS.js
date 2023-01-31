@@ -8,6 +8,18 @@ import Undo from 'editorjs-undo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
+
+
+
+var testejson = {blocks: [{
+                type: 'paragraph',
+                data: {
+                    text: 'MIGUE'
+                }
+            }]}
+
+
+
 const Editor = () => {
     // let editor = { isReady: false };
     // useEffect(() => {
@@ -28,14 +40,8 @@ const Editor = () => {
         /**
          * Previously saved data that should be rendered
          */
-        data: {
-            blocks: [{
-                type: 'paragraph',
-                data: {
-                    text: 'Digite aqui'
-                }
-            }]
-        },
+        data: testejson
+,
     });
 
     editor.isReady

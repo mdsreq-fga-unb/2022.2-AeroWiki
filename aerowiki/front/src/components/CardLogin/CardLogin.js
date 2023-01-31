@@ -38,15 +38,22 @@ function Cardlogin() {
         if (resultado["status"] !== 400) {
           const jazon = resultado;
           const senhareal = jazon["data"]["password"];
-          // const status = jazon["data"]["status"];
-          const status = "ativo"
+          const status = jazon["data"]["active"];
           if (senhareal === senhaLogin) {
-            if (status == 'ativo') {
+            if (status) {
+
               sessionStorage.setItem("senhaReal", resultado["data"]["password"]);
               sessionStorage.setItem("emailReal", resultado["data"]["email"]);
               sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
               sessionStorage.setItem("cargoReal", resultado["data"]["role"]);
               sessionStorage.setItem("matriculaReal", resultado["data"]["unb_id"]);
+
+              sessionStorage.setItem("senhabanco", resultado["data"]["password"]);
+              sessionStorage.setItem("emailbanco", resultado["data"]["email"]);
+              sessionStorage.setItem("nomebanco", resultado["data"]["name"]);
+              sessionStorage.setItem("cargobanco", resultado["data"]["role"]);
+              sessionStorage.setItem("matriculabanco", resultado["data"]["unb_id"]);
+              
               window.location.href = "/home";
             } else {
               SweetAlert('warning', 'Não foi possível fazer login', 'Sua conta não está ativa')

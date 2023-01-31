@@ -20,7 +20,7 @@ const router = Router()
 
 router.get('/getMembers', (request, response) => {
   const UsersData = mongoose.model('User', UserSchema)
-  UsersData.find({active: true}, (error, data) => {
+  UsersData.find((error, data) => {
     if (error) {
       console.log(error)
     }
