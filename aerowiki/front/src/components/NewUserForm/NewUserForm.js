@@ -77,7 +77,7 @@ function NewUserForm() {
       <div id='load-bg' className='form-bg'></div>
       <img id="load" className="logoLoadoff" src={load} alt="loading..." />
 
-      <div id='newMember-button=' className='area' onClick={showForm}>
+      <div id='newMember-button' className='area' onClick={showForm}>
         <Link to='#' className='button'>
           <FontAwesomeIcon icon={faIcons.faPlus} />
           <span>Novo membro</span>
