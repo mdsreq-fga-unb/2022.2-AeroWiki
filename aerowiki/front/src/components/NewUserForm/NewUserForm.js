@@ -4,11 +4,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
-import { setUser } from '../../services/cadastro'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
-const MySwal = withReactContent(Swal)
+import { addMember } from '../../services/addMember'
+import LoadingIcon from "../LoadingIcon/LoadingIcon"
+import SweetAlert from "../SweetAlert/SweetAlert"
+import load from "../../img/loding.png"
 
 function NewUserForm() {
   const [newuserForm, setForm] = useState(true)
@@ -32,102 +31,89 @@ function NewUserForm() {
   const sendform = async (e) => {
     e.preventDefault();
 
-    if (validarMatricula(unb_id) == false) {
-      MySwal.fire({
-        title: "Matrícula inválida",
-        icon: 'error'
-      })
-    } else {
-      if (validarNome(name) == false || validarNome(surname) == false) {
-        MySwal.fire({
-          title: "Nome inválido",
-          icon: 'error'
-        })
-      } else {
-        try {
-          const r = await setUser(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-          console.log("certo")
-          console.log(r)
-          resultadoCadastro(r)
-        } catch (error) {
-          console.log("errado")
-          console.log(error)
-          resultadoCadastro(error['response'])
-        }
+    if (validarNome(name) === false || validarNome(surname) === false) {
+      SweetAlert("error", "Nome inválido")
+    }
+    else if (validarMatricula(unb_id) === false) {
+      SweetAlert("error", "Matrícula inválida")
+    }
+    else {
+      try {
+        const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+        console.log("certo")
+        console.log(r)
+        resultadoCadastro(r)
+      }
+      catch (error) {
+        console.log("errado")
+        console.log(error)
+        resultadoCadastro(error['response'])
       }
     }
   }
 
   function resultadoCadastro(resultado) {
-    if (resultado == "repetiu") {
-      MySwal.fire({
-        title: "Um ou mais campos obrigatórios estão incompletos.",
-        icon: 'warning'
-      })
 
-    } else {
+    if (resultado === "repetiu") {
+      SweetAlert("warning", "Um ou mais campos obrigatórios estão incompletos.")
+    }
+    else {
       const fraseResultado = resultado['data']['message']
       const erroNumber = resultado['status']
-      if (erroNumber == 201) {
-        MySwal.fire({
-          title: "Cadastro realizado com sucesso!",
-          icon: 'success'
-        })
-
-      } else if (fraseResultado == 'User already exist') {
-        MySwal.fire({
-          title: "Este membro já está cadastrado.",
-          icon: 'warning'
-        })
-      } else {
-        MySwal.fire({
-          title: "Erro no sistema. :(",
-          text: "Por favor, tente novamente mais tarde.",
-          icon: 'error'
-        })
+      if (erroNumber === 201) {
+        LoadingIcon("success", "Cadastro realizado com sucesso!")
+      }
+      else if (fraseResultado === 'User already exist') {
+        SweetAlert("warning", "Esse membro já está cadastrado.")
+      }
+      else {
+        SweetAlert("error", "Ocorreu um erro no sistema D:", "Por favor, tente novamente mais tarde.")
       }
     }
   }
 
   return (
     <>
-      <div className='area'>
-        <Link to='#' className='button' onClick={showForm}>
+      <div id='load-bg' className='form-bg'></div>
+      <img id="load" className="logoLoadoff" src={load} alt="loading..." />
+
+      <div id='newMember-button' className='area' onClick={showForm}>
+        <Link to='#' className='button'>
           <FontAwesomeIcon icon={faIcons.faPlus} />
           <span>Novo membro</span>
         </Link>
       </div>
 
-      <div id={newuserForm ? 'form-bg' : 'form-bg-active'}></div>
+      <div className={newuserForm ? 'form-bg' : 'form-bg-active'}></div>
 
-      <div id={newuserForm ? 'form' : 'form-active'}>
-        <div id='form-container'>
-          <span>Cadastrar membro</span>
-          <form id='new-user-form' onSubmit={sendform} >
+      <div id={newuserForm ? 'newMember-form' : 'newMember-form-active'}>
+        <div className='form-container'>
+          <span className='form-title'>Cadastrar membro</span>
+          <form id='new-member-form' onSubmit={sendform} >
             <div className='form-col'>
 
-              <div id='form-box'>
-                <label>Nome</label>
+              <div className='form-box'>
+                <label className='form-label'>Nome</label>
                 <div id='inputs'>
                   <input type="text" value={name} onChange={(e) => setNameForm(e.target.value)} placeholder='Nome' className='input'></input>
                   <input type="text" value={surname} onChange={(e) => setSurnameForm(e.target.value)} placeholder='Sobrenome' className='input'></input>
                 </div>
               </div>
 
-              <div id='form-box'>
-                <label>Email</label>
+              <div className='form-box'>
+                <label className='form-label'>Email</label>
                 <input type="email" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
               </div>
 
-              <div id='form-box'>
-                <label>Matrícula UnB</label>
+              <div className='form-box'>
+                <label className='form-label'>Matrícula UnB</label>
                 <input type="number" value={unb_id} onChange={(e) => setUnb_idForm(e.target.value)} placeholder='Matrícula' className='input'></input>
               </div>
 
               <div id='form-roles'>
                 <div id='inputs'>
-                  <div id='form-box'>
-                    <label>Setor</label>
+                  <div className='form-box'>
+                    <label className='form-label'>Setor</label>
                     <select value={area} onChange={(e) => setAreaForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o setor</option>
                       <option value="Comercial">Comercial</option>
@@ -138,8 +124,8 @@ function NewUserForm() {
                     </select>
                   </div>
 
-                  <div id='form-box'>
-                    <label>Cargo</label>
+                  <div className='form-box'>
+                    <label className='form-label'>Cargo</label>
                     <select value={role} onChange={(e) => setRoleForm(e.target.value)} className='input'>
                       <option value="" disabled selected>Selecione o cargo</option>
                       <option value="Membro">Membro</option>
@@ -157,29 +143,29 @@ function NewUserForm() {
 
             <div className='form-col'>
 
-              <div id='form-box'>
-                <label>Telefone</label>
+              <div className='form-box'>
+                <label className='form-label'>Telefone</label>
                 <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
-              <div id='form-box'>
-                <label>Data de nascimento</label>
+              <div className='form-box'>
+                <label className='form-label'>Data de nascimento</label>
                 <input type="date" value={birthdate} onChange={(e) => setBirthdateForm(e.target.value)} className='input'></input>
               </div>
 
-              <div id='form-box'>
-                <label>RG</label>
+              <div className='form-box'>
+                <label className='form-label'>RG</label>
                 <input type="number" value={rg} onChange={(e) => setRgForm(e.target.value)} className='input'></input>
               </div>
 
-              <div id='form-box'>
-                <label>CPF</label>
+              <div className='form-box'>
+                <label className='form-label'>CPF</label>
                 <input type="number" value={cpf} onChange={(e) => setCpfForm(e.target.value)} className='input'></input>
               </div>
 
             </div>
           </form>
-          <div id='form-buttons'>
+          <div className='form-buttons'>
             <div className='back area'>
               <Link to='#' className='button' onClick={showForm}>
                 <FontAwesomeIcon icon={faIcons.faChevronLeft} />
@@ -190,7 +176,7 @@ function NewUserForm() {
             <div className='add area'>
               <div className='button'>
                 <FontAwesomeIcon icon={faIcons.faUserPlus} />
-                <button type='submit' form='new-user-form'>Adicionar</button>
+                <button type='submit' form='new-member-form'>Adicionar</button>
               </div>
             </div>
           </div>

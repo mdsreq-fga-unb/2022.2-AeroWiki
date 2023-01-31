@@ -3,30 +3,38 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import testedetoken from '../../testes/testedetoken'
+import NewProjectForm from '../../components/NewProjectForm/NewProjectForm'
+import ProjectsTable from '../../components/ProjectsTable/ProjectsTable'
 
 function Sub() {
   testedetoken()
   return (
-    <div id='web-body'>
-        <header>
-            <Header/>
-        </header>
-      
-        <div id='title' className='Body'>
-          <div id='hr'><hr></hr></div>
-            <span >PROJETOS</span>
-          <div id='hr'><hr></hr></div>
+    <>
+      <header>
+        <Header />
+      </header>
+
+      <div id='web-body'>
+        <div id='main-title'>
+          <span>Projetos</span>
+          <NewProjectForm></NewProjectForm>
         </div>
 
-      <body>
-        
-      </body>
+        <div id='project-table-container'>
+          <main>
+            <div className='pad-box'>
+              <ProjectsTable></ProjectsTable>
+            </div>
+          </main>
+        </div>
 
-        <footer>
-            <Footer/>
-        </footer>
-    </div>
-  
+      </div>
+
+      <footer>
+        <Footer />
+      </footer>
+    </>
+
   )
 }
 

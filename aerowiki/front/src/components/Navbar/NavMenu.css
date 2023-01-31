@@ -41,7 +41,7 @@
     width: 100%;
 }
 .area:hover{
-    background-color: var(--zdark-blue);
+    background-color: var(--zdark-blue) !important;
 }
 
 #subareas-toggle{
@@ -83,11 +83,17 @@
     align-items: center;
     justify-content: center;
     background-color: var(--zgrey);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .subarea{
     height: 70px;
+    width: 100%;
+    text-align: center;
 }
 .subarea .button{
     font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
 }

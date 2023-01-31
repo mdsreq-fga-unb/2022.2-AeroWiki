@@ -1,5 +1,6 @@
 export interface IUpdateMemberRequest{
-  area: string;
-  role: string;
+  area: string
+  role: string
   email: string
+  active: boolean
 }

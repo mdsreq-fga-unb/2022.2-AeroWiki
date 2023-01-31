@@ -8,12 +8,12 @@ import * as faIcons from '@fortawesome/free-solid-svg-icons'
 function FixedProjects() {
   return (
     <div id='fixed-projects-container'>
-      <div id='pad-box'>
-        <div id='title'>
+      <div className='pad-box'>
+        <div className='title'>
           <span>PROJETOS FIXADOS</span>
-          <div id='hr'><hr></hr></div>
+          <div className='hr'></div>
         </div>
-        <div id='fixed-projects'>
+        <div className='fixed-projects'>
           {ProjectsData.map((item, index) => {
             return(
               <div id='fixed-project' key={index} >

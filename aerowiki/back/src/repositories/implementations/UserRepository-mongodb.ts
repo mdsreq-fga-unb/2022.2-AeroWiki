@@ -1,9 +1,9 @@
 import { IUsersRepository } from "../IUsersRepository";
 import { User } from "../../entities/User";
 import * as mongoose from "mongoose";
-import { UserSchema } from "../../schemas/user-schema";
+import { UserSchema } from "../../schemas/UserSchema";
 
-export class MongodbImplementation implements IUsersRepository {
+export class MongodbUserImplementation implements IUsersRepository {
   private repository = mongoose.model("User", UserSchema);
 
   async findByEmail(email: string): Promise<User> {
@@ -20,7 +20,8 @@ export class MongodbImplementation implements IUsersRepository {
     name: string,
     email: string,
     telephone: string,
-    unb_id: string
+    unb_id: string,
+    password: string
   ): Promise<void> {
     const userUpdated = await this.repository.findOneAndUpdate(
       {
@@ -30,13 +31,14 @@ export class MongodbImplementation implements IUsersRepository {
         name: name,
         email: email,
         telephone: telephone,
+        password: password
       },
       {
         new: true,
       }
     );
   }
-  async updateMember(area: string, role: string, email: string): Promise<void> {
+  async updateMember(area: string, role: string, email: string, active: boolean): Promise<void> {
     const memberUpdate = await this.repository.findOneAndUpdate(
       {
         email: email,
@@ -44,10 +46,18 @@ export class MongodbImplementation implements IUsersRepository {
       {
         area: area,
         role: role,
+        active: active
       },
       {
         new: true,
       }
     );
+  }
+  async deleteMember(email: string): Promise<void> {
+    const memberDeleted = await this.repository.findOneAndDelete(
+    {
+      email: email
+    }
+    )
   }
 }

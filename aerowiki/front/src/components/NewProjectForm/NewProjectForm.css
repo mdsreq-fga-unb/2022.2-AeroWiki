@@ -1,0 +1,40 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+#newProject-form, #newProject-form-active{
+    width: 800px;
+    position: fixed;
+    left: calc(50% - (800px)/2);;
+    z-index: 1;
+}
+#newProject-form{
+    top: -855.94px;
+    transition: 300ms;
+}
+#newProject-form-active{
+    top: calc(50% - (855.94px)/2);
+    transition: 500ms;
+}
+
+.radio-form{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.radio-option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.radio-input{
+    height: 1.3rem;
+    width: 1.3rem;
+}

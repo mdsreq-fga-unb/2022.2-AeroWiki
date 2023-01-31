@@ -7,20 +7,20 @@ export class UpdateUserController {
   ) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const {name, email, unb_id, telephone } = request.body;
-
+    const {name, email, unb_id, telephone, password } = request.body;
+    // console.log(request)
     try {
       await this.updateUserUseCase.execute({
        name,
        email,
        unb_id,
-       telephone
+       telephone,
+       password
       })
-      
-      return response.status(201).send().json({message: "USUARIO ATUALIZADO"});  
+      return response.status(201).json({message: "USUARIO ATUALIZADO"});  
     } catch (err) {
       return response.status(400).json({
-        message: err.message || 'Unexpected error ao createUser.'
+        message: err.message || 'ERRO NO SISTEMA D:'
       })
     }
   }

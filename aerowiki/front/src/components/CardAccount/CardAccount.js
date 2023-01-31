@@ -10,26 +10,28 @@ import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
-import { Add_membro } from '../../services/add_membro'
+import { getMembers } from '../../services/getMembers'
 import email from '../../testes/validacoes/email';
 import { updateUser } from '../../services/updateUser';
+// import load from "../../img/loding.png"
+// import LoadingIcon from '../LoadingIcon/LoadingIcon';
 
 
 
 function CardAccount() {
     const attform = async () => {
         try {
-            const response = await Add_membro()
+            const response = await getMembers()
             console.log("atualizado")
-            console.log(response.data)
-            const jazon = response.data
+            // console.log(response.data)
+            let jazon = response.data
             // const membersData = JSON.stringify(response.data)
-            const emailReal = sessionStorage.getItem('emailReal')
-            console.log(jazon)
-            // alert(jazon[0]["email"])
-            var i
-            for (i = 0; i < jazon.length; i++) {
-                if (emailReal == jazon[i]["email"]) {
+            let matriculaReal = sessionStorage.getItem('matriculaReal')
+            // console.log(jazon)
+            
+            for (var i = 0; i < jazon.length; i++) {
+                if (matriculaReal === jazon[i]["unb_id"]) {
+
                     sessionStorage.setItem('nomebanco', jazon[i]['name'])
                     sessionStorage.setItem('nomeReal', jazon[i]['name'])
                     sessionStorage.setItem('emailbanco', jazon[i]['email'])
@@ -40,28 +42,47 @@ function CardAccount() {
                     sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
                     sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
                     sessionStorage.setItem('rgbanco', jazon[i]['rg'])
+                    sessionStorage.setItem('senhabanco', jazon[i]['password'])
                 }
             }
         } catch (error) {
-            console.log("error")
+            console.log("erro")
             console.log(error)
         }
     }
     attform()
-    // sessionStorage.setItem('matriculabanco', '190087439')
-    // sessionStorage.setItem('telefonebanco', '111111')
-    // sessionStorage.setItem('setorbanco', 'aaaaaa')
-    // sessionStorage.setItem('cargobanco', 'aaaaaa')
-    // sessionStorage.setItem('dataNascbanco','1111-11-11' )
-    // sessionStorage.setItem('cpfbanco', '1111111')
-    // sessionStorage.setItem('rgbanco','11111111')
 
     const update = async (e) => {
-        e.preventDefault();
+        let senhaDefinit = sessionStorage.getItem('senhaReal')
+        if (senhaConfirm !== '') {
+            if (senha === senhaConfirm) {
+                if (senha === sessionStorage.getItem('senhaReal')) {
+                    alert("Use uma senha diferente da atual")
+                    return;
+                } else {
+                    senhaDefinit = senha
+                }
+            } else {
+                alert('As duas senhas devem ser iguais')
+                return;
+            }
+        }
+        // e.preventDefault();
         try {
-            const response = await updateUser(nome, email, matricula, telefone)
+            const response = await updateUser(nome, email, matricula, telefone, senhaDefinit)
+            sessionStorage.setItem('nomebanco', nome)
+            sessionStorage.setItem('emailbanco', email)
+            sessionStorage.setItem('matriculabanco', matricula)
+            sessionStorage.setItem('telefonebanco', telefone)
+
             console.log("updateuser")
-            console.log(response)
+            console.log("aloalo", response)
+            if (email === sessionStorage.getItem('emailReal') && senhaDefinit === sessionStorage.getItem('senhaReal')) {
+
+            } else {
+                sessionStorage.clear()
+            }
+
             refreshPage()
             // resultadoCadastro(r)
         } catch (error) {
@@ -71,15 +92,16 @@ function CardAccount() {
         }
     }
 
-    const nomebanco = sessionStorage.getItem('nomebanco')
-    const emailbanco = sessionStorage.getItem('emailbanco')
-    const matriculabanco = sessionStorage.getItem('matriculabanco')
-    const telefonebanco = sessionStorage.getItem('telefonebanco')
-    const setorbanco = sessionStorage.getItem('setorbanco')
-    const cargobanco = sessionStorage.getItem('cargobanco')
-    const dataNascbanco = sessionStorage.getItem('dataNascbanco')
-    const cpfbanco = sessionStorage.getItem('cpfbanco')
-    const rgbanco = sessionStorage.getItem('rgbanco')
+    let nomebanco = sessionStorage.getItem('nomebanco')
+    let emailbanco = sessionStorage.getItem('emailbanco')
+    let matriculabanco = sessionStorage.getItem('matriculabanco')
+    let telefonebanco = sessionStorage.getItem('telefonebanco')
+    let setorbanco = sessionStorage.getItem('setorbanco')
+    let cargobanco = sessionStorage.getItem('cargobanco')
+    let dataNascbanco = sessionStorage.getItem('dataNascbanco')
+    let cpfbanco = sessionStorage.getItem('cpfbanco')
+    let rgbanco = sessionStorage.getItem('rgbanco')
+    // let senhabanco = sessionStorage.getItem('senhabanco')
 
 
 
@@ -98,9 +120,8 @@ function CardAccount() {
     const [dataNasc, setDataNasc] = useState(dataNascbanco);
     const [cpf, setCpf] = useState(cpfbanco);
     const [rg, setRg] = useState(rgbanco);
-
-
-
+    const [senha, setSenha] = useState();
+    const [senhaConfirm, setSenhaConfirm] = useState('');
 
     const editConta = () => {
         setLiberar(false);
@@ -117,18 +138,21 @@ function CardAccount() {
 
     }
     function refreshPage() {
-        window.location.reload(false);
+        window.location.href = "/myAccount";
     }
 
     return (
         <>
+            {/* <div id='load-bg' className='form-bg'></div>
+            <img id="load" className="logoLoadoff" src={load} alt="loading..." /> */}
+
             <Row className='TitleAccountCard justify-content-center align-items-center'>
                 <Col xxl={4} xl={6}>
                     <h1 className='TitleAccount'>Minha conta</h1>
                 </Col>
             </Row>
 
-            <div className='Body'>
+            <main>
                 <div className='ajusteAccount'>
                     <Row className='justify-content-end'>
                         <Col xxl={1}>
@@ -150,7 +174,7 @@ function CardAccount() {
                         </Col>
                     </Row>
 
-                    <Form onSubmit={update}>
+                    <Form /* onSubmit={update}*/ >
                         <Row>
                             <Col xxl={5}>
                                 <Form.Group className="FullName form" controlId="fullName">
@@ -209,7 +233,7 @@ function CardAccount() {
                                             display: mostrarInverseSenha,
                                         }} controlId="newPs">
                                             <Form.Label className='imputAccount'>Digite a nova senha</Form.Label>
-                                            <Form.Control disabled={false} size='lg' className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
+                                            <Form.Control autocomplete="off" disabled={false} size='lg' value={senha} onChange={(e) => setSenha(e.target.value)} className='imputNewPsAccount' type="password" placeholder="Digite aqui" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
@@ -217,7 +241,7 @@ function CardAccount() {
                                             display: mostrarInverseSenha,
                                         }} controlId="confirmNewPs">
                                             <Form.Label className='imputAccount'>Confirme a nova senha</Form.Label>
-                                            <Form.Control disabled={false} size='lg' className='imputCNewPsccount' type="password" placeholder="Confirme aqui" />
+                                            <Form.Control autocomplete="off" disabled={false} size='lg' value={senhaConfirm} onChange={(e) => setSenhaConfirm(e.target.value)} className='imputCNewPsccount' type="password" placeholder="Confirme aqui" />
                                         </Form.Group>
 
                                     </Col>
@@ -229,7 +253,7 @@ function CardAccount() {
                                                 <div id='btsAccount' className='btsAccount' style={{
                                                     display: mostrarInverse,
                                                 }}>
-                                                    <Button type='submit' className='btSalvarAccount'>Salvar</Button>
+                                                    <Button onClick={update} type='button' className='btSalvarAccount'>Salvar</Button>
                                                     <Button onClick={refreshPage} className='btCancelarAccount'>Cancelar</Button>
                                                 </div>
                                             </Col>
@@ -242,7 +266,7 @@ function CardAccount() {
                         </Row>
                     </Form>
                 </div>
-            </div>
+            </main>
 
         </>
     );

@@ -1,20 +1,20 @@
-import { Add_membro } from '../../services/add_membro'
+import { getMembers } from '../../services/getMembers'
 
-const sendform = async () => {
+const membersData = async () => {
     try {
-        const response = await Add_membro()
+        const response = await getMembers()
         console.log("certo")
         const membersData = JSON.stringify(response.data)
-        sessionStorage.setItem('formdata', membersData)
+        sessionStorage.setItem('membersData', membersData)
         
     } catch (error) {
         console.log("errado")
         console.log(error)
     }
 }
-sendform()
+membersData()
 
-const MembersData = JSON.parse("[" + sessionStorage.getItem('formdata') + "]");
+const MembersData = eval(sessionStorage.getItem('membersData'))
 console.log("MembersData", MembersData)
 
 export {MembersData}

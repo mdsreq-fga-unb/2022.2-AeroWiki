@@ -5,9 +5,9 @@ function Login() {
     return (
         <>
         <div id='login-bg'>
-            <div className='Body'>
+            <main>
                 <CardLogin />
-            </div>
+            </main>
         </div>
         </>
     );

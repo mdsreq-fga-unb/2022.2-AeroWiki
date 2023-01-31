@@ -1,0 +1,21 @@
+:root{
+    --zlight-blue: #00549B;
+    --zdark-blue: #082B61;
+    --zred: #DD284F;
+    --zgrey: #595959;
+}
+
+#editMember-form, #editMember-form-active{
+    width: 700px;
+    position: fixed;
+    left: calc(50% - (700px)/2);
+    z-index: 1;
+}
+#editMember-form{
+    top: -625.59px;
+    transition: 300ms;
+}
+#editMember-form-active{
+    top: calc(50% - (625.59px)/2);
+    transition: 500ms;
+}

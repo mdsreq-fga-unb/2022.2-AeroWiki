@@ -1,4 +1,4 @@
-import { MongodbImplementation } from "../repositories/implementations/UserRepository-mongodb";
+import { MongodbUserImplementation } from "../repositories/implementations/UserRepository-mongodb";
 import { CreateUserUseCase } from "./CreateUserUseCase/CreateUserUseCase";
 import { CreateUserController } from "./CreateUserUseCase/CreateUserController";
 import { LoginController } from "./LoginUseCase/LoginController";
@@ -7,8 +7,20 @@ import { UpdateUserUseCase } from "../UseCases/UpdateUserUseCase/UpdateUserUseCa
 import { UpdateUserController } from "../UseCases/UpdateUserUseCase/UpdateUserController";
 import { UpdateMemberUseCase } from "../UseCases/UpdateMemberUseCase/UpdateMemberUseCase";
 import { UpdateMemberController } from "../UseCases/UpdateMemberUseCase/UpdateMemberController";
+import { DeleteMemberUseCase } from "../UseCases/DeleteMemberUseCase/DeleteMemberUseCase";
+import { DeleteMemberController } from "../UseCases/DeleteMemberUseCase/DeleteMemberController";
 
-const userRepository = new MongodbImplementation();
+import { MongodbProjectImplementation } from "../repositories/implementations/ProjectRepository-mongodb";
+import { NewProjectController } from "../UseCases/NewProjectUseCase/NewProjectController";
+import { NewProjectUseCase } from "../UseCases/NewProjectUseCase/NewProjectUseCase";
+import { UpdateProjectController } from "../UseCases/UpdateProjectUseCase/UpdateProjectController";
+import { UpdateProjectUseCase } from "../UseCases/UpdateProjectUseCase/UpdateProjectUseCase";
+import { UpdateProjectDataController } from "../UseCases/UpdateProjectDataUseCase/UpdateProjectDataController";
+import { UpdateProjectDataUseCase } from "../UseCases/UpdateProjectDataUseCase/UpdateProjectDataUseCase";
+import { DeleteProjectController } from "../UseCases/DeleteProjectUseCase/DeleteProjectController";
+import { DeleteProjectUseCase } from "../UseCases/DeleteProjectUseCase/DeleteProjectUseCase";
+
+const userRepository = new MongodbUserImplementation();
 
 const createUserUseCase = new CreateUserUseCase(userRepository);
 
@@ -26,6 +38,30 @@ const updateMemberUseCase = new UpdateMemberUseCase(userRepository);
 
 const updateMemberController = new UpdateMemberController(updateMemberUseCase);
 
+const deleteMemberUseCase = new DeleteMemberUseCase(userRepository);
+
+const deleteMemberController = new DeleteMemberController(deleteMemberUseCase);
+
+
+
+const projectRepository = new MongodbProjectImplementation();
+
+const newProjectUseCase = new NewProjectUseCase(projectRepository);
+
+const newProjectController = new NewProjectController(newProjectUseCase);
+
+const updateProjectUseCase = new UpdateProjectUseCase(projectRepository);
+
+const updateProjectController = new UpdateProjectController(updateProjectUseCase);
+
+const updateProjectDataUseCase = new UpdateProjectDataUseCase(projectRepository);
+
+const updateProjectDataController = new UpdateProjectDataController(updateProjectDataUseCase);
+
+const deleteProjectUseCase = new DeleteProjectUseCase(projectRepository);
+
+const deleteProjectController = new DeleteProjectController(deleteProjectUseCase);
+
 export {
   createUserUseCase,
   createUserController,
@@ -35,4 +71,14 @@ export {
   updateUserController,
   updateMemberUseCase,
   updateMemberController,
+  deleteMemberUseCase,
+  deleteMemberController,
+  newProjectUseCase,
+  newProjectController,
+  updateProjectUseCase,
+  updateProjectController,
+  updateProjectDataUseCase,
+  updateProjectDataController,
+  deleteProjectUseCase,
+  deleteProjectController,
 };

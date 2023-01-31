@@ -12,7 +12,7 @@ function Navbar() {
 
     return (
         <>
-        <div id='pad-box'>
+        <div className='pad-box'>
             <div id='navbar'>
                 <Link to='#' id='navbar-icons'> 
                     <FontAwesomeIcon icon={faIcons.faBars} onClick={showSidebar} />
@@ -31,7 +31,7 @@ function Navbar() {
 
                 <div id='navbar-areas'>
                     {NavbarData.map((item, index) => {
-                        return <NavMenu item={item} key={index} />;
+                        return <NavMenu item={item} key={index} chave={index} />;
                     })}  
                 </div>
                 

@@ -1,13 +1,6 @@
-@media screen and (min-width: 2000px) {
-    
-}
-
-@media screen and (min-width: 1500px) and (max-width: 2000px) {
-    
-}
-
-@media screen and (max-width: 1500px) {
-    
+@font-face {
+    font-family: 'Nexa';
+    src: url(../../fonts/Nexa/Nexa-Trial-ExtraBold.ttf);
 }
 
 .TitleLogin {
@@ -21,6 +14,7 @@
     text-align: center;
     letter-spacing: 0.3em;
     color: #FFFFFF;
+    font-family: 'Nexa';
 }
 
 .Sub-title {
@@ -35,18 +29,15 @@
 }
 
 .username {
-    border-radius: 30px;
     margin-bottom: 10px;
 }
 
 .senha {
-    border-radius: 30px;
     margin-bottom: 20px;
 }
 
 .secondary {
     margin-bottom: 110px;
-    border-radius: 30px;
 }
 
 #login-logo{
