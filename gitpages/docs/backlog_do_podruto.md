@@ -10,8 +10,10 @@
 | 02/12/2022 | 0.6 | Atualização do backlog com base nos feedbacks do professor e do cliente | Arthur D'Assumpção<br>Arthur Trindade |
 | 05/12/2022 | 0.7 | Adição de alguns US's para revisão | Arthur Trindade |
 | 06/12/2022 | 0.8 | Definição dos MVP's 1 e 2 | Arthur D'Assumpção<br>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira |
-| 06/12/2022 | 0.9 | Reformulação de todo o documento | Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
-| 07/12/2022 | 0.91 | Reformulação de todo o documento | Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira|
+| 06/12/2022 | 0.9 | Refatoração de todo o documento | Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
+| 07/12/2022 | 1.0 | Refatoração de todo o documento | Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
+| 30/01/2023 | 1.1 | Refatoração do E3 e do E4 de acordo com a demanda do cliente. | Arthur Trindade<br>Miguel Moreira |
+
 
 ## Mapeamento de personas
 
@@ -19,7 +21,7 @@
 | ---------- | ------ |
 | Presidente | é um membro, um diretor e um gerente|
 | Diretor | é um membro e um gerente|
-| Gerente | é um membro|
+| Gerente | é um membro |
 | Membro | todos são membros |
 
 ## Requisitos não-funcionais
@@ -35,50 +37,52 @@
 ## Épicos
 
 ### E1 - Gestão de cadastros
-- F1: Manutenção de dados pessoais.
-    - US1 -> Como membro, devo poder alterar os dados pessoais do meu cadastro para atualizar a minha conta.
-    - US2 -> Como membro, quero realizar login no site para ter acesso ao sistema.
-- F2: Cadastro de membros
+- F1: Atualizar ou editar dados pessoais
+    - US1 -> Como membro, quero realizar login no site para ter acesso ao sistema.
+    - US2 -> Como membro, devo poder alterar os dados pessoais do meu cadastro para atualizar a minha conta.
+- F2: Cadastrar novos usuários e fazer manutenção de usuários cadastrados
     - US1 -> Como diretor, eu devo realizar o cadastro de usuários na plataforma para que eles possam ter acesso ao sistema.
     - US2 -> Como diretor, eu devo poder remover cadastro de usuários da plataforma para removê-los da base de dados do sistema.
     - US3 -> Como diretor, eu devo poder arquivar o cadastro de usuários da plataforma para manter a organização dos usuários.
 
 ### E2 - Gestão de áreas 
 
-- F1: Atribuição de papel
-    - US1 -> Como diretor, eu quero ser capaz de atribuir papéis a membros do sistema para que cada usuário tenha suas funcionalidades bem definidas.
-    - US2 -> Como diretor, eu quero ser capaz de editar papéis de membros do sistema para que os papéis de cada usuário estejam em sincronia com seu cargo na Zenit.
+- F1: Atribuir papéis aos membros cadastrados
+    - US1 -> Como diretor, eu quero ser capaz de editar o cargo de membros do sistema para que o cargo de cada usuário estejam em sincronia com seu cargo na Zenit.
+    - US2 -> Como diretor, eu quero ser capaz de editar o setor de membros do sistema para que o setor de cada usuário estejam em sincronia com seu setor de trabalho na Zenit.
+    - US3 -> Como diretor, eu desejo que apenas eu tenha acesso aos botões de cadastro de usuários e edição de membros existentes.
 
-- F2: Criar áreas
+- F2: Criar novas areas no menu lateral
     - US1 -> Como presidente, eu quero ser capaz de criar novas áreas para expansão da empresa.
     - US2 -> Como presidente, eu quero ser capaz de excluir áreas existentes para compactação da empresa.
 
 ### E3 - Projetos
 
-- F1: Administração de projetos.
+- F1: Administrar projetos da empresa
     - US1 -> Como gerente, eu quero classificar projetos para saber quais projetos foram finalizados e quais estão em andamento.
     - US2 -> Como gerente, eu quero arquivar projetos que estão inativos.
     - US3 -> Como gerente, eu quero excluir projetos que perderam a relevancia.
     - US4 -> Como gerente, eu quero criar novos projetos para atender novas demandas.
     - US5 -> Como gerente, eu quero editar projetos para realizar alterações necessárias.
 
-- F2: Administração de documentos no projeto.
-    - US1 -> Como gerente, eu quero excluir documentos para manter o projeto limpo.
-    - US2 -> Como gerente, eu quero adicionar novos documentos para o desenvolvimento do projeto.
+- F2: Editar texto dentro dos projetos
+    - US1 -> Como gerente, eu quero editar o texto dentro do projeto para criar e manter o seu conteúdo atualizado. 
+    - US2 -> Como gerente, eu quero ter ferramentas de edição que me auxiliem no desenvolvimento do texto que estou escrevendo.
+    - US3 -> Como gerente, eu quero salvar o texto para que outros membros possam ler o que escrevi.
 
 ### E4 - Tela inicial
 
-- F1: Projetos
-    - US1 -> Eu, como presidente, desejo fixar projetos na tela inicial, para mostrar os projetos mais importantes da empresa.
-    - US2 -> Eu, como presidente, desejo desafixar projetos na tela inicial, para que a plataforma tenha maior organização. 
+- F1: Gerenciar projetos que aparecem na tela inicial
+    - US1 -> Eu, como presidente, desejo fixar projetos na tela inicial, para destacar os projetos mais importantes no contexto da empresa.
+    - US2 -> Eu, como presidente, desejo desafixar projetos da tela inicial, para manter a organização da tela inicial da plataforma. 
     
-- F2: Funcionalidades
-    - US1 -> Eu, como membro, desejo visualizar o calendário da empresa na tela inicial, para sempre estar atualizado dos enventos da empresa.
-    - US2 -> Eu, como presidente, desejo editar a imagem do banner da tela incial, para maior dinamicidade da plataforma.
+- F2: Funcionalidades extras
+    - US1 -> Eu, como membro, desejo visualizar o calendário da empresa na tela inicial, para sempre estar atualizado dos enventos mais importantes.
+    - US2 -> Eu, como presidente, desejo editar a imagem do banner da tela incial, destacar alguma informação ou contexto da empresa.
 
 ## MVP's
 
 | MVP | Funcionalidades | Objetivo |
 | :---: | :--------------------------: | -------- |
-| 1 | E1-F1<br>E1-F2<br>E2-F1 | Dar suporte de login e cadastramento|
-| 2 | E3-F1<br>E3-F2<br>E4-F1<br>E4-F2  | Fazer a platarforma está altamente personalizável e usável para Zenit |
+| 1 | E1-F1<br>E1-F2<br>E2-F1 | Criação do login e cadastramento de novos usuários. |
+| 2 | E3-F1<br>E3-F2<br>E4-F1<br>E4-F2  | Fazer a platarforma altamente personalizável e utilizável para Zenit. |
