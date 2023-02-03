@@ -20,10 +20,10 @@ function Cardlogin() {
   const loginForm = async (e) => {
     e.preventDefault();
     //Validações Login
-    if (emailLogin === '') {
+    if (emailLogin === undefined) {
       return SweetAlert('warning', 'Por favor, insira seu email Zenit.')
     }
-    else if (senhaLogin === '') {
+    else if (senhaLogin === undefined) {
       return SweetAlert('warning', 'Por favor, insira sua senha.')
     }
 
@@ -32,7 +32,7 @@ function Cardlogin() {
       const response = await loginUser(emailLogin, senhaLogin);
       resultadoLogin(response)
     } catch (err) {
-      resultadoLogin(err.status) //err.status é undefined
+      resultadoLogin(err.response)
     }
   };
 
