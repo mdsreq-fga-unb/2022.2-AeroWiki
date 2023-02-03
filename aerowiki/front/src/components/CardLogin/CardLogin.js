@@ -19,60 +19,51 @@ function Cardlogin() {
 
   const loginForm = async (e) => {
     e.preventDefault();
+    //Validações Login
+    if (emailLogin === '') {
+      return SweetAlert('warning', 'Por favor, insira seu email Zenit.')
+    }
+    else if (senhaLogin === '') {
+      return SweetAlert('warning', 'Por favor, insira sua senha.')
+    }
+
+    //Requisição de Login
     try {
-      const r = await loginUser(emailLogin, senhaLogin);
-      console.log("certo");
-      console.log(r);
-      resultadoLogin(r);
-    } catch (error) {
-      console.log("errado");
-      resultadoLogin(error["response"]);
+      const response = await loginUser(emailLogin, senhaLogin);
+      resultadoLogin(response)
+    } catch (err) {
+      resultadoLogin(err.status) //err.status é undefined
     }
   };
 
   function resultadoLogin(resultado) {
-    if (resultado === "vazio") {
-      SweetAlert('warning', 'Por favor, preencha todos os campos.')
-    } else {
-      try {
-        if (resultado["status"] !== 400) {
-          const jazon = resultado;
-          const senhareal = jazon["data"]["password"];
-          const status = jazon["data"]["active"];
-          if (senhareal === senhaLogin) {
-            if (status) {
-
-              sessionStorage.setItem("senhaReal", resultado["data"]["password"]);
-              sessionStorage.setItem("emailReal", resultado["data"]["email"]);
-              sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
-              sessionStorage.setItem("cargoReal", resultado["data"]["role"]);
-              sessionStorage.setItem("matriculaReal", resultado["data"]["unb_id"]);
-
-              sessionStorage.setItem("senhabanco", resultado["data"]["password"]);
-              sessionStorage.setItem("emailbanco", resultado["data"]["email"]);
-              sessionStorage.setItem("nomebanco", resultado["data"]["name"]);
-              sessionStorage.setItem("cargobanco", resultado["data"]["role"]);
-              sessionStorage.setItem("matriculabanco", resultado["data"]["unb_id"]);
-              
-              window.location.href = "/home";
-            } else {
-              SweetAlert('warning', 'Não foi possível fazer login', 'Sua conta não está ativa')
-            }
-          } else {
-            SweetAlert('error', 'Senha incorreta.')
-          }
-        } else {
-          resultado = resultado["data"]["message"];
-          if (resultado === "Esse usuário não existe!") {
-            SweetAlert('error', 'Usuário não cadastrado!', 'Por favor, contate o gerente ou diretor do seu setor.')
-          } else {
-            SweetAlert('error', 'Erro no sistema. :(', 'Por favor, tente novamente mais tarde.')
-          }
+    try {
+      if (resultado.status === 400) {
+        const resMessage = resultado.data.message
+        if (resMessage === 'ERRO NO SISTEMA') {
+          return SweetAlert('error', 'Ocorreu um erro no sistema. D:', 'Por favor, tente novamente mais tarde.')
         }
-      } catch (error) {
-        console.log(error);
-        SweetAlert('error', 'Erro no sistema. :(', 'Por favor, tente novamente mais tarde.')
+        return SweetAlert('error', resultado.data.message, 'Por favor, contate o gerente ou diretor do seu setor.')
       }
+      else if (resultado.status === 200) {
+        sessionStorage.setItem("senhaReal", resultado.data.password)
+        sessionStorage.setItem("emailReal", resultado.data.email)
+        sessionStorage.setItem("nomeReal", resultado.data.name)
+        sessionStorage.setItem("cargoReal", resultado.data.role)
+        sessionStorage.setItem("matriculaReal", resultado.data.unb_id)
+
+        sessionStorage.setItem("senhabanco", resultado.data.password)
+        sessionStorage.setItem("emailbanco", resultado.data.email)
+        sessionStorage.setItem("nomebanco", resultado.data.name)
+        sessionStorage.setItem("cargobanco", resultado.data.role)
+        sessionStorage.setItem("matriculabanco", resultado.data.unb_id)
+
+        window.location.href = "/home"
+      }
+    }
+    catch (err) {
+      console.log(err);
+      SweetAlert('error', 'Ocorreu um erro no sistema. D:', 'Por favor, tente novamente mais tarde.')
     }
   }
   return (
