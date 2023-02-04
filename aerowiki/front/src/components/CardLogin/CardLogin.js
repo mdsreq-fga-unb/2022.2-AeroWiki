@@ -17,7 +17,7 @@ function Cardlogin() {
   const [emailLogin, setEmailLogin] = useState();
   const [senhaLogin, setSenhaLogin] = useState();
 
-  const loginForm = async (e) => {
+  const sendLoginForm = async (e) => {
     e.preventDefault();
     //Validações Login
     if (emailLogin === undefined) {
@@ -46,17 +46,22 @@ function Cardlogin() {
         return SweetAlert('error', resultado.data.message, 'Por favor, contate o gerente ou diretor do seu setor.')
       }
       else if (resultado.status === 200) {
-        sessionStorage.setItem("senhaReal", resultado.data.password)
-        sessionStorage.setItem("emailReal", resultado.data.email)
-        sessionStorage.setItem("nomeReal", resultado.data.name)
-        sessionStorage.setItem("cargoReal", resultado.data.role)
-        sessionStorage.setItem("matriculaReal", resultado.data.unb_id)
+        // sessionStorage.setItem("senhaReal", resultado.data.password)
+        // sessionStorage.setItem("emailReal", resultado.data.email)
+        // sessionStorage.setItem("nomeReal", resultado.data.name)
+        // sessionStorage.setItem("cargoReal", resultado.data.role)
+        // sessionStorage.setItem("matriculaReal", resultado.data.unb_id)
 
-        sessionStorage.setItem("senhabanco", resultado.data.password)
-        sessionStorage.setItem("emailbanco", resultado.data.email)
-        sessionStorage.setItem("nomebanco", resultado.data.name)
-        sessionStorage.setItem("cargobanco", resultado.data.role)
-        sessionStorage.setItem("matriculabanco", resultado.data.unb_id)
+        sessionStorage.setItem('nome', resultado.data.name)
+        sessionStorage.setItem('email', resultado.data.email)
+        sessionStorage.setItem('matricula', resultado.data.unb_id)
+        sessionStorage.setItem('telefone', resultado.data.telephone)
+        sessionStorage.setItem('setor', resultado.data.area)
+        sessionStorage.setItem('cargo', resultado.data.role)
+        sessionStorage.setItem('dataNasc', resultado.data.birthdate)
+        sessionStorage.setItem('cpf', resultado.data.cpf)
+        sessionStorage.setItem('rg', resultado.data.rg)
+        sessionStorage.setItem('senha', resultado.data.password)
 
         window.location.href = "/home"
       }
@@ -74,7 +79,7 @@ function Cardlogin() {
         <Col xxl={4} className="menu-login">
           <Row className="justify-content-center">
             <Col xxl={8}>
-              <Form className="3" onSubmit={loginForm}>
+              <Form className="3">
                 <FloatingLabel label="E-mail Zenit">
                   <Form.Control
                     className=" input username"
@@ -95,7 +100,7 @@ function Cardlogin() {
                 </FloatingLabel>
                 <Row className="justify-content-center">
                   <Button
-                    onClick={loginForm}
+                    onClick={sendLoginForm}
                     type="submit"
                     className="secondary"
                     variant="outline-light col-5"
