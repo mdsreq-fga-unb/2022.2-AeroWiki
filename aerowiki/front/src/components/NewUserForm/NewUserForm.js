@@ -28,6 +28,7 @@ function NewUserForm() {
   var validarMatricula = require('../../testes/validacoes/matricula')
 
   const sendForm = async (e) => {
+    //Validação individual de input vazio
     e.preventDefault();
     if (name === '' || surname === '') {
       return SweetAlert("warning", "Por favor, digite o nome do membro.")
@@ -45,26 +46,24 @@ function NewUserForm() {
       return SweetAlert("warning", "Por favor, digite o RG e o CPF do membro.")
     }
 
-
+    //Validação de texto válido
     if (!validarNome(name) || !validarNome(surname)) {
-      SweetAlert("error", "Por favor, insira um nome válido")
+      return SweetAlert("error", "Por favor, insira um nome válido")
     }
     else if (!validarEmail(email)) {
-      SweetAlert("error", "Por favor, insira um email válido")
+      return SweetAlert("error", "Por favor, insira um email válido")
     }
     else if (validarMatricula(unb_id) === false) {
-      SweetAlert("error", "Por favor, insira uma matrícula UnB válida.")
+      return SweetAlert("error", "Por favor, insira uma matrícula UnB válida.")
     }
 
-    else {
-      try {
-        const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-        resultadoCadastro(r)
-      }
-      catch (err) {
-        console.log(err)
-        resultadoCadastro(err.response)
-      }
+    try {
+      const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+      resultadoCadastro(r)
+    }
+    catch (err) {
+      console.log(err)
+      resultadoCadastro(err.response)
     }
   }
 
@@ -149,12 +148,12 @@ function NewUserForm() {
             </div>
 
 
-            
+
             <div className='form-col'>
 
               <div className='form-box'>
                 <label className='form-label'>Telefone</label>
-                <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
+                <input type="number" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
               <div className='form-box'>

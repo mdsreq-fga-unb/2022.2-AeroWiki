@@ -11,9 +11,10 @@ import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
 // import { getMembers } from '../../services/getMembers'
-import validarEmail from '../../testes/validacoes/email';
 import { updateUser } from '../../services/updateUser';
 import SweetAlert from '../SweetAlert/SweetAlert';
+import validarEmail from '../../testes/validacoes/email';
+import validarNome from '../../testes/validacoes/nome';
 // import load from "../../img/loding.png"
 // import LoadingIcon from '../LoadingIcon/LoadingIcon';
 
@@ -63,7 +64,19 @@ function CardAccount() {
     let senhabanco = sessionStorage.getItem('senha')
 
     const sendUpdateForm = async (e) => {
-        if(!validarEmail(email)){
+        //Validação individual de input vazio
+        if (nome === ''){
+            return SweetAlert("warning", "Por favor, digite seu nome.")
+        }
+        else if (email === ''){
+            return SweetAlert("warning", "Por favor, digite seu email.")
+        }
+
+        //Validação de texto válido
+        if(!validarNome(nome)){
+            return SweetAlert("warning", "Por favor, utilize um nome válido.")
+        }
+        else if(!validarEmail(email)){
             return SweetAlert("warning", "Por favor, utilize um email válido.")
         }
 

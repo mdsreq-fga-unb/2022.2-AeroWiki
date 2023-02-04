@@ -2,7 +2,7 @@ import "./MembersTable.css";
 import React, { useEffect } from 'react';
 // import Swal from 'sweetalert2'
 // import withReactContent from 'sweetalert2-react-content'
-import { MembersData } from "./MembersData";
+import MembersData from "./MembersData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,6 @@ import load from "../../img/loding.png"
 import LoadingIcon from "../LoadingIcon/LoadingIcon";
 import { getMembers } from "../../services/getMembers";
 // const MySwal = withReactContent(Swal)
-
 
 function MembersTable() {
   // const [memberButtons, setButtons] = useState(false);
