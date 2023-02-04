@@ -8,7 +8,11 @@ export class MongodbUserImplementation implements IUsersRepository {
 
   async findByEmail(email: string): Promise<User> {
     const user = await this.repository.findOne({ email });
+    return user;
+  }
 
+  async findById(unb_id: string): Promise<User> {
+    const user = await this.repository.findOne({ unb_id });
     return user;
   }
 

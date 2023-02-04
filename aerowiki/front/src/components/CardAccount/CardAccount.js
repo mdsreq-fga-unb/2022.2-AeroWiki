@@ -11,7 +11,7 @@ import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
 // import { getMembers } from '../../services/getMembers'
-import validacaoEmail from '../../testes/validacoes/email';
+import validarEmail from '../../testes/validacoes/email';
 import { updateUser } from '../../services/updateUser';
 import SweetAlert from '../SweetAlert/SweetAlert';
 // import load from "../../img/loding.png"
@@ -63,7 +63,7 @@ function CardAccount() {
     let senhabanco = sessionStorage.getItem('senha')
 
     const sendUpdateForm = async (e) => {
-        if(!validacaoEmail(email)){
+        if(!validarEmail(email)){
             return SweetAlert("warning", "Por favor, utilize um email válido.")
         }
 

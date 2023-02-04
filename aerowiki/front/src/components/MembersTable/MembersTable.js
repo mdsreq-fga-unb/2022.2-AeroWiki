@@ -120,7 +120,7 @@ function MembersTable() {
                 document.getElementById("membro-" + index).classList.add("arquivado")
               }
 
-              var cargo = sessionStorage.getItem('cargoReal')
+              var cargo = sessionStorage.getItem('cargo')
 
               if (cargo === 'Membro' || cargo === 'Gerente') {
                 document.getElementById("member-buttons").remove()

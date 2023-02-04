@@ -27,7 +27,7 @@ export class CreateUserController {
       return response.status(201).json({ message: "NOVO MEMBRO CADASTRADO" });;  
     } catch (err) {
       return response.status(400).json({
-        message: err.message || 'ERRO NO SISTEMA D:'
+        message: err.message || 'ERRO NO SISTEMA'
       })
     }
   }
