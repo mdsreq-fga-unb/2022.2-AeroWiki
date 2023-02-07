@@ -9,6 +9,8 @@ import {
   updateUserController,
   deleteMemberController,
   loginController,
+
+  getProjectsController,
   newProjectController,
   updateProjectController,
   updateProjectDataController,
@@ -18,7 +20,6 @@ import {
 const router = Router()
 
 //Pega lista de membros do banco
-
 router.get('/getMembers', (request, response) => {
   return getMembersController.handle(request, response)
 });
@@ -52,15 +53,7 @@ router.delete('/deleteMember', (request, response) => {
 
 //
 router.get('/getProjects', (request, response) => {
-  const ProjectsData = mongoose.model('Project', ProjectSchema)
-  ProjectsData.find((error, data) => {
-    if (error) {
-      console.log(error)
-    }
-    else {
-      response.json(data)
-    }
-  })
+  return getProjectsController.handle(request, response)
 });
 
 // Cria projeto no banco de dados

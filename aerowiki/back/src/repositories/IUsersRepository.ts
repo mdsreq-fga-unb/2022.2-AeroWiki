@@ -1,7 +1,7 @@
 import { User } from "../entities/User";
 
 export interface IUsersRepository {
-  getMembers(): Promise<Object>
+  getMembers(): Promise<any>
   findByEmail(email: string): Promise<User>
   findById(unb_id: string): Promise<User>
   saveUser(user: User): Promise<void>

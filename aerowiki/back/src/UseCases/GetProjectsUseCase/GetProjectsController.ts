@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
-import { GetMembersUseCase } from "./GetMembersUseCase";
+import { GetProjectsUseCase } from "./GetProjectsUseCase";
 
-export class GetMembersController {
+export class GetProjectsController {
   constructor(
-    private getMembersUseCase: GetMembersUseCase,
+    private getProjectsUseCase: GetProjectsUseCase,
   ) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
     try {
-      const membersList = await this.getMembersUseCase.execute()
+      const membersList = await this.getProjectsUseCase.execute()
       return response.status(200).json(membersList);  
     } catch (err) {
       return response.status(400).json({

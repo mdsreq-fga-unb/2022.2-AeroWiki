@@ -6,38 +6,14 @@ import { ProjectSchema } from "../../schemas/ProjectSchema";
 export class MongodbProjectImplementation implements IProjectsRepository {
   private repository = mongoose.model("Project", ProjectSchema);
 
-  // async findByEmail(email: string): Promise<User> {
-  //   const user = await this.repository.findOne({ email });
-
-  //   return user;
-  // }
+  async getProjects(): Promise<any> {
+    const projectsList = await this.repository.find();
+    return projectsList;
+  }
 
   async saveProject(project: Project): Promise<void> {
     const projectCreated = await this.repository.create(project);
   }
-
-  // async updateUser(
-  //   name: string,
-  //   email: string,
-  //   telephone: string,
-  //   unb_id: string,
-  //   password: string
-  // ): Promise<void> {
-  //   const userUpdated = await this.repository.findOneAndUpdate(
-  //     {
-  //       unb_id: unb_id,
-  //     },
-  //     {
-  //       name: name,
-  //       email: email,
-  //       telephone: telephone,
-  //       password: password
-  //     },
-  //     {
-  //       new: true,
-  //     }
-  //   );
-  // }
 
   async updateProject(id: string, name: string, isfixed: boolean, editable: boolean, ongoing: boolean, active: boolean): Promise<void> {
     const projectUpdate = await this.repository.findOneAndUpdate(
