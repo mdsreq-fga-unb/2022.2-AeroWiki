@@ -28,7 +28,6 @@ function Navbar() {
                         <FontAwesomeIcon icon={faIcons.faChevronLeft} />
                     </Link>
                 </div>
-
                 <div id='navbar-areas'>
                     {NavbarData.map((item, index) => {
                         return <NavMenu item={item} key={index} chave={index} />;

@@ -8,70 +8,75 @@ import Undo from 'editorjs-undo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
-const Editor = () => {
-    // let editor = { isReady: false };
-    // useEffect(() => {
+let dataa = JSON.parse(sessionStorage.getItem("dataa"))
+console.log(dataa)
+if (dataa == null) {
 
-    //     if (!editor.isReady) {
+    dataa = {
+        blocks: [{
+            type: 'paragraph',
+            data: {
+                text: 'Digite aqui'
+            }
+        }]
+    }
+}
+const Editor = () => {
     const editor = new EditorJS({
         onReady: () => {
             new DragDrop(editor)
             new Undo({ editor })
         },
 
-        placeholder: "Digite aqui",
+        placeholder: "",
         holder: "editorjs",
         tools: Tools,
 
-        readOnly: true,
+        isReadOnly: true,
 
-        /**
-         * Previously saved data that should be rendered
-         */
-        data: {
-            blocks: [{
-                type: 'paragraph',
-                data: {
-                    text: 'Digite aqui'
-                }
-            }]
-        },
+        data: dataa,
+
+        onChange: () => {
+            saved();
+        }
     });
 
+    function saved() {
+        editor.save().then((outputData) => {
+            sessionStorage.setItem('dataa', JSON.stringify(outputData))
+            console.log('Article data: ', outputData)
+
+        }).catch((error) => {
+            console.log('Saving failed: ', error)
+        });
+    }
     editor.isReady
         .then(() => {
             console.log('Editor.js is ready to work!')
-            /** Do anything you need after editor initialization */
-            editor.save().then((outputData) => {
-                console.log('Article data: ', outputData)
-            }).catch((error) => {
-                console.log('Saving failed: ', error)
-            });
+
         })
         .catch((reason) => {
             console.log(`Editor.js initialization failed because of ${reason}`)
         });
-    //     }
-    // // }, []);
 
-    function editToggle(){
+    function editToggle() {
         const toggleButton = document.getElementById("toggleEdit")
         const toggleText = document.getElementById("toggleText")
 
         var resultado = editor.readOnly.toggle()
-        resultado.then(function(resultado){
-            if(!resultado){
+        resultado.then(function (resultado) {
+
+            if (!resultado) {
                 toggleButton.classList.add("active")
                 toggleText.innerHTML = "Modo Edição"
             }
-            else{
+            else {
                 toggleButton.classList.remove("active")
                 toggleText.innerHTML = "Modo Leitura"
             }
         })
 
     }
-
     return (
         <>
             <div className="project-container">
