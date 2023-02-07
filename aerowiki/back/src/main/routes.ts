@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { UserSchema } from '../schemas/UserSchema'
 import { ProjectSchema } from '../schemas/ProjectSchema'
 import {
+  getMembersController,
   createUserController,
   updateMemberController,
   updateUserController,
@@ -19,15 +20,7 @@ const router = Router()
 //Pega lista de membros do banco
 
 router.get('/getMembers', (request, response) => {
-  const UsersData = mongoose.model('User', UserSchema)
-  UsersData.find((error, data) => {
-    if (error) {
-      console.log(error)
-    }
-    else {
-      response.json(data)
-    }
-  })
+  return getMembersController.handle(request, response)
 });
 
 // Cadastra novo membro no banco de dados da aplicação

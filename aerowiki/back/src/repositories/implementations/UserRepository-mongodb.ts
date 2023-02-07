@@ -6,6 +6,11 @@ import { UserSchema } from "../../schemas/UserSchema";
 export class MongodbUserImplementation implements IUsersRepository {
   private repository = mongoose.model("User", UserSchema);
 
+  async getMembers(): Promise<any> {
+      const membersList = await this.repository.find();
+      return membersList;
+  }
+
   async findByEmail(email: string): Promise<User> {
     const user = await this.repository.findOne({ email });
     return user;

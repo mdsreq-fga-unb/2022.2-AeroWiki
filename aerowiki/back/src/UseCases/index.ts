@@ -1,4 +1,6 @@
 import { MongodbUserImplementation } from "../repositories/implementations/UserRepository-mongodb";
+import { GetMembersUseCase } from "./GetMembersUseCase/GetMembersUseCase";
+import { GetMembersController } from "./GetMembersUseCase/GetMembersController";
 import { CreateUserUseCase } from "./CreateUserUseCase/CreateUserUseCase";
 import { CreateUserController } from "./CreateUserUseCase/CreateUserController";
 import { LoginController } from "./LoginUseCase/LoginController";
@@ -21,6 +23,10 @@ import { DeleteProjectController } from "../UseCases/DeleteProjectUseCase/Delete
 import { DeleteProjectUseCase } from "../UseCases/DeleteProjectUseCase/DeleteProjectUseCase";
 
 const userRepository = new MongodbUserImplementation();
+
+const getMembersUseCase = new GetMembersUseCase(userRepository);
+
+const getMembersController = new GetMembersController(getMembersUseCase);
 
 const createUserUseCase = new CreateUserUseCase(userRepository);
 
@@ -63,6 +69,7 @@ const deleteProjectUseCase = new DeleteProjectUseCase(projectRepository);
 const deleteProjectController = new DeleteProjectController(deleteProjectUseCase);
 
 export {
+  getMembersController,
   createUserUseCase,
   createUserController,
   loginUseCase,
