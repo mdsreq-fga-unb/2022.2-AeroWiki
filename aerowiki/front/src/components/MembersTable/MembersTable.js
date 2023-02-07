@@ -2,7 +2,7 @@ import "./MembersTable.css";
 import React, { useEffect } from 'react';
 // import Swal from 'sweetalert2'
 // import withReactContent from 'sweetalert2-react-content'
-import { MembersData } from "./MembersData";
+import MembersData from "./MembersData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,6 @@ import load from "../../img/loding.png"
 import LoadingIcon from "../LoadingIcon/LoadingIcon";
 import { getMembers } from "../../services/getMembers";
 // const MySwal = withReactContent(Swal)
-
 
 function MembersTable() {
   // const [memberButtons, setButtons] = useState(false);
@@ -46,17 +45,17 @@ function MembersTable() {
       // document.getElementById("load").classList.remove('logoLoadoff')
       // document.getElementById("load").classList.add('logoLoad')
       // setTimeout(function () { resultado(response.data); }, 5000)
-      
-      if(action === "editar"){
-        LoadingIcon("success", "Membro atualizado com sucesso!") 
+
+      if (action === "editar") {
+        LoadingIcon("success", "Membro atualizado com sucesso!")
       }
-      else if(action === "arquivar"){
+      else if (action === "arquivar") {
         console.log(active)
-        if(!active){
-          LoadingIcon("success", "Membro arquivado com sucesso!")          
+        if (!active) {
+          LoadingIcon("success", "Membro arquivado com sucesso!")
         }
-        else{
-          LoadingIcon("success", "Membro desarquivado com sucesso!")     
+        else {
+          LoadingIcon("success", "Membro desarquivado com sucesso!")
         }
       }
 
@@ -115,23 +114,24 @@ function MembersTable() {
         </div>
         <div id="mtable-members">
           {MembersData.map((item, index) => {
-            setTimeout(function () { 
-            if(!item.active){
-              document.getElementById("membro-"+ index).classList.add("arquivado") 
-              
-              var cargo = sessionStorage.getItem('cargoReal')
-              if(cargo === 'Membro' || cargo === 'Gerente'){
+            setTimeout(function () {
+              if (!item.active) {
+                document.getElementById("membro-" + index).classList.add("arquivado")
+              }
+
+              var cargo = sessionStorage.getItem('cargo')
+
+              if (cargo === 'Membro' || cargo === 'Gerente') {
                 document.getElementById("member-buttons").remove()
                 document.getElementById("newMember-button").remove()
-              }  
-            }         
+              }
             }, 3)
             return (
               <>
                 <div id={"membro-" + index} className="mtable-member" key={index}>
                   <div className="member-info" >
                     <div className="member-name">
-                      <FontAwesomeIcon icon={faIcons.faCircleUser}/>
+                      <FontAwesomeIcon icon={faIcons.faCircleUser} />
                       <span>{item.name}</span>
                     </div>
                     <Link to={item.path} className="member-sector">

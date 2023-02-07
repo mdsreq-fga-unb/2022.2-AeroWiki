@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 import { addMember } from '../../services/addMember'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
-const MySwal = withReactContent(Swal)
+import LoadingIcon from "../LoadingIcon/LoadingIcon"
+import SweetAlert from "../SweetAlert/SweetAlert"
+import load from "../../img/loding.png"
 
 function NewUserForm() {
   const [newuserForm, setForm] = useState(true)
@@ -28,89 +27,65 @@ function NewUserForm() {
   var validarNome = require('../../testes/validacoes/nome')
   var validarMatricula = require('../../testes/validacoes/matricula')
 
-
-  const sendform = async (e) => {
+  const sendForm = async (e) => {
+    //Validação individual de input vazio
     e.preventDefault();
+    if (name === '' || surname === '') {
+      return SweetAlert("warning", "Por favor, digite o nome do membro.")
+    }
+    else if (email === '') {
+      return SweetAlert("warning", "Por favor, digite o email do membro.")
+    }
+    else if (unb_id === '') {
+      return SweetAlert("warning", "Por favor, digite a matrícula UnB do membro.")
+    }
+    else if (area === '' || role === '') {
+      return SweetAlert("warning", "Por favor, selecione o setor de trabalho e papel do membro.")
+    }
+    else if (cpf == '' || rg === '') {
+      return SweetAlert("warning", "Por favor, digite o RG e o CPF do membro.")
+    }
 
-    if (validarMatricula(unb_id) === false) {
-      MySwal.fire({
-        title: "Matrícula inválida",
-        icon: 'error'
-      })
-    } else {
-      if (validarNome(name) === false || validarNome(surname) === false) {
-        MySwal.fire({
-          title: "Nome inválido",
-          icon: 'error'
-        })
-      } else {
-        try {
-          const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-          console.log("certo")
-          console.log(r)
-          resultadoCadastro(r)
-        } catch (error) {
-          console.log("errado")
-          console.log(error)
-          resultadoCadastro(error['response'])
-        }
-      }
+    //Validação de texto válido
+    if (!validarNome(name) || !validarNome(surname)) {
+      return SweetAlert("error", "Por favor, insira um nome válido")
+    }
+    else if (!validarEmail(email)) {
+      return SweetAlert("error", "Por favor, insira um email válido")
+    }
+    else if (validarMatricula(unb_id) === false) {
+      return SweetAlert("error", "Por favor, insira uma matrícula UnB válida.")
+    }
+
+    try {
+      const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+      resultadoCadastro(r)
+    }
+    catch (err) {
+      console.log(err)
+      resultadoCadastro(err.response)
     }
   }
 
   function resultadoCadastro(resultado) {
-
-    function refreshPage() {
-      window.location.reload(true);
+    if (resultado.status === 201) {
+      LoadingIcon("success", "Cadastro realizado com sucesso!")
     }
-
-    function resultadoC() {
-      document.getElementById("load").classList.remove('logoLoad')
-      document.getElementById("load").classList.add('logoLoadoff')
-      MySwal.fire({
-        title: "Cadastro realizado com sucesso!",
-        icon: 'success',
-        confirmButtonText: 'Ok',
-        allowOutsideClick: false
-      }).then((result) => {
-        if (result.isConfirmed) {
-          refreshPage()
-        }
-      })
-    }
-
-    if (resultado === "repetiu") {
-      MySwal.fire({
-        title: "Um ou mais campos obrigatórios estão incompletos.",
-        icon: 'warning'
-      })
-
-    } else {
-      const fraseResultado = resultado['data']['message']
-      const erroNumber = resultado['status']
-      if (erroNumber === 201) {
-        document.getElementById("load").classList.remove('logoLoadoff')
-        document.getElementById("load").classList.add('logoLoad')
-        setTimeout(function () { resultadoC(); }, 5000)
-        
-      } else if (fraseResultado === 'User already exist') {
-        MySwal.fire({
-          title: "Este membro já está cadastrado.",
-          icon: 'warning'
-        })
-      } else {
-        MySwal.fire({
-          title: "Ocorreu um erro no sistema D:",
-          text: "Por favor, tente novamente mais tarde.",
-          icon: 'error'
-        })
+    else if (resultado.status === 400) {
+      const resMessage = resultado.data.message
+      if (resMessage === 'ERRO NO SISTEMA') {
+        return SweetAlert('error', 'Ocorreu um erro no sistema. D:', 'Por favor, tente novamente mais tarde.')
       }
+      return SweetAlert('warning', resultado.data.message, 'Por favor, verifique o email ou a matrícula do membro.')
     }
   }
 
   return (
     <>
-      <div id='newMember-button=' className='area' onClick={showForm}>
+      <div id='load-bg' className='form-bg'></div>
+      <img id="load" className="logoLoadoff" src={load} alt="loading..." />
+
+      <div id='newMember-button' className='area' onClick={showForm}>
         <Link to='#' className='button'>
           <FontAwesomeIcon icon={faIcons.faPlus} />
           <span>Novo membro</span>
@@ -122,7 +97,7 @@ function NewUserForm() {
       <div id={newuserForm ? 'newMember-form' : 'newMember-form-active'}>
         <div className='form-container'>
           <span className='form-title'>Cadastrar membro</span>
-          <form id='new-member-form' onSubmit={sendform} >
+          <form id='new-member-form' onSubmit={sendForm} >
             <div className='form-col'>
 
               <div className='form-box'>
@@ -135,7 +110,7 @@ function NewUserForm() {
 
               <div className='form-box'>
                 <label className='form-label'>Email</label>
-                <input type="email" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
+                <input type="text" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
               </div>
 
               <div className='form-box'>
@@ -178,7 +153,7 @@ function NewUserForm() {
 
               <div className='form-box'>
                 <label className='form-label'>Telefone</label>
-                <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
+                <input type="number" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
               <div className='form-box'>

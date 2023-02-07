@@ -4,26 +4,25 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 import { UserMenuData } from './UserMenuData'
-import { UserMenuDataM } from './UserMenuDataM'
+// import { UserMenuDataM } from './UserMenuDataM'
 
 function UserMenu() {
-    let UserMenuDataFinal = UserMenuDataM
-    UserMenuDataFinal = UserMenuDataM
+    // let UserMenuDataFinal = UserMenuDataM
+    // UserMenuDataFinal = UserMenuDataM
     const [usermenu, setUsermenu] = useState(true)
     const showUsermenu = () => setUsermenu(!usermenu)
     
     useEffect(() => {
         // alert(document.getElementById('nameHeader').textContent)
         if (document.getElementById('nameHeader').textContent === '') {
-            document.getElementById('nameHeader').append(sessionStorage.getItem('nomeReal'))
+            document.getElementById('nameHeader').append(sessionStorage.getItem('nome'))
         }
 
     }, []);
     // alert(sessionStorage.getItem('cargobanco'))
-    if(sessionStorage.getItem('cargoReal') === 'Presidente'){
-        UserMenuDataFinal = UserMenuData     
-    }
-    
+    // if(sessionStorage.getItem('cargoReal') === 'Presidente'){
+    //     UserMenuDataFinal = UserMenuData     
+    // }
     
     return (
         <>
@@ -36,7 +35,7 @@ function UserMenu() {
 
             <nav id={usermenu ? 'usermenu' : 'usermenu-active'}>
                 <div id='usermenu-items' onClick={showUsermenu}>
-                    {UserMenuDataFinal.map((item, index) => {
+                    {UserMenuData.map((item, index) => {
                         return (
                             <div className='area' key={index}>
                                 <Link to={item.path} className='button'>
