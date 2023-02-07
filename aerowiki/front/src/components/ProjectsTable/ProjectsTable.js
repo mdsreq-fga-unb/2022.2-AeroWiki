@@ -33,7 +33,11 @@ function ProjectsTable() {
                                             </Link>
                                         </div>
                                         <div id='bot'>
-                                            <Link to='/projetoteste' id='project-title'>{item.name}</Link>
+                                            <Link to='/projetoteste' id='project-title' 
+                                            onClick={() => {
+                                                sessionStorage.setItem('projeto', item.name)
+                                                sessionStorage.setItem('projeto_id', item._id)
+                                                }}>{item.name}</Link>
                                         </div>
                                     </div>
                                 </div>

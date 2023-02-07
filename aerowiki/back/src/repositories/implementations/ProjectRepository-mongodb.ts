@@ -60,7 +60,7 @@ export class MongodbProjectImplementation implements IProjectsRepository {
   async updateProjectData(id: string, project: object): Promise<void> {
     const projectDataUpdate = await this.repository.findOneAndUpdate(
       {
-        id: id,
+        _id: id,
       },
       {
         project: project

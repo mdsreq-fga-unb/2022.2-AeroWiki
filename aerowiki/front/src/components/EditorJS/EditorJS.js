@@ -1,6 +1,8 @@
 import "./EditorJS.css"
+import { updateProjectData } from "../../services/updateProjectData"
 import React, { useEffect } from 'react'
 import EditorJS from "@editorjs/editorjs"
+
 import { Tools } from "./EditorTools"
 import DragDrop from "editorjs-drag-drop"
 import Undo from 'editorjs-undo';
@@ -21,6 +23,9 @@ if (dataa == null) {
         }]
     }
 }
+
+let projeto_id = sessionStorage.getItem('projeto_id')
+
 const Editor = () => {
     const editor = new EditorJS({
         onReady: () => {
@@ -43,6 +48,8 @@ const Editor = () => {
 
     function saved() {
         editor.save().then((outputData) => {
+            const response = updateProjectData(projeto_id, outputData)
+            console.log("sera", projeto_id, outputData)
             sessionStorage.setItem('dataa', JSON.stringify(outputData))
             console.log('Article data: ', outputData)
 
@@ -90,7 +97,7 @@ const Editor = () => {
 
                         <div className="title-container">
                             <div className="project-title">
-                                <span>Nome do projeto</span>
+                                <span>{sessionStorage.getItem('projeto')}</span>
                             </div>
 
                             <div id='toggleEdit' className='edit area' onClick={editToggle}>
