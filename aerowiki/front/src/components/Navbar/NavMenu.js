@@ -19,13 +19,12 @@ function NavMenu({item, chave}) {
       area.style.borderBottomLeftRadius = "8px"
       area.style.borderBottomRightRadius = "8px"
     }
-    
   }
 
   return (
     <>
-    <div id='item'>
-      <div tabIndex="-1" id={chave} className="area">
+    <div id='item' onClick={() => {sessionStorage.setItem('area', item.title)}} >
+      <div tabIndex="-1" id={chave} className="area" >
         <Link to={item.path} className='button'>
           {item.icon}
           <span>{item.title}</span>
@@ -39,11 +38,11 @@ function NavMenu({item, chave}) {
       <div id={subnav? 'subareas-active' : 'subareas'}>
         {item.subnav && item.subnav.map((item, index) => {
           return(
-            <div className='subarea' key={index}>
-              <Link to={item.path} className='button'>
+            <div className='subarea' key={index} onClick={() => {sessionStorage.setItem('subarea', item.title)}}>
+              <div onClick={() => {window.location.href = item.path}} className='button'>
                 {item.icon}
                 <span>{item.title}</span>
-              </Link>
+              </div>
             </div>
           )
         })}

@@ -9,19 +9,21 @@ import LoadingIcon from "../LoadingIcon/LoadingIcon"
 import SweetAlert from "../SweetAlert/SweetAlert"
 import load from "../../img/loding.png"
 
-
 function NewProjectForm() {
 
   const [newprojectForm, setForm] = useState(true)
   const showForm = () => setForm(!newprojectForm)
 
   const [name, setProjectNameForm] = useState('')
-  const area = "Area Teste"
-  const subarea = "Subarea Teste"
+  
+  const area = sessionStorage.getItem('area')
+  const subarea = sessionStorage.getItem('subarea')
 
   const sendform = async (e) => {
     e.preventDefault();
+
     const editable = document.querySelector('input[name="iseditable"]:checked').value
+
     console.log(name, area, subarea, editable)
     if (name === '') {
       SweetAlert("error", "Por favor, escolha um nome para o projeto")

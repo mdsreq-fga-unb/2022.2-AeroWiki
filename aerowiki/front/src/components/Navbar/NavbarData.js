@@ -12,13 +12,13 @@ export const NavbarData = [
         class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'Vendas',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'Campanhas',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]
@@ -32,13 +32,18 @@ export const NavbarData = [
         class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'Campanhas',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'Processo Recrutador',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Vendas',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]
@@ -52,13 +57,13 @@ export const NavbarData = [
         class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'Parceiros',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'Eventos',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]
@@ -72,13 +77,18 @@ export const NavbarData = [
         class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'Grupos de Trabalho',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'Grupos de Trab. & Des.',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Serviços',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]
@@ -92,13 +102,28 @@ export const NavbarData = [
                 class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'Gestão',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'Gestão de Pessoas',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Gestão Financeira',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Processo Recrutador',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Contratos',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]
@@ -112,13 +137,18 @@ export const NavbarData = [
                 class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'SEGMI',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'SEGAP',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'SEOTEC',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]
@@ -132,13 +162,23 @@ export const NavbarData = [
                 class: 'nav-text',
         subnav: [
             {
-                title: 'Subárea 1',
-                path: '/SubAreas',
+                title: 'Direx',
+                path: '/subareas',
                 class: 'nav-text'
             },
             {
-                title: 'Subárea 2',
-                path: '/SubAreas',
+                title: 'Comissão Eleitoral',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Comissão de Diversidade',
+                path: '/subareas',
+                class: 'nav-text'
+            },
+            {
+                title: 'Comissão de LGPD',
+                path: '/subareas',
                 class: 'nav-text'
             }
         ]

@@ -10,7 +10,6 @@ import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
 
 
-
 var testejson = {blocks: [{
                 type: 'paragraph',
                 data: {
@@ -21,10 +20,6 @@ var testejson = {blocks: [{
 
 
 const Editor = () => {
-    // let editor = { isReady: false };
-    // useEffect(() => {
-
-    //     if (!editor.isReady) {
     const editor = new EditorJS({
         onReady: () => {
             new DragDrop(editor)
@@ -60,12 +55,12 @@ const Editor = () => {
     //     }
     // // }, []);
 
-    function editToggle(){
+    async function editToggle(){
         const toggleButton = document.getElementById("toggleEdit")
         const toggleText = document.getElementById("toggleText")
 
-        var resultado = editor.readOnly.toggle()
-        resultado.then(function(resultado){
+        await editor.readOnly.toggle()
+        .then(function(resultado){
             if(!resultado){
                 toggleButton.classList.add("active")
                 toggleText.innerHTML = "Modo Edição"
@@ -85,9 +80,9 @@ const Editor = () => {
                     <div className="project-info">
 
                         <div className="sector-container">
-                            <span>Area</span>
+                            <span>{sessionStorage.getItem('area')}</span>
                             <FontAwesomeIcon icon={faIcons.faChevronRight} />
-                            <span>Subarea</span>
+                            <span>{sessionStorage.getItem('subarea')}</span>
                         </div>
 
                         <div className="title-container">
