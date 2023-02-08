@@ -71,27 +71,29 @@ const Editor = () => {
             console.log(`Editor.js initialization failed because of ${reason}`)
         });
 
-        async function editToggleStart() {
-            const toggleButton = document.getElementById("toggleEdit")
-            await editor.readOnly.toggle()
-                .then(function (resultado) {
-                    if (!resultado) {
-                        toggleButton.classList.add("active")
-                        
-                    }
-                    else {
-                        toggleButton.classList.remove("active")
-                        
-                    }
-                })
+    async function editToggleStart() {
+        const toggleButton = document.getElementById("toggleEdit")
+        await editor.readOnly.toggle()
+            .then(function (resultado) {
+                if (!resultado) {
+                    toggleButton.classList.add("active")
 
-        }
+                }
+                else {
+                    toggleButton.classList.remove("active")
+
+                }
+            })
+
+    }
 
     async function editToggle() {
         let cargo = sessionStorage.getItem("cargo")
         let editable = sessionStorage.getItem("editable")
-        if (cargo === 'Membro' && editable==='false') {
+
+        if (cargo === 'Membro' && editable === 'false') {
         } else {
+            // if(projetostatus === "ativo"){
             const toggleButton = document.getElementById("toggleEdit")
             const toggleText = document.getElementById("toggleText")
 
@@ -106,6 +108,7 @@ const Editor = () => {
                         toggleText.innerHTML = "Modo Leitura"
                     }
                 })
+            // }
         }
     }
 
