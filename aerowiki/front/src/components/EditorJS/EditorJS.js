@@ -65,27 +65,48 @@ const Editor = () => {
     editor.isReady
         .then(() => {
             console.log('Editor.js is ready to work!')
-            editToggle()
+            editToggleStart()
         })
         .catch((reason) => {
             console.log(`Editor.js initialization failed because of ${reason}`)
         });
 
-    async function editToggle() {
-        const toggleButton = document.getElementById("toggleEdit")
-        const toggleText = document.getElementById("toggleText")
+        async function editToggleStart() {
+            const toggleButton = document.getElementById("toggleEdit")
+            await editor.readOnly.toggle()
+                .then(function (resultado) {
+                    if (!resultado) {
+                        toggleButton.classList.add("active")
+                        
+                    }
+                    else {
+                        toggleButton.classList.remove("active")
+                        
+                    }
+                })
 
-        await editor.readOnly.toggle()
-            .then(function (resultado) {
-                if (!resultado) {
-                    toggleButton.classList.add("active")
-                    toggleText.innerHTML = "Modo Edição"
-                }
-                else {
-                    toggleButton.classList.remove("active")
-                    toggleText.innerHTML = "Modo Leitura"
-                }
-            })
+        }
+
+    async function editToggle() {
+        let cargo = sessionStorage.getItem("cargo")
+        let editable = sessionStorage.getItem("editable")
+        if (cargo === 'Membro' && editable==='false') {
+        } else {
+            const toggleButton = document.getElementById("toggleEdit")
+            const toggleText = document.getElementById("toggleText")
+
+            await editor.readOnly.toggle()
+                .then(function (resultado) {
+                    if (!resultado) {
+                        toggleButton.classList.add("active")
+                        toggleText.innerHTML = "Modo Edição"
+                    }
+                    else {
+                        toggleButton.classList.remove("active")
+                        toggleText.innerHTML = "Modo Leitura"
+                    }
+                })
+        }
     }
 
     async function clearText() {

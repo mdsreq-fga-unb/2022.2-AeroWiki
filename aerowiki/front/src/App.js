@@ -25,7 +25,7 @@ function App() {
         <Route path="/subareas/*" element={<SubAreas />} />
         <Route path="/membros" element={<Members />} />
         <Route path="/myAccount" element={<Account />} />
-        <Route path='/projetoteste' element={<Project />} />
+        <Route path='/projeto' element={<Project />} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </>
