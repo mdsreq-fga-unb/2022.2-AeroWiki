@@ -33,7 +33,7 @@ const Editor = () => {
         }]
     }
 
-    if (projectText !== null) {
+    if (projectText.blocks.length !== 0) {
         data = projectText
     }
 
@@ -47,8 +47,6 @@ const Editor = () => {
         holder: "editorjs",
         tools: Tools,
 
-        isReadOnly: true,
-
         data: data,
 
         onChange: () => {
@@ -58,9 +56,8 @@ const Editor = () => {
 
     function saved() {
         editor.save().then((outputData) => {
-            updateProjectData(projectId, outputData)
-            console.log('Article data: ', outputData)
-
+            updateProjectData(projectId, outputData.blocks)
+            // console.log('Article data: ', outputData)
         }).catch((error) => {
             console.log('Saving failed: ', error)
         });
@@ -90,6 +87,11 @@ const Editor = () => {
                 }
             })
     }
+
+    async function clearText() {
+        await editor.clear()
+    }
+
     return (
         <>
             <div className="project-container">
@@ -107,12 +109,24 @@ const Editor = () => {
                                 <span>{projectName}</span>
                             </div>
 
-                            <div id='toggleEdit' className='edit area' onClick={editToggle}>
-                                <div className='button' >
-                                    <FontAwesomeIcon id="toggleIcon" icon={faIcons.faFileSignature} />
-                                    <span id="toggleText">Modo Leitura</span>
+                            <div id="editor-options">
+
+                                <div id='toggleEdit' className='edit area' onClick={editToggle}>
+                                    <div className='button' >
+                                        <FontAwesomeIcon id="toggleIcon" icon={faIcons.faFileSignature} />
+                                        <span id="toggleText">Modo Leitura</span>
+                                    </div>
                                 </div>
+
+                                <div id='clearText' className='edit area' onClick={clearText}>
+                                    <div className='button' >
+                                        <FontAwesomeIcon icon={faIcons.faBroom} />
+                                        <span>Limpar</span>
+                                    </div>
+                                </div>
+
                             </div>
+
                         </div>
 
 

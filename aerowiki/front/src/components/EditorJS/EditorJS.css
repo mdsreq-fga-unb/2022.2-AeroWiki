@@ -80,3 +80,17 @@
 .codex-editor{
     z-index: 0;
 }
+
+#editor-options{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#clearText{
+    width: fit-content;
+}
+#clearText .button{
+    display: flex;
+    gap: 1rem;
+}

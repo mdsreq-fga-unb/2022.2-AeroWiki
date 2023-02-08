@@ -39,7 +39,7 @@ export class MongodbProjectImplementation implements IProjectsRepository {
         _id: id,
       },
       {
-        project: project
+        project: {'blocks': project}
       },
       {
         new: true,

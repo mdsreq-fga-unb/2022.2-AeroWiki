@@ -18,3 +18,15 @@
 #web-body{
     margin-top: 150px;
 }
+
+#project-areasubarea-name{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: calc(16.666% + 1rem);
+    gap: 1rem;
+}
+
+#project-areasubarea-name >*{
+    font-size: 1.7rem !important;
+}
