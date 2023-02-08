@@ -5,7 +5,12 @@
     --zgrey: #595959;
 }
 
-#fixed-projects{
+#fixed-projects-container .pad-box{
+    display: block;
+    padding: 1rem;
+}
+
+.fixed-projects{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -49,16 +54,15 @@
     gap: 1rem;
 }
 
-#project-areas-text {
+.project-areas-text,
+.project-options {
     font-size: 1.7rem;
     color: white;
     text-decoration: none;
+    position: relative;
 }
 #project-title{
     font-size: 2.7rem;
     text-decoration: none;
     font-weight: 600;
-    text-align: center;
 }
-
-

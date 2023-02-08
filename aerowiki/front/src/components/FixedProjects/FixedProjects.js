@@ -1,5 +1,5 @@
 import React from 'react'
-import './FixedProjects.css'
+// import './FixedProjects.css'
 import { Link } from 'react-router-dom'
 import { ProjectsData } from './ProjectsData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,12 +21,12 @@ function FixedProjects() {
                 <div id='project-text'>
                   <div id='top'>
                     <div id='project-areas'>
-                      <Link to={item.area_path} id='project-areas-text'>{item.area}</Link>
-                      <FontAwesomeIcon icon={faIcons.faChevronRight} id='project-areas-text'/>
-                      <Link to={item.subarea_path} id='project-areas-text'>{item.subarea}</Link>
+                      <Link to={item.area_path} className='project-areas-text'>{item.area}</Link>
+                      <FontAwesomeIcon icon={faIcons.faChevronRight} className='project-areas-text'/>
+                      <Link to={item.subarea_path} className='project-areas-text'>{item.subarea}</Link>
                     </div>
-                    <Link to='#' id='project-areas-text'>
-                      <FontAwesomeIcon icon={faIcons.faEllipsis} id='project-areas-text'/>
+                    <Link to='#' className='project-options'>
+                      <FontAwesomeIcon icon={faIcons.faEllipsis}/>
                     </Link> 
                   </div>
                   <div id='bot'>

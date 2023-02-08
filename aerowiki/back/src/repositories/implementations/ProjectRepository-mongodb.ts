@@ -18,7 +18,7 @@ export class MongodbProjectImplementation implements IProjectsRepository {
   async updateProject(id: string, name: string, isfixed: boolean, editable: boolean, ongoing: boolean, active: boolean): Promise<void> {
     const projectUpdate = await this.repository.findOneAndUpdate(
       {
-        id: id,
+        _id: id,
       },
       {
         name: name,
@@ -50,7 +50,7 @@ export class MongodbProjectImplementation implements IProjectsRepository {
   async deleteProject(id: string): Promise<void> {
     const projectDeleted = await this.repository.findOneAndDelete(
       {
-        id: id
+        _id: id
       }
     )
   }

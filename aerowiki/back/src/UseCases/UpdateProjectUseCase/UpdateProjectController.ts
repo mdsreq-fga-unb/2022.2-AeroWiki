@@ -4,7 +4,7 @@ import { UpdateProjectUseCase } from "../UpdateProjectUseCase/UpdateProjectUseCa
 export class UpdateProjectController {
   constructor(
     private updateProjectUseCase: UpdateProjectUseCase
-  ) {}
+  ) { }
 
   async handle(request: Request, response: Response): Promise<Response> {
     const { id,
@@ -12,7 +12,7 @@ export class UpdateProjectController {
       isfixed,
       editable,
       ongoing,
-      active} = request.body;
+      active } = request.body;
 
     try {
       await this.updateProjectUseCase.execute({

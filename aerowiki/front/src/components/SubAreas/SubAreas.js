@@ -8,7 +8,7 @@ import { NavbarData } from '../Navbar/NavbarData'
 function SubAreas() {
   return (
     <div id='fixed-projects-container'>
-      <div id='fixed-projects'>
+      <div className='fixed-projects'>
 
         {NavbarData.find( item => item.title === sessionStorage.getItem('area') ).subnav.map((item, index) => {
           return (

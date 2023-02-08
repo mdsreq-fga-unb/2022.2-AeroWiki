@@ -48,7 +48,6 @@ function MembersTable() {
         LoadingIcon("success", "Membro atualizado com sucesso!")
       }
       else if (action === "arquivar") {
-        console.log(active)
         if (!active) {
           LoadingIcon("success", "Membro arquivado com sucesso!")
         }
