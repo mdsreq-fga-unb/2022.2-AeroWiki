@@ -76,6 +76,16 @@ function ProjectsTable() {
                 <div className='fixed-projects'>
                     {JSON.parse(sessionStorage.getItem('projectsData')).map((item, index) => {
                         if (item.area === sessionStorage.getItem('area') && item.subarea === sessionStorage.getItem('subarea')) {
+
+                            setTimeout(function () {
+                                var cargo = sessionStorage.getItem('cargo')
+                  
+                                if (cargo === 'Membro') {
+                                  document.getElementById("options-buttons").remove()
+                                  document.getElementById("newProject-button=").remove()
+                                }
+                              }, 3)
+
                             return (
                                 <div id='fixed-project' key={index}>
                                     <div id='project-image' style={{ backgroundImage: `url(${item.img})` }}></div>
@@ -87,16 +97,20 @@ function ProjectsTable() {
                                                 <Link className='project-areas-text'>{item.subarea}</Link>
                                             </div>
 
-                                            <div className='project-options'>
+                                            <div id='options-buttons' className='project-options'>
                                                 <ProjectOptions onUpdate={onUpdate} onEdit={onEdit} onDelete={onDelete} project={item} />
                                             </div>
 
                                         </div>
                                         <div id='bot'>
-                                            <Link to='/projeto' id='project-title'
+                                            <Link to='#' id='project-title'
                                                 onClick={() => {
                                                     sessionStorage.setItem('projeto_id', item._id)
                                                     sessionStorage.setItem('editable', item.editable)
+                                                     
+                                                    if (item.active) {
+                                                        window.location.href = '/projeto'
+                                                    }
                                                 }}>{item.name}</Link>
                                         </div>
                                     </div>

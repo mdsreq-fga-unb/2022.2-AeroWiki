@@ -15,6 +15,8 @@ import * as faIcons from '@fortawesome/free-solid-svg-icons'
 const Editor = () => {
     projectsData()
 
+    let cargo = sessionStorage.getItem("cargo")
+    let editable = sessionStorage.getItem("editable")
     let projectId = sessionStorage.getItem('projeto_id')
 
     let thisProject =
@@ -72,25 +74,14 @@ const Editor = () => {
         });
 
     async function editToggleStart() {
+        if (cargo === 'Membro' && editable === 'false') {
+            document.getElementById('clearText').remove()
+        }
         const toggleButton = document.getElementById("toggleEdit")
         await editor.readOnly.toggle()
-            .then(function (resultado) {
-                if (!resultado) {
-                    toggleButton.classList.add("active")
-
-                }
-                else {
-                    toggleButton.classList.remove("active")
-
-                }
-            })
-
     }
 
     async function editToggle() {
-        let cargo = sessionStorage.getItem("cargo")
-        let editable = sessionStorage.getItem("editable")
-
         if (cargo === 'Membro' && editable === 'false') {
         } else {
             // if(projetostatus === "ativo"){
