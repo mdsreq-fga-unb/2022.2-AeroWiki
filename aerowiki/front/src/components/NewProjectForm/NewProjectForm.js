@@ -9,6 +9,8 @@ import LoadingIcon from "../LoadingIcon/LoadingIcon"
 import SweetAlert from "../SweetAlert/SweetAlert"
 import load from "../../img/loding.png"
 
+import { projectsData } from '../ProjectsTable/ProjectsData'
+
 function NewProjectForm() {
 
   const [newprojectForm, setForm] = useState(true)
@@ -34,6 +36,7 @@ function NewProjectForm() {
         console.log("certo")
         console.log(response)
         LoadingIcon("success", "Projeto criado com sucesso!")
+        projectsData()
       } catch (error) {
         console.log("errado")
         console.log(error)

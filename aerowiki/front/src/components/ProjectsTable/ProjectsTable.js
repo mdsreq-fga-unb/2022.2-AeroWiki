@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 import "./ProjectsTable.css"
-import { ProjectsData } from "./ProjectsData";
+import { projectsData } from './ProjectsData'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
 function ProjectsTable() {
+    projectsData()
     return (
         <>
             <div className='projects-table'>
@@ -16,7 +17,7 @@ function ProjectsTable() {
                 </div>
 
                 <div className='fixed-projects'>
-                    {ProjectsData.map((item, index) => {
+                    {JSON.parse(sessionStorage.getItem('projectsData')).map((item, index) => {
                         if (item.area === sessionStorage.getItem('area') && item.subarea === sessionStorage.getItem('subarea')) {
                             return (
                                 <div id='fixed-project' key={index}>
@@ -33,10 +34,9 @@ function ProjectsTable() {
                                             </Link>
                                         </div>
                                         <div id='bot'>
-                                            <Link to='/projetoteste' id='project-title' 
-                                            onClick={() => {
-                                                sessionStorage.setItem('projeto', item.name)
-                                                sessionStorage.setItem('projeto_id', item._id)
+                                            <Link to='/projetoteste' id='project-title'
+                                                onClick={() => {
+                                                    sessionStorage.setItem('projeto_id', item._id)
                                                 }}>{item.name}</Link>
                                         </div>
                                     </div>
@@ -46,7 +46,6 @@ function ProjectsTable() {
 
                     })}
                 </div>
-
 
             </div>
         </>

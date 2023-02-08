@@ -1,17 +1,11 @@
 import { getProjects } from '../../services/getProjects'
 
-export async function projectsData(){
+export const projectsData = async() => {
     try {
         const response = await getProjects()
-        const ProjectsData = JSON.stringify(response.data)
-        sessionStorage.setItem('projectsData', ProjectsData)
+        sessionStorage.setItem('projectsData', JSON.stringify(response.data))
     }
     catch (err) {
-        console.log("errado")
-        console.log(err);
+        console.log(err)
     }
 }
-projectsData()
-
-const ProjectsData = eval(sessionStorage.getItem('projectsData'))
-export { ProjectsData }

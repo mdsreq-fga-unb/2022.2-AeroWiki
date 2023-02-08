@@ -18,7 +18,7 @@ export class NewProjectController {
         editable: editable,
         ongoing: true,
         active: true,
-        project: {"teste": false}
+        project: null
       })
       
       return response.status(201).json({ message: "NOVO PROJETO CRIADO" });;  

@@ -1,7 +1,8 @@
 import "./EditorJS.css"
 import { updateProjectData } from "../../services/updateProjectData"
-import React, { useEffect } from 'react'
+import React from 'react'
 import EditorJS from "@editorjs/editorjs"
+import { projectsData } from '../ProjectsTable/ProjectsData'
 
 import { Tools } from "./EditorTools"
 import DragDrop from "editorjs-drag-drop"
@@ -10,11 +11,20 @@ import Undo from 'editorjs-undo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
-let dataa = JSON.parse(sessionStorage.getItem("dataa"))
-console.log(dataa)
-if (dataa == null) {
 
-    dataa = {
+const Editor = () => {
+    projectsData()
+
+    let projectId = sessionStorage.getItem('projeto_id')
+
+    let thisProject =
+        JSON.parse(sessionStorage.getItem('projectsData'))
+            .find(item => item._id === projectId)
+
+    let projectName = thisProject.name
+    let projectText = thisProject.project
+
+    let data = {
         blocks: [{
             type: 'paragraph',
             data: {
@@ -22,11 +32,11 @@ if (dataa == null) {
             }
         }]
     }
-}
 
-let projeto_id = sessionStorage.getItem('projeto_id')
+    if (projectText !== null) {
+        data = projectText
+    }
 
-const Editor = () => {
     const editor = new EditorJS({
         onReady: () => {
             new DragDrop(editor)
@@ -39,7 +49,7 @@ const Editor = () => {
 
         isReadOnly: true,
 
-        data: dataa,
+        data: data,
 
         onChange: () => {
             saved();
@@ -48,9 +58,7 @@ const Editor = () => {
 
     function saved() {
         editor.save().then((outputData) => {
-            const response = updateProjectData(projeto_id, outputData)
-            console.log("sera", projeto_id, outputData)
-            sessionStorage.setItem('dataa', JSON.stringify(outputData))
+            updateProjectData(projectId, outputData)
             console.log('Article data: ', outputData)
 
         }).catch((error) => {
@@ -60,28 +68,27 @@ const Editor = () => {
     editor.isReady
         .then(() => {
             console.log('Editor.js is ready to work!')
-
+            editToggle()
         })
         .catch((reason) => {
             console.log(`Editor.js initialization failed because of ${reason}`)
         });
 
-    async function editToggle(){
+    async function editToggle() {
         const toggleButton = document.getElementById("toggleEdit")
         const toggleText = document.getElementById("toggleText")
 
         await editor.readOnly.toggle()
-        .then(function(resultado){
-            if(!resultado){
-                toggleButton.classList.add("active")
-                toggleText.innerHTML = "Modo Edição"
-            }
-            else {
-                toggleButton.classList.remove("active")
-                toggleText.innerHTML = "Modo Leitura"
-            }
-        })
-
+            .then(function (resultado) {
+                if (!resultado) {
+                    toggleButton.classList.add("active")
+                    toggleText.innerHTML = "Modo Edição"
+                }
+                else {
+                    toggleButton.classList.remove("active")
+                    toggleText.innerHTML = "Modo Leitura"
+                }
+            })
     }
     return (
         <>
@@ -97,7 +104,7 @@ const Editor = () => {
 
                         <div className="title-container">
                             <div className="project-title">
-                                <span>{sessionStorage.getItem('projeto')}</span>
+                                <span>{projectName}</span>
                             </div>
 
                             <div id='toggleEdit' className='edit area' onClick={editToggle}>
