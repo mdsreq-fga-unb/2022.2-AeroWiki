@@ -117,7 +117,7 @@
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 02/01/2023 | 09/02/2023 |  | Arthur Trindade |
+| 02/01/2023 | 09/02/2023 | E3-F1-US1 <br> E3-F2-US2 <br> E3-F2-US3 <br> E4-F1-US1 <br> E4-F1-US2 <br> E4-F2-US2 | Arthur Trindade |
 
 | Planejamento |
 | --- |
