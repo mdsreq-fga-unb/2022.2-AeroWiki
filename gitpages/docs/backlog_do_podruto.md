@@ -50,8 +50,7 @@
 - F1: Atribuir papéis aos membros cadastrados
     - US1 -> Como diretor, eu quero ser capaz de editar o cargo de membros do sistema para que o cargo de cada usuário estejam em sincronia com seu cargo na Zenit.
     - US2 -> Como diretor, eu quero ser capaz de editar o setor de membros do sistema para que o setor de cada usuário estejam em sincronia com seu setor de trabalho na Zenit.
-    - US3 -> Como diretor, eu desejo que apenas eu tenha acesso aos botões de cadastro de usuários e edição de membros existentes.
-
+    
 - F2: Criar novas areas no menu lateral
     - US1 -> Como presidente, eu quero ser capaz de criar novas áreas para expansão da empresa.
     - US2 -> Como presidente, eu quero ser capaz de excluir áreas existentes para compactação da empresa.
