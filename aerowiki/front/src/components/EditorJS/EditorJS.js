@@ -104,7 +104,8 @@ const Editor = () => {
     }
 
     async function clearText() {
-        await editor.clear()
+        await editor.clear()    
+        window.location.reload()
     }
 
     return (
