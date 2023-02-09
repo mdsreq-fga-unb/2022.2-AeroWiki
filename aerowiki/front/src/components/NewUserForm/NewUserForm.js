@@ -27,48 +27,56 @@ function NewUserForm() {
   var validarNome = require('../../testes/validacoes/nome')
   var validarMatricula = require('../../testes/validacoes/matricula')
 
-
-  const sendform = async (e) => {
+  const sendForm = async (e) => {
+    //Validação individual de input vazio
     e.preventDefault();
+    if (name === '' || surname === '') {
+      return SweetAlert("warning", "Por favor, digite o nome do membro.")
+    }
+    else if (email === '') {
+      return SweetAlert("warning", "Por favor, digite o email do membro.")
+    }
+    else if (unb_id === '') {
+      return SweetAlert("warning", "Por favor, digite a matrícula UnB do membro.")
+    }
+    else if (area === '' || role === '') {
+      return SweetAlert("warning", "Por favor, selecione o setor de trabalho e papel do membro.")
+    }
+    else if (cpf == '' || rg === '') {
+      return SweetAlert("warning", "Por favor, digite o RG e o CPF do membro.")
+    }
 
-    if (validarNome(name) === false || validarNome(surname) === false) {
-      SweetAlert("error", "Nome inválido")
+    //Validação de texto válido
+    if (!validarNome(name) || !validarNome(surname)) {
+      return SweetAlert("error", "Por favor, insira um nome válido")
+    }
+    else if (!validarEmail(email)) {
+      return SweetAlert("error", "Por favor, insira um email válido")
     }
     else if (validarMatricula(unb_id) === false) {
-      SweetAlert("error", "Matrícula inválida")
+      return SweetAlert("error", "Por favor, insira uma matrícula UnB válida.")
     }
-    else {
-      try {
-        const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
-        console.log("certo")
-        console.log(r)
-        resultadoCadastro(r)
-      }
-      catch (error) {
-        console.log("errado")
-        console.log(error)
-        resultadoCadastro(error['response'])
-      }
+
+    try {
+      const r = await addMember(name, surname, email, unb_id, area, role, telephone, birthdate, cpf, rg)
+      resultadoCadastro(r)
+    }
+    catch (err) {
+      console.log(err)
+      resultadoCadastro(err.response)
     }
   }
 
   function resultadoCadastro(resultado) {
-
-    if (resultado === "repetiu") {
-      SweetAlert("warning", "Um ou mais campos obrigatórios estão incompletos.")
+    if (resultado.status === 201) {
+      LoadingIcon("success", "Cadastro realizado com sucesso!")
     }
-    else {
-      const fraseResultado = resultado['data']['message']
-      const erroNumber = resultado['status']
-      if (erroNumber === 201) {
-        LoadingIcon("success", "Cadastro realizado com sucesso!")
+    else if (resultado.status === 400) {
+      const resMessage = resultado.data.message
+      if (resMessage === 'ERRO NO SISTEMA') {
+        return SweetAlert('error', 'Ocorreu um erro no sistema. D:', 'Por favor, tente novamente mais tarde.')
       }
-      else if (fraseResultado === 'User already exist') {
-        SweetAlert("warning", "Esse membro já está cadastrado.")
-      }
-      else {
-        SweetAlert("error", "Ocorreu um erro no sistema D:", "Por favor, tente novamente mais tarde.")
-      }
+      return SweetAlert('warning', resultado.data.message, 'Por favor, verifique o email ou a matrícula do membro.')
     }
   }
 
@@ -89,7 +97,7 @@ function NewUserForm() {
       <div id={newuserForm ? 'newMember-form' : 'newMember-form-active'}>
         <div className='form-container'>
           <span className='form-title'>Cadastrar membro</span>
-          <form id='new-member-form' onSubmit={sendform} >
+          <form id='new-member-form' onSubmit={sendForm} >
             <div className='form-col'>
 
               <div className='form-box'>
@@ -102,7 +110,7 @@ function NewUserForm() {
 
               <div className='form-box'>
                 <label className='form-label'>Email</label>
-                <input type="email" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
+                <input type="text" value={email} onChange={(e) => setEmailForm(e.target.value)} placeholder='E-mail Zenit' className='input'></input>
               </div>
 
               <div className='form-box'>
@@ -145,7 +153,7 @@ function NewUserForm() {
 
               <div className='form-box'>
                 <label className='form-label'>Telefone</label>
-                <input type="tel" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
+                <input type="number" value={telephone} onChange={(e) => setTelephoneForm(e.target.value)} placeholder='Telefone' className='input'></input>
               </div>
 
               <div className='form-box'>

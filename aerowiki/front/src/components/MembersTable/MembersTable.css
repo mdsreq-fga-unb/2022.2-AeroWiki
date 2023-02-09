@@ -137,8 +137,8 @@
     color: var(--zdark-blue);
 }
 
-#delete-file-edit, 
-#delete-file-edit-active{
+.delete-file-edit, 
+.delete-file-edit-active{
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -146,12 +146,12 @@
     align-items: center;
     gap: 1.5rem;
 }
-#delete-file-edit{
+.delete-file-edit{
     left: -5vw;
     transition: 500ms;
     z-index: -1;
 }
-#delete-file-edit-active{
+.delete-file-edit-active{
     left: 5vw;
     transition: 500ms;
     z-index: 0;

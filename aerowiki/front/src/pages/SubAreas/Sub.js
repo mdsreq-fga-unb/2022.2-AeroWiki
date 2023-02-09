@@ -8,6 +8,10 @@ import ProjectsTable from '../../components/ProjectsTable/ProjectsTable'
 
 function Sub() {
   testedetoken()
+
+  let areaName = sessionStorage.getItem('area')
+  let subareaName = sessionStorage.getItem('subarea')
+
   return (
     <>
       <header>
@@ -16,6 +20,11 @@ function Sub() {
 
       <div id='web-body'>
         <div id='main-title'>
+          <div id='project-areasubarea-name'>
+            <span>{areaName}</span>
+            <span>{subareaName}</span>
+          </div>
+
           <span>Projetos</span>
           <NewProjectForm></NewProjectForm>
         </div>

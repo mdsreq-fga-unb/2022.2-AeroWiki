@@ -1,6 +1,6 @@
 import './ModalButton.css'
-import * as faIcons from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as faIcons from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { useState } from "react";
 

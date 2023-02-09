@@ -3,11 +3,14 @@ import mongoose from "mongoose";
 import { UserSchema } from '../schemas/UserSchema'
 import { ProjectSchema } from '../schemas/ProjectSchema'
 import {
+  getMembersController,
   createUserController,
   updateMemberController,
   updateUserController,
   deleteMemberController,
   loginController,
+
+  getProjectsController,
   newProjectController,
   updateProjectController,
   updateProjectDataController,
@@ -17,17 +20,8 @@ import {
 const router = Router()
 
 //Pega lista de membros do banco
-
 router.get('/getMembers', (request, response) => {
-  const UsersData = mongoose.model('User', UserSchema)
-  UsersData.find({active: true}, (error, data) => {
-    if (error) {
-      console.log(error)
-    }
-    else {
-      response.json(data)
-    }
-  })
+  return getMembersController.handle(request, response)
 });
 
 // Cadastra novo membro no banco de dados da aplicação
@@ -59,15 +53,7 @@ router.delete('/deleteMember', (request, response) => {
 
 //
 router.get('/getProjects', (request, response) => {
-  const ProjectsData = mongoose.model('Project', ProjectSchema)
-  ProjectsData.find((error, data) => {
-    if (error) {
-      console.log(error)
-    }
-    else {
-      response.json(data)
-    }
-  })
+  return getProjectsController.handle(request, response)
 });
 
 // Cria projeto no banco de dados

@@ -13,6 +13,7 @@
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
     transition: 500ms;
+    color: ;
 }
 
 #newMember-form, #newMember-form-active{

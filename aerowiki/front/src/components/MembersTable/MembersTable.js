@@ -1,8 +1,6 @@
 import "./MembersTable.css";
 import React, { useEffect } from 'react';
-// import Swal from 'sweetalert2'
-// import withReactContent from 'sweetalert2-react-content'
-import { MembersData } from "./MembersData";
+import { membersData } from "./MembersData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,9 +11,8 @@ import { updateMember } from "../../services/updateMember";
 import { deleteMember } from "../../services/deleteMember";
 import load from "../../img/loding.png"
 import LoadingIcon from "../LoadingIcon/LoadingIcon";
-import { getMembers } from "../../services/getMembers";
-// const MySwal = withReactContent(Swal)
 
+membersData()
 
 function MembersTable() {
   // const [memberButtons, setButtons] = useState(false);
@@ -51,7 +48,6 @@ function MembersTable() {
         LoadingIcon("success", "Membro atualizado com sucesso!")
       }
       else if (action === "arquivar") {
-        console.log(active)
         if (!active) {
           LoadingIcon("success", "Membro arquivado com sucesso!")
         }
@@ -114,13 +110,13 @@ function MembersTable() {
           </div>
         </div>
         <div id="mtable-members">
-          {MembersData.map((item, index) => {
+          {JSON.parse(sessionStorage.getItem('membersData')).map((item, index) => {
             setTimeout(function () {
               if (!item.active) {
                 document.getElementById("membro-" + index).classList.add("arquivado")
               }
 
-              var cargo = sessionStorage.getItem('cargoReal')
+              var cargo = sessionStorage.getItem('cargo')
 
               if (cargo === 'Membro' || cargo === 'Gerente') {
                 document.getElementById("member-buttons").remove()

@@ -62,6 +62,7 @@
     flex-direction: row;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 .button svg{
     width: 30%;

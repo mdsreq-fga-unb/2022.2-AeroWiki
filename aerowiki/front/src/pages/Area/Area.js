@@ -8,29 +8,9 @@ import testedetoken from '../../testes/testedetoken'
 
 function Marketing() {
   testedetoken()
-  var areaName = window.location.href.split('/').pop()
-  if (areaName === 'comercial'){
-    areaName = 'COMERCIAL'
-  }
-  else if(areaName === 'marketing'){
-    areaName = 'MARKETING'
-  }
-  else if(areaName === 'relacoes'){
-    areaName = 'RELAÇÕES EXTERNAS'
-  }
-  else if(areaName === 'ped'){
-    areaName = 'PESQUISA & DESENVOLVIMENTO'
-  }
-  else if(areaName === 'operacoes'){
-    areaName = 'OPERAÇÕES'
-  }
-  else if(areaName === 'segmentos'){
-    areaName = 'SEGMENTOS'
-  }
-  else if(areaName === 'presidencia'){
-    areaName = 'PRESIDÊNCIA'
-  }
 
+  let areaName = sessionStorage.getItem('area')
+  
   return (
     <>
       <header>

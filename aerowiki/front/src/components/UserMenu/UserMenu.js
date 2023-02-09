@@ -12,22 +12,22 @@ function UserMenu() {
     const [usermenu, setUsermenu] = useState(true)
     const showUsermenu = () => setUsermenu(!usermenu)
     
-    useEffect(() => {
-        // alert(document.getElementById('nameHeader').textContent)
-        if (document.getElementById('nameHeader').textContent === '') {
-            document.getElementById('nameHeader').append(sessionStorage.getItem('nomeReal'))
-        }
+    // useEffect(() => {
+    //     // alert(document.getElementById('nameHeader').textContent)
+    //     if (document.getElementById('nameHeader').textContent === '') {
+    //         document.getElementById('nameHeader').append(sessionStorage.getItem('nome'))
+    //     }
 
-    }, []);
-    // alert(sessionStorage.getItem('cargobanco'))
-    // if(sessionStorage.getItem('cargoReal') === 'Presidente'){
-    //     UserMenuDataFinal = UserMenuData     
-    // }
+    // }, []);
+    // // alert(sessionStorage.getItem('cargobanco'))
+    // // if(sessionStorage.getItem('cargoReal') === 'Presidente'){
+    // //     UserMenuDataFinal = UserMenuData     
+    // // }
     
     return (
         <>
             <div id='username'>
-                <span id='nameHeader'></span>
+                <span id='nameHeader'>{sessionStorage.getItem('nome')}</span>
                 <Link to='#' className='user-menu-icon'>
                     <FontAwesomeIcon icon={faIcons.faCircleUser} onClick={showUsermenu} />
                 </Link>

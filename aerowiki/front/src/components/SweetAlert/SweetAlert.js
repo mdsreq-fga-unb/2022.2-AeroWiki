@@ -5,7 +5,7 @@ const MySwal = withReactContent(Swal)
 
 export default function SweetAlert(alertIcon, alertTitle, alertText) {
     if (alertIcon && alertTitle) {
-        MySwal.fire({
+        return MySwal.fire({
             title: alertTitle,
             text: alertText,
             icon: alertIcon,
@@ -13,9 +13,9 @@ export default function SweetAlert(alertIcon, alertTitle, alertText) {
             allowOutsideClick: false
         }).then((result) => {
             if (result.isConfirmed) {
-                // window.location.href = "/membros";
+                return true
             }
         })
     }
-
+    return false
 }

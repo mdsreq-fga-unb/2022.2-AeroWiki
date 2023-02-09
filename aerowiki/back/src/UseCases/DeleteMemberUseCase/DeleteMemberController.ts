@@ -8,7 +8,6 @@ export class DeleteMemberController {
 
   async handle(request: Request, response: Response): Promise<Response> {
     const { email } = request.body
-    console.log({email})
     try {
       await this.deleteMemberUseCase.execute({
         email

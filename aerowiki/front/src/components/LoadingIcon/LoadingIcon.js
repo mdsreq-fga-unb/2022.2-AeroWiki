@@ -30,7 +30,7 @@ export default function LoadingIcon(alertIcon, alertTitle, alertText) {
             allowOutsideClick: false
             }).then((result) => {
             if (result.isConfirmed) {
-                // window.location.href = "/membros";
+                window.location.reload()
             }
             })            
         }

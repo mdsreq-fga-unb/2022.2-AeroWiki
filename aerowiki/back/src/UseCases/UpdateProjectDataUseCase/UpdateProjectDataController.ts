@@ -7,8 +7,7 @@ export class UpdateProjectDataController {
   ) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { id,
-      project } = request.body;
+    const { id, project } = request.body;
 
     try {
       await this.updateProjecDatatUseCase.execute({

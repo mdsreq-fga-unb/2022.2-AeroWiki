@@ -17,55 +17,58 @@ function Cardlogin() {
   const [emailLogin, setEmailLogin] = useState();
   const [senhaLogin, setSenhaLogin] = useState();
 
-  const loginForm = async (e) => {
+  const sendLoginForm = async (e) => {
     e.preventDefault();
+    //Validações Login
+    if (emailLogin === undefined) {
+      return SweetAlert('warning', 'Por favor, insira seu email Zenit.')
+    }
+    else if (senhaLogin === undefined) {
+      return SweetAlert('warning', 'Por favor, insira sua senha.')
+    }
+
+    //Requisição de Login
     try {
-      const r = await loginUser(emailLogin, senhaLogin);
-      console.log("certo");
-      console.log(r);
-      resultadoLogin(r);
-    } catch (error) {
-      console.log("errado");
-      resultadoLogin(error["response"]);
+      const response = await loginUser(emailLogin, senhaLogin);
+      resultadoLogin(response)
+    } catch (err) {
+      resultadoLogin(err.response)
     }
   };
 
   function resultadoLogin(resultado) {
-    if (resultado === "vazio") {
-      SweetAlert('warning', 'Por favor, preencha todos os campos.')
-    } else {
-      try {
-        if (resultado["status"] !== 400) {
-          const jazon = resultado;
-          const senhareal = jazon["data"]["password"];
-          // const status = jazon["data"]["status"];
-          const status = "ativo"
-          if (senhareal === senhaLogin) {
-            if (status == 'ativo') {
-              sessionStorage.setItem("senhaReal", resultado["data"]["password"]);
-              sessionStorage.setItem("emailReal", resultado["data"]["email"]);
-              sessionStorage.setItem("nomeReal", resultado["data"]["name"]);
-              sessionStorage.setItem("cargoReal", resultado["data"]["role"]);
-              sessionStorage.setItem("matriculaReal", resultado["data"]["unb_id"]);
-              window.location.href = "/home";
-            } else {
-              SweetAlert('warning', 'Não foi possível fazer login', 'Sua conta não está ativa')
-            }
-          } else {
-            SweetAlert('error', 'Senha incorreta.')
-          }
-        } else {
-          resultado = resultado["data"]["message"];
-          if (resultado === "Esse usuário não existe!") {
-            SweetAlert('error', 'Usuário não cadastrado!', 'Por favor, contate o gerente ou diretor do seu setor.')
-          } else {
-            SweetAlert('error', 'Erro no sistema. :(', 'Por favor, tente novamente mais tarde.')
-          }
+    try {
+      if (resultado.status === 400) {
+        const resMessage = resultado.data.message
+        if (resMessage === 'ERRO NO SISTEMA') {
+          return SweetAlert('error', 'Ocorreu um erro no sistema. D:', 'Por favor, tente novamente mais tarde.')
         }
-      } catch (error) {
-        console.log(error);
-        SweetAlert('error', 'Erro no sistema. :(', 'Por favor, tente novamente mais tarde.')
+        return SweetAlert('error', resultado.data.message, 'Por favor, contate o gerente ou diretor do seu setor.')
       }
+      else if (resultado.status === 200) {
+        // sessionStorage.setItem("senhaReal", resultado.data.password)
+        // sessionStorage.setItem("emailReal", resultado.data.email)
+        // sessionStorage.setItem("nomeReal", resultado.data.name)
+        // sessionStorage.setItem("cargoReal", resultado.data.role)
+        // sessionStorage.setItem("matriculaReal", resultado.data.unb_id)
+
+        sessionStorage.setItem('nome', resultado.data.name)
+        sessionStorage.setItem('email', resultado.data.email)
+        sessionStorage.setItem('matricula', resultado.data.unb_id)
+        sessionStorage.setItem('telefone', resultado.data.telephone)
+        sessionStorage.setItem('setor', resultado.data.area)
+        sessionStorage.setItem('cargo', resultado.data.role)
+        sessionStorage.setItem('dataNasc', resultado.data.birthdate)
+        sessionStorage.setItem('cpf', resultado.data.cpf)
+        sessionStorage.setItem('rg', resultado.data.rg)
+        sessionStorage.setItem('senha', resultado.data.password)
+
+        window.location.href = "/home"
+      }
+    }
+    catch (err) {
+      console.log(err);
+      SweetAlert('error', 'Ocorreu um erro no sistema. D:', 'Por favor, tente novamente mais tarde.')
     }
   }
   return (
@@ -76,7 +79,7 @@ function Cardlogin() {
         <Col xxl={4} className="menu-login">
           <Row className="justify-content-center">
             <Col xxl={8}>
-              <Form className="3" onSubmit={loginForm}>
+              <Form className="3">
                 <FloatingLabel label="E-mail Zenit">
                   <Form.Control
                     className=" input username"
@@ -97,7 +100,7 @@ function Cardlogin() {
                 </FloatingLabel>
                 <Row className="justify-content-center">
                   <Button
-                    onClick={loginForm}
+                    onClick={sendLoginForm}
                     type="submit"
                     className="secondary"
                     variant="outline-light col-5"

@@ -10,81 +10,107 @@ import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Button from 'react-bootstrap/esm/Button';
-import { getMembers } from '../../services/getMembers'
-import email from '../../testes/validacoes/email';
+// import { getMembers } from '../../services/getMembers'
 import { updateUser } from '../../services/updateUser';
+import SweetAlert from '../SweetAlert/SweetAlert';
+import validarEmail from '../../testes/validacoes/email';
+import validarNome from '../../testes/validacoes/nome';
 // import load from "../../img/loding.png"
 // import LoadingIcon from '../LoadingIcon/LoadingIcon';
 
-
-
 function CardAccount() {
-    const attform = async () => {
-        try {
-            const response = await getMembers()
-            console.log("atualizado")
-            // console.log(response.data)
-            let jazon = response.data
-            // const membersData = JSON.stringify(response.data)
-            let matriculaReal = sessionStorage.getItem('matriculaReal')
-            // console.log(jazon)
-            
-            for (var i = 0; i < jazon.length; i++) {
-                if (matriculaReal === jazon[i]["unb_id"]) {
+    // const attform = async () => {
+    //     try {
+    //         const response = await getMembers()
+    //         console.log("atualizado")
+    //         // console.log(response.data)
+    //         let jazon = response.data
+    //         // const membersData = JSON.stringify(response.data)
+    //         let matriculaReal = sessionStorage.getItem('matriculaReal')
+    //         // console.log(jazon)
 
-                    sessionStorage.setItem('nomebanco', jazon[i]['name'])
-                    sessionStorage.setItem('nomeReal', jazon[i]['name'])
-                    sessionStorage.setItem('emailbanco', jazon[i]['email'])
-                    sessionStorage.setItem('matriculabanco', jazon[i]['unb_id'])
-                    sessionStorage.setItem('telefonebanco', jazon[i]['telephone'])
-                    sessionStorage.setItem('setorbanco', jazon[i]['area'])
-                    sessionStorage.setItem('cargobanco', jazon[i]['role'])
-                    sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
-                    sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
-                    sessionStorage.setItem('rgbanco', jazon[i]['rg'])
-                    sessionStorage.setItem('senhabanco', jazon[i]['password'])
-                }
-            }
-        } catch (error) {
-            console.log("erro")
-            console.log(error)
+    //         for (var i = 0; i < jazon.length; i++) {
+    //             if (matriculaReal === jazon[i]["unb_id"]) {
+
+    //                 sessionStorage.setItem('nomebanco', jazon[i]['name'])
+    //                 sessionStorage.setItem('nomeReal', jazon[i]['name'])
+    //                 sessionStorage.setItem('emailbanco', jazon[i]['email'])
+    //                 sessionStorage.setItem('matriculabanco', jazon[i]['unb_id'])
+    //                 sessionStorage.setItem('telefonebanco', jazon[i]['telephone'])
+    //                 sessionStorage.setItem('setorbanco', jazon[i]['area'])
+    //                 sessionStorage.setItem('cargobanco', jazon[i]['role'])
+    //                 sessionStorage.setItem('dataNascbanco', jazon[i]['birthdate'])
+    //                 sessionStorage.setItem('cpfbanco', jazon[i]['cpf'])
+    //                 sessionStorage.setItem('rgbanco', jazon[i]['rg'])
+    //                 sessionStorage.setItem('senhabanco', jazon[i]['password'])
+    //             }
+    //         }
+    //     } catch (error) {
+    //         console.log("erro")
+    //         console.log(error)
+    //     }
+    // }
+    // attform()
+
+    let nomebanco = sessionStorage.getItem('nome')
+    let emailbanco = sessionStorage.getItem('email')
+    let matriculabanco = sessionStorage.getItem('matricula')
+    let telefonebanco = sessionStorage.getItem('telefone')
+    let setorbanco = sessionStorage.getItem('setor')
+    let cargobanco = sessionStorage.getItem('cargo')
+    let dataNascbanco = sessionStorage.getItem('dataNasc')
+    let cpfbanco = sessionStorage.getItem('cpf')
+    let rgbanco = sessionStorage.getItem('rg')
+    let senhabanco = sessionStorage.getItem('senha')
+
+    const sendUpdateForm = async (e) => {
+        //Validação individual de input vazio
+        if (nome === ''){
+            return SweetAlert("warning", "Por favor, digite seu nome.")
         }
-    }
-    attform()
+        else if (email === ''){
+            return SweetAlert("warning", "Por favor, digite seu email.")
+        }
 
-    const update = async (e) => {
-        let senhaDefinit = sessionStorage.getItem('senhaReal')
-        if (senhaConfirm !== '') {
+        //Validação de texto válido
+        if(!validarNome(nome)){
+            return SweetAlert("warning", "Por favor, utilize um nome válido.")
+        }
+        else if(!validarEmail(email)){
+            return SweetAlert("warning", "Por favor, utilize um email válido.")
+        }
+
+        let senhaDefinit = senhabanco
+
+        if (senhaConfirm !== undefined || senha !== undefined) {
             if (senha === senhaConfirm) {
-                if (senha === sessionStorage.getItem('senhaReal')) {
-                    alert("Use uma senha diferente da atual")
-                    return;
+                if (senha === senhaDefinit) {
+                    return SweetAlert("warning", "Por favor, utilize uma senha diferente da senha atual.")
                 } else {
                     senhaDefinit = senha
                 }
             } else {
-                alert('As duas senhas devem ser iguais')
-                return;
+                return SweetAlert("warning", "As senhas não conferem.")
             }
         }
         // e.preventDefault();
         try {
             const response = await updateUser(nome, email, matricula, telefone, senhaDefinit)
-            sessionStorage.setItem('nomebanco', nome)
-            sessionStorage.setItem('emailbanco', email)
-            sessionStorage.setItem('matriculabanco', matricula)
-            sessionStorage.setItem('telefonebanco', telefone)
+            sessionStorage.setItem('nome', nome)
+            sessionStorage.setItem('telefone', telefone)
 
-            console.log("updateuser")
-            console.log("aloalo", response)
-            if (email === sessionStorage.getItem('emailReal') && senhaDefinit === sessionStorage.getItem('senhaReal')) {
-
-            } else {
-                sessionStorage.clear()
+            if (email !== emailbanco || senhaDefinit !== senhabanco) {
+                SweetAlert("success", "Dados alterados com sucesso!" ,"Por favor, faça login novamente.").then(result => {
+                    if (result) {
+                        sessionStorage.clear()
+                        window.location.href = "/login"
+                    }
+                })
+            }
+            else {
+                refreshPage()
             }
 
-            refreshPage()
-            // resultadoCadastro(r)
         } catch (error) {
             console.log("errado")
             console.log(error)
@@ -92,36 +118,10 @@ function CardAccount() {
         }
     }
 
-    let nomebanco = sessionStorage.getItem('nomebanco')
-    let emailbanco = sessionStorage.getItem('emailbanco')
-    let matriculabanco = sessionStorage.getItem('matriculabanco')
-    let telefonebanco = sessionStorage.getItem('telefonebanco')
-    let setorbanco = sessionStorage.getItem('setorbanco')
-    let cargobanco = sessionStorage.getItem('cargobanco')
-    let dataNascbanco = sessionStorage.getItem('dataNascbanco')
-    let cpfbanco = sessionStorage.getItem('cpfbanco')
-    let rgbanco = sessionStorage.getItem('rgbanco')
-    // let senhabanco = sessionStorage.getItem('senhabanco')
-
-
-
     const [liberar, setLiberar] = useState(true);
     const [mostrar, setMostrar] = useState('block');
     const [mostrarInverse, setmostrarInverse] = useState('none');
     const [mostrarInverseSenha, setmostrarInverseSenha] = useState('none');
-
-
-    const [nome, setNome] = useState(nomebanco);
-    const [email, setEmail] = useState(emailbanco);
-    const [matricula, setMatricula] = useState(matriculabanco);
-    const [telefone, setTelefone] = useState(telefonebanco);
-    const [setor, setSetor] = useState(setorbanco);
-    const [cargo, setCargo] = useState(cargobanco);
-    const [dataNasc, setDataNasc] = useState(dataNascbanco);
-    const [cpf, setCpf] = useState(cpfbanco);
-    const [rg, setRg] = useState(rgbanco);
-    const [senha, setSenha] = useState();
-    const [senhaConfirm, setSenhaConfirm] = useState('');
 
     const editConta = () => {
         setLiberar(false);
@@ -135,11 +135,28 @@ function CardAccount() {
 
         document.getElementById("btsAccount").classList.remove("btsAccount");
         document.getElementById("btsAccount").style.marginBottom = '10px';
-
+    }
+    const cancelar = () =>{
+        setLiberar(true)
+        setMostrar('block')
+        setmostrarInverse('none')
+        setmostrarInverseSenha('none')
     }
     function refreshPage() {
         window.location.href = "/myAccount";
     }
+
+    const [nome, setNome] = useState(nomebanco);
+    const [email, setEmail] = useState(emailbanco);
+    const [matricula, setMatricula] = useState(matriculabanco);
+    const [telefone, setTelefone] = useState(telefonebanco);
+    // const [setor, setSetor] = useState(setorbanco);
+    // const [cargo, setCargo] = useState(cargobanco);
+    // const [dataNasc, setDataNasc] = useState(dataNascbanco);
+    // const [cpf, setCpf] = useState(cpfbanco);
+    // const [rg, setRg] = useState(rgbanco);
+    const [senha, setSenha] = useState()
+    const [senhaConfirm, setSenhaConfirm] = useState()
 
     return (
         <>
@@ -189,7 +206,7 @@ function CardAccount() {
                                     <Col>
                                         <Form.Group className="Matricula form" controlId="matricula">
                                             <Form.Label className='imputAccount'>Matrícula</Form.Label>
-                                            <Form.Control disabled={true} size='lg' value={matricula} onChange={(e) => setMatricula(e.target.value)} className='imputMatriculaAccount' type="number" placeholder="Digite sua matrícula" />
+                                            <Form.Control disabled={true} size='lg' value={matriculabanco} className='imputMatriculaAccount' type="number" placeholder="Digite sua matrícula" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
@@ -203,13 +220,13 @@ function CardAccount() {
                                     <Col>
                                         <Form.Group className="Setor form" controlId="setor">
                                             <Form.Label className='imputAccount'>Setor</Form.Label>
-                                            <Form.Control disabled={true} size='lg' value={setor} onChange={(e) => setSetor(e.target.value)} className='imputSetorAccount' type="text" placeholder="Sem setor" />
+                                            <Form.Control disabled={true} size='lg' value={setorbanco} className='imputSetorAccount' type="text" placeholder="Sem setor" />
                                         </Form.Group>
                                     </Col>
                                     <Col>
                                         <Form.Group className="Cargo form" controlId="cargo">
                                             <Form.Label className='imputAccount'>Cargo</Form.Label>
-                                            <Form.Control disabled={true} size='lg' value={cargo} onChange={(e) => setCargo(e.target.value)} className='imputCargoAccount' type="text" placeholder="Sem cargo" />
+                                            <Form.Control disabled={true} size='lg' value={cargobanco} className='imputCargoAccount' type="text" placeholder="Sem cargo" />
                                         </Form.Group>
                                     </Col>
                                 </Row>
@@ -217,15 +234,15 @@ function CardAccount() {
                             <Col xxl={{ span: 5, offset: 2 }}>
                                 <Form.Group className="NascDate form" controlId="nascDate">
                                     <Form.Label className='imputAccount'>Data de nascimento</Form.Label>
-                                    <Form.Control disabled={true} size='lg' value={dataNasc} onChange={(e) => setDataNasc(e.target.value)} className='imputNascDateAccount' type="date" />
+                                    <Form.Control disabled={true} size='lg' value={dataNascbanco} className='imputNascDateAccount' type="date" />
                                 </Form.Group>
                                 <Form.Group className="Cpf form" controlId="cpf">
                                     <Form.Label className='imputAccount'>CPF</Form.Label>
-                                    <Form.Control disabled={true} size='lg' value={cpf} onChange={(e) => setCpf(e.target.value)} className='imputCPFAccount' type="number" placeholder="AAABBBCCCDD" />
+                                    <Form.Control disabled={true} size='lg' value={cpfbanco} className='imputCPFAccount' type="number" placeholder="AAABBBCCCDD" />
                                 </Form.Group>
                                 <Form.Group className="Rg form" controlId="rg">
                                     <Form.Label className='imputAccount'>RG</Form.Label>
-                                    <Form.Control disabled={true} size='lg' value={rg} onChange={(e) => setRg(e.target.value)} className='imputRGAccount' type="number" placeholder="AABBBCCCD" />
+                                    <Form.Control disabled={true} size='lg' value={rgbanco} className='imputRGAccount' type="number" placeholder="AABBBCCCD" />
                                 </Form.Group>
                                 <Row>
                                     <Col>
@@ -253,8 +270,8 @@ function CardAccount() {
                                                 <div id='btsAccount' className='btsAccount' style={{
                                                     display: mostrarInverse,
                                                 }}>
-                                                    <Button onClick={update} type='button' className='btSalvarAccount'>Salvar</Button>
-                                                    <Button onClick={refreshPage} className='btCancelarAccount'>Cancelar</Button>
+                                                    <Button onClick={sendUpdateForm} type='button' className='btSalvarAccount'>Salvar</Button>
+                                                    <Button onClick={cancelar} className='btCancelarAccount'>Cancelar</Button>
                                                 </div>
                                             </Col>
 
