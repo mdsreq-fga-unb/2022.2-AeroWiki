@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm --prefix ./aerowiki/front install
-      - run: mpm --prefix ./aerowiki/front run test
+      - run: npm --prefix ./aerowiki/front run test
       - run: npm --prefix ./aerowiki/back install
       - run: npm --prefix ./aerowiki/back run build
-      - run: mpm --prefix ./aerowiki/back run test
+      - run: npm --prefix ./aerowiki/back run test
       - run: npm --prefix ./aerowiki/front run build
 
