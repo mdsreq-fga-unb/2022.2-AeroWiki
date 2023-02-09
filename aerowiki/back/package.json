@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/main/server.ts",
     "test": "jest",
-    "build": "tsc && browserify main.js -o dist/bundle.js"
+    "build": "rm -rf dist && tsc --build tsconfig.build.json && tscpaths -p tsconfig.build.json -s ./src -o ./dist"
   },
   "keywords": [],
   "author": "",
