@@ -55,3 +55,16 @@
 .projarquivado #project-title{
     color: var(--zgrey);
 }
+
+.fixar-div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 5rem;
+}
+
+.fixado svg{
+    color: green;
+}

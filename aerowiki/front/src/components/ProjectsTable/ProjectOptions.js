@@ -25,7 +25,7 @@ function ProjectOptions({ onUpdate, onDelete, onEdit, project }) {
                         active: !project.active
                     }, 'arquivar')} >
                         <FontAwesomeIcon icon={faIcons.faFileCircleMinus} />
-                        <span>Arquivar</span>
+                        <span id='arquivado-texto'>{project.active ? 'Arquivar' : 'Desarquivar'}</span>
                     </Link>
                 </div>
 

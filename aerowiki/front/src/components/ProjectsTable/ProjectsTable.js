@@ -28,7 +28,6 @@ function ProjectsTable() {
 
     const onUpdate = async ({ id, name, isfixed, editable, ongoing, active }, action) => {
         try {
-            console.log('editable', editable)
             let response = await updateProject({ id, name, isfixed, editable, ongoing, active });
             console.log(response)
             setModalState({ open: false, project: undefined });
@@ -49,6 +48,14 @@ function ProjectsTable() {
                 LoadingIcon("success", "Projeto desarquivado com sucesso!")
             }
         }
+        else if (action === "fixar") {
+            if (isfixed) {
+                LoadingIcon("success", "Projeto fixado na tela incial!")
+            }
+            else {
+                LoadingIcon("success", "Projeto desafixado da tela incial!")
+            }
+        }
 
     };
 
@@ -64,6 +71,37 @@ function ProjectsTable() {
         }
     };
 
+    const fixarProjeto = async (project) => {
+        console.log('ue', project.isfixed)
+        await onUpdate({
+            id: project._id,
+            name: project.name,
+            isfixed: !project.isfixed,
+            editable: project.editable,
+            ongoing: project.ongoing,
+            active: project.active
+        }, 'fixar')
+    }
+
+
+    // setTimeout(function () {
+    //     var cargo = sessionStorage.getItem('cargo')
+
+    //     if (cargo === 'Membro') {
+    //         document.getElementById("options-buttons").remove()
+    //         document.getElementById("newProject-button=").remove()
+    //     }
+    //     else {
+    //         if (item.isfixed) {
+    //             document.getElementById('fix-' + index).classList.add('fixado')
+    //         }
+    //         else {
+    //             document.getElementById('fix-' + index).classList.remove('fixado')
+    //         }
+    //     }
+    // }, 3)
+
+
     return (
         <>
             <div className='projects-table'>
@@ -77,13 +115,22 @@ function ProjectsTable() {
                 <div className='fixed-projects'>
                     {JSON.parse(sessionStorage.getItem('projectsData')).map((item, index) => {
                         if (item.area === sessionStorage.getItem('area') && item.subarea === sessionStorage.getItem('subarea') && item.active) {
-
                             setTimeout(function () {
                                 var cargo = sessionStorage.getItem('cargo')
 
                                 if (cargo === 'Membro') {
+                                    document.getElementById('fix-' + index).remove()
+
                                     document.getElementById("options-buttons").remove()
                                     document.getElementById("newProject-button=").remove()
+                                }
+                                else {
+                                    if (item.isfixed) {
+                                        document.getElementById('fix-' + index).classList.add('fixado')
+                                    }
+                                    else {
+                                        document.getElementById('fix-' + index).classList.remove('fixado')
+                                    }
                                 }
                             }, 3)
 
@@ -96,6 +143,11 @@ function ProjectsTable() {
                                                 <Link className='project-areas-text'>{item.area}</Link>
                                                 <FontAwesomeIcon icon={faIcons.faChevronRight} className='project-areas-text' />
                                                 <Link className='project-areas-text'>{item.subarea}</Link>
+                                            </div>
+
+                                            <div id={'fix-' + index} className='fixar-div' onClick={() => fixarProjeto(item)}>
+                                                <span className='project-areas-text' >Fixar Projeto</span>
+                                                <FontAwesomeIcon icon={faIcons.faCircleCheck} className='project-areas-text' />
                                             </div>
 
                                             <div id='options-buttons' className='project-options'>
