@@ -9,7 +9,9 @@ GitPages do projeto "AeroWiki", da disciplina "Métodos de desenvolvimento de so
 <a href="https://youtu.be/Rz08RF30b_E"> Link para a apresentação da unidade 3.</a>
 <br>
 <br>
-<a href="https://www.youtube.com/watch?v=xeLSqw1WdJU"> Link para a apresentação do produto para o cliente.</a>
+<a href="https://www.youtube.com/watch?v=xeLSqw1WdJU"> Link para a apresentação do produto para o cliente. MVP1</a>
+<br>
+<a href="https://youtu.be/etOeTfJIVic"> Link para a apresentação do produto para o cliente. MVP2</a>
 <br>
 <a href="https://www.figma.com/file/5zazCQXME0xdlVmGG6DffO/AeroWiki?node-id=2%3A2&t=pCeyVmZkoBnElYZZ-0"> Link para o figma.</a>
 
