@@ -72,12 +72,12 @@
 ### E4 - Tela inicial
 
 - F1: Gerenciar projetos que aparecem na tela inicial
-    - US1 -> Eu, como presidente, desejo fixar projetos na tela inicial, para destacar os projetos mais importantes no contexto da empresa.
-    - US2 -> Eu, como presidente, desejo desafixar projetos da tela inicial, para manter a organização da tela inicial da plataforma. 
+    - US1 -> Como presidente, desejo fixar projetos na tela inicial, para destacar os projetos mais importantes no contexto da empresa.
+    - US2 -> Como presidente, desejo desafixar projetos da tela inicial, para manter a organização da tela inicial da plataforma. 
     
 - F2: Funcionalidades extras
-    - US1 -> Eu, como membro, desejo visualizar o calendário da empresa na tela inicial, para sempre estar atualizado dos enventos mais importantes.
-    - US2 -> Eu, como presidente, desejo editar a imagem do banner da tela incial, destacar alguma informação ou contexto da empresa.
+    - US1 -> Como membro, desejo visualizar o calendário da empresa na tela inicial, para sempre estar atualizado dos enventos mais importantes.
+    - US2 -> Como presidente, desejo editar a imagem do banner da tela incial, destacar alguma informação ou contexto da empresa.
 
 ## MVP's
 
