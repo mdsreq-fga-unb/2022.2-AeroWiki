@@ -66,5 +66,5 @@ Paleta de Cores
 * Os quadros terão o formato de retangulo;
 * O quadro terá uma imagem representativa do projeto;
 * O quadro terá o caminho do projeto escrito;
-* O quasro terá o nome do proejto;"
+* O quasro terá o nome do proejto"
   
