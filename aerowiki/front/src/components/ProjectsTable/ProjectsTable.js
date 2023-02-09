@@ -71,7 +71,7 @@ function ProjectsTable() {
         try {
             await deleteProject({ id });
 
-            LoadingIcon("success", "Projeto excluído com sucesso")
+            LoadingIcon("success", "Projeto excluído com sucesso!")
 
         } catch (err) {
             console.log(err);
