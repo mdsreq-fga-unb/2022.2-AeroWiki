@@ -54,40 +54,41 @@ function ProjectsTable() {
 
     const onDelete = async ({ id }) => {
         try {
-          await deleteProject({ id });
-    
-          LoadingIcon("success", "Projeto excluído com sucesso")
-    
+            await deleteProject({ id });
+
+            LoadingIcon("success", "Projeto excluído com sucesso")
+
         } catch (err) {
-          console.log(err);
-          LoadingIcon("error", "Ocorreu um erro no sistema D:", "Por favor, tente mais tarde.")
+            console.log(err);
+            LoadingIcon("error", "Ocorreu um erro no sistema D:", "Por favor, tente mais tarde.")
         }
-      };
+    };
 
     return (
         <>
             <div className='projects-table'>
-
                 <div className='title'>
                     <span>Projetos Ativos</span>
                     <div className='hr'></div>
                 </div>
 
+                <br />
+
                 <div className='fixed-projects'>
                     {JSON.parse(sessionStorage.getItem('projectsData')).map((item, index) => {
-                        if (item.area === sessionStorage.getItem('area') && item.subarea === sessionStorage.getItem('subarea')) {
+                        if (item.area === sessionStorage.getItem('area') && item.subarea === sessionStorage.getItem('subarea') && item.active) {
 
                             setTimeout(function () {
                                 var cargo = sessionStorage.getItem('cargo')
-                  
+
                                 if (cargo === 'Membro') {
-                                  document.getElementById("options-buttons").remove()
-                                  document.getElementById("newProject-button=").remove()
+                                    document.getElementById("options-buttons").remove()
+                                    document.getElementById("newProject-button=").remove()
                                 }
-                              }, 3)
+                            }, 3)
 
                             return (
-                                <div id='fixed-project' key={index}>
+                                <div id={'projeto-' + index} className='fixed-project' key={index}>
                                     <div id='project-image' style={{ backgroundImage: `url(${item.img})` }}></div>
                                     <div id='project-text'>
                                         <div id='top'>
@@ -107,7 +108,66 @@ function ProjectsTable() {
                                                 onClick={() => {
                                                     sessionStorage.setItem('projeto_id', item._id)
                                                     sessionStorage.setItem('editable', item.editable)
-                                                     
+
+                                                    if (item.active) {
+                                                        window.location.href = '/projeto'
+                                                    }
+                                                }}>{item.name}</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+
+                    })}
+                </div>
+
+
+                <br /><br /><br />
+
+
+                <div className='title'>
+                    <span>Projetos Arquivados</span>
+                    <div className='hr'></div>
+                </div>
+
+                <br />
+
+                <div className='fixed-projects'>
+                    {JSON.parse(sessionStorage.getItem('projectsData')).map((item, index) => {
+                        if (item.area === sessionStorage.getItem('area') && item.subarea === sessionStorage.getItem('subarea') && !item.active) {
+
+                            setTimeout(function () {
+                                var cargo = sessionStorage.getItem('cargo')
+
+                                if (cargo === 'Membro') {
+                                    document.getElementById("options-buttons").remove()
+                                    document.getElementById("newProject-button=").remove()
+                                }
+                            }, 3)
+
+                            return (
+                                <div id={'projeto-' + index} className='fixed-project projarquivado' key={index}>
+                                    <div id='project-image' style={{ backgroundImage: `url(${item.img})` }}></div>
+                                    <div id='project-text'>
+                                        <div id='top'>
+                                            <div id='project-areas'>
+                                                <Link className='project-areas-text'>{item.area}</Link>
+                                                <FontAwesomeIcon icon={faIcons.faChevronRight} className='project-areas-text' />
+                                                <Link className='project-areas-text'>{item.subarea}</Link>
+                                            </div>
+
+                                            <div id='options-buttons' className='project-options'>
+                                                <ProjectOptions onUpdate={onUpdate} onEdit={onEdit} onDelete={onDelete} project={item} />
+                                            </div>
+
+                                        </div>
+                                        <div id='bot'>
+                                            <Link to='#' id='project-title'
+                                                onClick={() => {
+                                                    sessionStorage.setItem('projeto_id', item._id)
+                                                    sessionStorage.setItem('editable', item.editable)
+
                                                     if (item.active) {
                                                         window.location.href = '/projeto'
                                                     }

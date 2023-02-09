@@ -12,7 +12,7 @@ function SubAreas() {
 
         {NavbarData.find( item => item.title === sessionStorage.getItem('area') ).subnav.map((item, index) => {
           return (
-            <div id='fixed-project' key={index} onClick={() => {sessionStorage.setItem('subarea', item.title)}}>
+            <div className='fixed-project' key={index} onClick={() => {sessionStorage.setItem('subarea', item.title)}}>
               <div id='project-image' style={{ backgroundImage: `url()` }}></div>
               <div id='project-text'>
                 <div id='bot' >

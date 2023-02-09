@@ -16,7 +16,7 @@ function FixedProjects() {
         <div className='fixed-projects'>
           {ProjectsData.map((item, index) => {
             return(
-              <div id='fixed-project' key={index} >
+              <div className='fixed-project' key={index} >
                 <div id='project-image' style={{backgroundImage: `url(${item.img})`}}></div>
                 <div id='project-text'>
                   <div id='top'>
