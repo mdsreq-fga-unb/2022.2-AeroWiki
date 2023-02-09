@@ -36,7 +36,7 @@
 | 9 | Desenvolvimento;<br>Reunião de validação com o cliente;<br>Atualização da documentação.| E1-F1-US1<br>E1-F1-US2<br><br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US3<br><br><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s><br><br>Entrega do MVP1. | 05/01/2023 | 12/01/2023 |
 | 10 | Desenvolvimento; <br> Refatoração; | E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US<br><br>E3-F1-US4<br><br>E4-F2-US1<br><br>Backlog do produto atualizado. | 17/01/2023 | 24/01/2023 |
 | 11 | Desenvolvimento;<br>Refatoração;<br>Atualização da documentação; | E3-F1-US2<br>E3-F1-US3<br>E3-F1-US4<br>E3-F1-US5<br><br>E3-F2-US1<br><br>Código corrigido;<br>GitPages atualizado. | 25/01/2023 | 01/02/2023 |
-| 12 | Desenvolvimento;<br>Reunião de validação com o cliente;<br>Atualização da documentação. | <br>Entrega do MVP2. | 02/02/2023 | 09/02/2023 |
+| 12 | Desenvolvimento;<br>Reunião de validação com o cliente;<br>Atualização da documentação. | E3-F1-US1<br>E4-F1-US1<br>E4-F1-US2<br>E4-F2-US2<br>Entrega do MVP2. | 02/02/2023 | 09/02/2023 |
 
 ## Matriz de Comunicação
 
