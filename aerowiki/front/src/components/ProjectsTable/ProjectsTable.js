@@ -50,10 +50,18 @@ function ProjectsTable() {
         }
         else if (action === "fixar") {
             if (isfixed) {
-                LoadingIcon("success", "Projeto fixado na tela incial!")
+                LoadingIcon("success", "Projeto fixado na tela incial.")
             }
             else {
-                LoadingIcon("success", "Projeto desafixado da tela incial!")
+                LoadingIcon("success", "Projeto desafixado da tela incial.")
+            }
+        }
+        else if (action === "classificar") {
+            if (ongoing) {
+                LoadingIcon("success", "Projeto em Andamento.")
+            }
+            else {
+                LoadingIcon("success", "Projeto Finalizado.")
             }
         }
 
