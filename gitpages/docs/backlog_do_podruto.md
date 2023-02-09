@@ -67,7 +67,7 @@
 
 - F2: Editar texto dentro dos projetos
     - US1 -> Como gerente, eu quero editar o texto dentro do projeto para criar e manter o seu conteúdo atualizado. 
-    - US2 -> Como gerente, eu quero ter ferramentas de edição que me auxiliem no desenvolvimento do texto que estou escrevendo.
+    - US2 -> Como gerente, eu quero ter ferramentas que me auxiliem na construção do conteúdo do projeto.
     - US3 -> Como gerente, eu quero salvar o texto para que outros membros possam ler o que escrevi.
 
 ### E4 - Tela inicial
