@@ -72,7 +72,6 @@ function ProjectsTable() {
     };
 
     const fixarProjeto = async (project) => {
-        console.log('ue', project.isfixed)
         await onUpdate({
             id: project._id,
             name: project.name,
@@ -81,6 +80,17 @@ function ProjectsTable() {
             ongoing: project.ongoing,
             active: project.active
         }, 'fixar')
+    }
+
+    const classificarProjeto = async (project) => {
+        await onUpdate({
+            id: project._id,
+            name: project.name,
+            isfixed: project.isfixed,
+            editable: project.editable,
+            ongoing: !project.ongoing,
+            active: project.active
+        }, 'classificar')
     }
 
 
@@ -118,6 +128,10 @@ function ProjectsTable() {
                             setTimeout(function () {
                                 var cargo = sessionStorage.getItem('cargo')
 
+                                if (!item.ongoing) {
+                                    document.getElementById('projeto-' + index).classList.add('finalizado')
+                                }
+
                                 if (cargo === 'Membro') {
                                     document.getElementById('fix-' + index).remove()
 
@@ -136,7 +150,14 @@ function ProjectsTable() {
 
                             return (
                                 <div id={'projeto-' + index} className='fixed-project' key={index}>
+
+                                    <div id={'projetostatus-' + index} className='projetostatus' onClick={() => classificarProjeto(item)}>
+                                        <span id='projetostatus-texto' className='project-areas-text' >{item.ongoing ? 'Projeto em Andamento' : 'Projeto Finalizado'}</span>
+                                        <FontAwesomeIcon icon={faIcons.faFile} className='project-areas-text' />
+                                    </div>
+
                                     <div id='project-image' style={{ backgroundImage: `url(${item.img})` }}></div>
+
                                     <div id='project-text'>
                                         <div id='top'>
                                             <div id='project-areas'>

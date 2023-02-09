@@ -68,3 +68,26 @@
 .fixado svg{
     color: green;
 }
+
+.projetostatus{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+    cursor: pointer;
+}
+.projetostatus > *{
+    right: 1rem;
+    color: var(--zlight-blue);
+}
+
+.finalizado #top{
+    background-color: var(--zred);
+}
+.finalizado #projetostatus-texto{
+    color: var(--zred) !important;
+}
+.finalizado .projetostatus svg{
+    color: var(--zred) !important;
+}
