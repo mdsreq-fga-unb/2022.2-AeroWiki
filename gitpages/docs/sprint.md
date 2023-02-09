@@ -132,7 +132,7 @@
 | --- |
 | O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO? Novamente, podêmos reutilizar alguns blocos de código. Alguns pontos fortes da última sprint também incluem a boa comunicação interna entre a equipe, a programação em pares e a atualização final da documentação do projeto. |
 |O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR? Infelizmente subestimados a dificuldade de uma US específica (E4-F2-US2) que demandaria um conhecimento que a equipe não tinha e um tempo maior do que o disponível. |
-|O QUE APRENDEMOS DURANTE ESSA SPRINT? Ao fim do desenvolvimento nós avaliamos o produto e vimos que está bem parecido com o que imaginamos durante o planejamento do projeto, no início da disciplina. Estamos contentes com o resultado obtido. |
+|O QUE APRENDEMOS DURANTE ESSA SPRINT? Ao fim da sprint nós avaliamos o produto e vimos que está bem parecido com o que imaginamos durante o planejamento do projeto, no início da disciplina. Estamos contentes com o resultado obtido. |
 
 | Programação em pares |
 | --- |
