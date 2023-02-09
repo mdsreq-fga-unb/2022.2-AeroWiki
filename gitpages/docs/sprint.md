@@ -5,10 +5,11 @@
 | Data | Versão | Descrição | Autor(es) |
 | --- | --- | --- | --- |
 | 20/12/2022 | 0.1 | Criação do documento | Miguel Moreira |
-| 03/01/2023 | 0.2 | Estruturação e atualização da Sprint 8 | Arthur Trindade |
-| 12/01/2023 | 0.3 | Atualização da Sprint 9 | Arthur Trindade |
-| 30/01/2023 | 0.4 | Atualização da Sprint 10 e 11 | Miguel Moreira |
+| 03/01/2023 | 0.2 | Estruturação e atualização da sprint 8 | Arthur Trindade |
+| 12/01/2023 | 0.3 | Atualização da sprint 9 | Arthur Trindade |
+| 30/01/2023 | 0.4 | Atualização das sprints 10 e 11 | Miguel Moreira |
 | 31/01/2023 | 0.5 | Correções no backlog das sprints | Arthur Trindade |
+| 09/02/2023 | 0.6 | Atualização da sprint 12  | Arthur Trindade |
 
 ## Sprint 7
 
@@ -107,25 +108,32 @@
 
 | Review e retrospectiva |
 | --- |
-| O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO? reposta|
-|O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR? reposta|
-|O QUE APRENDEMOS DURANTE ESSA SPRINT? reposta|
-|O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS? reposta|
+| O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO?<br>Nessa sprint, a equipe pôde adaptar e reutilizar o código pronto de outras funcionalidades, o que agilizou o processo de desenvolvimento e nos permitiu finalizar a sprint sem débitos técnicos. AAlém do mais, a equipe continuou com a programação em pares. |
+|O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR? A documentação do projeto do GitHub ainda tinha alguns erros, que devemos corrigir ao fim da última sprint. |
+|O QUE APRENDEMOS DURANTE ESSA SPRINT? Aprendemos principalmente a importância de um código organizado e reutilizável, e como isso pode facilitar a expansão do projeto no futuro. |
+|O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS? Na próxima sprint pretendemos continuar com a programação em pares e reutilizar alguns blocos de código menores. Também adiamos algum trabalho da última sprint para que não fiquemos tão apertados como na entrega do MVP1. |
+
+| Programação em pares |
+| --- |
+| Miguel Moreira e Arthur Trindade;<br>Gabriel de Souza e Arthur Trindade;<br>Gabriel de Souza e Miguel Moreira; |
 
 
 ## Sprint 12
 
 | Data de abertura | Data de fechamento | Sprint Backlog | Scrum Master |
 | --- | --- | --- | --- |
-| 02/01/2023 | 09/02/2023 | E3-F1-US1 <br> E3-F2-US2 <br> E3-F2-US3 <br> E4-F1-US1 <br> E4-F1-US2 <br> E4-F2-US2 | Arthur Trindade |
+| 02/01/2023 | 09/02/2023 | E3-F1-US1<br>E3-F2-US2<br>E3-F2-US3<br>E4-F1-US1<br>E4-F1-US2<br>E4-F2-US2 | Arthur D'Assumpção |
 
 | Planejamento |
 | --- |
-| |
+| Na última sprint do desenvolvimento do projeto, a equipe deve finalizar as 6 US's restantes do backlog e entregar o segundo MVP. A equipe deve implementar a funcionalidade de classificação de projetos como "Em andamento" ou "Finalizado" e seus critérios de aceitação, fixar e desafixar projetos na tela incial, toda a parte que diz respeito ao editor de texto dentro do projeto, que nós adiantamos na srint 11 e a alteração da imagem do banner da tela inicial. Durante a sprint tentaremos manter o fluxo de trabalho da última sprint e a programação em pares que têm funcionado muito bem desde a entrega do MVP1. No mais, esperamos entegar o projeto ao cliente como esperado sem tantas dificuldades como na entrega anterior. |
 
 | Review e retrospectiva |
 | --- |
-| O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO? reposta|
-|O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR? reposta|
-|O QUE APRENDEMOS DURANTE ESSA SPRINT? reposta|
-|O QUE PODEMOS FAZER DE FORMA DIFERENTE NA PRÓXIMA SPRINT PARA MELHORAR NOSSOS RESULTADOS? reposta|
+| O QUE FUNCIONOU BEM DURANTE ESSA SPRINT E O QUE DEVEMOS CONTINUAR FAZENDO? Novamente, podêmos reutilizar alguns blocos de código. Alguns pontos fortes da última sprint também incluem a boa comunicação interna entre a equipe, a programação em pares e a atualização final da documentação do projeto. |
+|O QUE NÃO FUNCIONOU TÃO BEM E O QUE DEVEMOS MUDAR? Infelizmente subestimados a dificuldade de uma US específica (E4-F2-US2) que demandaria um conhecimento que a equipe não tinha e um tempo maior do que o disponível. |
+|O QUE APRENDEMOS DURANTE ESSA SPRINT? Ao fim do desenvolvimento nós avaliamos o produto e vimos que está bem parecido com o que imaginamos durante o planejamento do projeto, no início da disciplina. Estamos contentes com o resultado obtido. |
+
+| Programação em pares |
+| --- |
+| Miguel Moreira e Arthur Trindade;<br>Gabriel de Souza e Arthur Trindade;<br>Gabriel de Souza e Miguel Moreira; |
