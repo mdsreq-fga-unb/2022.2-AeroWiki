@@ -6,7 +6,7 @@
 | ---------- | ------ | -------------------- | ------------------------------------------------------------ |
 | 31/10/2022 | 0.1 | Criação do documento | Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Miguel Moreira |
 | 07/11/2022 | 0.2 | Adição de objetivos e alteração na declaração do produto| Arthur D'Assumpção<br>Arthur Trindade<br>Lucas Queiroz<br>Gabriel de Souza<br>Miguel Moreira<br> |
-| 05/01/2023 | 0.3 | alteração de objetivos e de tecnologias| Arthur Trindade<br>Miguel Moreira<br> |
+| 05/01/2023 | 0.3 | Alteração dos objetivos do produto e tecnologias utilizadas | Arthur Trindade<br>Miguel Moreira<br> |
 
 ## Declaração de Posição do Produto
 
@@ -33,6 +33,3 @@ Tendo em vista essa inconveniência, a equipe propõe uma parceria com a empresa
 ## Tecnologias a serem utilizadas
 * Client-side: React.
 * Server-side: Node.js e mongoDB.
-
-
-
