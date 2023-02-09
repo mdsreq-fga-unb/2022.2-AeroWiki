@@ -74,7 +74,7 @@ const Editor = () => {
         });
 
     async function editToggleStart() {
-        if (cargo === 'Membro' && editable === 'false') {
+        if ((cargo === 'Membro' && editable === 'false') || !thisProject.ongoing) {
             document.getElementById('clearText').remove()
         }
         const toggleButton = document.getElementById("toggleEdit")
@@ -82,7 +82,7 @@ const Editor = () => {
     }
 
     async function editToggle() {
-        if (cargo === 'Membro' && editable === 'false') {
+        if ((cargo === 'Membro' && editable === 'false') || !thisProject.ongoing) {
         } else {
             // if(projetostatus === "ativo"){
             const toggleButton = document.getElementById("toggleEdit")
