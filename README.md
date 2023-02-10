@@ -4,10 +4,10 @@ Clique abaixo para acessar
 <br>
  
 <a href="http://137.184.12.54:3000/login">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; height: 150px; width: 100vw">
-    <img src="./aerowiki/front/src/img/logonew-nobg.png" alt="Aerowki logo" style="height: 125px"/>
-    <img src="./aerowiki/front/src/img/marcanew-nobg.png" alt="Aerowki logo" style="height: 100px"/>
-  </div>
+    <p align="center" style="height: 125px">
+        <img src="./logoreadme.png" alt="Aerowki logo" style="height: 125px"/>
+        <img src="./aerowiki/front/src/img/marcanew-nobg.png" alt="Aerowki logo" style="height: 100px; margin-bottom: 12.5px"/>
+    </p>
 </a>
 
 <br>
