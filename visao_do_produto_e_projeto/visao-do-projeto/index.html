@@ -1,0 +1,893 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../visao-do-produto/">
+      
+      
+        <link rel="next" href="../processo-de-desenvolvimento-de-software/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+    
+    
+      
+        <title>Visão geral do projeto - AeroWiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visao-geral-do-projeto" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="AeroWiki" class="md-header__button md-logo" aria-label="AeroWiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AeroWiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visão geral do projeto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AeroWiki" class="md-nav__button md-logo" aria-label="AeroWiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AeroWiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Página inicial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Visão do produto e projeto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Visão do produto e projeto
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-do-produto/" class="md-nav__link">
+        Visão geral do produto
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Visão geral do projeto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Visão geral do projeto
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-revisao" class="md-nav__link">
+    Histórico de revisão
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizacao-do-projeto" class="md-nav__link">
+    Organização do projeto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planejamento-das-fases-eou-iteracoes-do-projeto" class="md-nav__link">
+    Planejamento das Fases e/ou Iterações do Projeto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matriz-de-comunicacao" class="md-nav__link">
+    Matriz de Comunicação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gerenciamento-de-riscos" class="md-nav__link">
+    Gerenciamento de riscos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-replanejamento" class="md-nav__link">
+    Critérios de replanejamento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografia
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processo-de-desenvolvimento-de-software/" class="md-nav__link">
+        Processo de desenvolvimento de software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes-aprendidas/" class="md-nav__link">
+        Lições aprendidas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seminario_processos_ciclos.md" class="md-nav__link">
+        Seminário de processos e ciclos de vida
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backlog_do_podruto/" class="md-nav__link">
+        Backlog do Produto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estrategias_refac/" class="md-nav__link">
+        Estratégias de Refatoração
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estrategias_TDD/" class="md-nav__link">
+        Estratégias de TDD
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sprint/" class="md-nav__link">
+        Quadro de Sprints
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/" class="md-nav__link">
+        Arquitetura do Projeto
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-revisao" class="md-nav__link">
+    Histórico de revisão
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizacao-do-projeto" class="md-nav__link">
+    Organização do projeto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planejamento-das-fases-eou-iteracoes-do-projeto" class="md-nav__link">
+    Planejamento das Fases e/ou Iterações do Projeto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matriz-de-comunicacao" class="md-nav__link">
+    Matriz de Comunicação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gerenciamento-de-riscos" class="md-nav__link">
+    Gerenciamento de riscos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-replanejamento" class="md-nav__link">
+    Critérios de replanejamento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografia
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="visao-geral-do-projeto">Visão geral do projeto</h1>
+<h2 id="historico-de-revisao">Histórico de revisão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14/11/2022</td>
+<td>0.1</td>
+<td>Criação e estruturação do documento</td>
+<td>Lucas Queiroz</td>
+</tr>
+<tr>
+<td>16/11/2022</td>
+<td>0.2</td>
+<td>Alterações no documento</td>
+<td>Arthur Trindade<br>Gabriel de Souza<br>Lucas Queiroz<br>Miguel Moreira</td>
+</tr>
+<tr>
+<td>07/11/2022</td>
+<td>0.3</td>
+<td>Atualizações da unidade 2</td>
+<td>Arthur Trindade</td>
+</tr>
+<tr>
+<td>05/01/2023</td>
+<td>0.4</td>
+<td>Atualizações da unidade 3</td>
+<td>Miguel Moreira</td>
+</tr>
+<tr>
+<td>08/01/2023</td>
+<td>0.5</td>
+<td>Atualizações da unidade 4</td>
+<td>Miguel Moreira</td>
+</tr>
+</tbody>
+</table>
+<h2 id="organizacao-do-projeto">Organização do projeto</h2>
+<table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Atribuições</th>
+<th>Responsável</th>
+<th>Participantes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desenvolvedor</td>
+<td>Programar a aplicação;<br>Escrever a documentação do software;<br>Realizar testes.</td>
+<td>Gabriel de Souza</td>
+<td>Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br>Miguel Moreira</td>
+</tr>
+<tr>
+<td>Scrum Master</td>
+<td>Garantir que os processos relativos ao Scrum ocorram de maneira funcional.</td>
+<td>Papel rotativo</td>
+<td>Arthur D'Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br> Miguel Moreira</td>
+</tr>
+<tr>
+<td>Product Owner</td>
+<td>Desenvolver e comunicar, explicitamente, os objetivos do produto;<br>Criar e comunicar os itens do backlog do produto;<br>Garantir a compreensão do backlog do produto.</td>
+<td>Arthur D'Assumpção</td>
+<td>Arthur D'Assumpção</td>
+</tr>
+<tr>
+<td>Designer</td>
+<td>Planejar o layout das interfaces do site.</td>
+<td>Miguel Moreira</td>
+<td>Arthur D'Assumpção<br> Arthur Trindade<br> Gabriel de Souza<br>  Miguel Moreira</td>
+</tr>
+<tr>
+<td>Cliente</td>
+<td>Dar feedback do projeto à equipe de desenvolvimento; <br>Validar os protótipos e entregas;</td>
+<td>Arthur D'Assumpção</td>
+<td>Zenit Aerospace</td>
+</tr>
+</tbody>
+</table>
+<h2 id="planejamento-das-fases-eou-iteracoes-do-projeto">Planejamento das Fases e/ou Iterações do Projeto</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Sprint</th>
+<th>Atividades</th>
+<th>Produto (Entrega)</th>
+<th>Data Início</th>
+<th>Data fim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>Definição do produto;<br>Inicio da documentação.</td>
+<td>Ideia inicial do produto;<br>Documento de visão de produto.</td>
+<td>27/10/2022</td>
+<td>01/11/2022</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>Revisão do documento de visão de produto;<br>Construção do GitPages.</td>
+<td>GitPages;<br>Documento de visão de produto atualizado.</td>
+<td>02/11/2022</td>
+<td>10/11/2022</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Desenvolvimento do documento de visão de projeto.</td>
+<td>Documento de visão de projeto.</td>
+<td>11/11/2022</td>
+<td>17/11/2022</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>Reunião 1 com o cliente</td>
+<td>Lista de de requisitos iniciais do produto.</td>
+<td>18/11/2022</td>
+<td>24/11/2022</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>Reunião 2 com o cliente;<br>Refinamento da lista de requisitos;<br>Construção da estrutura inical do projeto.</td>
+<td>Lista de requisitos do projeto;<br>Estrutura inicial do projeto (Épicos, Features e US's)</td>
+<td>25/11/2022</td>
+<td>01/12/2022</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>Reconstrução da estrutura do projeto;<br>Desenvolvimento das estratégias de refatoração e TDD;<br>Revisão da visão de projeto.</td>
+<td>Documentação atualizada;<br>Estrutura do projeto (Épicos, features e US's)</td>
+<td>02/12/2022</td>
+<td>08/12/2022</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>Desenvolvimento</td>
+<td><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s></td>
+<td>20/12/2022</td>
+<td>27/12/2022</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>Desenvolvimento</td>
+<td><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s><br><br>E1-F1-US1</td>
+<td>28/12/2022</td>
+<td>04/12/2022</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>Desenvolvimento;<br>Reunião de validação com o cliente;<br>Atualização da documentação.</td>
+<td>E1-F1-US1<br>E1-F1-US2<br><br>E1-F2-US1<br>E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US3<br><br><s>E2-F2-US1</s><br><s>E2-F2-US2</s><br><s>E2-F2-US3</s><br><br>Entrega do MVP1.</td>
+<td>05/01/2023</td>
+<td>12/01/2023</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td>Desenvolvimento; <br> Refatoração;</td>
+<td>E1-F2-US2<br>E1-F2-US3<br><br>E2-F1-US1<br>E2-F1-US2<br>E2-F1-US<br><br>E3-F1-US4<br><br>E4-F2-US1<br><br>Backlog do produto atualizado.</td>
+<td>17/01/2023</td>
+<td>24/01/2023</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td>Desenvolvimento;<br>Refatoração;<br>Atualização da documentação;</td>
+<td>E3-F1-US2<br>E3-F1-US3<br>E3-F1-US4<br>E3-F1-US5<br><br>E3-F2-US1<br><br>Código corrigido;<br>GitPages atualizado.</td>
+<td>25/01/2023</td>
+<td>01/02/2023</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td>Desenvolvimento;<br>Reunião de validação com o cliente;<br>Atualização da documentação.</td>
+<td>E3-F1-US1<br>E3-F2-US2<br>E3-F2-US3<br>E4-F1-US1<br>E4-F1-US2<br>E4-F2-US2<br>Entrega do MVP2.</td>
+<td>02/02/2023</td>
+<td>09/02/2023</td>
+</tr>
+</tbody>
+</table>
+<h2 id="matriz-de-comunicacao">Matriz de Comunicação</h2>
+<table>
+<thead>
+<tr>
+<th>Descrição</th>
+<th>Área/Envolvidos</th>
+<th>Periodicidade</th>
+<th>Produtos Gerados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planejamento da sprint</td>
+<td>Equipe de desenvolvimento</td>
+<td>Semanal</td>
+<td>Backlog da sprint.</td>
+</tr>
+<tr>
+<td>Daily Scrum</td>
+<td>Equipe de desenvolvimento</td>
+<td>Diária</td>
+<td>Revisão do pregresso das atividades.</td>
+</tr>
+<tr>
+<td>Sprints</td>
+<td>Equipe de desenvolvimento</td>
+<td>Semanal</td>
+<td>Incremento de valor.</td>
+</tr>
+<tr>
+<td>Revisão e retrospectiva da sprint</td>
+<td>Equipe de desenvolvimento</td>
+<td>Semanal</td>
+<td>Revisão dos resultados da sprint atual;<br> Planejamento da próxima sprint.</td>
+</tr>
+<tr>
+<td>Comunicar situação do projeto</td>
+<td>Equipe de desenvolvimento <br>George Marsicano</td>
+<td>Semanal</td>
+<td>Feedback do professor<br> Atualização da documentação do projeto.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gerenciamento-de-riscos">Gerenciamento de riscos</h2>
+<p>Gerenciar riscos é particularmente importante para projetos de software por conta das incertezas inerentes que a maioria dos projetos enfrenta. Elas se originam de requisitos vagamente definidos, mudanças de requisitos devido a mudanças nas necessidades do cliente, dificuldades em estimar o tempo e os recursos necessários para o desenvolvimento do software e diferenças nas habilidades individuais. É preciso prever os riscos, compreender o impacto desses riscos sobre o projeto, o produto e o negócio e tomar medidas para evitar tais riscos. <br>
+Dito isso, a equipe decidiu considerar os seguintes riscos:</p>
+<table>
+<thead>
+<tr>
+<th>Descrição</th>
+<th>Causa</th>
+<th align="center">Probabilidade</th>
+<th>Mitigação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redução da equipe</td>
+<td>Trancamento da disciplina ou qualquer questão pessoal dos membros que impossibilite a realização permanente ou temporária das atividades de desenvolvimento.</td>
+<td align="center">Baixa</td>
+<td>Compensar por aumento na carga horária de trabalho dos membros restantes.</td>
+</tr>
+<tr>
+<td>Falha na comunicação externa</td>
+<td>Falta de comunicação com o cliente por indisponibilidade do mesmo ou perda de contato.</td>
+<td align="center">Baixa</td>
+<td>Buscar contatos de membros de outros núcleos de gestão da Zenit.</td>
+</tr>
+<tr>
+<td>Falha na comunicação interna</td>
+<td>Falta de comunicação entre os membros da equipe que possam levar a uma conclusão equivocada ou por questões como falta de internet ou energia.</td>
+<td align="center">Média</td>
+<td>Repensar a metodologia de comunicação e redistribuir temporariamente as atividades.</td>
+</tr>
+<tr>
+<td>Atraso do cronograma</td>
+<td>Falta de competência da equipe de desenvolvimento com as ferramentas propostas.</td>
+<td align="center">Média</td>
+<td>Promover treinamentos para a equipe nas ferramentas em questão.</td>
+</tr>
+<tr>
+<td>Dimensão do projeto</td>
+<td>Escopo de projeto muito grande para ser desenvolvido no tempo da disciplina com as competências dos membros</td>
+<td align="center">Média</td>
+<td>Redefinir o escopo do produto.</td>
+</tr>
+<tr>
+<td>Desvio de foco</td>
+<td>Conflito de responsabilidades da equipe com faculdade, trabalho, família e etc ou falta de motivação dos membros.</td>
+<td align="center">Alta</td>
+<td>Comunicação frequente entre os membros da equipe.</td>
+</tr>
+<tr>
+<td>Enfermidades</td>
+<td>Incapacitação dos desenvolvedores por questões de saúde.</td>
+<td align="center">Altíssima</td>
+<td>Compensar por aumento na carga horária de trabalho dos membros restantes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="criterios-de-replanejamento">Critérios de replanejamento</h2>
+<ul>
+  <li>Trancamento da disciplina por membros da equipe;</li>
+  <li>Escopo maior que o esperado para o desenvolvimento dentro do tempo disponível;</li>
+  <li>Atraso na entrega do MPV1.</li>
+</ul>
+
+<h2 id="bibliografia">Bibliografia</h2>
+<ul>
+<li>Sommerville, I., Engenharia de software. 9th ed., Pearson Addison Wesley, 2011.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      
+    
+  </body>
+</html>
