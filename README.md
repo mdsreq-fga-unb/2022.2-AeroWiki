@@ -5,8 +5,13 @@ Clique abaixo para acessar
  
 <a href="http://137.184.12.54:3000/login">
     <p align="center" style="height: 125px">
-        <img src="./logoreadme.png" alt="Aerowki logo" style="height: 125px"/>
-        <img src="./aerowiki/front/src/img/marcanew-nobg.png" alt="Aerowki logo" style="height: 100px; margin-bottom: 12.5px"/>
+        <img src="./aerowiki/front/src/img/logonew-nobg.png" alt="Aerowki logo" style="height: 125px"/>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <img src="./aerowiki/front/src/img/marcanew-nobg.png" alt="Aerowki logo" style="height: 100px"/>
     </p>
 </a>
 
