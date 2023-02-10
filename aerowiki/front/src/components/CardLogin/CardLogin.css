@@ -42,8 +42,14 @@
 
 #login-logo{
     width: unset;
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    top: 1rem;
+    padding-top: 3rem;
+    margin-bottom: -6rem;
 }
 #login-logo img{
-    width: 290px;
-    height: 212px;
+    width: 235px;
+    height: 200px;
 }

@@ -3,7 +3,8 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import LogoVerical from "../../img/logovertical.svg";
+// import LogoVerical from "../../img/logovertical.svg";
+import LogoAerowiki from "../../img/logonew-nobg.png";
 import "./CardLogin.css";
 import { useState } from "react";
 import Swal from "sweetalert2";
@@ -73,6 +74,9 @@ function Cardlogin() {
   }
   return (
     <>
+      <div id="login-logo">
+        <img src={LogoAerowiki} alt="logo"></img>
+      </div>
       <h1 className="TitleLogin justify-content-center">AEROWIKI</h1>
       <h3 className="Sub-title justify-content-center">Entrar</h3>
       <Row className="justify-content-center">
@@ -114,9 +118,7 @@ function Cardlogin() {
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <div id="login-logo">
-          <img src={LogoVerical} alt="logo"></img>
-        </div>
+
       </Row>
     </>
   );
