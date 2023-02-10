@@ -9,8 +9,6 @@ Clique abaixo para acessar
         &nbsp;
         &nbsp;
         &nbsp;
-        &nbsp;
-        &nbsp;
         <img src="./aerowiki/front/src/img/marcanew-nobg.png" alt="Aerowki logo" style="height: 100px"/>
     </p>
 </a>
