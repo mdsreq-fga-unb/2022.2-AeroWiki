@@ -18,7 +18,6 @@ jobs:
       - run: npm --prefix ./aerowiki/front install
       - run: npm --prefix ./aerowiki/front run test
       - run: npm --prefix ./aerowiki/back install
-      - run: npm --prefix ./aerowiki/back run build
       - run: npm --prefix ./aerowiki/back run test
       - run: npm --prefix ./aerowiki/front run build
 
