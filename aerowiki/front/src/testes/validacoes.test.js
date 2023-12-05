@@ -1,6 +1,22 @@
 var validarEmail = require('./validacoes/email')
 var validarNome = require('./validacoes/nome')
 var validarMatricula = require('./validacoes/matricula')
+var {verificaNumero, verificaCapital, verificaTamanho} = require('./validacoes/senha')
+
+
+describe('Validar senha', ()=> {
+    it('Verifica se tem algum numero', () =>{
+        expect(verificaNumero('testes1')).toEqual(true) 
+    })
+
+    it('Verifica se tem algum caracter maiusculo', () =>{
+        expect(verificaCapital('Testes1')).toEqual(true) 
+    })
+
+    it('Verifica tamanho da senha', () =>{
+        expect(verificaTamanho('Testes12')).toEqual(true) 
+    })
+})
 
 describe('Validar email', ()=> {
     it('verefica emails válidos', () =>{
